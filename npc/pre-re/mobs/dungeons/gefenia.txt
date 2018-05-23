@@ -25,8 +25,8 @@ gefenia01,0,0	monster	Mini Demon	1292,20
 gefenia01,0,0	monster	Abysmal Knight	1219,10
 gefenia01,0,0	monster	Bloody Knight	1268,1,3600000,3000000
 gefenia01,0,0	monster	Mysteltainn	1203,1,10800000,7200000
-gefenia01,0,0	monster	Executioner	1205,1,18000000,14400000
-gefenia01,0,0	monster	Ogretooth	1204,1,18000000,14400000
+gefenia01,0,0	monster	Executor	1205,1,18000000,14400000
+gefenia01,0,0	monster	Tirfing	1204,1,18000000,14400000
 
 //==================================================
 // gefenia02 - Geffenia
@@ -39,8 +39,8 @@ gefenia02,0,0	monster	Mini Demon	1292,30
 gefenia02,0,0	monster	Abysmal Knight	1219,10
 gefenia02,0,0	monster	Bloody Knight	1268,1,3600000,3000000
 gefenia02,0,0	monster	Mysteltainn	1203,1,18000000,14400000
-gefenia02,0,0	monster	Executioner	1205,1,18000000,14400000
-gefenia02,0,0	monster	Ogretooth	1204,1,10800000,7200000
+gefenia02,0,0	monster	Executor	1205,1,18000000,14400000
+gefenia02,0,0	monster	Tirfing	1204,1,10800000,7200000
 
 //==================================================
 // gefenia03 - Geffenia
@@ -53,8 +53,8 @@ gefenia03,0,0	monster	Mini Demon	1292,30
 gefenia03,0,0	monster	Abysmal Knight	1219,10
 gefenia03,0,0	monster	Bloody Knight	1268,1,3600000,3000000
 gefenia03,0,0	monster	Mysteltainn	1203,1,18000000,14400000
-gefenia03,0,0	monster	Executioner	1205,1,10800000,7200000
-gefenia03,0,0	monster	Ogretooth	1204,1,18000000,14400000
+gefenia03,0,0	monster	Executor	1205,1,10800000,7200000
+gefenia03,0,0	monster	Tirfing	1204,1,18000000,14400000
 
 //==================================================
 // gefenia04 - Geffenia
@@ -67,8 +67,8 @@ gefenia04,0,0	monster	Mini Demon	1292,20
 gefenia04,0,0	monster	Abysmal Knight	1219,10
 gefenia04,0,0	monster	Bloody Knight	1268,1,3600000,3000000
 gefenia04,0,0	monster	Mysteltainn	1203,1,18000000,14400000
-gefenia04,0,0	monster	Executioner	1205,1,18000000,14400000
-gefenia04,0,0	monster	Ogretooth	1204,1,18000000,14400000
+gefenia04,0,0	monster	Executor	1205,1,18000000,14400000
+gefenia04,0,0	monster	Tirfing	1204,1,18000000,14400000
 
 
 //The spawns bellow, are old ones that were used in events.
@@ -78,11 +78,11 @@ gefenia04,0,0	monster	Ogretooth	1204,1,18000000,14400000
 //gefenia01,0,0	monster	Fake Angel	1371,10
 //gefenia01,0,0	monster	Mini Demon	1292,6,300000
 //gefenia01,0,0	monster	Apocalypse	1365,4,300000
-//gefenia01,0,0	monster	Elder	1377,10,300000
+//gefenia01,0,0	monster	Ancião	1377,10,300000
 //gefenia01,0,0	monster	Abyssmal Knight	1219,3,1800000,900000
 //gefenia01,0,0	monster	Bloody Knight	1268,2,300000
 //gefenia01,0,0	monster	Poring	1502,1
-//gefenia01,0,0	monster	Executioner	1205,1,3600000,1800000
+//gefenia01,0,0	monster	Executor	1205,1,3600000,1800000
 //gefenia01,0,0	monster	Mysteltainn	1203,1,7200000,3600000
 
 //==================================================
@@ -107,12 +107,12 @@ gefenia04,0,0	monster	Ogretooth	1204,1,18000000,14400000
 //gefenia03,0,0	monster	Incubus	1374,5
 //gefenia03,0,0	monster	Mini Demon	1292,10,300000
 //gefenia03,0,0	monster	Apocalypse	1365,6,300000
-//gefenia03,0,0	monster	Elder	1377,10,300000
+//gefenia03,0,0	monster	Ancião	1377,10,300000
 //gefenia03,0,0	monster	Abyssmal Knight	1219,3,1800000,900000
 //gefenia03,0,0	monster	Bloody Knight	1268,2,300000
 //gefenia03,0,0	monster	Poring	1502,1
 //gefenia03,0,0	monster	Dark Illusion	1302,1,300000
-//gefenia03,0,0	monster	Owl Baron	1295,1
+//gefenia03,0,0	monster	Barão Coruja	1295,1
 
 //==================================================
 // gefenia04 - Geffenia (Old)
