@@ -43,7 +43,7 @@ juperos_02,0,0	monster	Venatu	1679,50
 juperos_02,0,0	monster	Venatu	1676,65
 juperos_02,0,0	monster	Venatu	1677,65
 juperos_02,0,0	monster	Venatu	1678,65
-juperos_02,0,0	monster	Apocalypse	1365,70
+juperos_02,0,0	monster	Apocalipse	1365,70
 
 //========================================================================================
 // - Juperos Core
