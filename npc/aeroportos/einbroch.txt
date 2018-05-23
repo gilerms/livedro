@@ -1,0 +1,109 @@
+//===== rAthena Script ======================================= 
+//= Einbroch Airport Staff
+//===== By: ================================================== 
+//= L0ne_W0lf, Muad_Dib
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: ===================================== 
+//= rAthena Project
+//===== Description: ========================================= 
+//= Einbroch Airport Staff
+//===== Additional Comments: ================================= 
+//= 1.0 First version.
+//===== Traduzido por Rarord:================================= 
+//= 1.0
+//============================================================  
+
+Aeroporto,143,43,5	script	Equipe do Aeroporto#airport1a::airport1	90,{
+	mes "[Equipe do Aeroporto]";
+	mes "Bem vindo ao";
+	mes "Aeroporto de Einbroch";
+	mes "onde oferecemos sem parar";
+	mes "vôos para as cidades de";
+	mes "Juno, Lighthalzen and Hugel.";
+	next;
+	if (select("Embarque:Cancelar") == 1) {
+		mes "[Equipe do Aeroporto]";
+		mes "A taxa de embarque é";
+		mes "1,200 zeny, mas se você tiver";
+		mes "um bilheti gratuito para o Aeroplano,";
+		mes "a taxa não será cobrada.";
+		next;
+		if (select("Sim:Não") == 1) {
+			if (countitem(7311) > 0) {
+				delitem 7311,1; //Bilhete Gratuito do Dirigível
+				warp "airport",148,51;
+				end;
+			}
+			if (Zeny >= 1200) {
+				set Zeny, Zeny - 1200;
+				warp "airport",148,51;
+				end;
+			}
+			mes "[Equipe do Aeroporto]";
+			mes "Sinto muito, mas você não";
+			mes "tem um Bilhete Gratuito para embarcar no";
+			mes "Aeroplano e nem Zeny suficiente";
+			mes " Lembre-se, a taxa de embarque é de 1.200 zenys.";
+			close;
+		}
+	}
+	mes "[Equipe do Aeroporto]";
+	mes "Obrigado e";
+	mes "tenha um bom dia.";
+	close;
+}
+
+airport,158,43,5	duplicate(airport1)	Equipe do Aeroporto#airport1b	90
+airport,126,43,5	duplicate(airport1)	Equipe do Aeroporto#airport1c	90
+
+airport,143,49,3	script	Equipe de Recepção#airport2a::airport2	90,{
+	mes "[Equipe de Recepção]";
+	mes "Bem-vindo ao Aeroporto de Einbroch.";
+	mes "Se você está chegando do seu";
+	mes "voo, deixe-me guiá-lo até o";
+	mes "terminal principal. Caso contrário, por favor embarque no Dirigível para partir para";
+	mes "Juno, Lighthalzen e Hugel.";
+	next;
+	if (select("Sair do terminal principal.:Cancelar.") == 1) {
+		mes "[Equipe de Recepção]";
+		mes "Quando você estiver no terminal principal, você precisará pagar a taxa novamente";
+		mes "para embarcar em um dirigível. Você deverá";
+		mes "sair da cidade de Einbroch";
+		mes "se for seu destino pretendido.";
+		mes "Prossiga para o terminal principal?";
+		next;
+		if (select("Sim:Não") == 1) {
+			warp "airport",142,40;
+			end;
+		}
+	}
+	mes "[Equipe de Recepção]";
+	mes "Tudo bem, obrigado";
+	mes "pelo seu apoio";
+	mes "e eu espero que você tenha";
+	mes "um vôo agradável~";
+	close;
+}
+
+airport,126,51,3	duplicate(airport2)	Equipe de Recepção#airport2b	90
+airport,158,50,3	duplicate(airport2)	Equipe de Recepção#airport2c	90
+
+einbroch,94,267,3	script	Equipe do Aeroporto#ein01	91,{
+	mes "[Equipe do Aeroporto]";
+	mes "Bem vindo ao";
+	mes "Aeroporto de Einbroch.";
+	mes "Por favor use esta porta para";
+	mes "embarque no dirigível que para";
+	mes "sobre Juno, Lighthalzen e";
+	mes "Hugel na República de Schwaltzvalt.";
+	next;
+	mes "[Equipe do Aeroporto]";
+	mes "Caso contrário, se Einbroch for";
+	mes "seu destino pretendido,";
+	mes "por favor desça as escadas";
+	mes "e pedir à equipe de desembarque para levá-lo";
+	mes "ao terminal principal. Obrigado";
+	mes "aproveite sua viagem.";
+	close;
+}
