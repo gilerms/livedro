@@ -14,7 +14,7 @@
 //==================================================
 // spl_fild01 - Splendide Field
 //==================================================
-spl_fild01,0,0	monster	Dark Pinguicula	2015,50,5000
+spl_fild01,0,0	monster	Pinguicula Sombria	2015,50,5000
 spl_fild01,0,0	monster	Naga	1993,35,5000
 spl_fild01,0,0	monster	Cornus	1992,25,5000
 
