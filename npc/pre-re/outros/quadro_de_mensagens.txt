@@ -16,14 +16,14 @@
 
 // Izlude
 //============================================================
-izlude,54,139,1	script	Sign#Iz1	111,{
-	mes "^993300- The Sign Reads -^000000";
-	mes "Welcome to the Swordsman Academy.";
+izlude,54,139,1	script	Avisos#Iz1	111,{
+	mes "^993300- Quadro de Avisos -^000000";
+	mes "Bem vindo a academia espadachim.";
 	close;
 }
 
 izlude,144,148,1	script	Sign#Iz2	111,{
-	mes "^993300- The Sign Reads -^000000";
-	mes "Welcome.";
+	mes "^993300- Quadro de Avisos -^000000";
+	mes "Bem vido.";
 	close;
 }
