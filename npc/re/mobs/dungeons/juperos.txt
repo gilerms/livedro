@@ -8,8 +8,8 @@
 //= rAthena Project
 //===== Additional Comments: =================================
 //= 0.1 Added 1st version. [Muad_Dib]
-//= 0.2 Updated the spawns according to current info [MasterOfMuppets]
-//= 0.3 Updated the spawns according to own info from iRO [MasterOfMuppets]
+//= 0.2 Updated the spawns according to current info [MEstrela-do-MarOfMuppets]
+//= 0.3 Updated the spawns according to own info from iRO [MEstrela-do-MarOfMuppets]
 //= 1.0 More exact numbers thanks to Tharis [Playtester]
 //= 1.1 Official X.3 spawns [Playtester]
 //= 1.2 Some 11.1 spawn changes [Playtester]
@@ -32,7 +32,7 @@ juperos_01,0,0	monster	Dimik	1673,5,5000
 //==================================================
 // juperos_02 - Ruins of Juperos
 //==================================================
-juperos_02,0,0	monster	Apocalypse	1365,70,5000
+juperos_02,0,0	monster	Apocalípse	1365,70,5000
 juperos_02,0,0	monster	Venatu	1676,65,5000
 juperos_02,0,0	monster	Venatu	1677,65,5000
 juperos_02,0,0	monster	Venatu	1678,65,5000
