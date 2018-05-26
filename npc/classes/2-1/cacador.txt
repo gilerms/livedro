@@ -837,7 +837,6 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		HNTR_Q = 12;
 		changequest 4010,4011;
 		warp "job_hunte",176,22;
-		cutin "job_huntermaster",255;
 		end;
 	}
 	else if (HNTR_Q > 1 && HNTR_Q < 10) {
@@ -851,10 +850,10 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		next;
 		mes "[Líder da Guilda de Caçadores]";
 		mes "Reuna os itens para o teste, e volte depois que você visitou a Guilda de Caçadores.";
-		close4;
+		close3;
 	}
 	else if (HNTR_Q == 10) {
-		mes "[Líder da Guilda de Caçadores]";
+		mes "[Caçador]";
 		mes "Hum?";
 		mes "Eu posso ajudá-lo";
 		mes "com algo?";
@@ -914,7 +913,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 		mes "que você está pronto.";
 		mes "Vamos começar.";
 		next;
-		if (select("Sim, vamos começar.:Ah, espere um momento.") == 1) {
+		if (select("Sim, vamos começar.", "Ah, espere um momento.") == 1) {
 			mes "[Líder da Guilda de Caçadores]";
 			mes "Ok!! Agora...";
 			mes "vamos lá!";
@@ -983,7 +982,7 @@ OnTouch_:
 		next;
 		mes "[Guia]";
 		mes "Nós iremos fornecer as flechas, por isso certifique-se que você tem um arco. Então, por favor, indique quando estiver pronto.";
-		savepoint "job_hunte",176,22;
+		savepoint "job_hunte",176,22,1,1;
 		close;
 	}
 	else if (HNTR_Q > 12 && HNTR_Q < 16) {
@@ -997,7 +996,7 @@ OnTouch_:
 		mes "[Guia]";
 		mes "Se é muito difícil, não faria mal tentar novamente na próxima vez. Gostaria de desistir agora?";
 		next;
-		switch(select("Continuar tentando.:Desistir.")) {
+		if (select("Continuar tentando.","Desistir.") == 1) {
 			mes "[Guia]";
 			mes "Ok. Faça o seu melhor e torne-se um grande Caçador. Por favor, entre na sala de espera. Se alguém já estiver fazendo o teste, você deve esperar até que a pessoa esteja pronta.";
 			close;
@@ -1207,12 +1206,12 @@ OnTouch_:
 	mes "no interruptor de escape.^000000";
 	HNTR_Q = 15;
 	next;
-	switch(select("Escapar:Cancelar:Refazer o teste")) {
+	switch( select( "Escapar", "Cancelar", "Re-teste" ) ) {
 	case 1:
 		mes "^3355FFO portal de Fuga";
 		mes "foi ativado.^000000";
 		close2;
-		mapannounce "job_hunte"," !! Ativação do portal de escapamento. !! ",bc_map;
+		mapannounce "job_hunte"," !! Ativação do portal completa. !! ",bc_map;
 		enablenpc "Saída#hnttest";
 		end;
 	case 2:
@@ -1245,6 +1244,7 @@ OnEnable:
 }
 
 job_hunte,89,139,0	script	Saída#hnttest	WARPNPC,2,2,{
+	end;
 OnInit:
 	disablenpc "Saída#hnttest";
 	end;

@@ -85,7 +85,8 @@ ein_in01,18,28,4	script	Guildsman#BLS	731,{
 	}
 
 	if (BaseClass == Job_Novice) {
-		if (Sex == 0) {
+		mes "[Altiregen]";
+		if (Sex == SEX_FEMALE) {
 			mes "Oh~";
 			mes "mas que";
 			mes "bela moça!";
@@ -228,7 +229,7 @@ ein_in01,18,28,4	script	Guildsman#BLS	731,{
 			mes "Por favor vá falar com o membro da guilda dentro da construção para mais detalhes sobre o próximo teste.";
 			next;
 			if (select("Eu quero mudar de classe rapidamente! Mas...está bem.:Grrr! Já basta!") == 1) {
-				BSMITH_Q = 16;
+				set BSMITH_Q,16;
 				changequest 2013,2014;
 				mes "[Altiregen]";
 				mes "Me desculpe, mas estou certo que você entende, certo? Nós não podemos aceitar qualquer um em";
@@ -258,17 +259,17 @@ ein_in01,18,28,4	script	Guildsman#BLS	731,{
 		}
 		else if (BSMITH_Q == 17 && countitem(1005) > 0 && JobLevel > 39) {
 			mes "[Altiregen]";
-			if (checkmount() || hascashmount()) {
+			if (ismounting()) {
 				mes "Você está em uma montaria de aluguel, então você não pode mudar seu trabalho.";
 				mes "Por favor desequipe a montaria de aluguel e tente novamente!";
 				close;
 			}
 			mes "Excelente, Eu posso falar pelo brilho em seus olhos que você teve sucesso. Eu posso agora colocar em prática o dom da forja, a arte dos Ferreiros.";
-			if (questprogress(2015)) {
+			if (checkquest(2015) != -1) {
 				changequest 2015,2016;
 			}
 			next;
-			.@joblvl = JobLevel;
+			if (checkquest(2015) != -1) {
 			callfunc "Job_Change",Job_Blacksmith;
 			callfunc "F_ClearJobVar";		// clears all job variables for the current player
 			mes "[Altiregen]";
@@ -366,85 +367,85 @@ ein_in01,201,27,3	script	Líder da Guilda#alberta	1_M_SMITH,{
 					mes "com sua especialidade?";
 					next;
 					if (select("Morroc - Traje de Gatuno:Alberta - Machado de Duas Mãos:Comodo - Poção da Fúria Selvagem:Alberta - Clava") == 4)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "2. Que condição pode ser";
 					mes "inflingido com a habilidade";
 					mes "^8E6B23Martelo de Thor^000000?";
 					next;
 					if (select("Atordoamento:Cegueira:Silêncio:Sono") == 1)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "3. Qual das seguintes habilidades não pode ser usada";
 					mes "por um Mercador?";
 					next;
 					if (select("Venda:Desconto:Superfaturar:Aumentar Agilidade") == 4)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "4. Onde você pode achar uma loja";
 					mes "que vende Gemas Azuis?";
 					next;
 					if (select("Alberta:Morroc:Geffen:Prontera") == 3)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "5. Onde o Vendedor";
 					mes "de Utilidades fica";
 					mes "ocalizado em Geffen?";
 					next;
 					if (select("Direção 8 horas do centro da cidade:Direção 11 horas do centro da cidade:Direção 6 horas do centro da cidade:Direção 5 horas do centro da cidade") == 1)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "6. Que arma";
 					mes "não pode ser usada";
 					mes "por um Mercador?";
 					next;
 					if (select("Stiletto:Sabre de Impacto:Mangual Pesado:Bíblia") == 4)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "7. Quais dos seguintes itens";
 					mes "tem a maior taxa de defesa?";
 					next;
 					if (select("Roupa de Baixo:Casaco de Pele:Armadura de Madeira:Manto de Seda") == 2)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "8. Para armas de Nível 3,";
 					mes "qual é o limite ^8E6B23Seguro^000000";
 					mes "de aprimoramento?";
 					next;
 					if (select("até + 3:até + 4:até + 5:até + 6") == 3)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "9. Que item";
 					mes "pode ser feito usando";
 					mes "o item ^8E6B23Tronco^000000?";
 					next;
 					if (select("Chapéu Chinês:Bandana Fantasma:Chifres Magestosos:Chifre de Alce") == 1)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "10. A parte mais importante";
 					mes "em ser um Mercador é...?";
 					next;
 					select("Crédito:Integridade:Dinheiro:Retórica");
-					.@black_q += 10;
+						set .@black_q,.@black_q+10;
 				}
 				else {
 					mes "[Geschupenschte]";
 					mes "1. Qual das regiões a seguir está combinada incorretamente com sua especialidade?";
 					next;
 					if (select("Al De Baran - Folha de Yggdrasil:Alberta - Marreta:Comodo - Poção da Fúria Selvagem:Al De Baran - Marreta") == 4)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "2. Quantos Zeny";
 					mes "valhe um Jellopy?";
 					next;
 					if (select("1 Zeny:2 Zeny:3 Zeny:4 Zeny") == 3)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "3. O que é requerido";
 					mes "para um Mercador para usar";
 					mes "a habilidade ^8E6B23Venda^000000?";
 					next;
 					if (select("Deve ter um Carrinho.:Deve ter itens para vender.:Deve estar empunhando uma arma.:Deve estar vestindo uma armadura.") == 1)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "4. Onde você poder";
 					mes "mudar de Classe para";
@@ -458,39 +459,39 @@ ein_in01,201,27,3	script	Líder da Guilda#alberta	1_M_SMITH,{
 					mes "localizado em Morroc?";
 					next;
 					if (select("7 horas do centro da cidade:11 horas do centro da cidade:6 horas do centro da cidade:5 horas do centro da cidade") == 4)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "6. Qual destas armas";
 					mes "um Mercador não";
 					mes "pode usar?";
 					next;
 					if (select("Main Gauche:Claymore:Mangual Pesado:Machado do Duas Mãos") == 2)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "7. Qual dos seguintes itens";
 					mes "tem a maior taxa de defesa?";
 					next;
 					if (select("Roupa de Baixo:Casaco de Pele:Armadura de Madeira:Manto de Seda") == 2)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "8. Para armas de Nível 3,";
 					mes "qual é o limite ^8E6B23Seguro^000000";
 					mes "de aprimoramento?";
 					next;
 					if (select("até + 3:até + 4:até + 5:até + 6") == 3)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "9. Que monstro NÃO";
 					mes "derruba Minério de Ferro?";
 					next;
 					if (select("Chon Chon:Chon Chon de Aço:Zerom:Anolian") == 4)
-						.@black_q += 10;
+						set .@black_q,.@black_q+10;
 					mes "[Geschupenschte]";
 					mes "10. O que é mais";
 					mes "importante para um Mercador?";
 					next;
 					select("Retórica:Crédito:Dinheiro:Experiência");
-					.@black_q += 10;
+						set .@black_q,.@black_q+10;
 				}
 				mes "[Geschupenschte]";
 				mes "Umm. Você fez um bom trabalho!";
@@ -498,8 +499,8 @@ ein_in01,201,27,3	script	Líder da Guilda#alberta	1_M_SMITH,{
 				mes "[Geschupenschte]";
 				mes "Vamos ver...sua pontuação é..." + .@black_q + " pontos.";
 				if (.@black_q == 100) {
-					BSMITH_Q = 3;
-					if (questprogress(2001)) {
+					set BSMITH_Q,3;
+					if (checkquest(2001) != -1) {
 						changequest 2001,2002;
 					} else {
 						changequest 2000,2002;
@@ -515,8 +516,8 @@ ein_in01,201,27,3	script	Líder da Guilda#alberta	1_M_SMITH,{
 					mes "Quando você voltar, eu estarei pronto!";
 					close;
 				}
-				BSMITH_Q = 2;
-				if (!questprogress(2001)) {
+				set BSMITH_Q,2;
+				if (checkquest(2001) == -1) {
 					changequest 2000,2001;
 				}
 				mes ".............";
@@ -543,19 +544,19 @@ ein_in01,201,27,3	script	Líder da Guilda#alberta	1_M_SMITH,{
 		/*
 		else if (BSMITH_Q == 2) {
 			mes "[Geschupenschte]";
-			mes "So, have you";
-			mes "studied a little";
-			mes "more this time?";
+			mes "Então, você";
+			mes "estudou um pouco";
+			mes "mais desta vez?";
 			next;
 			mes "[Geschupenschte]";
-			mes "I admit that it's pretty unreasonable to expect anyone to get a perfect score the first time around, so I'll give you";
-			mes "a little break...";
+			mes "Eu admito que não é razoável esperar que alguém obtenha uma pontuação perfeita na primeira vez, então eu vou te dar";
+			mes "uma pequena pausa ...";
 			next;
 			mes "[Geschupenschte]";
-			mes "You can miss";
-			mes "one problem!";
-			mes "Alright, let's start";
-			mes "with the questions~";
+			mes "Você pode perder";
+			mes "um problema!";
+			mes "Tudo bem, vamos começar";
+			mes "com as perguntas ~";
 			next;
 			goto L_AskQuestions;
 		}
@@ -661,7 +662,7 @@ ein_in01,201,27,3	script	Líder da Guilda#alberta	1_M_SMITH,{
 				delitem .@items[2],.@items[3];
 				delitem .@items[4],.@items[5];
 				delitem .@items[6],.@items[7];
-				BSMITH_Q = .@items[8];
+				set BSMITH_Q,.@items[8];
 				mes "[Geschupenschte]";
 				mes "Wooooo~~~";
 				mes "Tudo feito...";
@@ -694,7 +695,7 @@ ein_in01,201,27,3	script	Líder da Guilda#alberta	1_M_SMITH,{
 				case 10:
 					mes "Certo, agora leve isso para ^8E6B23Whichebain^000000 em Morroc do Reino de Rune-Midgard. Basta entregá-lo e trazer para mim o recibo.";
 					getitem 1219,1; //Gladius
-					if (questprogress(2004)) {
+					if (checkquest(2004) != -1) {
 						changequest 2004,2009;
 					}
 					next;
@@ -971,7 +972,7 @@ geffen,46,164,1	script	Baisulist#BLS	1_F_04,{
 		mes "[Baisulist]";
 		mes "Você têm";
 		mes "certeza absoluta?";
-		BSMITH_Q = 14;
+		set BSMITH_Q,14;
 		delitem 1610,1; //Arc_Wand
 		next;
 		mes "[Baisulist]";
@@ -1225,7 +1226,7 @@ payon,214,79,4	script	Talpiz#BLS	1_M_ORIENT01,{
 		mes "Então, você têm certeza?";
 		mes "Deixe-me dar uma olhada...";
 		next;
-		BSMITH_Q = 14;
+		set BSMITH_Q,14;
 		delitem 1713,1; //Arbalest
 		mes "[Talpiz]";
 		mes "*wheet whoo*";
@@ -1306,7 +1307,7 @@ hugel,168,183,1	script	Bismarc#BLS	2_M_THIEFMASTER,{
 		mes "Dê-me...";
 		mes "Por favor!";
 		next;
-		BSMITH_Q = 14;
+		set BSMITH_Q,14;
 		delitem 1122,1; //Ring_Pommel_Saber
 		mes "^3355FFBismark fura";
 		mes "a si mesmo repetidamente";
@@ -1374,7 +1375,7 @@ hugel,168,183,1	script	Bismarc#BLS	2_M_THIEFMASTER,{
 
 ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 	if (BSMITH_Q == 16) {
-		emotion e_hmm;
+		emotion ET_SCRATCH;
 		mes "[Mitehmaeeuh]";
 		mes "Oh... então é você quem quer se tornar um ferreiro?";
 		mes "Legal, heh heh.";
@@ -1392,7 +1393,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 			mes "você falha. E não";
 			mes "direi quais você errou.";
 			next;
-			.@blackss_te = 0;
+			set .@blackss_te,0;
 			mes "[Mitehmaeeuh]";
 			mes "Por favor, ouça";
 			mes "e responda cuidadosamente...";
@@ -1405,7 +1406,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				mes "a habilidade ^8E6B23Desconto^000000?";
 				next;
 				if (select("Usar Carrinho Level 3:Identificar Item:Mammonita Level 10:Aumentar Capacidade de Carga Level 3") == 4)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "2. Quando você ataca";
 				mes "com ^8E6B23Matelo de Thor^000000,";
@@ -1413,7 +1414,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				mes "pode inflingir nos inimigos?";
 				next;
 				if (select("Atordoamento:Cegueira:Caos:Silêncio") == 1)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "3. Quanto de zeny é gasto";
 				mes "quando se ataca com a";
@@ -1421,7 +1422,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				mes "(Mammonita Level 10)";
 				next;
 				if (select("900 Zeny:1000 Zeny:2000 Zeny:100,000 Zeny") == 2)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "4. Qual é a";
 				mes "taxa de desconto quando";
@@ -1429,7 +1430,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				mes "está no máximo?";
 				next;
 				if (select("21 % :22 % :23 % :24 % ") == 4)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "5. Qual é a máxima";
 				mes "porcentagem que você pode";
@@ -1438,7 +1439,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				mes "^8E6B23Lucro^000000 no máximo?";
 				next;
 				if (select("21 % :22 % :23 % :24 % ") == 3)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				break;
 			case 2:
 				mes "[Mitehmaeeuh]";
@@ -1447,21 +1448,21 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				mes "drops Steel?";
 				next;
 				if (select("Zerom:Chon Chon:Skel Worker:Requiem") == 3)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "2. Qual das seguintes";
 				mes "pedras pode ser feita de";
 				mes "Sangue Escarlate??";
 				next;
 				if (select("Coração Flamejante:Vento Bruto:Natureza Grandioza:Gelo Místico") == 1)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "3. Qual das seguintes";
 				mes "pedras você tem mais";
 				mes "em seu Armazém da Kafra?";
 				next;
 				select("Frescor do Vento:Sangue Escarlate:Vida Verdejante:Cristal Azul");
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "4. Geralmente,";
 				mes "qual das seguintes";
@@ -1470,14 +1471,14 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				mes "encantada com Vento?";
 				next;
 				if (select("Fogo:Água:Terra:Vento") == 2)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "5. Quantos Minérios de Ferro";
 				mes "são necessários para fazer";
 				mes "1 Aço?";
 				next;
 				if (select("5 Minério de Ferro :4 Minério de Ferro:3 Minério de Ferro:6 Minério de Ferro") == 1)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				break;
 			case 3:
 				mes "[Mitehmaeeuh]";
@@ -1488,7 +1489,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				switch(select("Pergunto o que precisam.:Tenho uma conversa rápida.:Ignoro.:Dou itens e corro.")) {
 				case 1:
 				case 2:
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 					break;
 				default:
 					break;
@@ -1500,20 +1501,20 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				mes "^8E6B23Mudar Carrinho^000000?";
 				next;
 				if (select("Al De Baran:Alberta:Morroc:Izlude") == 2)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "3. Do centro de Einbroch,";
 				mes "em qual direção fica a Guilda dos Ferreiros?";
 				next;
 				if (select("Noroeste:Sudeste:Sudoeste:Norte") == 2)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "4. Em qual cidade";
 				mes "você pode encontrar";
 				mes "mais Ferreiros?";
 				next;
 				if (select("Prontera:Morroc:Alberta:Einbroch") == 4)
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				mes "[Mitehmaeeuh]";
 				mes "5. Qual dos";
 				mes "seguintes status";
@@ -1521,7 +1522,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 				mes "como um Ferreiro?";
 				next;
 				if (select("FOR:DES:AGI:VIT") == 2) 
-					.@blackss_te += 20;
+					set .@blackss_te,.@blackss_te+20;
 				break;
 			}
 			mes "[Mitehmaeeuh]";
@@ -1562,7 +1563,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 		close;
 	}
 	else if (BSMITH_Q == 17) {
-		emotion e_hmm;
+		emotion ET_SCRATCH;
 		mes "[Mitehmaeeuh]";
 		mes "Ah, você acabou de fazer o teste de Ferreiro!";
 		next;
@@ -1577,7 +1578,7 @@ ein_in01,24,41,5	script	Homem da Guilda#moc	4_F_JOB_BLACKSMITH,{
 		close;
 	}
 	else {
-		emotion e_hmm;
+		emotion ET_SCRATCH;
 		mes "[Mitehmaeeuh]";
 		mes "Tive que lidar com o calor, enquanto estive em Morroc";
 		mes "e agora eu tenho que lidar com a fumaça em Einbroch!";
@@ -1632,7 +1633,7 @@ geffen_in,109,170,3	script	Homem da Guilda#gef	4_F_JOB_BLACKSMITH,{
 			mes "Desculpe-me, mas você não tem dinheiro suficiente.";
 			close;
 		}
-		Zeny -= 600;
+		set Zeny, Zeny-600;
 		warp "izlude",94,103;
 		end;
 	case 3:

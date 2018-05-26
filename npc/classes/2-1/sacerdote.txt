@@ -49,7 +49,7 @@ prt_church,16,41,4	script	Bispo#prst	1_M_PASTOR,{
 		if (BaseJob == Job_Priest) {
 			mes "[Bispo Paul]";
 			mes "Ah...";
-			if (Sex)
+			if (Sex == SEX_MALE)
 				mes "É bom ver você de novo, irmão " + strcharinfo(0) + ". Mais uma vez, a graça de Deus fez com que nossos caminhos se cruzassem.";
 			else
 				mes "É bom ver você de novo, irmã " + strcharinfo(0) + ". A graça de Deus a trouxe mais uma vez até mim.";
@@ -116,7 +116,7 @@ prt_church,16,41,4	script	Bispo#prst	1_M_PASTOR,{
 		else if (BaseClass == Job_Novice) {
 			mes "[Bishop Paul]";
 			mes "Que deus esteja";
-			if (Sex)
+			if (Sex == SEX_MALE)
 				mes "com você, irmão";
 			else
 				mes "com você, irmã";
@@ -149,7 +149,7 @@ prt_church,16,41,4	script	Bispo#prst	1_M_PASTOR,{
 		else {
 			mes "[Bishop Paul]";
 			mes "Que deus esteja";
-			if (Sex)
+			if (Sex == SEX_MALE)
 				mes "com você, irmão.";
 			else
 				mes "com você, irmã.";
@@ -205,7 +205,7 @@ prt_church,16,41,4	script	Bispo#prst	1_M_PASTOR,{
 	if (PRIEST_Q == 0) {
 		mes "[Bishop Paul]";
 		mes "Que deus esteja";
-		if (Sex)
+		if (Sex == SEX_MALE)
 			mes "com você, irmão";
 		else
 			mes "com você, irmã";
@@ -245,7 +245,10 @@ prt_church,16,41,4	script	Bispo#prst	1_M_PASTOR,{
 				set PRIEST_Q,1;
 				setquest 8009;
 				mes "[Bispo Paul]";
-				mes "Agora irei explicar os Três Exames do Sacedócio. Esses testes irão lhe trazer muito sofrimento, mas espero que você consiga superá-los, "+((Sex)?"Irmão.":"Irmã.")+" "+strcharinfo(0)+".";
+			if (Sex == SEX_MALE)
+				mes "Agora vou explicar as Três Provas do Sacerdócio. Essas tribulações lhe trarão muito sofrimento, mas eu espero que você possa completá-las, irmão" + strcharinfo (0) + ".";
+			else
+				mes "Agora eu explicarei as Três Provas do Sacerdócio. Essas tribulações lhe trarão muito sofrimento, mas eu espero que você possa completá-las, Irmã" + strcharinfo (0) + ".";
 				next;
 				mes "[Bispo Paul]";
 				mes "No primeiro exame, você deve fazer uma viagem, e visitar três sacerdotes em uma ordem específica.";
@@ -495,7 +498,10 @@ prt_church,16,41,4	script	Bispo#prst	1_M_PASTOR,{
 		mes "[Bispo Paul]";
 		mes "Deus, conceda seu poder para este servo diante de ti.";
 		changequest 8015,8016;
-		mes "Deixe que "+((Sex)?"ele":"ela")+" envie sua mensagem pelos arredores do mundo.";
+		if (Sex == SEX_MALE)
+			mes "Deixe-o enviar sua mensagem através dos confins da terra.";
+		else
+			mes "Deixe-a enviar sua mensagem através dos confins da terra.";
 		next;
 		mes "[Bispo Paul]";
 		mes "Faça desse servo um instrumento de seu trabalho...";
@@ -503,17 +509,17 @@ prt_church,16,41,4	script	Bispo#prst	1_M_PASTOR,{
 		set .@joblvl,JobLevel;
 		completequest 8016;
 		callfunc "Job_Change",Job_Priest;
-		callfunc "F_ClearJobVar";		// clears all job variables for the current player
+		callfunc "F_ClearJobVar";		// limpa todas as variáveis de classe do jogador atual
 		mes "[Bispo Paul]";
 		mes "Agora você nasceu novamente sendo um Sacerdote. Eu te parabenizo, e espero que você ajude outras pessoas pelo resto de sua vida.";
 		next;
 		mes "[Bishop Paul]";
 		if (.@joblvl < 50) {
-			getitem 1550,1; //Book
+			getitem 1550,1; //Livro
 			mes "Este livro é seu. Espero que ele te ajude a espalhar a mensagem de Deus na Terra.";
 		}
 		else {
-			getitem 1551,1; //Bible
+			getitem 1551,1; //Biblia
 			mes "Em comemoração a sua mudança de classe, te darei uma bíblia. Isto irá iluminá-lo pelo caminho da graça.";
 		}
 		next;
@@ -527,10 +533,10 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 	mes "[Irmã Cecília]";
 	if (BaseJob != Job_Acolyte) {
 		if (BaseJob == Job_Priest) {
-			mes "Que deus te abençoe, "+((Sex)?"irmão.":"irmã.")+" Meu coração fica alegre ao ver que você está trabalhando duro para cumprir a vontade de Deus.";
-		} else if (Class == Job_Novice) {
-			mes "Que deus te abençoe, "+((Sex)?"irmão.":"irmã.")+"";
-			mes "A Catedral de Prontera o parabeniza.";
+			mes "Que Deus te abençoe," + (Sex == SEX_MALE ? "irmão":"irmã") + ". Isso traz alegria ao meu coração ver que você está trabalhando duro para realizar a vontade de Deus.";
+		} else if (class == Job_Novice) {
+			mes "Que deus te abençoe," + (Sex == SEX_MALE ? "irmão":"irmã") + ".";
+			mes "Paróquia de Prontera lhe dá as boas vindas.";
 			next;
 			mes "[Irmã Cecília]";
 			mes "Você ainda não escolheu uma classe? Por que você não dedica sua vida a Deus?";
@@ -548,7 +554,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 			mes "Mas por favor...";
 			mes "Não tenha pressa, e decida qual classe será a melhor para você.";
 		} else {
-			mes "Que deus te abençoe, "+((Sex)?"irmão.":"irmã.")+"";
+			mes "Que deus te abençoe, "+ (Sex == SEX_MALE ? "Irmão":"Irmã") +".";
 			mes "Bem-vindo a Catedral de Prontera. Como posso te ajudar?";
 			next;
 			if (select("Me fale mais sobre Sacerdotes.:Nada.") == 1) {
@@ -706,7 +712,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 			mes "Irmão "+ strcharinfo(0) +",";
 		else
 			mes "Irmã "+ strcharinfo(0) +",";
-		mes "Você está disposto";
+		mes "Você está disposta";
 		mes "a entregar sua vida a Deus?";
 		next;
 		if (select("Sim.:Não!") == 2) {
@@ -725,7 +731,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 			mes "[Irmã Cecília]";
 			mes "Hã...? Deus não vai te conceder o poder da santidade se seus objetivos não são justos e puros. Medite sobre seus motivos, e então volte aqui.";
 			next;
-			PRIEST_Q = 8;
+			set PRIEST_Q,8;
 			mes "[Irmã Cecília]";
 			mes "Reflita sobre as qualidades que fazem um Sacerdote uma pessoa de respeito. Você não pode ser um Sacerdote se seu espírito não está em harmonia com Deus.";
 			close;
@@ -737,7 +743,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 			mes "[Irmã Cecília]";
 			mes "Não. Você está errado. Deus nos autoriza a usar seus poderes para ajudar seus filhos. Você deve ajudar pessoas em perigo: Essa é sua obrigação.";
 			next;
-			PRIEST_Q = 8;
+			set PRIEST_Q,8;
 			mes "[Irmã Cecília]";
 			mes "Vá e observe aventureiros que estão lutando por paz nesse mundo. Eles irão te mostrar o que você deve fazer para ajudá-los.";
 			close;
@@ -749,7 +755,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 			mes "[Irmã Cecília]";
 			mes "Como não...? Esse é um dos princípios básicos do Sacerdócio. Você deve preza o bem-estar dos outros até mesmo mais que o seu.";
 			next;
-			PRIEST_Q = 8;
+			set PRIEST_Q,8;
 			mes "[Irmã Cecília]";
 			mes "Pense um pouco sobre o valor do sofrimento e sobre o sacrifício. Quando pensar irá entender mais sobre o que significa ajudar os que precisam, após pensar volte aqui.";
 			close;
@@ -761,7 +767,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 			mes "[Irmã Cecília]";
 			mes "Não... Você não compreendeu. Apesar do motivo ser: espalhar a mensagem de Deus, ninguém irá aceitar o que você fala por que estará abusando.";
 			next;
-			PRIEST_Q = 8;
+			set PRIEST_Q,8;
 			mes "[Irmã Cecília]";
 			mes "Lembre-se...";
 			mes "Você deve ser uma pessoa com moral e respeito, e deve mostrar maturidade aos outros jogadores. Esse tipo de atitude é aplicada em todas as classes,";
@@ -775,7 +781,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 			mes "[Irmã Cecília]";
 			mes "Não. Atrair muitos monstros traz mais mal que bem. Não há exceção nisso. Esse comportamento é totalmente inaceitável.";
 			next;
-			PRIEST_Q = 8;
+			set PRIEST_Q,8;
 			mes "[Irmã Cecília]";
 			mes "Mesmo parecendo que você está ajudando os membros de seu grupo, essa atitude resultará em uma má consequência. Por favor reflita sobre isso.";
 			close;
@@ -787,7 +793,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 			mes "[Irmã Cecília]";
 			mes "Com esse espírito, você não pode se tornar um Sacerdote. Se a vontade de Deus é que você se sacrifique por um bem maior, você deve cumprir essa vontade como sendo seu servo.";
 			next;
-			PRIEST_Q = 8;
+			set PRIEST_Q,8;
 			mes "[Irmã Cecília]";
 			mes "E também, Deus deu aos Sacerdotes o poder de ressucitação. Pense sobre o sentido da vida e da morte novamente, após isso volte.";
 			close;
@@ -800,7 +806,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 			mes "Eu o ouvi, irmão. Por fim, jure a Deus que você respondeu com sinceridade as minhas perguntas";
 		next;
 		if (select("Eu juro.:Não.") == 1) {
-			PRIEST_Q = 9;
+			set PRIEST_Q,9;
 			changequest 8014,8015;
 			mes "[Irmã Cecília]";
 			mes "Agora, você completou seu juramento de Sacerdócio e todos os três exames para se tornar um Sacerdote.";
@@ -816,7 +822,7 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 		mes "...";
 		mes "......";
 		next;
-		PRIEST_Q = 8;
+		set PRIEST_Q,8;
 		mes "[Irmã Cecília]";
 		mes "Você chegou tão longe...";
 		mes "Por que quer";
@@ -838,11 +844,10 @@ prt_church,27,24,1	script	Irmã Cecília	1_F_PRIEST,{
 job_prist,24,187,4	script	Peter S. Alberto	4_M_MINISTER,{
 	mes "[Irmão Peter]";
 	if (BaseJob == Job_Priest) {
-		mes "Bem vind"+((sex)?)+"!";
 		if (Sex == SEX_MALE)
-			mes "Irmão "+ strcharinfo(0) +"!";
+			mes "Bem vindo Irmão "+ strcharinfo(0) +"!";
 		else
-			mes "Irmã "+ strcharinfo(0) +"!";
+			mes "Bem vinda Irmã "+ strcharinfo(0) +"!";
 			mes "É muito bom te rever!";
 			next;
 			mes "[Irmão Peter]";
@@ -883,7 +888,7 @@ job_prist,24,187,4	script	Peter S. Alberto	4_M_MINISTER,{
 		}
 	}
 	if (PRIEST_Q == 5) {
-		mes "Bem-vindo~!";
+		mes "Bem-vindo!";
 		mes "Receba meus parabéns";
 		mes "por passar no primeiro exame.";
 		next;
@@ -944,14 +949,14 @@ job_prist,24,187,4	script	Peter S. Alberto	4_M_MINISTER,{
 			donpcevent "Peter S. Alberto#2::OnEnable";
 			end;
 		case 2:
-			PRIEST_Q = 6;
+			set PRIEST_Q,6;
 			mes "[Irmão Peter]";
 			mes "Hum? Do que você precisa?";
 			mes "Tudo bem. Você pode";
 			mes "demorar o tempo necessário.";
 			close;
 		case 3:
-			PRIEST_Q = 6;
+			set PRIEST_Q,6;
 			mes "[Irmão Peter]";
 			mes "O que...?";
 			mes "Você quer voltar??";
@@ -1026,9 +1031,11 @@ OnDisable:
 job_prist,23,187,1	script	Peter S. Alberto#2	4_M_MINISTER,{
 	mes "[Irmão Peter]";
 	if (BaseJob == Job_Priest) {
-		mes "Bem-vindo!";
-		mes ""+((Sex)?"Irmão":"Irmã")+" "+strcharinfo(0)+"...";
-		mes "É muito bom te rever!";
+		if (Sex == SEX_MALE)
+			mes "Bem vindo Irmão "+ strcharinfo(0) +"!";
+		else
+			mes "Bem vinda Irmã "+ strcharinfo(0) +"!";
+		mes "Que Deus te abençoe!";
 		next;
 		mes "[Irmão Peter]";
 		mes "Você está aqui para ajudar um amigo seu Noviço no treinamento espiritual? Isso é ótimo ~ Acho que você irá conseguir fazer um ótimo trabalho.";
@@ -1089,30 +1096,30 @@ OnEnable:
 	initnpctimer;
 	end;
 
-OnM1:
-	.MyMobs = 13;
+Onm1:
+	set .MyMobs,13;
 	monster "job_prist",24,52,"Furto",1015,1,"Z_C#prst::OnMyMobDead";
 	monster "job_prist",18,52,"Desejo de Virtude",1015,1,"Z_C#prst::OnMyMobDead";
 	monster "job_prist",30,52,"Ciúme",1015,1,"Z_C#prst::OnMyMobDead";
 	end;
 
-OnM2:
+Onm2:
 	monster "job_prist",21,62,"Fúria",1015,1,"Z_C#prst::OnMyMobDead";
 	monster "job_prist",27,62,"Inveja",1015,1,"Z_C#prst::OnMyMobDead";
 	end;
 
-OnM3:
+Onm3:
 	monster "job_prist",24,72,"Arrogância",1015,1,"Z_C#prst::OnMyMobDead";
 	monster "job_prist",18,72,"Luxúria",1015,1,"Z_C#prst::OnMyMobDead";
 	monster "job_prist",30,72,"Preguiça",1015,1,"Z_C#prst::OnMyMobDead";
 	end;
 
-OnM4:
+Onm4:
 	monster "job_prist",21,82,"Gula",1015,1,"Z_C#prst::OnMyMobDead";
 	monster "job_prist",27,82,"Ganância",1015,1,"Z_C#prst::OnMyMobDead";
 	end;
 
-OnM5:
+Onm5:
 	monster "job_prist",24,92,"Desespero",1015,1,"Z_C#prst::OnMyMobDead";
 	monster "job_prist",18,92,"Desconfiança",1015,1,"Z_C#prst::OnMyMobDead";
 	monster "job_prist",30,92,"Medo",1015,1,"Z_C#prst::OnMyMobDead";
@@ -1163,8 +1170,8 @@ OnTouch_:
 		mes "[Irmão Peter]";
 		mes "Lembre-se...";
 		mes "Esse exame deve ser";
-		mes "completada dentro de";
-		mes "5 minutos. Boa Sorte ~";
+		mes "completado dentro de";
+		mes "5 minutos. Boa Sorte.";
 		close;
 	}
 	else if (BaseJob == Job_Acolyte){
@@ -1466,7 +1473,7 @@ OnTouch_:
 }
 
 job_prist,168,115,4	script	Senhor das Trevas#prst	DARK_LORD,8,1,{
-OnTouch:
+OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[Senhor das Trevas]";
 		mes "^330033Tudo é escuridão desgraça e desespero! Aqueles que você ama irão te trair, e tudo o que restará serão luto e fúria!^000000";
@@ -1523,7 +1530,7 @@ OnTouch:
 }
 
 job_prist,168,150,4	script	Bafomé#prst	4_BAPHOMET,8,1,{
-OnTouch:
+OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[Bafomé]";
 		mes "Odeio sacerdotes...";
@@ -1584,7 +1591,7 @@ OnTouch:
 }
 
 job_prist,168,180,4	script	prst2_1	WARPNPC,3,3,{
-OnTouch:
+OnTouch_:
 	if (BaseJob == Job_Priest) warp "job_prist",98,40;
 	else if (BaseClass == Job_Acolyte) {
 		warp "job_prist",98,40;

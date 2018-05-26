@@ -814,7 +814,7 @@ gef_tower,102,24,2	script	Bruxo Sombrio	4_M_JOB_WIZARD,{
 			close;
 		}
 		else {
-			WIZ_Q = 4;
+			set WIZ_Q,4;
 			mes "Você foi reprovado. Eu vou deixar você voltar de novo.. depois que tiver aprendido mais sobre as perguntas que eu fiz a você.";
 			next;
 			mes "[Raulel]";

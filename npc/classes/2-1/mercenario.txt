@@ -423,7 +423,7 @@ OnTouch_:
 			close;
 		case 2:
 			mes "[Mercenário Khai]";
-			if (Sex) {
+			if (Sex == SEX_MALE) {
 				mes "Você deve ter muita auto-confiança para ser um ladrão hoje em dia.";
 				next;
 				mes "[Mercenário Khai]";
@@ -615,8 +615,8 @@ OnTouch_:
 			next;
 			mes "[Mercenário Khai]";
 			mes "Vamos ver.";
-			mes "Seu nome é "+strcharinfo(0)+"...";
-			mes "Level de Classe "+JobLevel+"...";
+			mes "Seu nome é " + strcharinfo(0) + "...";
+			mes "Level de Classe " + JobLevel + "...";
 			next;
 			if (JobLevel > 48) {
 				mes "[Mercenário Khai]";
@@ -864,7 +864,7 @@ OnTouch_:
 					next;
 					mes "[O Anônimo]";
 					mes "Isso é tudo que tenho a dizer-lhe sobre habilidades de um mercenário.";
-					ASSIN_Q2 = 1;
+					set ASSIN_Q2,1;
 					next;
 					break;
 				case 2:
@@ -879,7 +879,7 @@ OnTouch_:
 					mes "[O Anônimo]";
 					mes "Eu não posso dar-lhe o melhor conselho do que em relação aos atributos.";
 					mes "Você deve pesquisar e ver qual atributo melhor e decidir que tipo de mercenário você quer ser..";
-					ASSIN_Q2 = 2;
+					set ASSIN_Q2,2;
 					next;
 					break;
 				case 3:
@@ -935,146 +935,146 @@ OnTouch_:
 			mes "1. O que aqui não é um pré-requisito da habilidade Tocaia?";
 			next;
 			if (select("Furtividade Lv 2:Lâminas Destruídoras Lv 5:Esconder Lv 2:Perícia com Mão Esquerda Lv 2") == 4)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "2. Envenenar Arma faz sua arma que elemento?";
 			next;
 			if (select("Veneno:Terra:Fogo:Vento") == 1)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "3. Qual é a função de level 4 de Perícia com Mão Esquerda?";
 			next;
-			if (select ("Recuperar 80% da redução de dano: Recuperar 90% da redução de dano: Aumentar 90% do dano: Aumentar 108% do dano") == 2)
+			if (select ("Reduzir 80% de dano: Reduzir 90% de dano: Aumentar 90% do dano: Aumentar 108% do dano") == 2)
 				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "4. Qual item você precisa usar quando você usa 'Névoa Tóxica'?";
 			next;
 			if (select("Gema Verde:Gema Azul:Gema Amarela:Gema Vermelha") == 4)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "5. Quando você aumenta Envenenar Arma para o level 5, qual nova habilidade irá aparecer?";
 			next;
 			if (select("Envenenar:Lâminas Destruídoras:Explosão Tóxica:Nuvem Tóxica") == 4)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "6. Que habilidade abaixo permite que você possa caminhar por ai despercebido?";
 			next;
 			if (select("Esconderijo:Recua:Furtividade:Chutar Areia") == 3)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "7. Qual é o requerimento para Névoa Tóxica?";
 			next;
-			if (select("Poisoned target.:Red Gemstone.:Remaing HP of Target.") == 2)
+			if (select("Envenenar.:Gema Vermelha.:HP restante do alvo.") == 2)
 				set .@assassin_t,.@assassin_t+10;
-			mes "[The Anonymous One]";
-			mes "8. Which monster is weak to a weapon with Vadon card (adds 20% damage on Fire property monster)?";
+			mes "[O Anônimo]";
+			mes "8. Qual monstro é fraco para uma arma com a carta de Vadon (adiciona 20% de dano no monstro da propriedade Fogo)? ";
 			next;
 			if (select("Chonchon de Aço:Deviruchi:Salgueiro Ancião:Bafomé") == 3)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "9. Quanto SP você gasta quando você bate dobrado usando uma adaga?";
 			next;
-			if (select("15: É uma habilidade passiva, por isso o uso SP é 0.:It's habilidade passiva, por isso o uso SP é 10.:54") == 2)
-				.@assassin_t += 10;
+			if (select("15: Está habilidade passiva, por isso o uso SP é 0.:Está habilidade passiva, por isso o uso SP é 10.:54") == 2)
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "10. Qual é o melhor tipo de espada para se usar em Bybalan?";
 			next;
 			if (select("Espada do Vento da Perfuração:Espada de Gelo:Espada de Terra:Espada de Fogo") == 1)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			break;
 		case 2:
 			mes "[O Anônimo]";
 			mes "1. Qual monstro dropa Katar com slot?";
 			next;
 			if (select("Besouro-Ladrão Macho:PecoPeco:Lobo do Deserto:Cobold") == 3)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "2. Qual carta abaixo pode ser introduzida em uma Jur?";
 			next;
 			if (select("Caramelo:Ghostring:Baphomet Jr.:DoppelGanger") == 1)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "3. Qual classe pode forjar armas elementais?";
 			next;
 			if (select("Mercador:Ferreiro:Gatuno:Sacerdote") == 2)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "4. Que arma abaixo não é uma arma da classe Katar?";
 			next;
 			if (select("Jamadhar:Jur:Katar:Gladius") == 4)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "5. Em Bybalan uma grande quantidade de monstros são de que elemento?";
 			next;
 			if (select("Água:Fogo:Vento:Terra") == 1)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "6. Qual monstro abaixo não pode ser domado e se tornar um lindo bichinho de estimação?";
 			next;
 			if (select("Poporing:Sapo de Roda:Lunático:Esporo Venenoso") == 2)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "7. Escolha o monstro que é fraco contra Fogo.";
 			next;
 			if (select("Cobold Espada:Cobold Maça:Cobold Martelo:Cobold Machado") == 4)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "8. Escolha um Katar não elemental.";
 			next;
 			if (select("Katar da Chama Impetuosa:Katar da Espinheira Empoeirada:Osso Afiad de Carniçal:Infiltrador") == 4)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "9. Escolha o monstro que não pertence ao grupo.";
 			next;
 			if (select("Poring:Ghostring:Creamy:Drops") == 3)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "10. Escolha um monstro não morto-vivo.";
 			next;
 			if (select("Drake:Megalodon:Esporo:Khalitzburg") == 3)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			break;
 		case 3:
 			mes "[O Anônimo]";
 			mes "1. Qual é a taxa de esquiva aumentada quando você tem a habilidade 'Aumentar Esquiva' no level 1?";
 			next;
 			if (select("30:40:160:20") == 1)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "2. Qual monstro pode detectar alguém que está invisível/escondido?";
 			next;
 			if (select("Rabo de Verme:Andre:Mumia:Esqueleto") == 2)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "3. Mercenários podem usar armas duplas.  Qual set das armas abaixo um Mercenário pode usar?";
 			next;
 			if (select("Jur e Maça:Damascus e Claymore:Damascus e Stiletto:Machado e Stiletto") == 3)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "4. Em qual cidade você vira Gatuno?";
 			next;
 			if (select("Prontera:Lutie:Alberta:Morocc") == 4)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "5. Qual carta tem nada para fazer com Agilidade?";
 			next;
 			if (select("Carta Baphomet Jr.:Carta Sussurro:Carta Besouro-Ladrão Macho:Carta Chonchon") == 2)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "6. O que faz os Mercenários tão especiais?";
 			next;
 			if (select("Excelente habilidade de canto:Excelente habilidade de ação:Excelente habilidade de dança:Excelente habilidade de esquiva") == 4)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "7. Quando um Mercenário alcança Nível de Classe 50, qual é o bonus adicionado que ele/ela recebe em Agilidade?";
 			next;
 			if (select("7:8:9:10") == 4) 
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "8. Qual equipamento não pode ser usado por um Mercenário?";
 			next;
 			if (select("Adaga:Elmo:Sapatos:Broche") == 2)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			mes "[O Anônimo]";
 			mes "9. Quando um Aprendiz quer se tornar um Gatuno, quais cogumelos ele/ela precisa roubar?";
 			next;
@@ -1090,7 +1090,7 @@ OnTouch_:
 			mes "10. Qual carta abaixo é inútil para um Mercenário?";
 			next;
 			if (select("Carta Ghostring:Carta Salgueiro Ancião:Carta Esqueleto Soldado:Carta Cobold") == 2)
-				.@assassin_t += 10;
+				set .@assassin_t,.@assassin_t+10;
 			break;
 		}
 		if (ASSIN_Q2 == 3) {
@@ -1113,7 +1113,7 @@ OnTouch_:
 				close;
 			}
 			else {
-				ASSIN_Q2 = 4;
+				set ASSIN_Q2,4;
 				mes "Isso significa que você não passou!";
 				next;
 				mes "[O Anônimo]";
@@ -1131,7 +1131,7 @@ OnTouch_:
 			next;
 			mes "[O Anônimo]";
 			mes "Vamos ver...";
-			mes "Você marcou "+.@assassin_t+" pontos...";
+			mes "Você marcou " + .@assassin_t + " pontos...";
 			if (.@assassin_t > 80) {
 				set ASSIN_Q2,5;
 				changequest 8002,8003;
@@ -1143,7 +1143,7 @@ OnTouch_:
 				close;
 			}
 			else {
-				ASSIN_Q2 = 4;
+				set ASSIN_Q2,4;
 				mes "Você não!";
 				next;
 				mes "[O Anônimo]";
@@ -1214,7 +1214,7 @@ OnTouch_:
 	}
 	if (ASSIN_Q == 1 && ASSIN_Q2 == 5) {
 		mes "[Barcardi]";
-		mes strcharinfo(0)+"...";
+		mes "" + strcharinfo(0) + "...";
 		mes "Você passou no teste?";
 		next;
 		mes "[Barcardi]";
@@ -1353,7 +1353,7 @@ OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
 		mapannounce "in_moc_16","Você parece estar indo muito bem!",bc_map;
-		ASSIN_Q = 3;
+		set ASSIN_Q,3;
 		changequest 8003,8004;
 		donpcevent "timestopper#1::OnEnable";
 		donpcevent "Keeper of the Door#ASN::OnEnable";
@@ -1367,8 +1367,8 @@ OnMyMobDead:
 	end;
 
 OnMyMobDead2:
-	mapannounce "in_moc_16",strcharinfo(0)+"! Você cometeu um erro! Eu estou lhe trazendo de volta!",bc_map;
-	ASSIN_Q = 2;
+	mapannounce "in_moc_16",strcharinfo(0) + "! Você cometeu um erro! Eu estou lhe trazendo de volta!",bc_map;
+	set ASSIN_Q,2;
 	warp "in_moc_16",19,161;
 	donpcevent "Beholder#ASNTEST::OnReset";
 	end;
@@ -1424,7 +1424,7 @@ OnTimer184000:
 OnTimer185000:
 	mapannounce "in_moc_16","O tempo acabou!",bc_map;
 	mapannounce "in_moc_16","Você só queria desperdiçar seu tempo. Terá que tentar novamente!",bc_map;
-	//ASSIN_Q = 2;
+	//set ASSIN_Q,2;
 	end;
 
 OnTimer186000:
@@ -1574,7 +1574,7 @@ OnDisable:
 OnMyMobDead:
 	mapannounce "in_moc_16","Ei, o que foi isso?! Eu lhe disse para não monstar nenhum monstro!",bc_map;
 	mapannounce "in_moc_16","Eu estou trazendo você de volta...",bc_map;
-	ASSIN_Q = 3;
+	set ASSIN_Q,3;
 	warp "in_moc_16",87,102;
 	killmonsterall "in_moc_16";
 	end;
@@ -1638,7 +1638,7 @@ OnTouch_:
 	mes "[Thomas]";
 	mes "Chega de conversa, vamos ver no que você capaz...";
 	close2;
-	ASSIN_Q = 4;
+	set ASSIN_Q,4;
 
 	monster "in_moc_16",81,77,"Múmia",1041,1,"timestopper#1::OnMyMobDead";
 	monster "in_moc_16",82,77,"Múmia",1041,1,"timestopper#1::OnMyMobDead";
@@ -1703,7 +1703,7 @@ OnTouch_:
 	}
 	else {
 		mapannounce "in_moc_16",strcharinfo(0)+" entrou sala de Lider dos Mercenários.",bc_map;
-		savepoint "in_moc_16",181,183;
+		savepoint "in_moc_16",181,183,1,1;
 		donpcevent "Lider dos Mercenários#ASN1::OnCast";
 		warp "in_moc_16",167,113;
 		end;
@@ -1711,8 +1711,8 @@ OnTouch_:
 }
 
 in_moc_16,167,110,0	script	Lider dos Mercenários#ASN1	-1,3,1,{
-OnTouch:
-	savepoint "in_moc_16",167,110;
+OnTouch_:
+	savepoint "in_moc_16",167,110,1,1;
 	mes "[Lider dos Mercenários]";
 	mes "Bem-vindo.";
 	mes "Este minha sala, o lugar mais profundo do clã mercenário.";
@@ -1732,10 +1732,11 @@ OnCast:
 }
 
 in_moc_16,149,80,4	script	Lider dos Mercenários#ASN2	1_M_MOC_LORD,1,1,{
-OnTouch:
-	savepoint "morocc",100,100;
+	end;
+OnTouch_:
+	savepoint "morocc",100,100,1,1;
 	if (ASSIN_Q == 7 && BaseJob == Job_Thief) {
-		ASSIN_Q = 8;
+		set ASSIN_Q,8;
 		mes "[Lider dos Mercenários]";
 		mes "Bem-vindo.";
 		mes "Eu peço desculpas por fazer você ir através do labirinto.";
@@ -1766,7 +1767,7 @@ OnTouch:
 			next;
 			switch(select("Por vingança.:Por dinheiro.:Eu quero viajar.")) {
 			case 1:
-				ASSIN_Q = 8;
+				set ASSIN_Q,8;
 				mes "[Lider dos Mercenários]";
 				mes "Vingança...";
 				mes "Sim, eu entendo.";
@@ -1781,7 +1782,7 @@ OnTouch:
 				next;
 				break;
 			case 2:
-				ASSIN_Q = 9;
+				set ASSIN_Q,9;
 				mes "[Lider dos Mercenários]";
 				mes "Razões financeiras...";
 				mes "Eu não vou negar que todos nós precisamos de dinheiro para viver.";
@@ -1792,7 +1793,7 @@ OnTouch:
 				next;
 				break;
 			case 3:
-				ASSIN_Q = 10;
+				set ASSIN_Q,10;
 				mes "[Lider dos Mercenários]";
 				mes "Boa ideia Viajando ao redor do mundo vão permitir que você ampliar suas experiências.";
 				next;
@@ -1821,7 +1822,7 @@ OnTouch:
 			next;
 			switch(select("Eu gosto da solidão.:Fazer riquesas.:Por aparência.")) {
 			case 1:
-				ASSIN_Q = 11;
+				set ASSIN_Q,11;
 				mes "[Lider dos Mercenários]";
 				mes "Você chegou no ponto...";
 				mes "Estamos só e sempre estaremos sozinhos....";
@@ -1835,14 +1836,14 @@ OnTouch:
 				next;
 				break;
 			case 2:
-				ASSIN_Q = 12;
+				set ASSIN_Q,12;
 				mes "[Lider dos Mercenários]";
 				mes "Bem, eu não posso negar isso, precisamos de dinheiro para ganhar a vida.";
 				mes "Mas você não acha que devemos buscar algo ainda mais importante do que o dinheiro?";
 				next;
 				break;
 			case 3:
-				ASSIN_Q = 13;
+				set ASSIN_Q,13;
 				mes "[Lider dos Mercenários]";
 				mes "Estilo e aparência é apenas superficial.";
 				mes "É triste que muitas pessoas pensam dessa maneira....";
@@ -1866,19 +1867,18 @@ OnTouch:
 			mes "Ao contrário da classe Gaturno, a classe Mercenário não permite a auto-indulgência.";
 			mes "Diga-me a motivo você treinar sem parar.";
 			next;
-			switch(select("Ampliar meus Habilidades.:É um objetivo meu.:For.")) {
+			switch (select("Para ampliar minhas habilidades. É um objetivo meu. Para melhoria espiritual.")) {
 			case 1:
-				ASSIN_Q = 14;
-				mes "[Lider dos Mercenários]";
-				mes "Habilidades de aprendizagem vem naturalmente com o trabalho duro.";
-				mes "Mas não acho que de habilidades como o melhor valor de seu treinamento...";
+				set ASSIN_Q,14;
+				mes "[Guildmaster]";
+				mes "Aprender habilidades vem naturalmente com o trabalho de Assassino. Mas não pense em habilidades como o melhor valor de seu treinamento.";
 				next;
 				mes "[Lider dos Mercenários]";
 				mes "Você não ficará satisfeito em se tornar um mercenário, se você acha que isso...";
 				next;
 				break;
 			case 2:
-				ASSIN_Q = 15;
+				set ASSIN_Q,15;
 				mes "[Lider dos Mercenários]";
 				mes "É um objetivo seu?";
 				mes "Bem, acho que você tem que ter objetivos...";
@@ -1897,7 +1897,7 @@ OnTouch:
 				next;
 				break;
 			case 3:
-				ASSIN_Q = 16;
+				set ASSIN_Q,16;
 				mes "[Lider dos Mercenários]";
 				mes "Boa ideia ...";
 				mes "Essa é uma boa maneira de melhorar a si mesmo eu vi muitas pessoas que sabem como ser forte fisicamente.";
@@ -1932,14 +1932,14 @@ OnTouch:
 			next;
 			switch(select("Gostaria de subir de nível rápido.:Explorar minhas habilidades.:Ir a novos lugares.")) {
 			case 1:
-				.@assassin_sangdam += 10;
+				set .@assassin_sangdam,.@assassin_sangdam+10;
 				mes "[Lider dos Mercenários]";
 				mes "Não faça dessa forma, é imprudente ...";
 				mes "Ser um mercenário nunca faz de você uma pessoa diferente e não confiar na sorte..";
 				next;
 				break;
 			case 2:
-				.@assassin_sangdam += 5;
+				set .@assassin_sangdam,.@assassin_sangdam+10;
 				mes "[Lider dos Mercenários]";
 				mes "É bom conhecer a si mesmo eu posso entender que você vai ser animar com a grande mudança em sua capacidade.";
 				next;
@@ -1966,14 +1966,14 @@ OnTouch:
 			next;
 			switch(select("Meus amigos.:Meu Clã.:Uma pessoa amada.")) {
 			case 1:
-				.@assassin_sangdam += 5;
+				set .@assassin_sangdam,.@assassin_sangdam+5;
 				mes "[Lider dos Mercenários]";
 				mes "Eu vejo ...";
 				mes "Aprecio as pessoas que se preocupam com você, mesmo quando você esteja sozinho.";
 				next;
 				break;
 			case 2:
-				.@assassin_sangdam += 5;
+				set .@assassin_sangdam,.@assassin_sangdam+5
 				mes "[Lider dos Mercenários]";
 				mes "Grande...";
 				mes "Camaradas por quem você morreria para...";
@@ -1988,13 +1988,14 @@ OnTouch:
 				mes "É melhor aceitar que isso é parte da natureza humana..";
 				next;
 				mes "[Lider dos Mercenários]";
-				mes "Mas você nunca deve revelar-lhe o lado mercenário de sua vida.";
-				mes "Não importa o que é preciso..";
-				next;
-				mes "[Lider dos Mercenários]";
-				mes "Ame o seu amado para sempre, mesmo que você não pode expressar abertamente.";
-				mes "Às vezes, a vida não permite que você para encontrar o amor verdadeiro mais do que uma vez..";
-				next;
+				if (Sex == SEX_MALE)
+					mes "Mas você nunca deve revelar a ela o lado Assassino da sua vida. Não importa o que for preciso.";
+				else
+					mes "Mas você nunca deve revelar a ele o lado Assassino da sua vida, não importa o que for preciso.";
+					next;
+					mes "[Guildmaster]";
+					mes "Ame seu amado para sempre, mesmo que você não possa expressá-lo abertamente. Às vezes, a vida não permite que você encontre o amor verdadeiro mais de uma vez.";
+					next;
 				break;
 			}
 			break;
@@ -2005,7 +2006,7 @@ OnTouch:
 			next;
 			switch(select("Lugares para subir de Level?:Objetivos do Mercenário?:Onde Ganhar dinheiro?")) {
 			case 1:
-				.@assassin_sangdam += 5;
+				set .@assassin_sangdam,.@assassin_sangdam+5
 				mes "[Lider dos Mercenários]";
 				mes "Tudo depende de sua mente.";
 				mes "Qualquer lugar pode ser o melhor para o nível máximo de acordo com seu estado de espírito..";
@@ -2025,7 +2026,7 @@ OnTouch:
 				next;
 				break;
 			case 3:
-				.@assassin_sangdam += 10;
+				set .@assassin_sangdam,.@assassin_sangdam+10;
 				mes "[Lider dos Mercenários]";
 				mes "Oh meu senhor ...";
 				mes "Você está planejando se tornar um mercenário, a fim de ganhar dinheiro?";
@@ -2052,7 +2053,7 @@ OnTouch:
 		next;
 		enablenpc "[Huey]";
 		enablenpc "[Khai]";
-		enablenpc "[O Anônimo One]";
+		enablenpc "[O Anônimo]";
 		enablenpc "[Barcardi]";
 		enablenpc "[Beholder]";
 		enablenpc "[Thomas]";
@@ -2061,11 +2062,11 @@ OnTouch:
 		mes "Estou aqui.";
 		next;
 		mes "[Lider dos Mercenários]";
-		mes "Gostaria de ouvir a sua opinião sobre "+strcharinfo(0)+" sobre o teste de mudança de classe.";
+		mes "Gostaria de ouvir a sua opinião sobre " + strcharinfo(0) + " sobre o teste de mudança de classe.";
 		next;
 		mes "[O Anônimo]";
 		mes "Ah sim ...";
-		mes "Eu acho "+strcharinfo(0)+" que tem potencial.";
+		mes "Eu acho " + strcharinfo(0) + " que tem potencial.";
 		next;
 		mes "[Lider dos Mercenários]";
 		mes "Bem ...";
@@ -2172,7 +2173,7 @@ OnTouch:
 			mes "Por favor, escolha uma arma como um presente.";
 			next;
 			mes "[Lider dos Mercenários]";
-			mes "Você pode escolher um Jur, Katar, Main Gauche, ou um Gladius.";
+			mes "Você pode escolher um Jur, Katar, Main Gauche, ou uma Gladius.";
 			mes "Como um mestre, eu amo todos eles..";
 			next;
 			switch(select("Jur:Katar:Main Gauche:Gladius")) {
@@ -2197,9 +2198,9 @@ OnTouch:
 				break;
 			case 4:
 				mes "[Lider dos Mercenários]";
-				mes "O Gladius ...";
-				mes "Ele é utilizado para governar o mercado de arma mercenário.";
-				mes "Por favor, cuide bem dele...";
+				mes "Uma Gladius ...";
+				mes "Ele é utilizado para governar o mercado de arma mercenária.";
+				mes "Por favor, cuide bem dela...";
 				getitem 1220,1; //Gladius_
 			}
 			set ASSIN_Q,17;
@@ -2207,7 +2208,6 @@ OnTouch:
 			next;
 		}
 		else {
-			ASSIN_Q = 17;
 			mes "[Lider dos Mercenários]";
 			mes "Bem, eu falei demais.";
 			mes "Por favor, tome isso primeiro.";
@@ -2238,9 +2238,9 @@ OnTouch:
 		mes "Ao receber este sinal, Huey vai promovê-lo a um mercenário.";
 		next;
 		mes "[Lider dos Mercenários]";
-		mes "Você, "+strcharinfo(0)+", optou por viver como um mercenário.";
+		mes "Você, " + strcharinfo(0) + ", optou por viver como um mercenário.";
 		mes "Que possa aprender com nossos caminhos, e ser um exemplo honra para os outros";
-		savepoint "morocc",100,100;
+		savepoint "morocc",100,100,1,1;
 		getitem 1008,1; //Frozen_Heart
 		changequest 8006,8007;
 		next;
@@ -2248,7 +2248,7 @@ OnTouch:
 		mes "Ok, todos vocês podem voltar para suas posições vou enviar-lhe para a entrada....";
 		disablenpc "[Huey]";
 		disablenpc "[Khai]";
-		disablenpc "[O Anônimo One]";
+		disablenpc "[O Anônimo]";
 		disablenpc "[Barcardi]";
 		disablenpc "[Beholder]";
 		disablenpc "[Thomas]";
@@ -2269,7 +2269,7 @@ OnTouch:
 		end;
 	}
 	else if (ASSIN_Q > 7 && ASSIN_Q < 17) {
-		ASSIN_Q = 7;
+		set ASSIN_Q;7;
 		mes "[Lider dos Mercenários]";
 		mes "Porque você pressionou \"Cancelar\" durante o processo.";
 		mes "Quer mudar o sua classe ou o quê?";
@@ -2302,7 +2302,7 @@ in_moc_16,186,81,1	script	Assistente do Mestre	1_M_JOBTESTER,1,1,{
 }
 
 in_moc_16,170,90,0	script	info 1	-1,{
-OnTouch:
+OnTouch_:
 	mes "[Lider dos Mercenários]";
 	mes "Huh.";
 	mes "Agora, esse lugar é bloqueado.";
@@ -2311,7 +2311,7 @@ OnTouch:
 }
 
 in_moc_16,153,85,0	script	info 2	-1,1,1,{
-OnTouch:
+OnTouch_:
 	mes "[Lider dos Mercenários]";
 	mes "Você está ficando mais quente.";
 	mes"Você está quase lá.";
@@ -2320,14 +2320,14 @@ OnTouch:
 }
 
 in_moc_16,160,85,0	script	info 3	-1,1,1,{
-OnTouch:
+OnTouch_:
 	mes "[Lider dos Mercenários]";
 	mes "Esse lugar está bloqueado. ";
 	close;
 }
 
 in_moc_16,175,89,0	script	info 4	-1,1,1,{
-OnTouch:
+OnTouch_:
 	mes "[Lider dos Mercenários]";
 	mes "Umm...";
 	mes "Você está indo para o meu assistente.";
@@ -2336,7 +2336,7 @@ OnTouch:
 }
 
 in_moc_16,164,88,0	script	info 5	-1,{
-OnTouch:
+OnTouch_:
 	mes "[Lider dos Mercenários]";
 	mes "Muito bem ...";
 	mes "Eu posso sentir seus passos perto de mim.";
@@ -2344,7 +2344,7 @@ OnTouch:
 }
 
 in_moc_16,149,95,0	script	info 6	-1,1,1,{
-OnTouch:
+OnTouch_:
 	mes "[Lider dos Mercenários]";
 	mes "Hmm. Nada mau.";
 	mes "Você está quase aqui.";
@@ -2352,14 +2352,14 @@ OnTouch:
 }
 
 in_moc_16,180,101,0	script	info 7	-1,1,1,{
-OnTouch:
+OnTouch_:
 	mes "[Lider dos Mercenários]";
 	mes "Eu acho que você está indo no caminho errado.";
 	close;
 }
 
 in_moc_16,186,107,0	script	info 8	-1,1,1,{
-OnTouch:
+OnTouch_:
 	mes "[Lider dos Mercenários]";
 	mes "No sentido de orientação, não é?";
 	close;
@@ -2374,7 +2374,7 @@ OnInit:
 }
 in_moc_16,156,87,1	duplicate(#moc_assin_dup)	[Huey]	1_M_JOBTESTER
 in_moc_16,156,85,1	duplicate(#moc_assin_dup)	[Khai]	4_M_JOB_ASSASSIN
-in_moc_16,156,83,1	duplicate(#moc_assin_dup)	[O Anônimo One]	1_M_MOC_LORD
+in_moc_16,156,83,1	duplicate(#moc_assin_dup)	[O Anônimo]	1_M_MOC_LORD
 in_moc_16,156,81,2	duplicate(#moc_assin_dup)	[Barcardi]	4_F_JOB_ASSASSIN
 in_moc_16,156,79,1	duplicate(#moc_assin_dup)	[Beholder]	2_M_THIEFMASTER
 in_moc_16,156,77,1	duplicate(#moc_assin_dup)	[Thomas]	2_M_THIEFMASTER
