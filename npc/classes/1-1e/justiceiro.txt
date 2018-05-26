@@ -70,7 +70,7 @@ que_ng,152,167,3	script	Master Miller	901,{
 			mes "Ótimo, ótimo.";
 			mes "Muito bem, então vamos começar. Leve esta carta para o Sr. Sábio Chifre de Touro, em Payon.";
 			mes "Ele é um xamã que irá julgar se você é ou não qualificado para se tornar um Justiceiro.";
-			GUNS_Q = 1;
+			set GUNS_Q,1;
 			setquest 6020;
 			close;
 		}
