@@ -78,7 +78,6 @@ comodo,171,137,1	script	Haith#um	92,{
 	next;
 	if (select("Pagar 1,000 Zenys:Recusar a pagar") == 1) {
 		if (Zeny > 999) {
-			Zeny -= 1000;
 			set Zeny, Zeny-1000;
 			mes "[Haith]";
 			mes "Hahahaha! Você é o cara!";

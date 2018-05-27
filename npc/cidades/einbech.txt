@@ -85,7 +85,7 @@ einbech,172,113,4	script	Nemuk#ein	855,{
 
 einbech,197,139,4	script	JOven#air2	855,{
 	mes "[Heinz]";
-	mes "Uau ...";
+	mes "Uau...";
 	mes "Um aventureiro de";
 	mes "Rune-Midgard, certo?";
 	mes "O que o traz aqui?";
@@ -255,7 +255,7 @@ einbech,157,215,3	script	Gerente da Estação#ei	852,{
 
 einbech,151,168,3	script	Tollaf#ein	855,{
 	mes "[Tollaf]";
-	mes "Ah ...!";
+	mes "Ah...!";
 	mes "Isso está me matando!";
 	mes "Eu não tenho dinheiro";
 	mes "mas eu não quero";
@@ -297,7 +297,7 @@ einbech,93,139,5	script	Raust#ein	847,{
 	mes "[Raust]";
 	mes "Por que tudo";
 	mes "está bom ainda em";
-	mes "Einbroch ?! Eu odeio isso!";
+	mes "Einbroch?! Eu odeio isso!";
 	mes "^333333*Grumble*^000000";
 	close;
 }
@@ -345,7 +345,7 @@ einbech,149,154,3	script	Mjunia#ein	850,{
 einbech,130,253,1	script	Ekuri#ein	848,{
 	mes "[Ekuri]";
 	mes "Yo-heave-ho!";
-	mes "Yo-heave-ho ~!";
+	mes "Yo-heave-ho~!";
 	next;
 	mes "[Ekuri]";
 	mes "O que estou fazendo aqui?";
@@ -758,7 +758,7 @@ einbech,46,107,6	script	Shena#ein::EinMonsters	846,{
 		}
 	case 2:
 		mes "[Shena]";
-		mes "Luda ...";
+		mes "Luda...";
 		mes "Você não viveu o suficiente";
 		mes "para ser experiente como";
 		mes "eu e não aprendeu";
@@ -899,17 +899,17 @@ einbech,148,242,5	script	Jung#ein	855,{
 		}
 	case 2:
 		mes "[Jung]";
-			mes "Eu entendo se você estiver";
-			mes "com tanta pressa. Apesar,";
-			mes "se você for novo por";
-			mes "aqui, você deveria aprender tanto";
-			mes "quanto você puder antes de";
-			mes "entrar em qualquer calabouço.";
-			next;
-			mes "[Jung]";
-			mes "Certo então,";
-			mes "tome cuidado em suas";
-			mes "aventuras, tudo bem?";
+		mes "Eu entendo se você estiver";
+		mes "com tanta pressa. Apesar,";
+		mes "se você for novo por";
+		mes "aqui, você deveria aprender tanto";
+		mes "quanto você puder antes de";
+		mes "entrar em qualquer calabouço.";
+		next;
+		mes "[Jung]";
+		mes "Certo então,";
+		mes "tome cuidado em suas";
+		mes "aventuras, tudo bem?";
 		close;
 	}
 }

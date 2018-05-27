@@ -1088,7 +1088,7 @@ geffen_in,39,127,2	script	Vidente	704,{
 			}
 			break;
 		case 4:
-		mes "Querendo um romance, eh? Sempre bom ter novas emoções.";
+			mes "Querendo um romance, eh? Sempre bom ter novas emoções.";
 			next;
 			mes "[Vidente]";
 			mes "Estranho, eu vejo um triângulo amoroso em seu futuro. Não, espere! Na verdade...";

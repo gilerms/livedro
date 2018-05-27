@@ -1117,13 +1117,13 @@ aldeba_in,79,161,7	script	Funcionária da Kafra#reserve1	4_F_KAFRA3,{
 			mes "Pontos de Reserva Especial suficiente";
 			mes "para trocar por essa";
 			mes "recompensa. Você precisa de pelo menos";
-			mes "^0000FF"+.@points +"^000000 pontos.";
+			mes "^0000FF"+ .@points +"^000000 pontos.";
 			close;
 		}
 		.@total = .@total - .@select_price[.@index_points];
 		mes "Depois de receber a";
 		mes "recompensa, você terá";
-		mes "^AC0000"+.@total+"^000000 Reserva Especial";
+		mes "^AC0000"+ .@total + "^000000 Reserva Especial";
 		mes "Você";
 		mes "gostaria de resgatar seus";
 		mes "pontos com esta recompensa?";
@@ -1135,7 +1135,7 @@ aldeba_in,79,161,7	script	Funcionária da Kafra#reserve1	4_F_KAFRA3,{
 			else {
 				mes "[Funcionária da Kafra]";
 				if (.@choose_sub_select == 0) {
-					mes "^0000FFPrimeira chance da loteria!! ^000000";
+					mes "^0000FFPrimeira chance da loteria!!^000000";
 					mes "É hora de testar";
 					mes "sua sorte. Prepare-se!";
 				}
@@ -1291,7 +1291,7 @@ aldeba_in,88,161,3	script	Funcionária da Kafra#reserve2	4_F_KAFRA3,{
 	mes "[Funcionária da Kafra]";
 	mes "Você quer usar seus pontos?";
 	next;
-	if (select("Sim, eu quero","Talvez na próxima") == 1 ) {
+	if (select( "Sim, eu quero","Talvez na próxima" ) == 1) {
 		mes "[Funcionária da Kafra]";
 		if ((MaxWeight - Weight) < 11000) {
 			mes ".... Oh querida ...você está carregando mitas coisas ...?";
@@ -1346,15 +1346,15 @@ aldeba_in,88,161,3	script	Funcionária da Kafra#reserve2	4_F_KAFRA3,{
 				if (.@choose_prize < 15) {
 					getitem 501,150;// Poção Vermelha
 					mes "Que pena!";
-					mes "Você recebeu o quarto prêmio !!";
+					mes "Você recebeu o quarto prêmio!!";
 					mes "O prêmio é ^00FF00150 Poções Vermelhas~^000000";
 					next;
 					mes "[Funcionária da Kafra]";
-					mes "Whoa ~ 150 poções! É o suficiente para compartilhar com seus amigos~";
+					mes "Whoa~ 150 poções! É o suficiente para compartilhar com seus amigos~";
 				}
 				else if (.@choose_prize < 18) {
 					getitem 645,15;// Poção de Concentração
-					mes "O terceiro ~~";
+					mes "O terceiro~~";
 					mes "O 3º prêmio!";
 					mes "O prêmio é ^00FF0015Poção da Concentração~^000000";
 					next;
@@ -1364,9 +1364,9 @@ aldeba_in,88,161,3	script	Funcionária da Kafra#reserve2	4_F_KAFRA3,{
 				}
 				else if (.@choose_prize < 20) {
 					getitem 505,3;// Poção Azul
-					mes "O segundo ~~";
-					mes "O 3º prêmio ~~";
-					mes "O prêmio é ^ 00FF003 Poções Azuis~^000000";
+					mes "O segundo~~";
+					mes "O 3º prêmio~~";
+					mes "O prêmio é ^00FF003 Poções Azuis~^000000";
 					next;
 					mes "[Funcionária da Kafra]";
 					mes "Tente estes quando seu MP estiver baixo ~";
@@ -1413,8 +1413,8 @@ aldeba_in,88,161,3	script	Funcionária da Kafra#reserve2	4_F_KAFRA3,{
 				else if (.@choose_prize == 20) {
 					getitem 608,1;// Semente de Yggdrasil
 					getitem 607,1;// Fruto de Yggdrasil
-					mes "Whoa ~ !! O primeiro ... O primeiro !!!";
-					mes "Parabéns ~~ Você recebeu o primeiro prêmio ~";
+					mes "Whoa~!! O primeiro ... O primeiro !!!";
+					mes "Parabéns~~ Você recebeu o primeiro prêmio ~";
 					mes "O prêmio é ^00FF001 Fruto de Yggdrasil^000000";
 					mes "O prêmio é ^00FF001 Semente Yggdrasil^000000";
 					next;
@@ -1450,7 +1450,7 @@ aldeba_in,88,161,3	script	Funcionária da Kafra#reserve2	4_F_KAFRA3,{
 					mes "O prêmio é ^00FF0010 Geléia Real^000000";
 					next;
 					mes "[Funcionária da Kafra]";
-					mes "What a gift set ~";
+					mes "What a gift set~";
 					mes "Estes são alimentos muito saudáveis, então~";
 				}
 				else if (.@choose_prize == 20) {

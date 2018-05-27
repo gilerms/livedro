@@ -164,7 +164,7 @@ hu_in01,23,311,4	script	Artigos de Festa	898,{
 
 hu_in01,18,94,0	script	Assistente Temporário#1	94,{
 	mes "[Luda]";
-	mes "Bem-vind"+(Sex?"o":"a")+" ao";
+	mes "Bem-vindo ao";
 	mes "Escritório da Expedição ao Templo.";
 	mes "Eu sou Luda, um assistente";
 	mes "temporário. Meu trabalho é";

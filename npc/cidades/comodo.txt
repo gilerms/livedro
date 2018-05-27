@@ -26,7 +26,7 @@
 
 // Interior de Comodo
 //============================================================
-cmd_in02,73,81,4	script	Martine#cmd	48,{,
+cmd_in02,73,81,4	script	Martine#cmd	48,{
 	mes "[Martine]";
 	mes "Jogos de azar...? Os jogos";
 	mes "aqui em Comodo conhecidos como";
@@ -69,7 +69,7 @@ cmd_in02,48,55,4	script	Patinação#cmd	51,{
 
 cmd_in02,64,43,4	script	Roberto#cmd	709,{
 	mes "[Roberto]";
-	mes "Heh heh heh ...";
+	mes "Heh heh heh...";
 	mes "O que é uma crédula";
 	mes "cara. Eu peguei o dinheiro dele";
 	mes "tão facilmente! Quero dizer,";
@@ -109,7 +109,7 @@ cmd_in02,178,92,4	script	Shalone#cmd	101,{
 
 cmd_in02,178,86,4	script	Stonae#cmd	98,{
 	mes "[Stonae]";
-	mes "N-não ...";
+	mes "N-não...";
 	mes "Eu perdi de novo?!";
 	mes "Mas eu não posso desistir";
 	mes "Eu vou ficar tentando";
@@ -155,7 +155,7 @@ cmd_in02,174,126,4	script	Loyar#cmd	83,{
 	switch(rand(1,3)) {
 	case 1:
 		mes "[Loyar]";
-		mes "Hmm ... Talvez seja melhor";
+		mes "Hmm... Talvez seja melhor";
 		mes "ir para casa. Eu não quero";
 		mes "gastar todo o dinheiro que";
 		mes "eu reservei neste jogo";
@@ -298,7 +298,7 @@ cmd_fild07,192,58,4	script	Rahasu#cmd	100,{
 	mes "Farol de Paros, eu vou";
 	mes "lhe contar.";
 	next;
-	if (select("Farol de Paros?: Cancelar.") == 1) {
+	if (select("Farol de Paros?:Cancelar.") == 1) {
 		mes "[Rahasu]";
 		mes "Por muitos anos, esse";
 		mes "farol guiou muitos";

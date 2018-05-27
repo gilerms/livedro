@@ -513,11 +513,11 @@ lhz_in02,201,181,7	script	Safwat Fahmy	853,{
 	mes "Passar o dia todo sem estar sóbrio.";
 	next;
 	mes "[Safwat Fahmy]";
-	mes "It looks like that";
-	mes "today I'll be heading";
-	mes "out to the bar again...";
-	mes "I just wish there were";
-	mes "someplace quieter to drink.";
+	mes "Parece com isso";
+	mes "hoje eu estarei indo";
+	mes "para o bar novamente ...";
+	mes "Eu só queria que houvesse";
+	mes "em algum lugar mais silencioso para beber.";
 	close;
 }
 
@@ -1375,7 +1375,7 @@ lhz_in01,217,121,3	script	Mecânico#li_01	851,{
 		mes "Ei, você não trabalha...";
 		mes "G-guardas! Corram!";
 		mes "Tem alguém aqui!";
-		emotion ET_SURPRISE;;
+		emotion ET_SURPRISE;
 		close2;
 		warp "lhz_in01",33,224;
 		end;
@@ -1461,13 +1461,13 @@ lhz_in01,24,140,3	script	Guarda Regenschirm#40	4_M_LGTGUARD,{
 			warp "lhz_dun01",149,285;
 			end;
 		}
-			mes "[Guarda Regenschirm]";
-			mes "Sinto muito mas não posso deixar ninguém passar sem utorização especial.";
-			mes "Apenas membros com Passaportes para o Laboratório podem ir ao subterrâneo.";
+		mes "[Guarda Regenschirm]";
+		mes "Sinto muito mas não posso deixar ninguém passar sem utorização especial.";
+		mes "Apenas membros com Passaportes para o Laboratório podem ir ao subterrâneo.";
 		close;
 	}
-		mes "[Guarda Regenschirm]";
-		mes "Obrigado e tenha um bom dia.";
+	mes "[Guarda Regenschirm]";
+	mes "Obrigado e tenha um bom dia.";
 	close;
 }
 

@@ -1039,8 +1039,7 @@ jawaii_in,41,106,3	script	Cliente#Cage	98,{
 	mes "Beba, beba...!";
 	mes "Coma, coma...!!";
 	mes "Junte-se a mim,";
-	mes (Sex ? "meu irmão":"minha irmã");
-	mes "de solteirice!";
+	mes "Irmão";
 	next;
 	mes "[Cage]";
 	mes "Somos livres...!";
@@ -1156,8 +1155,7 @@ prt_in,173,13,4	script	Cliente#SoloHan	86,{
 				mes "Oh...";
 				mes "Cara.";
 				mes "Não me surpreende que você seja solteiro. Não reconhece uma boa oportunidade nem quando ela está bem na sua frente.";
-				close2;
-				end;
+				close;
 			}
 			set .@jaw_roof,.@jaw_roof+3;
 			mes "[SoloHan]";
@@ -1187,7 +1185,8 @@ prt_in,173,13,4	script	Cliente#SoloHan	86,{
 		mes "Ah rapaz!";
 		mes "Saia da minha frente!";
 		if (Sex == SEX_MALE) {
-			mes "Você parece um daqueles maridos que só obedece a mulher!";		}
+			mes "Você parece um daqueles maridos que só obedece a mulher!";
+		}
 		else {
 			next;
 			mes "[SoloHan]";

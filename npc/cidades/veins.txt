@@ -604,7 +604,7 @@ ve_in,239,135,5	script	Cidadão#ve27	946,{
 	mes "licores aos meus clientes para que possam matar a sede.";
 	mes "Ver seus sorrisos bêbados alegra meu dia.";
 	close;
-	close;
+
 }
 
 ve_in,232,124,5	script	Cidadão#ve28	943,{

@@ -37,7 +37,7 @@ morocc,150,120,5	script	Soldado de Morroc#01::MocSoldier	707,3,3,{
 	mes "Essa é uma área restrita. Você não pode se aproximar!";
 	close;
 
-OnTouch:
+OnTouch_:
 	mes "[Soldado de Morroc]";
 	mes "Ei, você! Pare ai.";
 	next;
@@ -772,10 +772,11 @@ moc_fild16,195,281,4	script	Mercenário Guardião#1::SinGuard	707,{
 	close;
 }
 
-moc_fild16,204,281,4	duplicate(SinGuard)	Mercenário Guardião#2	707
-moc_fild16,207,281,4	duplicate(SinGuard)	Mercenário Guardião#3	707
-moc_fild16,216,281,4	duplicate(SinGuard)	Mercenário Guardião#4	707
-moc_fild16,200,231,4	duplicate(SinGuard)	Mercenário Guardião#5	707
-moc_fild16,211,231,4	duplicate(SinGuard)	Mercenário Guardião#6	707
-moc_fild16,200,257,4	duplicate(SinGuard)	Mercenário Guardião#7	707
-moc_fild16,211,257,4	duplicate(SinGuard)	Mercenário Guardião#8	707
+moc_fild16,204,281,4	duplicate(SinGuard)	Assassin Guardian#2	707
+moc_fild16,207,281,4	duplicate(SinGuard)	Assassin Guardian#3	707
+moc_fild16,216,281,4	duplicate(SinGuard)	Assassin Guardian#4	707
+moc_fild16,200,231,4	duplicate(SinGuard)	Assassin Guardian#5	707
+moc_fild16,211,231,4	duplicate(SinGuard)	Assassin Guardian#6	707
+moc_fild16,200,257,4	duplicate(SinGuard)	Assassin Guardian#7	707
+moc_fild16,211,257,4	duplicate(SinGuard)	Assassin Guardian#8	707
+

@@ -535,7 +535,8 @@ payon_in01,47,59,2	script	Arqueiro Wolt#payon	88,{
 	mes "[Arqueiro Wolt]";
 	mes "Eu sei que farewi uma pergunta um tanto inconveniente mas você quer gastar seu tempo comigo?";
 	next;
-	if (select("Oh, que inferno! não quero:Sim. eu acho que...")) {
+	switch(select("Oh, que inferno! não quero:Sim. eu acho que...")) {
+	case 1:
 		mes "[Arqueiro Wolt]";
 		mes "Oh isso é bom, na verdade, isso é ótimo!";
 		mes "Se todos nós arqueiros tivessémos essa atitude.";
@@ -605,7 +606,7 @@ payon_in01,47,59,2	script	Arqueiro Wolt#payon	88,{
 			mes "[Arqueiro Wolt]";
 			mes "Nós arqueiros, estamos aqui para proteger o nosso território contra eles, como é ordenado pelo nosso chefe!";
 			next;
-			if (select("Você disse caverna?:Chefe ...? :Cara, eu odeio essa cidade!") == 1) {
+			switch(select("Você disse caverna?:Chefe ...? :Cara, eu odeio essa cidade!")) {
 			case 1:
 				mes "[Arqueiro Wolt]";
 				mes "Se você for para o norte da cidade, você irpa encontrar a caverna de payon.";
@@ -680,48 +681,48 @@ payon_in01,47,59,2	script	Arqueiro Wolt#payon	88,{
 		mes "Ah, tenha paciência comigo.Pense nisso como praticar a sua paciência";
 		break;
 	case 2:
-	mes "[Arqueiro Wolt]";
+		mes "[Arqueiro Wolt]";
 		mes "Eh...";
-	mes "Eu acho que é importante reservar um tempo para descansar.";
+		mes "Eu acho que é importante reservar um tempo para descansar.";
 		next;
-	mes "[Arqueiro Wolt]";
-	mes "Mas também é uma ótima ideia reservar um tempo, para prática e treinamento.";
+		mes "[Arqueiro Wolt]";
+		mes "Mas também é uma ótima ideia reservar um tempo, para prática e treinamento.";
 		next;
-	mes "[Arqueiro Wolt]";
-	mes "E acredite você deve estar alerta, você deveria fazer outra coisa, ao invés de pensar em descansar.";
+		mes "[Arqueiro Wolt]";
+		mes "E acredite você deve estar alerta, você deveria fazer outra coisa, ao invés de pensar em descansar.";
 		next;
-	mes "[Arqueiro Wolt]";
-	mes "Isso me faz lembrar do tempo...";
-	mes "Que atearam fogo na minha casa durante as férias.";
-	mes "Foi um acidente, claro,mas o menino matou meus pais de raiva.";
+		mes "[Arqueiro Wolt]";
+		mes "Isso me faz lembrar do tempo...";
+		mes "Que atearam fogo na minha casa durante as férias.";
+		mes "Foi um acidente, claro,mas o menino matou meus pais de raiva.";
 		next;
-	mes "[Arqueiro Wolt]";
-	mes "Hahahaha.";
-	mes "Tudo começou, quando decidi tomar um banho em payon.";
-	mes "Nós usamos a moda antiga nos banhos, precisamos fazer uma fogueira para esquentar a água.";
-	mes "Banhos frios são desconfortáveis.";
+		mes "[Arqueiro Wolt]";
+		mes "Hahahaha.";
+		mes "Tudo começou, quando decidi tomar um banho em payon.";
+		mes "Nós usamos a moda antiga nos banhos, precisamos fazer uma fogueira para esquentar a água.";
+		mes "Banhos frios são desconfortáveis.";
 		next;
-	mes "[Arqueiro Wolt]";
-	mes "Pois bem, banhos quentes são confortáveis e aquele banho foi o melhor banho que tive em minha vida!";
-	mes "Foi tão bom que adormeci.";
+		mes "[Arqueiro Wolt]";
+		mes "Pois bem, banhos quentes são confortáveis e aquele banho foi o melhor banho que tive em minha vida!";
+		mes "Foi tão bom que adormeci.";
 		next;
-	mes "[Arqueiro Wolt]";
-	mes "Mas enquanto eu dormia,";
-	mes "Eu não percebi que o fogo começou a ir para as paredes e o teto!";
-	mes "Felizmente eu estava em uma banheira cheia de água.";
+		mes "[Arqueiro Wolt]";
+		mes "Mas enquanto eu dormia,";
+		mes "Eu não percebi que o fogo começou a ir para as paredes e o teto!";
+		mes "Felizmente eu estava em uma banheira cheia de água.";
 		next;
-	mes "[Arqueiro Wolt]";
-	mes "Eu teria conseguido ajudar, se minhas roupas não tivessem sido queimadas, enquanto eu dormia.";
-	mes "E eu não sairia nu correndo pela cidade.";
+		mes "[Arqueiro Wolt]";
+		mes "Eu teria conseguido ajudar, se minhas roupas não tivessem sido queimadas, enquanto eu dormia.";
+		mes "E eu não sairia nu correndo pela cidade.";
 		next;
-	mes "[Arqueiro Wolt]";
-	mes "Então...";
-	mes "Eu apenas sentei-me na água por cerca de uma hora, completamente nu e pedindo ajuda, até que alguém pudesse me ouvir.";
+		mes "[Arqueiro Wolt]";
+		mes "Então...";
+		mes "Eu apenas sentei-me na água por cerca de uma hora, completamente nu e pedindo ajuda, até que alguém pudesse me ouvir.";
 		next;
-	mes "[Arqueiro Wolt]";
-	mes "Porém, eu descobri que ninguém me ouvia.";
-	mes "O nosso teto desabou demolindo as paredes ao meu redor.";
-	mes "Dessa forma puderam ouvir meus gritos e foi assim que sobrevivi.";
+		mes "[Arqueiro Wolt]";
+		mes "Porém, eu descobri que ninguém me ouvia.";
+		mes "O nosso teto desabou demolindo as paredes ao meu redor.";
+		mes "Dessa forma puderam ouvir meus gritos e foi assim que sobrevivi.";
 		next;
 	switch(select("Hum, qual é dessa história?:Acho melhor não ficar com preguiça.:Blah blah blah.")) {
 		case 1:
@@ -938,12 +939,13 @@ OnTouch_:
 			mes "Porém, nós damos boas vindas as pessoas que provam ser capazes de se tornar um Caçador.";
 			break;
 		}
-			mes "[Chefe]";
-			mes "Tão cansado ...";
-			mes "É melhor eu descansar.";
-			mes "Por favor, tome cuidado";
-			mes "de si mesmo.";
-			close;
+		next;
+		mes "[Chefe]";
+		mes "Tão cansado ...";
+		mes "É melhor eu descansar.";
+		mes "Por favor, tome cuidado";
+		mes "de si mesmo.";
+		close;
 
 		//if (.@oldman_random == 2) {
 		//	mes "[Guarda]";

@@ -115,7 +115,7 @@ xmas_in,167,173,4	script	Duffle	711,{
 		mes "[Duffle]";
 		mes "Então...";
 		mes "Feliz Natal!!";
-		xmas_npc = 2;
+		set xmas_npc,2;
 		close;
 	}
 	else if (xmas_npc > 1) {

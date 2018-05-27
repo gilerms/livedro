@@ -172,7 +172,7 @@ ayothaya,171,152,5	script	Girl#Lalitha	838,{
 		mes "tanto quanto você puder!";
 		next;
 		mes "[Lalitha]";
-		mes "Ah ...";
+		mes "Ah...";
 		mes "Eu me pergunto de onde";
 		mes "meu Cavaleiro Negro é~";
 		emotion ET_THROB;
@@ -183,23 +183,23 @@ ayothaya,171,152,5	script	Girl#Lalitha	838,{
 		mes "montando um cavalo branco?";
 		next;
 		mes "[Lalitha]";
-		mes "Hmm ...?";
+		mes "Hmm...?";
 		mes "Oh, bem ...";
 		mes "Eu vou levar os dois!";
 		mes "Hee hee ~!";
 		close;
-}
-		mes "[Lalitha]";
-		mes "Mmm ...?";
-		mes "O que está acontecendo?";
-		close;
+	}
+	mes "[Lalitha]";
+	mes "Mmm ...?";
+	mes "O que está acontecendo?";
+	close;
 }
 
 ayothaya,143,102,5	script	Velho Homem#ayothaya	842,{
 	mes "[Aldeão]";
 	mes "Ummm.";
-	mes "Hmmmmm ...";
-	mes "Ummmmm ...?";
+	mes "Hmmmmm...";
+	mes "Ummmmm...?";
 	next;
 	mes "[Aldeão]";
 	mes "Você deve ser";
@@ -214,7 +214,7 @@ ayothaya,143,102,5	script	Velho Homem#ayothaya	842,{
 	mes "nós velhos fazemos: Pescar.";
 	next;
 	mes "[Aldeão]";
-	mes "Hmmm ...";
+	mes "Hmmm...";
 	mes "Você gostaria de ouvir";
 	mes "algo interessante? Ouvi dizer que alguém encontrou um anel dentro";
 	mes "um peixe que ele pegou no";
@@ -227,7 +227,7 @@ ayothaya,143,102,5	script	Velho Homem#ayothaya	842,{
 	mes "Se você tiver sorte o suficiente,";
 	mes "você pode até se tornar";
 	mes "um milionário.";
-	mes "Heh heh heh ~";
+	mes "Heh heh heh~";
 	next;
 	mes "[Aldeão]";
 	mes "...!?";
@@ -283,15 +283,15 @@ ayothaya,241,264,5	script	Jovem Rapaz#5ayothaya2	843,{
 	mes "para um jogo?";
 	next;
 	if (select("Claro!: Nah~") == 1) {
-	mes "[Eik]";
-	mes "Ow ow ow!";
-	mes "Eu estava apenas";
-	mes "brincando, cara!";
-	next;
-	mes "[Eik]";
-	mes "Eu não sou tão rude a ponto de lutar com estranhos sem motivo!";
-	emotion ET_KEK;
-	close;
+		mes "[Eik]";
+		mes "Ow ow ow!";
+		mes "Eu estava apenas";
+		mes "brincando, cara!";
+		next;
+		mes "[Eik]";
+		mes "Eu não sou tão rude a ponto de lutar com estranhos sem motivo!";
+		emotion ET_KEK;
+		close;
 	}
 	mes "[Eik]";
 	mes "Poder real é desenvolvido depois de ter milhares de partidas com outras pessoas. Então, não tenha medo de lutar, ok?";
