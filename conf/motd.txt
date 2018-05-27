@@ -1,2 +1,3 @@
-// Internal default is limited to 128 lines.  If you need more, you will need to modify the MOTD_LINE_SIZE definition in pc.c
-Welcome to rAthena! Enjoy! Please report any bugs you find.
+// O padrão interno é limitado a 128 linhas. Se você precisar de mais,
+// você precisará modificar a definição MOTD_LINE_SIZE em pc.c
+Bem-vindo ao LivedRO! Por favor, relate quaisquer erros que você encontrar.
