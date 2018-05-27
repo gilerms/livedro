@@ -14,7 +14,7 @@
 //= 1.0
 //============================================================  
 
-Aeroporto,143,43,5	script	Equipe do Aeroporto#airport1a::airport1	90,{
+airport,143,43,5	script	Equipe do Aeroporto#airport1a::airport1	90,{
 	mes "[Equipe do Aeroporto]";
 	mes "Bem vindo ao";
 	mes "Aeroporto de Einbroch";

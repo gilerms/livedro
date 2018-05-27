@@ -14,7 +14,7 @@
 //= 1.0
 //============================================================  
 
-hugel,178,142,0	script	Equipe_do_Aeroporto#hugel	45,1,1,{
+hugel,178,142,0	script	Equipe do Aeroporto#hugel	45,1,1,{
 	end;
 OnTouch:
 	mes "Para usar o dirigível, você precisará pagar uma taxa de 1.200 zenys ou possuir um bilhete grátis.";

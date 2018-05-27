@@ -1147,7 +1147,7 @@ lhz_in03,193,25,2	script	Bartender#12	61,{
 	if (Sex == SEX_MALE) {
 		mes "Ei cara, eu sei disso";
 	}
-		else {
+	else {
 		mes "Ei senhora, eu sei disso";
 	}
 	mes "Ei eu sei que esse lugar é ruim, praticamente um gueto, mas nos orgulhamos de ter o melhor rum de toda Rune-Midgard.";
@@ -1455,7 +1455,7 @@ lhz_in01,24,140,3	script	Guarda Regenschirm#40	4_M_LGTGUARD,{
 		next;
 		if (select("Sim","Não") == 1) {
 			mes "[Guarda Regenschirm]";
-			mês "obrigado e";
+			mes "obrigado e";
 			mes "tenha um bom dia.";
 			close2;
 			warp "lhz_dun01",149,285;

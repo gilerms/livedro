@@ -104,14 +104,14 @@ bat_room,133,121,1	script	Oficial de Flavius#01b	414,{
 		else {
 			if (BaseLevel < 80) {
 				mes "[Oficial do Exército Croix]";
-mes "Estou muito feliz que você queira se juntar a nós e lutar contra o Exército de Guillaume, mas me desculpe: eu não posso mandar um novato como você para morrer no cruel campo de batalha.";
+				mes "Estou muito feliz que você queira se juntar a nós e lutar contra o Exército de Guillaume, mas me desculpe: eu não posso mandar um novato como você para morrer no cruel campo de batalha.";
 			}
 			else {
 				set .@chk_urtime,checkquest(2070,PLAYTIME);
 				if ((.@chk_urtime == 0)|| (.@chk_urtime == 1)) {
 					mes "[Oficial do Exército Croix]";
-mes "Você parece ter acabado de voltar do campo de batalha.";
-mes "É muito cedo para você voltar. Vá descansar e deixe os inimigos conosco!";
+					mes "Você parece ter acabado de voltar do campo de batalha.";
+					mes "É muito cedo para você voltar. Vá descansar e deixe os inimigos conosco!";
 				}
 				else {
 					if (.@chk_urtime == 2)
@@ -119,20 +119,20 @@ mes "É muito cedo para você voltar. Vá descansar e deixe os inimigos conosco!
 					set .@mapcount2,getmapusers("bat_b01");
 					if (.@mapcount2 > 0) {
 						mes "[Oficial do Exército Croix]";
-mes "Eu recebi um relatório me informando que um grupo de elite já foi enviado para o campo de batalha lutando contra os Guillaume.";
-mes "Por que você não espera por um tempo? Eu sugiro que você afie suas armas e prepare seus equipamentos.";
+						mes "Eu recebi um relatório me informando que um grupo de elite já foi enviado para o campo de batalha lutando contra os Guillaume.";
+						mes "Por que você não espera por um tempo? Eu sugiro que você afie suas armas e prepare seus equipamentos.";
 					}
 					else {
 						if ($@FlaviusBG1 > 0) {
 							mes "[Oficial do Exército Croix]";
-mes "Um corgrupopo de elite já está de prontidão para ser enviado para o campo de batalha.";
-mes "Por que você não espera por um tempo? Eu sugiro que você afie suas armas e prepare seus equipamentos.";
+							mes "Um grupo de elite já está de prontidão para ser enviado para o campo de batalha.";
+							mes "Por que você não espera por um tempo? Eu sugiro que você afie suas armas e prepare seus equipamentos.";
 						}
 						else {
 							mes "[Oficial do Exército Croix]";
-mes "Você definitivamente parece estar pronto para a batalha!";
-mes "Vá mostrar aos Guillaumes o que o medo realmente significa!";
-mes "Hoje, nosso grito de vitória ecoará por todo o campo de batalha!";
+							mes "Você definitivamente parece estar pronto para a batalha!";
+							mes "Vá mostrar aos Guillaumes o que o medo realmente significa!";
+							mes "Hoje, nosso grito de vitória ecoará por todo o campo de batalha!";
 							close2;
 							warp "bat_room",85,207;
 							end;
@@ -144,7 +144,7 @@ mes "Hoje, nosso grito de vitória ecoará por todo o campo de batalha!";
 		break;
 	case 2:
 		mes "[Oficial do Exército Croix]";
-mes "Hoje, seremos vitoriosos!";
+		mes "Hoje, seremos vitoriosos!";
 		break;
 	}
 	close;
