@@ -868,7 +868,7 @@ prt_castle,35,151,5	script	Bliant Piyord	4_M_CRU,{
 			mes "[Bliant Piyord]";
 			mes "Para receber o teste de batalha, traga-me";
 			mes "1 ^3355FFAgua Benta^000000. Será usada para purificar seu interior para receber o teste.";
-			if (questprogress(3013)) {
+			if(checkquest(3013) != -1) {
 				changequest 3013,3014;
 			}
 			next;

@@ -48,7 +48,7 @@ cmd_in02,73,81,4	script	Martine#cmd	48,{
 	mes "muitas vezes até eu acertar o";
 	mes "jackpot! Você vê, você vê?";
 	mes "Eu estou jogando as probabilidades loucas.";
-	fechar;
+	close;
 }
 
 cmd_in02,48,55,4	script	Patinação#cmd	51,{

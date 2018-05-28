@@ -1,17 +1,17 @@
-# Config para Storages
+# Config for Storages
 #
-# Para acessar o armazenamento premium, use o comando de script 'openstorage2'.
-# Se repositórios premium forem adicionados, copie a estrutura da tabela de armazenamento e corresponda ao nome da tabela nesta configuração.
-# O 'max' dos storages premium não são ajustados pela configuração 'vip_storage_increase' nem por MIN_STORAGE.
+# To access the premium storage, use script command 'openstorage2'.
+# If premium storages are added, copy the structure of the storage table and match the table name in this config.
+# The 'max' of premium storages are not adjusted by 'vip_storage_increase' config nor MIN_STORAGE.
 #
-# Estrutura:
-# - ID: <storage_id> // (int) O ID de armazenamento será usado para o comando de script 'openstorage2'.
-# Name: "<nome do armazenamento>" // (string) O nome do armazenamento será enviado para o cliente para ser exibido na barra de título.
-# Table: "<storage_table>" // (string) Nome da tabela onde o armazenamento é salvo. A estrutura da tabela é a mesma que a tabela de armazenamento padrão.
-# Max: <max_amount> // (int) * optional * Número máximo de itens no armazenamento. MAX_STORAGE será usado se nenhum valor for definido.
-################################################## ################################################## ###########################################
+# Structure:
+#	- ID: <storage_id>          // (int) Storage ID will be used for script command 'openstorage2'.
+#	  Name: "<storage name>"    // (string) Storage name will be sent to the client to display on the title bar.
+#	  Table: "<storage_table>"  // (string) Name of table where storage is saved. The table stucture is the same as the default storage table.
+#	  Max: <max_amount>         // (int) *optional* Maximum number of items in storage. MAX_STORAGE will be used if no value is defined.
+###############################################################################################################################################
 #Storages:
-# -ID: 1
-# Name: "Armazenamento VIP"
-# Table: "vip_storage"
-# Max: 300
+#   - ID: 1
+#     Name: "VIP Storage"
+#     Table: "vip_storage"
+#     Max: 300

@@ -535,8 +535,8 @@ function	script	F_SetKafCode	{
 			mes "Você teve êxito ao colocar senha em seu armazém.";
 			mes "Muito obrigado por usar os " + .@comp_name$ + ".";
 			emotion ET_THANKS;
-		} else {
-				} else {
+		} else 
+			{
 			mes "Senha errada! Não devolverei seus 1000 Zeny.";
 			mes "Por favor, na próxima entre com a senha correta.";
 			emotion ET_SORRY;

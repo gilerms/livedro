@@ -1939,7 +1939,7 @@ OnTouch_:
 				next;
 				break;
 			case 2:
-				set .@assassin_sangdam,.@assassin_sangdam+10;
+				set .@assassin_sangdam,.@assassin_sangdam+5;
 				mes "[Lider dos Mercenários]";
 				mes "É bom conhecer a si mesmo eu posso entender que você vai ser animar com a grande mudança em sua capacidade.";
 				next;
@@ -1973,7 +1973,7 @@ OnTouch_:
 				next;
 				break;
 			case 2:
-				set .@assassin_sangdam,.@assassin_sangdam+5
+				set .@assassin_sangdam,.@assassin_sangdam+5;
 				mes "[Lider dos Mercenários]";
 				mes "Grande...";
 				mes "Camaradas por quem você morreria para...";
@@ -2000,40 +2000,36 @@ OnTouch_:
 			}
 			break;
 		case 3:
-			mes "[Lider dos Mercenários]";
-			mes "Admirável sua atitude.";
-			mes "Existe algo que gostaria de me perguntar?";
+			mes "[Guildmaster]";
+			mes "That's most admirable. Is there anything that you would like to ask me about?";
 			next;
-			switch(select("Lugares para subir de Level?:Objetivos do Mercenário?:Onde Ganhar dinheiro?")) {
+			switch(select("Places where Assassins can level up...:Main goals as an Assassin.:Financial consulting.")) {
 			case 1:
-				set .@assassin_sangdam,.@assassin_sangdam+5
-				mes "[Lider dos Mercenários]";
-				mes "Tudo depende de sua mente.";
-				mes "Qualquer lugar pode ser o melhor para o nível máximo de acordo com seu estado de espírito..";
+				set .@assassin_sangdam,.@assassin_sangdam+5;
+				mes "[Guildmaster]";
+				mes "It all depends on your mind. Any place could be the best to level up according to your mind state.";
 				next;
-				mes "[Lider dos Mercenários]";
-				mes "Você deve saber sobreviver em qualquer situação.";
+				mes "[Guildmaster]";
+				mes "You must know how to";
+				mes "survive in any situation.";
 				next;
 				break;
 			case 2:
-				mes "[Lider dos Mercenários]";
-				mes "Há muitos mercenários lá fora.";
-				mes "Olhe para eles como seus treinadores, e pedir suas opiniões.";
+				mes "[Guildmaster]";
+				mes "There are many Assassins out there. Look to them as your trainers, and ask for their opinions.";
 				next;
-				mes "[Lider dos Mercenários]";
-				mes "Eu espero que você se torne um excelente mercenário e quando você alcança um certo nível.";
-				mes "Você deve guiar novatos como seus conhecimentos..";
+				mes "[Guildmaster]";
+				mes "I hope you will become an excellent Assassin. And when you reach a certain level, you must guide newbies as your trainers have.";
 				next;
 				break;
 			case 3:
 				set .@assassin_sangdam,.@assassin_sangdam+10;
-				mes "[Lider dos Mercenários]";
-				mes "Oh meu senhor ...";
-				mes "Você está planejando se tornar um mercenário, a fim de ganhar dinheiro?";
+				mes "[Guildmaster]";
+				mes "Oh my lord...";
+				mes "Are you planning to become an Assassin in order to make money?";
 				next;
-				mes "[Lider dos Mercenários]";
-				mes "As pessoas dessa natureza não são bem-vindas.";
-				mes "Se tal é o seu objetivo, você pode querer reconsiderar o sua classe....";
+				mes "[Guildmaster]";
+				mes "People of that nature are unwelcome. If such is your goal, you may wish to reconsider your job...";
 				next;
 				break;
 			}
@@ -2269,7 +2265,7 @@ OnTouch_:
 		end;
 	}
 	else if (ASSIN_Q > 7 && ASSIN_Q < 17) {
-		set ASSIN_Q;7;
+		set ASSIN_Q,7;
 		mes "[Lider dos Mercenários]";
 		mes "Porque você pressionou \"Cancelar\" durante o processo.";
 		mes "Quer mudar o sua classe ou o quê?";

@@ -105,7 +105,7 @@ payon,173,82,0	script	Jovem Homem#2payon	88,{
 	mes "...";
 	mes "......";
 	mes "[Jovem Homem]";
-	mes "...";OnTouch_
+	mes "...";
 	mes "D-Deus...?";
 	close;
 }
@@ -138,12 +138,9 @@ payon,249,156,1	script	Woman#payon	1_F_01,{
 	next;
 	mes "[Mulher]";
 	if (Sex == SEX_MALE)
-		mes "Eu notei que seus braços são bastante grossos.";
-		mes "Você parece muito forte, cara.";
-		mes "Quantos monstros você matou?";
-	else 
-		mes "Eu não percebi antes, mas você olhar bem forte embaixo de todo esse charme feminino.";
-
+		mes "Whoa~! I just noticed those arms of yours look pretty solid. You look pretty strong, guy. Just how many monsters have you killed?!";
+	else
+		mes "Oooh! I didn't notice before, but you look pretty strong beneath all of that feminine charm.";
 	next;
 	mes "[Mulher]";
 	mes "Ei, eu sei de um lugar bom para você caçar.";
@@ -359,117 +356,94 @@ payon,132,235,3	script	Estudante de Monstros#02	98,{
 // Inside Payon
 //============================================================
 payon_in01,180,7,2	script	Waitress#payon	90,{
-	mes "[Garçonete]";
-	mes "Este lugar sempre está movimentado com pessoas.";
-	mes "Noviços sempre aparecem por aqui para virar arqueiros, ou para comprar flecha.";
-	mes "Eles se divertem enquanto eu fico aqui nessa pequena loja.";
+	mes "[Pub Lady]";
+	mes "This place is always bustling with busy people. Little Novices come and go to become Archers, and everyone else is buying arrows while I have to stay here in this small shop.";
 	next;
-	mes "[Garçonete]";
-	mes "Eu já estou ficando cansada e doente de tanto fazer sopa de macarrão.";
-	mes "Tenho que tomar diversos banhos ao dia, para me livrar desse cheiro.";
-	mes "E acredite não é nada fácil livrar-se dele.";
+	mes "[Pub Lady]";
+	mes "And I'm sick and tired of making this noodle soup. I have to shower all the time so I can get rid of the smell. And it's not so easy";
+	mes "to get rid of.";
 	next;
-	mes "[Garçonete]";
-	mes "Eu me sinto tão...";
-	mes "Entediada e sozinha...";
+	mes "[Pub Lady]";
+	mes "I feel so...";
+	mes "Bored.";
+	mes "And lonely...";
 	next;
-	mes "[Garçonete]";
+	mes "[Pub Lady]";
 	if (Sex == SEX_MALE)
-		mes "Onde posso encontrar a pessoa certa, alguém amável e meiga, para me levar daqui?";
-		mes "Hum, Hey! você está me ouvindo?";
-
+		mes "Where I can find the right person, a hot and Sexy hunk who can take me away from here? Um, hey mister, are you listening?";
 	else {
-		mes "Onde eu posso encontrar a pessoa certa, alguém bonita, mas que seja um pouco dificil de conquistar, para poder me levar daqui?";
-		mes "Hum, heeeeei senhora você está me ouvindo?";
+		mes "Where I can find the right person, a cute, yet hard-bodied hunk who can take me away from here?";
+		mes "Um, hey lady, are";
+		mes "you listening?";
 	}
 	next;
-	mes "[Garçonete]";
-	mes "A cartomante velha, me disse que eu teria muita sorte em um futuro próximo.";
-	mes "Mas o que há de errado comigo? Eu estou vivendo dia após dia e nada...";
-	mes "Talvez eu seja um burro e azarado mesmo...";
+	mes "[Pub Lady]";
+	mes "The old fortune teller told me that I'd have great luck in the near future! But what's wrong with me? I'm just living day to day. Maybe I'm just dumb and wishy-washy.";
 	next;
-	mes "[Garçonete]";
-	mes "Sinto muito.";
-	mes "Eu falo demais.";
-	mes "Agora vou apenas ouvir...";
-	mes "Lamento por você ter ouvido tantas asneiras.";
+	mes "[Pub Lady]";
+	mes "I'm so sorry,";
+	mes "I've said too much.";
+	mes "Now I'm just acting stupid.";
+	mes "I'm sorry you had to listen";
+	mes "to all that.";
 	next;
-	mes "[Garçonete]";
-	mes "Então...";
-	mes "Como posso te ajudar?";
+	mes "[Pub Lady]";
+	mes "So...";
+	mes "How may I help you? ";
 	next;
-	switch(select("Você ja ouviu falar de zumbis?:Bancário...?:Eu preciso de uma bebida.")) {
+	switch(select("Have you ever heard of Zombies?:Fortune Teller...?:I needs some booze.")) {
 	case 1:
-		mes "[Garçonete]";
-		mes "É claro que quero ouvir sobre zumbis!";
-		mes "Esta é Payon agora.";
-		mes "Você pode encontrar zumbis caminhando, eles são mortos-vivos, e você pode facilmente encontrá-los aqui.";
+		mes "[Pub Lady]";
+		mes "Of course I've";
+		mes "heard of Zombies!";
+		mes "This is Payon, after all.";
+		mes "Zombies are the walking";
+		mes "Undead, and you can easily";
+		mes "find them around here.";
 		next;
-		mes "[Garçonete]";
-		mes "Eu ouvi dizer que eles temem a santidade, por isso eles tem medo de arqueiros,";
-		mes "Eles preferem usar setas feitas de prata, um metal sagrado, que é infalível contra eles.";
+		mes "[Pub Lady]";
+		mes "I hear that they fear holiness, so Archers prefer to use arrow made out of silver, a holy metal, against them.";
 		next;
-		mes "[Garçonete]";
-		mes "A lenda diz que o chefe desta cidade, usava flechas de prata contra os zumbis.";
-		mes "Que costumavam ser seus irmãos, afim de liberar suas almas para que pudessem descansar em paz.";
+		mes "[Pub Lady]";
+		mes "Legend says that the chief of this town used silver arrows against Zombies that used to be his brethren in order to release their souls so that they may rest in peace.";
 		next;
-		mes "[Garçonete]";
-		mes "Nós acreditamos que se exorcizarmos os zumbis, poderemos leválos pacificamente a uma vida após a morte.";
-		mes "E que suas almas não precisaram viver angustiadas nunca mais.";
+		mes "[Pub Lady]";
+		mes "We believe that exorcising";
+		mes "Zombies in this way will lead them peacefully to the afterlife. Their souls no longer need to anguish.";
 		next;
-		mes "[Garçonete]";
-		mes "Você pode não acreditar nas nossas crenças,mas meu avô foi um dos mortos-vivos.";
-		mes "Acredito que meu chefe era capaz de libertá-lo do mundo dos vivos.";
+		mes "[Pub Lady]";
+		mes "You might not share our beliefs, but my grandfather was one of the Undead. I appreciate that the chief was able to free him from being bound to the world of the living.";
 		break;
 	case 2:
-		mes "[Garçonete]";
-		mes "Temos uma cartomante, ela é uma pessoa extraordinária.";
-		mes "Porém ela não fica mais por aqui, como ela fazia antigamente.";
+		mes "[Pub Lady]";
+		mes "Oh! Our fortune teller is a really extraordinary person. Well, she doesn't hang around here as";
+		mes "much as she used to do. ";
 		next;
-		mes "[Garçonete]";
-		mes "Ela costumava ficar aqui, para nos contar sobre a sorte da nossa vida, só que ela foi reconhecida por ter este talento.";
-		mes "Foi levada pelo nosso chefe.";
-		mes "Agora ela fica no palácio central, então se quiser vê-la terá que ir até la.";
+		mes "[Pub Lady]";
+		mes "She used to stay here to tell fortunes for our patrons, but ever since the chief recognized her talents, she now stays in the Central Palace. So you'd better go there if you want to see her.";
 		break;
 	case 3:
-		mes "[Garçonete]";
-		mes "Você... precisa de alguma bebida?";
-		mes "Não temos nada ao seu gosto?";
+		mes "[Pub Lady]";
+		mes "You...";
+		mes "needs some";
+		mes "booze, eh?";
+		mes "Don't we all?";
 		next;
-		mes "[Garçonete]";
-		mes "Eu sinto muito, não vendemos para fora.";
-		mes "Não podemos nos dar ao luxo de preparar o alcóol, poos há criaturas hostis lá fora.";
-		mes "Mas por favor, volte mais tarde.";
-		mes "Desculpe-nos pelos transtornos. ";
+		mes "[Pub Lady]";
+		mes "But I'm so sorry, we sold out.";
+		mes "And we can't afford to prepare alcohol anymore because of the hostile creatures out there. But please come again later. I'm sorry for the inconvenience.";
 		break;
 	}
 	next;
-	mes "[Garçonete]";
-	mes "Tenha um bom dia querido";
+	mes "[Pub Lady]";
+	mes "Have a nice";
+	mes "day, dearie.";
 	next;
-	mes "[Garçonete]";
-	mes "^666666*Choro*^000000";
-	mes "Um dia vou ser recompensada pelo meu bom comportamento.";
-	mes "Será que ainda encontrarei um homem para mim?";
-	close;
-}
-
-payon_in03,96,116,3	script	Guarda Chefe#payon	708,3,3,{
-	end;
-
-OnTouch:
-	mes "[Guarda Chefe]";
-	mes "O que trás você aqui?";
-	next;
-	mes "[Guarda Chefe]";
-	mes "Eu posso ver que você não é morador de payon.";
-	mes "Eu gostaria apenas de lembrá-lo, que estou aqui para conduzi-lo de forma correta.";
-	mes "Lembre-se: você é nosso convidado.";
-	next;
-	mes "[Guarda Chefe]";
-	mes "No interesse de proteger a paz pública, eu vou desarmar o seu equipamento.";
-	mes "Obrigado pela sua cooperação.";
-	nude;
+	mes "[Pub Lady]";
+	mes "^666666*Sob*^000000";
+	mes "When will I be romanced";
+	mes "by my perfectly formed,";
+	mes "yet well read man?";
 	close;
 }
 

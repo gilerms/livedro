@@ -183,7 +183,7 @@ amatsu,179,107,4	script	John#ama	86,{
 	mes "negócios aqui...";
 	next;
 	mes "[John]";
-	mes "No começo, eu pensei: 'O que';
+	mes "No começo, eu pensei em uma";
 	mes "uma grande chance! Começar um";
 	mes "comércio entre o";
 	mes "Reino de Rune-Midgard e Amatsu.";
@@ -310,7 +310,7 @@ amatsu,287,266,3	script	Jyaburo#ama	766,{
 	mes "[Jyaburo]";
 	mes "Depois daquele dia, nós tivemos muitas";
 	mes "conversas aqui. Quieto";
-	mes "e pacífico, este foi o nosso;
+	mes "e pacífico, este foi o nosso";
 	mes "lugar favorito para ficar juntos.";
 	next;
 	mes "[Jyaburo]";

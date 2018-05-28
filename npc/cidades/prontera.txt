@@ -317,7 +317,7 @@ prt_in,180,20,2	script	Garçom#pront	61,{
 
 }
 
-prt_in,173,24,2	script	Shevild#pront	85{
+prt_in,173,24,2	script	Shevild#pront	85,{
 	mes "[Shevild]";
 	mes "Ei, colega! Chegue aqui e tome um drinque comigo! Eu tenho umas histórias boas pra te contar.";
 	mes "Sabe, eu já andei por todos os arredores de Prontera!";
@@ -473,7 +473,7 @@ prt_in,177,18,2	script	Marvin#pront	80,{
 	close;
 }
 
-prt_in,284,168,3	script	Ginedin Rephere#pront	55{
+prt_in,284,168,3	script	Ginedin Rephere#pront	55,{
 	mes "[Ginedin Rephere]";
 	mes "Hmmm... Espero que caiba todos os meus convidados aqui...";
 	mes "Oh! Perdão, eu mal percebi que você estava aqui!";
@@ -505,7 +505,7 @@ prt_in,284,168,3	script	Ginedin Rephere#pront	55{
 
 // Igreja de Prontera
 //============================================================
-prt_church,103,76,0	script	Garnet#pront	67{
+prt_church,103,76,0	script	Garnet#pront	67,{
 	mes "[Garnet]";
 	mes "Olá! Sou a Garnet, pode me chamar de Garn... Mas então. Você gostaria de fazer o bem para os outros? As habilidades dos Sacerdotes são feitas para isso!";
 	mes "Se você se interessa por esta vocação, de ajudar e dedicar sua vida ao bem estar alheio, você pode ser um de nós!";
@@ -601,7 +601,7 @@ prt_church,103,71,0	script	Henson#pront	2_M_PHARMACIST,{
 	while(1) {
 		next;
 		switch(select("Sobre a Proteção Divina: Sobre Demon Bane: Sobre a Diminuição AGI: Sobre a Signum Crusis: Sobre a Pneuma: Sobre a Ruwach: Sobre o Teleport: Terminar conversa.")) {
-		caso 1:
+		case 1:
 			mes "[Henson]";
 			mes "Se você quiser melhorar permanentemente a sua Defesa contra os Mortos-Vivos, aprenda ^ 6666CProteção contra as Civis ^ 000000.";
 			next;

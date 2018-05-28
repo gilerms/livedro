@@ -322,7 +322,7 @@ job_duncer,43,93,4	script	Aile#da	4_F_07,{
 			mes "[Aile]";
 			mes "Agora, vá até ^CD6889Bijou^000000, aquela que está no comando das entrevistas. Ela precisa te perguntar algumas coisas.";
 			DANC_Q = 5;
-			if (questprogress(7001)) {
+			if(checkquest(7001) != -1) {
 				changequest 7001,7004;
 			}
 			else if(checkquest(7002) != -1) {

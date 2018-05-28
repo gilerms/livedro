@@ -268,7 +268,7 @@ alde_alche,27,185,5	script	Alquimista da Guilda#am	744,{
 			mes "[Parmy Gianino]";
 			mes "Ok, agora você precisa aprender";
 			mes "o básico para ser um Alquimista e aprender os procedimentos de misturar produtos químicos e medicamentos.";
-			et ALCH_Q,4;
+			set ALCH_Q,4;
 			if(checkquest(2028) != -1) {
 				changequest 2028,2031;
 			}
@@ -772,7 +772,7 @@ alde_alche,175,107,3	script	Alquimista Minucioso#am	4_M_ALCHE_B,{
 		mes "Então se apresse, se torne um Alquimista, faça alguma pesquisa boa, e você pode vir a ser de alguma ajuda para mim. Hahahahahaha!";
 		next;
 		mes "[Raspuchin Gregory]";
-		es "Agora vá para o Darwin!";
+		mes "Agora vá para o Darwin!";
 		mes "Ele vai te ensinar como fazer os experimentos. Basta dizer-lhe que";
 		mes "eu enviei-lhe.";
 		set ALCH_Q,6;
@@ -1444,8 +1444,6 @@ alde_alche,79,19,5	script	Especialista#am	4_M_ALCHE_A,{
 	}
 	else if (ALCH_Q == 9) {
 		mes "Tudo bem, se eu fazer uma incisão aqui no Tentáculo, e adicionar um Jellopy e um Muco Pegajoso para dentro dos... Onde diabos minha Vasilha de Mistura está? ";
-		next
-		mes "[Van Helmont]";
 		mes "Eu iria usá-los todos em um momento como este? Ugh, que dor. Aguarde. Espere um minuto ...";
 		next;
 		mes "[Van Helmont]";

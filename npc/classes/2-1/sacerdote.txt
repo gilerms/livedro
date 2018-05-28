@@ -1304,7 +1304,7 @@ OnTouch_:
 
 // 3rd Test
 //==========================================================
-job_prist,168,45,4	script	Deviruchi#prst	DEVIRUCHI,8,1,{
+job_prist,168,45,4	script	Deviruchi#prst	1109,8,1,{
 OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[Deviruchi]";
@@ -1405,7 +1405,7 @@ OnTouch_:
 	end;
 }
 
-job_prist,168,80,4	script	Doppelganger#prst	DOPPELGANGER,8,1,{
+job_prist,168,80,4	script	Doppelganger#prst	1046,8,1,{
 OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[Doppelganger]";
@@ -1472,7 +1472,7 @@ OnTouch_:
 	}
 }
 
-job_prist,168,115,4	script	Senhor das Trevas#prst	DARK_LORD,8,1,{
+job_prist,168,115,4	script	Senhor das Trevas#prst	1272,8,1,{
 OnTouch_:
 	if (BaseJob == Job_Priest) {
 		mes "[Senhor das Trevas]";

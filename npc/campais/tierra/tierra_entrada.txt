@@ -368,6 +368,7 @@ bat_room,140,121,1	script	Oficial de Tierra#02b	414,{
 							mes "Uma unidade do batalhão já está preparada e esperando ser despachada ao campo de batalha.";
 							mes "Por que você não espera um instante? Eu aconselho você a afiar suas armas e preparar seus suprimentos até a hora da batalha.";
 						}
+						else {
 							mes "[Oficial do Exército Croix]";
 							mes "Certamente você já está preparado para a batalha!";
 							mes "Vá e mostre aos Guillaumes o significado da palavra medo!";

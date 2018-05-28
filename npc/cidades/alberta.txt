@@ -326,7 +326,7 @@ alberta,190,173,4	script	Phelix	4_M_03,{
 				mes "[Phelix]";
 				mes "Coloque a quantidade. Coloque 0 pra cancelar.";
 				mes "Neste momento, o máximo que você poderá pegar é " + .@max + " e por favor, não peça mais de 100... você quer quebrar minhas costas?.";
-				imput .@amount;
+				input .@amount;
 				next;
 				mes "[Phelix]";
 			if (.@amount <= 0) {

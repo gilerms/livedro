@@ -14,7 +14,7 @@
 //= 1.0
 //============================================================ 
 
--	script	::Equipe_do_Aeroporto_Izlude	-1,{
+-	script	::Airship_Staff_izlude	-1,{
 	mes "[Equipe do Aeroporto]";
 	mes "Bem vindo! Você gostaria de";
 	mes "embarcar no dirigível que";

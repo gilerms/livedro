@@ -417,7 +417,7 @@ comodo,226,123,5	script	Wandering Bard	2_M_BARD_ORIENT,{
 				mes "Então, você quer tentar cantar...?";
 				mes "Eu vou cantar uma melodia curta...";
 				mes "e você tenta depois.";
-				if (!questprogress(3003)) {
+				if(checkquest(3003) == -1) {
 					changequest 3002,3003;
 				}
 				next;

@@ -46,7 +46,7 @@ function	script	F_CoolEventCorp	{
 		mes "[Corp. Eventos Incríveis]";
 		if(!callfunc("F_CanOpenStorage")){
 			mes "Me desculpe, mas você";
-			mes precisa ser um Aprendiz";
+			mes "precisa ser um Aprendiz";
 			mes "com habilidades básicas nivel 6";
 			mes "para usar o serviço de armazém.";
 			close2;

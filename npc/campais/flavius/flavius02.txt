@@ -232,10 +232,11 @@ OnKill:
 OnMyMobDead:
 	if (mobcount("bat_b02","guardian#bat_b02_a::OnMyMobDead") < 1) {
 		donpcevent "cell#bat_b02_a::OnGreen";
-		mapannounce "bat_b02", "O Guardião Protegendo o Cristal de Guillaume foi derrotado.",bc_map,"0xFFCE00";
-		setunitdata $@FlavBG2_C1_ID,UMOB_DMGIMMUNE,0
+		mapannounce "bat_b02", "The Guardian protecting Guillaume's Crystal has been slain.",bc_map,"0xFFCE00";
+		setunitdata $@FlavBG2_C1_ID,UMOB_DMGIMMUNE,0; // Make Crystal damageable again
 	}
 	end;
+
 }
 
 bat_b02,1,3,3	script	guardian#bat_b02_b	844,{

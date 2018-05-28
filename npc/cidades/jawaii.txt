@@ -961,50 +961,53 @@ S_KillChar:
 	return;
 }
 
-jawaii_in,43,115,0	script	Cliente#jaw_1	97,{
+jawaii_in,43,115,0	script	Customer#jaw_1	97,{
 	mes "[Buchi]";
 	if (!getpartnerid()) {
 		if (Zeny > 99) {
 			mes "Grrrr...";
-			mes "Droga! Não gosto desse lugar!";
-			mes "Não gosto nada disso!";
+			mes "Damn! I don't";
+			mes "like this place!";
+			mes "I don't like this at all!";
 			next;
 			mes "[Buchi]";
-			mes "Não acredito nos meus olhos! Todos os outros parecem felizes! Isso me deixa miserável!";
-			mes "Você concorda, não?!";
+			mes "I can't believe my eyes! Everyone else looks disgustingly happy! It makes me feel so miserable!";
+			mes "You agree, don't you?!";
 			next;
 			mes "[Buchi]";
 			mes "Grrrr...";
-			mes "Garçom!";
-			mes "Me dê mais uma dose!"
+			mes "Bartender!";
+			mes "Give me one more!";
 			close;
 		}
-		mes "[Buchi]";
-		mes "Ei, por que você não está bebendo?";
-		mes "Não está bem?";
-		mes "Mas eu sei como você se sente. Deprimido com toda a atmosfera romântica desse lugar, não é?";
+		mes "Hey, why aren't you drinking?";
+		mes "I guess you're all out of dough.";
+		mes "But I know how you feel. Disgusted with all the lovey dovey around this place, aren't you?";
 		next;
 		mes "[Buchi]";
 		mes "Heh.";
-		mes "Deixe-me pagar uma bebida pra você!";
+		mes "Lemme buy";
+		mes "you a drink!";
 		next;
 		mes "[Buchi]";
-		mes "Beba de uma vez, e esqueça da sua vida miserável! Anime-se, você tem o futuro todo e uma bebida a sua frente! Vamos~!";
+		mes "Drink this at once, and forget about your miserable life! Cheer up, you got the whole future ahead of you and a drink in front of you! Come on, now~!";
 		next;
-		mes "^3355FFEle ofereceu um JJ especial para mim.^000000";
+		mes "^3355FFHe ordered a JJ special for me.^000000";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "Droga...!";
-		mes "Droga! Eu vou ser aquele que rir por último!";
+		mes "Damn...!";
+		mes "Damn! I will be";
+		mes "the one who laughs last!";
 		next;
-		mes "^3355FFVocê bebe tudo.^000000";
+		mes "^3355FFYou drank to your fill.^000000";
 		close2;
 		percentheal -100,0;
 		end;
 	}
-	mes "[Buchi]";
-	mes "Você parece feliz...";
-	mes "Espero que consiga se sentir assim pra sempre...";
+	mes "You look happy...";
+	mes "I hope you'll be";
+	mes "able to feel that";
+	mes "way forever...";
 	mes " ";
 	mes "^666666*Hiccup...!*^000000";
 	close;
@@ -1075,7 +1078,7 @@ prt_in,173,13,4	script	Cliente#SoloHan	86,{
 		next;
 		mes "[Bachewcca]";
 		mes "...!";
-		emotion e_no1,0,"Cliente#Bachewcca";
+		emotion ET_CRY;
 		next;
 		mes "[SoloHan]";
 		mes "Não faz muita diferença se você é casado ou não, certo? Certo?!";

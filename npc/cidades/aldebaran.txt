@@ -1094,7 +1094,7 @@ aldeba_in,79,161,7	script	Funcionária da Kafra#reserve1	4_F_KAFRA3,{
 	mes "Vamos ver...";
 	mes strcharinfo(0)+"...";
 	mes "Ah, você tem um total de";
-	mes. @total+"Pontos Especiais de Reserva.";
+	mes .@total +"Pontos Especiais de Reserva.";
 	mes "Agora você gostaria";
 	mes "de trocá-los por";
 	next;
@@ -1378,7 +1378,7 @@ aldeba_in,88,161,3	script	Funcionária da Kafra#reserve2	4_F_KAFRA3,{
 					mes "O prêmio é ^00FF001 Semente Yggdrasil~^000000";
 					next;
 					mes "[Funcionária da Kafra]";
-					mes "Eu acho que você usou toda sorte que tinha por hoje~"
+					mes "Eu acho que você usou toda sorte que tinha por hoje~";
 				}
 			}
 			else if (.@s == 2) {
