@@ -4268,11 +4268,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients- ^0000cd1 Clover, 1 Green Herb, 1 Red Herb^000000.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "Ø§ÓªÆ½Ä«Ö¥.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Clover and the Red Herb are dropped by Lunatic or Fabre monsters wandering everywhere on the field outside Izlude.";
 				next;
-				cutin "ÆÄºê¸£Ä«µå.bmp", 3;
+				cutin "Ç„ÛªØ£Ä«Ö¥.bmp", 3;
 				mes "[Eclaire]";
 				mes "Green Herbs are dropped by Fabres.";
 				next;
@@ -4294,11 +4294,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Apple & 2 Carrots^000000.";
 				next;
-				cutin "Æ÷¸µÄ«µå.bmp", 3;
+				cutin "Ç·ØµÄ«Ö¥.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apples are dropped by Porings bouncing around the field outside of Izlude.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "Ø§ÓªÆ½Ä«Ö¥.bmp", 3;
 				mes "[Eclaire]";
 				mes "Carrots are given by Lunatics.";
 				next;
@@ -4320,15 +4320,15 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Jellopy, 1 Fluff, 1 Feather^000000.";
 				next;
-				cutin "Æ÷¸µÄ«µå.bmp", 3;
+				cutin "Ç·ØµÄ«Ö¥.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Jellopy are dropped by Porings bouncing around the field of Izlude.";
 				next;
-				cutin "ÆÄºê¸£Ä«µå.bmp", 3;
+				cutin "Ç„ÛªØ£Ä«Ö¥.bmp", 3;
 				mes "[Eclaire]";
 				mes "Fluff can be received from Fabre or Lunatic.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "Ø§ÓªÆ½Ä«Ö¥.bmp", 3;
 				mes "[Mille Feuille]";
 				mes "Feathers are dropped by Lunatics or Fabres.";
 				next;
@@ -4350,11 +4350,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are-^0000cd 1 Apple & 1 Clover^000000.";
 				next;
-				cutin "Æ÷¸µÄ«µå.bmp", 3;
+				cutin "Ç·ØµÄ«Ö¥.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apple can be found in Porings in the field outside of Izlude.";
 				next;
-				cutin "·ç³ªÆ½Ä«µå.bmp", 3;
+				cutin "Ø§ÓªÆ½Ä«Ö¥.bmp", 3;
 				mes "[Eclaire]";
 				mes "Clovers are dropped by Lunatics or Fabre in the field outside Izlude.";
 				next;
@@ -12921,7 +12921,7 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 	if (isbegin_quest(5153) == 1) {
 		if (getequipweaponlv(.@part) == 1) {
 			mes "[Refining Machine Wagjak]";
-			mes "Type : 1 level weapon";
+			mes "Type : Level 1 weapon";
 			mes "Charge : Phracon, 1000 zeny";
 			mes "Service usage coupon sensed. No charge to be requested. Will you refine?";
 			next;
@@ -12969,33 +12969,17 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 			}
 		}
 	}
-	switch(getequipweaponlv(.@part)) {
-	case 0:
+
+	.@refineitemid = getequipid(.@part); // save id of the item
+	.@refinerycnt = getequiprefinerycnt(.@part); //save refinery count
+	.@price = getequiprefinecost(.@part, REFINE_COST_WAGJAK, REFINE_ZENY_COST);
+	.@material = getequiprefinecost(.@part, REFINE_COST_WAGJAK, REFINE_MATERIAL_ID);
+
+	if ((getequipweaponlv(.@part) >= 1) && (getequipweaponlv(.@part) <= 4))
+		.@type$ = "Level " + getequipweaponlv(.@part) + " weapon";
+	else
 		.@type$ = "Armor";
-		.@material = 985;// Elunium
-		.@price = 20000;
-		break;
-	case 1:
-		.@type$ = "Level 1 weapon";
-		.@material = 1010;// Phracon
-		.@price = 1000;
-		break;
-	case 2:
-		.@type$ = "Level 2 weapon";
-		.@material = 1011;// Emveretarcon
-		.@price = 2000;
-		break;
-	case 3:
-		.@type$ = "Level 3 weapon";
-		.@material = 984;// Oridecon
-		.@price = 10000;
-		break;
-	case 4:
-		.@type$ = "Level 4 weapon";
-		.@material = 984;// Oridecon
-		.@price = 20000;
-		break;
-	}
+
 	mes "[Refining Machine Wagjak]";
 	mes "Type : "+ .@type$ +"";
 	mes "Charge : "+ getitemname(.@material) +", "+ .@price +" zeny";
@@ -13025,6 +13009,17 @@ izlude_d,153,126,1	duplicate(Refinery Owner Han#iz)	Refinery Owner Han#iz_d	4_M_
 	if (countitem(.@material) > 0 && Zeny >= .@price) {
 		delitem .@material, 1;
 		Zeny -= .@price;
+
+		// anti-hack
+		if (callfunc("F_IsEquipIDHack", .@part, .@refineitemid) ||
+		    callfunc("F_IsEquipRefineHack", .@part, .@refinerycnt)) {
+			mes "[Refining Machine Wagjak]";
+			emotion ET_FRET;
+			mes "Wait a second...";
+			mes "Do you think I'm stupid?!";
+			mes "You switched the item while I wasn't looking! Get out of here!";
+			close;
+		}
 	} else {
 		mes "[Refining Machine Wagjak]";
 		mes "^FF0000- error number 8282 -^000000";
