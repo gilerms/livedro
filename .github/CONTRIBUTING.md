@@ -173,4 +173,3 @@ The rAthena team is comprised of all volunteers ([AUTHORS](https://github.com/ra
 Thanks!
 
 rAthena Team
-LivedRO Team
