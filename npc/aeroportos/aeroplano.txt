@@ -45,130 +45,130 @@ OnTouch_:
 
 airplane,243,29,0	duplicate(#AirshipWarp-1)	#AirshipWarp-2	45,1,1
 
-airplane,1,1,0	script	Aeroplano_Domestico	-1,{
+airplane,1,1,0	script	Aeroplano	-1,{
 	end;
 OnInit:
 	initnpctimer;
 	end;
 OnTimer20000:
-	mapannounce "aeroplano","Estamos indo para Einbroch.",bc_map,"0x00ff00";
+	mapannounce "airplane","Estamos indo para Einbroch.",bc_map,"0x00ff00";
 	end;
 OnTimer50000:
-	mapannounce "aeroplano","Chegaremos a Einbroch em breve.",bc_map,"0x00ff00";
+	mapannounce "airplane","Chegaremos a Einbroch em breve.",bc_map,"0x00ff00";
 	end;
 OnTimer60000:
 	set $@airplanelocation,1;
 	donpcevent "#AirshipWarp-1::OnUnhide";
 	donpcevent "#AirshipWarp-2::OnUnhide";
-	mapannounce "aeroplano","Bem vindo a Einbroch. Tenha uma viagem segura.",bc_map,"0x00ff00";
+	mapannounce "airplane","Bem vindo a Einbroch. Tenha uma viagem segura.",bc_map,"0x00ff00";
 	end;
 OnTimer70000:
-	mapannounce "aeroplano","Atualmente estamos em Einbroch. O Aeroplano irá decolar em breve.",bc_map,"0x00ff00";
+	mapannounce "airplane","Atualmente estamos em Einbroch. O Aeroplano irá decolar em breve.",bc_map,"0x00ff00";
 	end;
 OnTimer80000:
 	donpcevent "#AirshipWarp-1::OnHide";
 	donpcevent "#AirshipWarp-2::OnHide";
-	mapannounce "aeroplano","O Aeroplano está decolando agora. Nosso próximo destino é Lighthalzen.",bc_map,"0x70dbdb";
+	mapannounce "airplane","O Aeroplano está decolando agora. Nosso próximo destino é Lighthalzen.",bc_map,"0x70dbdb";
 	end;
 OnTimer100000:
-	mapannounce "aeroplano","Estamos indo para Lighthalzen.",bc_map,"0x70dbdb";
+	mapannounce "airplane","Estamos indo para Lighthalzen.",bc_map,"0x70dbdb";
 	end;
 OnTimer130000:
-	mapannounce "aeroplano","Chegaremos a Lighthalzen em breve.",bc_map,"0x70dbdb";
+	mapannounce "airplane","Chegaremos a Lighthalzen em breve.",bc_map,"0x70dbdb";
 	end;
 OnTimer140000:
 	set $@airplanelocation,2;
 	donpcevent "#AirshipWarp-1::OnUnhide";
 	donpcevent "#AirshipWarp-2::OnUnhide";
-	mapannounce "aeroplano","Bem vindo a Lighthalzen. Tenha uma viagem segura.",bc_map,"0x70dbdb";
+	mapannounce "airplane","Bem vindo a Lighthalzen. Tenha uma viagem segura.",bc_map,"0x70dbdb";
 	end;
 OnTimer150000:
-	mapannounce "aeroplano","Atualmente estamos em Lighthalzen. O Aeroplano sairá em breve.",bc_map,"0x70dbdb";
+	mapannounce "airplane","Atualmente estamos em Lighthalzen. O Aeroplano sairá em breve.",bc_map,"0x70dbdb";
 	end;
 OnTimer160000:
 	donpcevent "#AirshipWarp-1::OnHide";
 	donpcevent "#AirshipWarp-2::OnHide";
-	mapannounce "aeroplano","O Aeroplano está para decolar. Nosso próximo destino será Einbroch.",bc_map,"0x00ff00";
+	mapannounce "airplane","O Aeroplano está para decolar. Nosso próximo destino será Einbroch.",bc_map,"0x00ff00";
 	end;
 OnTimer180000:
-	mapannounce "aeroplano","Estamos indo para Einbroch.",bc_map,"0x00ff00";
+	mapannounce "airplane","Estamos indo para Einbroch.",bc_map,"0x00ff00";
 	end;
 OnTimer210000:
-	mapannounce "aeroplano","Chegaremos a Einbroch em breve.",bc_map,"0x00FF00";
+	mapannounce "airplane","Chegaremos a Einbroch em breve.",bc_map,"0x00FF00";
 	end;
 OnTimer220000:
 	set $@airplanelocation,1;
 	donpcevent "#AirshipWarp-1::OnUnhide";
 	donpcevent "#AirshipWarp-2::OnUnhide";
-	mapannounce "aeroplano","Bem vindo a Einbroch. Tenha uma viagem segura.",bc_map,"0x00ff00";
+	mapannounce "airplane","Bem vindo a Einbroch. Tenha uma viagem segura.",bc_map,"0x00ff00";
 	end;
 OnTimer230000:
-	mapannounce "aeroplano","Atualmente estamos em Einbroch. O Aeroplano irá decolar em breve.",bc_map,"0x00ff00";
+	mapannounce "airplane","Atualmente estamos em Einbroch. O Aeroplano irá decolar em breve.",bc_map,"0x00ff00";
 	end;
 OnTimer240000:
 	donpcevent "#AirshipWarp-1::OnHide";
 	donpcevent "#AirshipWarp-2::OnHide";
-	mapannounce "aeroplano","O Aeroplano está decolando. Nosso próximo destino será Juno.",bc_map,"0xff8200";
+	mapannounce "airplane","O Aeroplano está decolando. Nosso próximo destino será Juno.",bc_map,"0xff8200";
 	end;
 OnTimer260000:
-	mapannounce "aeroplano","Estamos indo para Juno.",bc_map,"0xff8200";
+	mapannounce "airplane","Estamos indo para Juno.",bc_map,"0xff8200";
 	end;
 OnTimer290000:
-	mapannounce "aeroplano","Chegaremos a Juno em breve.",bc_map,"0xff8200";
+	mapannounce "airplane","Chegaremos a Juno em breve.",bc_map,"0xff8200";
 	end;
 OnTimer300000:
 	set $@airplanelocation,0;
 	donpcevent "#AirshipWarp-1::OnUnhide";
 	donpcevent "#AirshipWarp-2::OnUnhide";
-	mapannounce "aeroplano","Bem vindo a Juno. Tenha uma viagem segura.",bc_map,"0xff8200";
+	mapannounce "airplane","Bem vindo a Juno. Tenha uma viagem segura.",bc_map,"0xff8200";
 	end;
 OnTimer310000:
-	mapannounce "aeroplano","Atualmente estamos em Juno. O Aeroplano sairá em breve.",bc_map,"0xff8200";
+	mapannounce "airplane","Atualmente estamos em Juno. O Aeroplano sairá em breve.",bc_map,"0xff8200";
 	end;
 OnTimer320000:
 	donpcevent "#AirshipWarp-1::OnHide";
 	donpcevent "#AirshipWarp-2::OnHide";
-	mapannounce "aeroplano","O Aeroplano está decolando. Nosso próximo destino é Hugel.",bc_map,"0xca4bf3";
+	mapannounce "airplane","O Aeroplano está decolando. Nosso próximo destino é Hugel.",bc_map,"0xca4bf3";
 	end;
 OnTimer340000:
-	mapannounce "aeroplano","Estamos indo para Hugel.",bc_map,"0xca4bf3";
+	mapannounce "airplane","Estamos indo para Hugel.",bc_map,"0xca4bf3";
 	end;
 OnTimer370000:
-	mapannounce "aeroplano","Chegaremos a Hugel em breve.",bc_map,"0xca4bf3";
+	mapannounce "airplane","Chegaremos a Hugel em breve.",bc_map,"0xca4bf3";
 	end;
 OnTimer380000:
 	set $@airplanelocation,3;
 	donpcevent "#AirshipWarp-1::OnUnhide";
 	donpcevent "#AirshipWarp-2::OnUnhide";
-	mapannounce "aeroplano","Bem vindo a Hugel. Tenha uma viagem segura.",bc_map,"0xca4bf3";
+	mapannounce "airplane","Bem vindo a Hugel. Tenha uma viagem segura.",bc_map,"0xca4bf3";
 	end;
 OnTimer390000:
-	mapannounce "aeroplano","Atualmente estamos em Hugel. O Aeroplano sairá em breve.",bc_map,"0xca4bf3";
+	mapannounce "airplane","Atualmente estamos em Hugel. O Aeroplano sairá em breve.",bc_map,"0xca4bf3";
 	end;
 OnTimer400000:
 	donpcevent "#AirshipWarp-1::OnHide";
 	donpcevent "#AirshipWarp-2::OnHide";
-	mapannounce "aeroplano","O Aeroplano irá decolar. Nosso próximo destino será Juno.",bc_map,"0xff8200";
+	mapannounce "airplane","O Aeroplano irá decolar. Nosso próximo destino será Juno.",bc_map,"0xff8200";
 	end;
 OnTimer420000:
-	mapannounce "aeroplano","Estamos indo para Juno.",bc_map,"0xff8200";
+	mapannounce "airplane","Estamos indo para Juno.",bc_map,"0xff8200";
 	end;
 OnTimer450000:
-	mapannounce "aeroplano","Chegaremos em Juno em breve.",bc_map,"0xff8200";
+	mapannounce "airplane","Chegaremos em Juno em breve.",bc_map,"0xff8200";
 	end;
 OnTimer460000:
 	set $@airplanelocation,0;
 	donpcevent "#AirshipWarp-1::OnUnhide";
 	donpcevent "#AirshipWarp-2::OnUnhide";
-	mapannounce "aeroplano","Bem vindo a Juno. Tenha uma viagem segura.",bc_map,"0xff8200";
+	mapannounce "airplane","Bem vindo a Juno. Tenha uma viagem segura.",bc_map,"0xff8200";
 	end;
 OnTimer470000:
-	mapannounce "aeroplano","Atualmente estamos em Juno. O Aeroplano sairá em breve.",bc_map,"0xff8200";
+	mapannounce "airplane","Atualmente estamos em Juno. O Aeroplano sairá em breve.",bc_map,"0xff8200";
 	end;
 OnTimer480000:
 	donpcevent "#AirshipWarp-1::OnHide";
 	donpcevent "#AirshipWarp-2::OnHide";
-	mapannounce "aeroplano","O Aeroplano irá decolar. Nosso próximo destino será Einbroch.",bc_map,"0x00ff00";
+	mapannounce "airplane","O Aeroplano irá decolar. Nosso próximo destino será Einbroch.",bc_map,"0x00ff00";
 	stopnpctimer;
 	initnpctimer;
 }
@@ -176,9 +176,9 @@ OnTimer480000:
 airplane,240,64,5	script	Saída#airplane1a::ExitAirplane	857,{
 	end;
 }
-airplane,247,64,5	duplicate(ExitAirplane)	Exit#airplane1b	857
-airplane,240,40,1	duplicate(ExitAirplane)	Exit#airplane2a	857
-airplane,247,40,1	duplicate(ExitAirplane)	Exit#airplane2b	857
+airplane,247,64,5	duplicate(ExitAirplane)	Saída#airplane1b	857
+airplane,240,40,1	duplicate(ExitAirplane)	Saída#airplane2a	857
+airplane,247,40,1	duplicate(ExitAirplane)	Saída#airplane2b	857
 
 airplane,100,69,3	script	Tripulante#ein-1	852,{
 	mes "[Tripulante]";
@@ -213,7 +213,7 @@ airplane,66,93,3	script	Senhora de Umbala#ein_p	783,{
 	mes "[Senhora]";
 	if (event_umbala >= 3) {
 		mes "Shush...";
-		mes "Querido, comporte-se~";
+		mes "Querido, comporte-se";
 		mes "Não se anime tanto";
 		mes "enquanto não sairmos";
 		mes "deste lugar público!";
@@ -414,16 +414,16 @@ airplane,221,158,2	script	Piloto#airplane	852,{
 		mes "viagem de ferias";
 		mes "ou até mesmo um dia de folga. Sim, alguns";
 		mes "bebida, batatas fritas, TV";
-		mes "e serio R&R está em ordom.";
+		mes "e serio R&R está em ordem.";
 		emotion ET_CRY;
 		close;
 	case 2:
 		mes "[Piloto]";
 		mes "Cara, o clima";
 		mes "está ótimo hoje.";
-		mes "Brilho, o céu está aberto";
+		mes "o céu está aberto";
 		mes "com uma boa visibilidade";
-		mes "e segurança, um vôo despreocupado.";
+		mes "e segurança, para um vôo despreocupado.";
 		close;
 	case 3:
 		mes "[Piloto]";
@@ -665,7 +665,7 @@ OnTouch_:
 		else
 			warp "izlude",200,56;
 		end;
-	case 2: warp "juno",12,261;	end;
+	case 2: warp "yuno",12,261;	end;
 	}
 
 OnInit:
