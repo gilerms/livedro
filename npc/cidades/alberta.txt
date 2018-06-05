@@ -72,7 +72,7 @@ alberta,131,139,2	script	Velho Bêbado	1_M_JOBGUIDER,{
 	next;
 	switch(select("Não diga nada.","Deixe-o em paz.")){
 	case 1:
-		mes "[DeaVelho Bêbadogle]";
+		mes "[Velho Bêbadogle]";
 		mes "Hahahaha ^666666*soluço*^000000... Você tem um pouco de coragem. Eu posso parecer sem valor agora, mas eu costumava ser um marinheiro 'Feliz'.";
 		next;
 		switch(select("Nunca ouvi falar disso","Realmente? Não está brincando!")){
@@ -374,28 +374,29 @@ alberta,190,173,4	script	Phelix	4_M_03,{
 			break;
 		case 2:
 			mes "[Phelix]";
-			mes "Right I'm not giving you more then 100 at a time so don't bother, okay? If you don't want any, just say '0'.";
+			mes "Coloque a quantidade. Coloque 0 pra cancelar.";
+			mes "e por favor, não peça mais de 100... vou acabar com minhas costas carregando peso.";
 			input .@amount;
 			next;
 			mes "[Phelix]";
 			if (.@amount == 0) {
-				mes "Alright then, see you next time.";
+				mes "Certo, então, vejo você por ai.";
 				close;
 			}
 			if (.@amount > 100) {
-				mes "Hey pansy ass, I said 100 at most, no more then that! I'm not going to break my back for the likes of you!";
+				mes "Hey, eu disse 100 no máximo, não mais que isso! Eu não vou quebrar minhas costas para pessoas como você!";
 				close;
 			}
 			if (countitem(909) < .@amount*3) {
-				mes "Seems you don't have enough. Go get some more if you want anything else.";
+				mes "Parece que você não tem o suficiente. Vá pegar mais Jellopys se você quiser algo comigo.";
 				close;
 			}
 			delitem 909,.@amount*3;// Jellopy
-			getitem 515,.@amount;// Carrot
+			getitem 515,.@amount;// Cenoura
 			break;
 		case 3:
 			mes "[Phelix]";
-			mes "Catch'ya later.";
+			mes "Até mas tarde.";
 			close;
 }	
 		mes "[Phelix]";

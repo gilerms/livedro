@@ -104,10 +104,10 @@ OnEnable:
 	donpcevent "OBJ#bat_a01_a::OnEnable";
 	donpcevent "OBJ#bat_a01_b::OnKill";
 	donpcevent "OBJ#bat_a01_b::OnEnable";
-	donpcevent "barricade#bat_a01_a::OnKill";
-	donpcevent "barricade#bat_a01_a::OnEnable";
-	donpcevent "barricade#bat_a01_b::OnKill";
-	donpcevent "barricade#bat_a01_b::OnEnable";
+	donpcevent "barricada#bat_a01_a::OnKill";
+	donpcevent "barricada#bat_a01_a::OnEnable";
+	donpcevent "barricada#bat_a01_b::OnKill";
+	donpcevent "barricada#bat_a01_b::OnEnable";
 	donpcevent "OBJ#bat_a01_n::OnKill";
 	donpcevent "OBJ#bat_a01_n::OnEnable";
 	donpcevent "NOBJ_mob#bat_a01_a::OnKill";
@@ -117,8 +117,8 @@ OnEnable:
 	donpcevent "countdown#bat_a01::OnEnable";
 	disablenpc "Ferreiro Guillaume#a01";
 	disablenpc "Ferreiro Croix#bat_a01";
-	disablenpc "Guillaume Vintenar#a01_a";
-	disablenpc "Croix Vintenar#a01_b";
+	disablenpc "Armada de Guillaume#a01_a";
+	disablenpc "Armada de Croix#a01_b";
 	end;
 
 OnGuillaumeQuit:
@@ -166,8 +166,8 @@ OnMyMobDead:
 		donpcevent "Terapeuta de Batalha#a01_a::OnStop";
 		donpcevent "Terapeuta de Batalha#a01_b::OnStop";
 		set $@TierraBG1_Victory, 2;
-		enablenpc "Guillaume Vintenar#a01_a";
-		enablenpc "Croix Vintenar#a01_b";
+		enablenpc "Armada de Guillaume#a01_a";
+		enablenpc "Armada de Croix#a01_b";
 		mapannounce "bat_a01", "Croix Vintenar Swandery: Nós destruímos os Suprimentos dos Guillaumes. Nós vencemos esta! Wow!",bc_map,"0xFFCE00";
 		bg_warp $@TierraBG1_id1,"bat_a01",50,374;
 		bg_warp $@TierraBG1_id2,"bat_a01",42,16;
@@ -186,11 +186,11 @@ OnKill:
 
 OnMyMobDead:
 	if (mobcount("bat_a01","OBJ#bat_a01_b::OnMyMobDead") < 1) {
-		donpcevent "Battle Therapist#a01_a::OnStop";
-		donpcevent "Battle Therapist#a01_b::OnStop";
+		donpcevent "Terapeuta de Batalha#a01_a::OnStop";
+		donpcevent "Terapeuta de Batalha#a01_b::OnStop";
 		set $@TierraBG1_Victory, 1;
-		enablenpc "Guillaume Vintenar#a01_a";
-		enablenpc "Croix Vintenar#a01_b";
+		enablenpc "Armada de Guillaume#a01_a";
+		enablenpc "Armada de Croix#a01_b";
 		mapannounce "bat_a01", "Guillaume Vintenar Axl Rose: Nós destruímos os Suprimentos dos Croixs. Nós vencemos esta! Wow!",bc_map,"0xFFCE00";
 		bg_warp $@TierraBG1_id1,"bat_a01",50,374;
 		bg_warp $@TierraBG1_id2,"bat_a01",42,16;
@@ -206,13 +206,13 @@ OnEnable:
 	end;
 
 OnKill:
-	killmonster "bat_a01","barricade#bat_a01_a::OnMyMobDead";
+	killmonster "bat_a01","barricada#bat_a01_a::OnMyMobDead";
 	delwall "bat_a01_c1";
 	end;
 
 OnMyMobDead:
-	if (mobcount("bat_a01","barricade#bat_a01_a::OnMyMobDead") < 17) {
-		killmonster "bat_a01","barricade#bat_a01_a::OnMyMobDead";
+	if (mobcount("bat_a01","barricada#bat_a01_a::OnMyMobDead") < 17) {
+		killmonster "bat_a01","barricada#bat_a01_a::OnMyMobDead";
 		delwall "bat_a01_c1";
 		enablenpc "Ferreiro Guillaume#a01";
 		mapannounce "bat_a01", "Guillaume Vintenar Axl Rose: A Barricada do vale foi destruída! Onde está o nosso Ferreiro Guillaume? Nós precisamos reconstruir a Barricada!",bc_map,"0xFFCE00";
@@ -220,7 +220,7 @@ OnMyMobDead:
 	end;
 }
 
-bat_a01,15,19,3	script	barricade#bat_a01_b	844,{
+bat_a01,15,19,3	script	barricada#bat_a01_b	844,{
 OnEnable:
 	for( set .@i,169; .@i < 186; set .@i,.@i+1 )
 		bg_monster $@TierraBG1_id2,"bat_a01",.@i,129,"Barricada",1906,"barricade#bat_a01_b::OnMyMobDead";
@@ -228,13 +228,13 @@ OnEnable:
 	end;
 
 OnKill:
-	killmonster "bat_a01","barricade#bat_a01_b::OnMyMobDead";
+	killmonster "bat_a01","barricada#bat_a01_b::OnMyMobDead";
 	delwall "bat_a01_g1";
 	end;
 
 OnMyMobDead:
-	if (mobcount("bat_a01","barricade#bat_a01_b::OnMyMobDead") < 17) {
-		killmonster "bat_a01","barricade#bat_a01_b::OnMyMobDead";
+	if (mobcount("bat_a01","barricada#bat_a01_b::OnMyMobDead") < 17) {
+		killmonster "bat_a01","barricada#bat_a01_b::OnMyMobDead";
 		delwall "bat_a01_g1";
 		enablenpc "Ferreiro Croix#bat_a01";
 		mapannounce "bat_a01", "Croix Vintenar Swandery : A Barricada do vale foi destruída! Onde está o nosso Ferreiro Croix? Nós precisamos reconstruir a Barricada!",bc_map,"0xFFCE00";
@@ -674,7 +674,7 @@ bat_a01,357,74,3	script	Acampamento Croix#flag8	974,{ end; }
 bat_a01,348,74,3	script	Acampamento Croix#flag9	974,{ end; }
 
 
-bat_a01,53,377,3	script	Guillaume Vintenar#a01_a	419,{
+bat_a01,53,377,3	script	Armada de Guillaume#a01_a	419,{
 	if (getcharid(4) == $@TierraBG1_id1) {
 		if ($@TierraBG1_Victory == 1)
 			callfunc "F_BG_Badge",1,"Guillaume","Tierra";
@@ -692,11 +692,11 @@ bat_a01,53,377,3	script	Guillaume Vintenar#a01_a	419,{
 	end;
 
 OnInit:
-	disablenpc "Guillaume Vintenar#a01_a";
+	disablenpc "Armada de Guillaume#a01_a";
 	end;
 }
 
-bat_a01,45,19,3	script	Croix Vintenar#a01_b	415,{
+bat_a01,45,19,3	script	Armada de Croix#a01_b	415,{
 	if (getcharid(4) == $@TierraBG1_id2) {
 		if ($@TierraBG1_Victory == 2)
 			callfunc "F_BG_Badge",1,"Croix","Tierra";
@@ -714,7 +714,7 @@ bat_a01,45,19,3	script	Croix Vintenar#a01_b	415,{
 	end;
 
 OnInit:
-	disablenpc "Croix Vintenar#a01_b";
+	disablenpc "Armada de Croix#a01_b";
 	end;
 }
 

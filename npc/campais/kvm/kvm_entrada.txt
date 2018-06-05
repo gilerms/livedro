@@ -36,12 +36,12 @@ bat_room,164,178,5	script	Oficial de KVM#1	418,{
 		close;
 	}
 	else if (.@permit == 2) erasequest 6025;
-	mes "[Oficial Mercenário de Guillaume]";
+	mes "[Oficial KVM de Guillaume]";
 	mes "Parece que você recentemente participou de uma batalha KVM. Você deve esperar 5 minutos antes de se inscrever novamente.";
 	next;
 	switch(select("Eu vou lutar com você.:Fim de dialogo.")) {
 	case 1:
-		mes "[Oficial Mercenário de Guillaume]";
+		mes "[Oficial KVM de Guillaume]";
 		mes "Mostre a eles o quanto somos fortes.";
 		mes "Hoje, todo mundo vai ouvir o grito de triunfo de Guillaume!";
 		close2;
@@ -123,7 +123,7 @@ bat_room,164,121,1	script	Oficial de KVM#2	414,{
 	/*
 	set .@kvm,checkquest(6025,PLAYTIME);
 	if ((.@kvm == 0) || (.@kvm == 1)) {
-		mes "[Mercenário Oficial Croix]";
+		mes "[Oficial KVM de Croix]";
 		mes "Eu sei que você já assinou com o Guillaume. Volte e junte-se ao time deles. Nós não vamos aceitar traidores para lutar por nós.";
 		close;
 	}
@@ -131,7 +131,7 @@ bat_room,164,121,1	script	Oficial de KVM#2	414,{
 	*/
 	set .@permit,checkquest(6025,PLAYTIME);
 	if ((.@permit == 0) || (.@permit == 1)) {
-		mes "[Mercenário Oficial Croix]";
+		mes "[Oficial KVM de Croix]";
 		mes "Parece que você recentemente participou de uma batalha KVM. Você deve esperar 5 minutos antes de se inscrever novamente.";
 		close;
 	}

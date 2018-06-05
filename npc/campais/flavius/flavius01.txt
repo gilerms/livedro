@@ -38,7 +38,7 @@ OnEnterBG:
 bat_room,85,204,0	script	Tenente Thelokus	414,{
 	end;
 OnInit:
-	waitingroom "Battle Station",11,"start#bat_b01::OnReadyCheck",1,0,80;
+	waitingroom "Estação de Batalha",11,"start#bat_b01::OnReadyCheck",1,0,80;
 	end;
 OnEnterBG:
 	set $@FlaviusBG1_id2, waitingroom2bg("bat_b01",390,10,"start#bat_b01::OnCroixQuit","");
@@ -84,8 +84,8 @@ OnInit:
 OnReadyCheck:
 	if( $@FlaviusBG1 )
 		end;
-	set .@Guillaume, getwaitingroomstate(0,"Lieutenant Ator");
-	set .@Croix, getwaitingroomstate(0,"Lieutenant Thelokus");
+	set .@Guillaume, getwaitingroomstate(0,"Tenente Ator");
+	set .@Croix, getwaitingroomstate(0,"Tenente Thelokus");
 	if( !.@Guillaume && !.@Croix ) {
 		donpcevent "#bat_b01_timer::OnStop";
 		end;
@@ -98,23 +98,22 @@ OnReadyCheck:
 	set $@Guill_ScoreBG1, 0;
 	bg_updatescore "bat_b01",$@Guill_ScoreBG1,$@Croix_ScoreBG1;
 
-	donpcevent "Lieutenant Ator::OnEnterBG";
-	donpcevent "Lieutenant Thelokus::OnEnterBG";
+	donpcevent "Tenente Ator::OnEnterBG";
+	donpcevent "Tenente Thelokus::OnEnterBG";
 	donpcevent "OBJ#bat_b01_a::OnKill";
 	donpcevent "OBJ#bat_b01_a::OnEnable";
 	donpcevent "OBJ#bat_b01_b::OnKill";
 	donpcevent "OBJ#bat_b01_b::OnEnable";
-	donpcevent "guardian#bat_b01_a::OnKill";
-	donpcevent "guardian#bat_b01_b::OnKill";
-	donpcevent "guardian#bat_b01_a::OnEnable";
-	donpcevent "guardian#bat_b01_b::OnEnable";
+	donpcevent "guardião#bat_b01_a::OnKill";
+	donpcevent "guardião#bat_b01_b::OnKill";
+	donpcevent "guardião#bat_b01_a::OnEnable";
 	donpcevent "cell#bat_b01_a::OnRed";
 	donpcevent "cell#bat_b01_b::OnRed";
 	donpcevent "time#bat_b01::OnEnable";
-	disablenpc "Guillaume Vintenar#b01_a";
-	disablenpc "Croix Vintenar#b01_b";
-	disablenpc "Vintenar#bat_b01_aover";
-	disablenpc "Vintenar#bat_b01_bover";
+	disablenpc "Armada de Guillaume#b01_a";
+	disablenpc "Armada de Croix#b01_b";
+	disablenpc "Armada#bat_b01_aover";
+	disablenpc "Armada#bat_b01_bover";
 	bg_warp $@FlaviusBG1_id1,"bat_b01",87,75;
 	bg_warp $@FlaviusBG1_id2,"bat_b01",311,224;
 	donpcevent "countdown#bat_b01::OnEnable";
@@ -126,17 +125,17 @@ OnReset:
 	donpcevent "OBJ#bat_b01_a::OnEnable";
 	donpcevent "OBJ#bat_b01_b::OnKill";
 	donpcevent "OBJ#bat_b01_b::OnEnable";
-	donpcevent "guardian#bat_b01_a::OnKill";
-	donpcevent "guardian#bat_b01_b::OnKill";
-	donpcevent "guardian#bat_b01_a::OnEnable";
-	donpcevent "guardian#bat_b01_b::OnEnable";
+	donpcevent "guardião#bat_b01_a::OnKill";
+	donpcevent "guardião#bat_b01_b::OnKill";
+	donpcevent "guardião#bat_b01_a::OnEnable";
+	donpcevent "guardião#bat_b01_b::OnEnable";
 	donpcevent "cell#bat_b01_a::OnRed";
 	donpcevent "cell#bat_b01_b::OnRed";
 	donpcevent "time#bat_b01::OnEnable";
-	disablenpc "Guillaume Vintenar#b01_a";
-	disablenpc "Croix Vintenar#b01_b";
-	disablenpc "Vintenar#bat_b01_aover";
-	disablenpc "Vintenar#bat_b01_bover";
+	disablenpc "Armada de Guillaume#b01_a";
+	disablenpc "Armada de Croix#b01_b";
+	disablenpc "Armada#bat_b01_aover";
+	disablenpc "Armada#bat_b01_bover";
 	bg_warp $@FlaviusBG1_id1,"bat_b01",87,75;
 	bg_warp $@FlaviusBG1_id2,"bat_b01",311,224;
 	end;
@@ -168,8 +167,8 @@ OnMyMobDead:
 		if ($@Croix_ScoreBG1 > 0) {
 			set $@FlaviusBG1_Victory,2;
 			set $@Croix_ScoreBG1,$@Croix_ScoreBG1+1;
-			enablenpc "Guillaume Vintenar#b01_a";
-			enablenpc "Croix Vintenar#b01_b";
+			enablenpc "Armada de Guillaume#b01_a";
+			enablenpc "Armada de Croix#b01_b";
 			donpcevent "time#bat_b01::OnStop";
 		}
 		else {
@@ -202,8 +201,8 @@ OnMyMobDead:
 		if ($@Guill_ScoreBG1 > 0) {
 			set $@FlaviusBG1_Victory,1;
 			set $@Guill_ScoreBG1,$@Guill_ScoreBG1+1;
-			enablenpc "Guillaume Vintenar#b01_a";
-			enablenpc "Croix Vintenar#b01_b";
+			enablenpc "Armada de Guillaume#b01_a";
+			enablenpc "Armada de Croix#b01_b";
 			donpcevent "time#bat_b01::OnStop";
 		}
 		else {
@@ -220,20 +219,20 @@ OnMyMobDead:
 	end;
 }
 
-bat_b01,1,3,3	script	Guardião#bat_b01_a	844,{
+bat_b01,1,3,3	script	guardião#bat_b01_a	844,{
 OnEnable:
-	bg_monster $@FlaviusBG1_id1,"bat_b01",108,159,"Guardião do Campo de Guillaume",1949,"guardião#bat_b01_a::OnMyMobDead";
-	bg_monster $@FlaviusBG1_id1,"bat_b01",108,141,"Guardião do Campo de Guillaume",1949,"guardião#bat_b01_a::OnMyMobDead";
+	bg_monster $@FlaviusBG1_id1,"bat_b01",108,159,"Guardião de Guillaume",1949,"guardião#bat_b01_a::OnMyMobDead";
+	bg_monster $@FlaviusBG1_id1,"bat_b01",108,141,"Guardião de Guillaume",1949,"guardião#bat_b01_a::OnMyMobDead";
 	end;
 
 OnKill:
-	killmonster "bat_b01","guardian#bat_b01_a::OnMyMobDead";
+	killmonster "bat_b01","Guardião#bat_b01_a::OnMyMobDead";
 	end;
 
 OnMyMobDead:
-	if (mobcount("bat_b01","guardian#bat_b01_a::OnMyMobDead") < 1) {
+	if (mobcount("bat_b01","Guardião#bat_b01_a::OnMyMobDead") < 1) {
 		donpcevent "cell#bat_b01_a::OnGreen";
-		mapannounce "bat_b01", "The Guardian protecting Guillaume's Crystal has been slain.",bc_map,"0xFFCE00";
+		mapannounce "bat_b01", "O Guardião que protegia o cristal de guillaume foi drstruído.",bc_map,"0xFFCE00";
 		setunitdata $@FlavBG1_C1_ID,UMOB_DMGIMMUNE,0; // Make Crystal damageable again
 	}
 	end;
@@ -241,16 +240,16 @@ OnMyMobDead:
 
 bat_b01,1,3,3	script	guardião#bat_b01_b	844,{
 OnEnable:
-	bg_monster $@FlaviusBG1_id2,"bat_b01",307,160,"Guardião do Campo Croix",1949,"guardião#bat_b01_b::OnMyMobDead";
-	bg_monster $@FlaviusBG1_id2,"bat_b01",307,138,"Guardião do Campo Croix",1949,"guardião#bat_b01_b::OnMyMobDead";
+	bg_monster $@FlaviusBG1_id2,"bat_b01",307,160,"Guardião de Croix",1949,"guardião#bat_b01_b::OnMyMobDead";
+	bg_monster $@FlaviusBG1_id2,"bat_b01",307,138,"Guardião de Croix",1949,"guardião#bat_b01_b::OnMyMobDead";
 	end;
 
 OnKill:
-	killmonster "bat_b01","guardian#bat_b01_b::OnMyMobDead";
+	killmonster "bat_b01","guardião#bat_b01_b::OnMyMobDead";
 	end;
 
 OnMyMobDead:
-	if (mobcount("bat_b01","guardian#bat_b01_b::OnMyMobDead") < 1) {
+	if (mobcount("bat_b01","guardião#bat_b01_b::OnMyMobDead") < 1) {
 		donpcevent "cell#bat_b01_b::OnGreen";
 		mapannounce "bat_b01", "O Guardião que protegia o Cristal de Croix foi derrotado.",bc_map,"0xFFCE00";
 		setunitdata $@FlavBG1_C2_ID,UMOB_DMGIMMUNE,0;
@@ -398,7 +397,7 @@ OnTouch:
 	end;
 }
 
-bat_b01,10,294,3	script	Guillaume Vintenar#b01_a	934,{
+bat_b01,10,294,3	script	Armada de Guillaume#b01_a	934,{
 	if ($@FlaviusBG1_id1 == getcharid(4)) {
 		if ($@FlaviusBG1_Victory == 1)
 			callfunc "F_BG_Badge",1,"Guillaume","Flavius";
@@ -476,8 +475,8 @@ OnTimer1830000:
 	donpcevent "time#bat_b01::OnStop";
 	bg_warp $@FlaviusBG1_id1,"bat_b01",10,290;
 	bg_warp $@FlaviusBG1_id2,"bat_b01",390,10;
-	enablenpc "Vintenar#bat_b01_aover";
-	enablenpc "Vintenar#bat_b01_bover";
+	enablenpc "Armada#bat_b01_aover";
+	enablenpc "Armada#bat_b01_bover";
 	end;
 
 OnTimer1900000:
@@ -510,7 +509,7 @@ bat_b01,336,161,3	script	Campo Croix#flag29	974,{ end; }
 bat_b01,336,139,3	script	Campo Croix#flag30	974,{ end; }
 bat_b01,389,16,3	script	Campo Croix#flag31	974,{ end; }
 
-bat_b01,10,294,3	script	Vintenar#bat_b01_aover	419,{
+bat_b01,10,294,3	script	Armada#bat_b01_aover	419,{
 	set .@A_B_gap,$@Guill_ScoreBG1 - $@Croix_ScoreBG1;
 	if ($@FlaviusBG1_id1 == getcharid(4)) {
 		if (.@A_B_gap > 0)
@@ -530,7 +529,7 @@ bat_b01,10,294,3	script	Vintenar#bat_b01_aover	419,{
 	end;
 
 OnInit:
-	disablenpc "Vintenar#bat_b01_aover";
+	disablenpc "Armada#bat_b01_aover";
 	end;
 }
 
@@ -554,7 +553,7 @@ bat_b01,389,14,3	script	Armada#bat_b01_bover	415,{
 	end;
 
 OnInit:
-	disablenpc "Vintenar#bat_b01_bover";
+	disablenpc "Armada#bat_b01_bover";
 	end;
 }
 

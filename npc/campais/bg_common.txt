@@ -310,7 +310,7 @@ bat_room,253,211,0	warp	bat32	1,1,bat_room,154,149
 
 // Kafra
 //============================================================
-bat_room,148,147,4	script	Funcionária Kafra::kaf_bat	861,{
+bat_room,148,147,4	script	Funcionária da Kafra::kaf_bat	861,{
 	cutin "kafra_09",2;
 	callfunc "F_Kafra",0,2,1,150,0;
 }

@@ -37,14 +37,14 @@ bat_room,124,178,5	script	Oficial de Tierra#01a	418,{
 		else {
 			if (BaseLevel < 80) {
 				mes "[Oficial do Exército Guillaume]";
-			mes "Eu estou muito honrado que você queira se juntar para lutar contra o exército Croix mas, eu sinto muito! Eu não posso mandar um novato como você para morrer cruelmente no campo de batalha.";
+				mes "Eu estou muito honrado que você queira se juntar para lutar contra o exército Croix mas, eu sinto muito! Eu não posso mandar um novato como você para morrer cruelmente no campo de batalha.";
 			}
 			else {
 				set .@chk_urtime,checkquest(2069,PLAYTIME);
 				if ((.@chk_urtime == 0)|| (.@chk_urtime == 1)) {
 					mes "[Oficial do Exército Guillaume]";
-			mes "Me parece que você acabou de voltar do campo de batalha.";
-			mes "Então é muito cedo pra você retornar. Vá descansar um pouco e deixe os inimigos conosco!";
+					mes "Me parece que você acabou de voltar do campo de batalha.";
+					mes "Então é muito cedo pra você retornar. Vá descansar um pouco e deixe os inimigos conosco!";
 				}
 				else {
 					if (.@chk_urtime == 2)
