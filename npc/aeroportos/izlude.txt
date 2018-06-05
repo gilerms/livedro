@@ -10,25 +10,24 @@
 //= Izlude Airport NPCs
 //===== Additional Comments: ================================= 
 //= 1.0 First version.
-//===== Traduzido por Rarord:================================= 
-//= 1.0
 //============================================================ 
 
 -	script	::Airship_Staff_izlude	-1,{
 	mes "[Equipe do Aeroporto]";
-	mes "Bem vindo! VocÃª gostaria de";
-	mes "embarcar no dirigÃ­vel que";
-	mes "parte no vÃ´o para";
-	mes "Juno e Rachel?";
+	mes "Bem vindo! Você gostaria de";
+	mes "embarcar no";
+	mes "vôo que parte para";
+	mes "Juno ou Rachel?";
 	next;
-	if (select("Embarcar no vÃ´o para Juno/Rachel.:Cancelar.") == 1) {
+	if (select("Embarcar no voo para Juno/Rachel.:Cancelar.") == 1) {
 		mes "[Equipe do Aeroporto]";
-	mes "A taxa de embarque Ã©";
-	mes "1.200 zeny. No entanto";
-	mes "se tiver um Bilhete para o Aeroplano,";
-	mes "a taxa nÃ£o serÃ¡ cobrada, gostaria de embarcar?";
+		mes "O voo tem um custo de";
+		mes "1,200 zeny. Ou caso você tenha";
+		mes "um Bilhete para o Aeroplano,";
+		mes "sua taxa não é cobrada. Então,";
+		mes "gostaria de embarcar?";
 		next;
-		if (select("Sim:NÃ£o") == 1) {
+		if (select("Sim:Não") == 1) {
 			if (countitem(7311) > 0) {
 				delitem 7311,1; //Bilhete para o Aeroplano
 				warp "airplane_01",244,58;
@@ -40,7 +39,7 @@
 				end;
 			}
 			mes "[Equipe do Aeroporto]";
-			mes "Desculpe, mas vocÃª nÃ£o";
+			mes "Desculpe, mas você não";
 			mes "possui 1,200 zenys para";
 			mes "pagar o embarque.";
 			close;
@@ -49,6 +48,6 @@
 	mes "[Equipe do Aeroporto]";
 	mes "Obrigado, e por favor";
 	mes "volte novamente.";
-	mes "Tenha um bom dia ~";
+	mes "Tenha um bom dia~";
 	close;
 }

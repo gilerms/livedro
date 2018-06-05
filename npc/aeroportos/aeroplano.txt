@@ -1199,7 +1199,7 @@ airplane_01,32,61,4	script	Nils#ein	49,1,1,{
 		}
 	case 2:
 		mes "[Nils]";
-		mes "O ^ff0000Desafio de Escrita RO^000000";
+		mes "O ^ff0000Desafio de Escrita LivedRO^000000";
 		mes "é um jogo onde você deve digitar";
 		mes "o texto exibido o mais rápido que você";
 		mes "puder. O nome do jogador que possuir o";
