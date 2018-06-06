@@ -16,7 +16,7 @@ hugel,178,142,0	script	toairplane#hugel	45,1,1,{
 	end;
 OnTouch:
 	mes "Para usar o aeroplano, você precisa pagar uma taxa de 1,200 zenys ou possuir um Bilhete para o Aeroplano.";
-	mes "Gostaria de utilizar nossos serviços.";
+	mes "Gostaria de utilizar nossos serviços?";
 	next;
 	if (select("Sim:Não") == 1) {
 		if (countitem(7311) > 0) {
