@@ -398,42 +398,36 @@ function	script	F_KafCart	{
 function	script	F_KafInfo	{
 // Uncomment next line to block Kafra Storage Protection
 //	.@block = 1;
-	if (getarg(0) == 2)// Port Malaya, Rune Knight
-		setarray .@menu$[0], "Checar reserva de pontos especiais.", "", "", "Cancelar";
-	else if (.@block)
-		setarray .@menu$[0], "Checar reserva de pontos especiais.", "", "FLocalização das Funcionárias", "Cancelar";
-	else
-		setarray .@menu$[0], "Checar reserva de pontos especiais.", "Senha do Armazém", "FLocalização das Funcionárias", "Cancelar";
-	.@menu_list$ = implode(.@menu$,":");
+	setarray .@m$, "Verificar Reserva Especial de Pontos","Serviço de Senha do Armazém","Localizações dos Empregados da Kafra","Cancelar";
+	if (getarg(0) == 2) deletearray .@m$[1],2; // Port Malaya, Rune Knight: remove Storage Password and Kafra Employee Locations
+	else if (.@block) deletearray .@m$[1],1; // Remove Storage Password
 	while (true) {
-		.@j = select(.@menu_list$) - 1;
-		switch(.@j) {
-		case 0:// Checar reserva de pontos especiais.
+		.@j = select(implode(.@m$,":")) - 1;
+		if (.@m$[.@j] == "Verificar Reserva Especial de Pontos") {
 			mes "[Funcionária Kafra]";
-			mes "Vamos ver...";
-			mes "" + strcharinfo(0) + "...";
-			mes "Ah, você tem um total de";
-			mes "" + RESRVPTS + " reservas de pontos especiais.";
+			mes "Deixe-me ver...";
+			mes strcharinfo(0) + "...";
+			mes "Ah, Você tem no total ";
+			mes RESRVPTS+ " Reserva especial de pontos.";
 			next;
 			mes "[Funcionária Kafra]";
-			mes "Você pode trocar suas";
-			mes "Reservas de pontos especiais por";
-			mes "recompensas no escritório da Corporação Kafra em Aldebaran. Por favor,";
-			mes "utilize nossos serviços convenientes receber os benefícios do nosso programa de recompensas.";
-			if (getarg(0) == 1)
+			mes "Você pode trocar os seus Pontos de Reserva Especial por recompensas no Escritório Principal Kafra em toda Al De Baran.";
+			mes "Por favor, utilize nosso conveniênte serviço para ver o benefícios de nossos programas de recompensas.";
+			next;
+			if(getarg(0) == 1)
 				return;
-			next;
-			break;
-		case 1:// Senha do Armazém
-			callfunc("F_SetKafCode","[Funcionária Kafra]","Serviços Kafra");
-		case 2:// Localização das Funcionárias
-			for ( .@i = 0; .@i <= 3; .@i++ )
+		}
+		else if (.@m$[.@j] == "Localizações dos Empregados da Kafra") {
+			for (.@i = 0; .@i <= 3; ++.@i)
 				viewpoint 1,@viewpX[.@i],@viewpY[.@i],(.@i+1),0xFF00FF;
 			next;
-			for ( .@i = 0; .@i <= 3; .@i++ )
+			for (.@i = 0; .@i <= 3; ++.@i)
 				viewpoint 2,@viewpX[.@i],@viewpY[.@i],(.@i+1),0xFF00FF;
-			break;
-		default:
+		}
+		else if (.@m$[.@j] == "Serviço de Senha do Armazém") {
+			callfunc("F_SetKafCode","[Funcionária Kafra]","Serviços Kafra");
+		}
+		else {
 			return;
 		}
 	}

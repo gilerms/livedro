@@ -1,4 +1,4 @@
-ï»¿//===== rAthena Script ======================================= 
+//===== rAthena Script ======================================= 
 //= The Airship System Script
 //===== By: ================================================== 
 //= rAthena Dev Team
@@ -178,7 +178,7 @@ airplane,247,64,5	duplicate(ExitAirplane)	Saída#airplane1b	857
 airplane,240,40,1	duplicate(ExitAirplane)	Saída#airplane2a	857
 airplane,247,40,1	duplicate(ExitAirplane)	Saída#airplane2b	857
 
-airplane,100,69,3	script	Tripulação do Aeroplano#ein-1	852,{
+airplane,100,69,3	script	Tripulação do Aeroplano#ein-1	857,{
 	mes "[Tripulação do Aeroplano]";
 	mes "Se já pousamos no";
 	mes "seu destino e você";
@@ -189,7 +189,7 @@ airplane,100,69,3	script	Tripulação do Aeroplano#ein-1	852,{
 	close;
 }
 
-airplane,64,94,1	script	Criança de Umbala#ein_p	787,{
+airplane,64,94,1	script	Criançade Umbala#ein_p	787,{
 	emotion ET_PROFUSELY_SWEAT;
 	mes "[Criança]";
 	if (event_umbala >= 3) {
@@ -212,7 +212,7 @@ airplane,66,93,3	script	Senhora de Umbala#ein_p	783,{
 	mes "[Senhora]";
 	if (event_umbala >= 3) {
 		mes "Shush...";
-		mes "Querido, comporte-se.";
+		mes "Querido, comporte-se~";
 		mes "Não se anime tanto";
 		mes "enquanto não sairmos";
 		mes "deste lugar público!";
@@ -229,7 +229,7 @@ airplane,66,93,3	script	Senhora de Umbala#ein_p	783,{
 airplane,71,91,7	script	Homem de Umbala#ein_p	789,{
 	if (event_umbala >= 3) {
 		mes "[Chrmlim]";
-		mes "Ei você";
+		mes "Ei você~";
 		mes "Pela sua aparência,";
 		mes "percebo que você";
 		mes "consegue me entender.";
@@ -362,7 +362,7 @@ airplane,72,34,6	script	Aanos#01airplane	702,{
 	close;
 }
 
-airplane,221,158,2	script	Pilot#airplane	852,{
+airplane,221,158,2	script	Piloto#airplane	852,{
 	// Hugel quest addition
 	if (hg_ma1 == 3) {
 		mes "[Piloto]";
@@ -371,8 +371,8 @@ airplane,221,158,2	script	Pilot#airplane	852,{
 		mes "Não vivo sem bebidas!";
 		next;
 		mes "[Piloto]";
-		mes "Mas! Dirigir sob influência da bebida não é bom.";
-		mes "Porém! Preciso estar bebendo mais e mais!";
+		mes "Mas! Dirigir sob influência da bebida não e bom.";
+		mes "Porrém! Preciso estar bebendo mais e mais!";
 		emotion ET_CRY;
 		next;
 		select("Você conhece um passageiro chamado Thierry?");
@@ -393,10 +393,10 @@ airplane,221,158,2	script	Pilot#airplane	852,{
 		mes "[Piloto]";
 		mes "Ah!? O que é isto!";
 		next;
-		mes "- ...Ele não está te ouvindo. -";
+		mes "- ...Ele não está ouvindo tudo que você fala. -";
 		close;
 	}
-	// Hugel quest end
+	// Fim da quest de Hugel
 	switch (rand(1,4)) {
 	case 1:
 		mes "[Piloto]";
@@ -413,7 +413,7 @@ airplane,221,158,2	script	Pilot#airplane	852,{
 		mes "da última vez que tive umas férias de verdade";
 		mes "ou até mesmo um dia de folga, sim";
 		mes "uma bebida, algumas batatas fritas";
-		mes "um pouco de TV e tudo ficará ótimo.";
+		mes "um pouco de TV e tudo ficaria ótimo.";
 		emotion ET_CRY;
 		close;
 	case 2:
@@ -449,7 +449,7 @@ airplane,221,158,2	script	Pilot#airplane	852,{
 		mes "Sim, temos um Aeroplano";
 		mes "voando a uma incrível velocidade.";
 		next;
-		emotion e_omg;
+		emotion ET_HUK;
 		mes "[Piloto]";
 		mes "Ainda assim, há sempre algo sério,";
 		mes "realmente acontecendo.";
@@ -461,12 +461,12 @@ airplane,221,158,2	script	Pilot#airplane	852,{
 	}
 }
 
-airplane,50,66,5	script	Apple Merchant#airplane	86,{
+airplane,50,66,5	script	Mercador de Maçãs#airplane	86,{
 	mes "[Fruitz]";
-	mes "Bem vindo ao Fruitz's";
+	mes "Bem-vind"+(Sex?"o":"a")+" a loja do Fruit'z";
 	mes "onde você pode";
 	mes "comprar maçãs ou triturá-las";
-	mes "para fazer suco de maçã.";
+	mes "para fazer Suco de Maçã.";
 	next;
 	switch (select("Comprar Maçãs.:Fazer Suco de Maçã.:Por que você está aqui?:Cancelar.")) {
 	case 1:
@@ -475,8 +475,7 @@ airplane,50,66,5	script	Apple Merchant#airplane	86,{
 		mes "de Maçãs que você deseja";
 		mes "comprar. Cada Maçã custa 15 zeny";
 		mes "e você pode comprar no máximo";
-		mes "500 por vez.",
-		mes "Digite '0' para cancelar sua compra.";
+		mes "500 por vez. Digite '0' para cancelar sua compra.";
 		next;
 		while (1) {
 			input .@input;
@@ -487,7 +486,7 @@ airplane,50,66,5	script	Apple Merchant#airplane	86,{
 				mes "na minha loja. Adeus!";
 				mes "Venha a qualquer hora quando";
 				mes "você sentir vontade de ter uma";
-				mes "Maçã para fazer um lanche.";
+				mes "Maçã para fazer um lanche ~";
 				close;
 			}
 			else if (.@input < 1 || .@input > 500) {
@@ -502,16 +501,16 @@ airplane,50,66,5	script	Apple Merchant#airplane	86,{
 			else {
 				mes "[Fruitz]";
 				mes "Um total de ^FF0000" + .@input + "^000000 Maçãs";
-				mes "que irá custar a você ^FF0000" + .@pay + " Zeny^000000.";
+				mes "que irá custar a você ^FF0000" + .@pay + " Zeny^000000 zeny.";
 				mes "Você gostaria de continuar?";
 				next;
 				if (select("Sim:Não") == 2) {
 					mes "[Fruitz]";
 					mes "Obrigado por parar";
-					mes "na minha loja. Até mais!";
+					mes "na minha loja. Adeus!";
 					mes "Venha a qualquer hora quando";
-					mes "você sentir vontade";
-					mes "fazer um lanche";
+					mes "você sentir vontade de ter uma";
+					mes "Maçã para fazer um lanche ~";
 					close;
 				}
 				break;
@@ -523,7 +522,7 @@ airplane,50,66,5	script	Apple Merchant#airplane	86,{
 			mes "tem dinheiro suficiente para";
 			mes "comprar muitas Maçãs.";
 			mes "Por favor, verifique o seu zeny ou";
-			mes "compre poucas Maçãs.";
+			mes "compre menos Maçãs.";
 			close;
 		}
 		else if (checkweight(512,.@input) == 0) {
@@ -540,7 +539,7 @@ airplane,50,66,5	script	Apple Merchant#airplane	86,{
 			mes "[Fruitz]";
 			mes "Obrigado pela visita";
 			mes "na minha loja. Espero que você goste";
-			mes "do aroma dessas Maçãs~!";
+			mes "do aroma dessas Maçãs ~!";
 			close;
 		}
 	case 2:
@@ -564,8 +563,7 @@ airplane,50,66,5	script	Apple Merchant#airplane	86,{
 			else {
 				mes "[Fruitz]";
 				mes "Obrigado,";
-				mes "por favor";
-				mes "espere um momento.";
+				mes "por favor espere um momento.";
 				next;
 				mes "^3355FF*Grind grind*";
 				mes "*Grind grind*";
@@ -575,12 +573,12 @@ airplane,50,66,5	script	Apple Merchant#airplane	86,{
 				delitem 713,1; //Garrafa Vazia
 				getitem 531,1; //Suco de Maçã
 				mes "[Fruitz]";
-				mes "Aqui está";
+				mes "Aqui está~";
 				mes "Espero que você goste!";
 				mes "Por favor fique a vontade";
 				mes "para comprar Maçãs";
 				mes "ou fazer Sucos de Maçã quando";
-				mes "você precisar, aventureiro";
+				mes "você precisar, aventureiro~";
 				close;
 			}
 		case 2:
@@ -589,7 +587,7 @@ airplane,50,66,5	script	Apple Merchant#airplane	86,{
 			mes "na minha loja. Adeus!";
 			mes "Venha a qualquer hora quando";
 			mes "você sentir vontade de ter uma";
-			mes "Maçã para fazer um lanche ~";
+			mes "Maçã para fazer um lanche.";
 			close;
 		}
 	case 3:
@@ -664,7 +662,8 @@ OnTouch_:
 		else
 			warp "izlude",200,56;
 		end;
-	case 2: warp "yuno",12,261; end;
+	case 2: warp "yuno",12,261;
+		 end;
 	}
 
 OnInit:
@@ -766,11 +765,11 @@ airplane_01,247,64,5	duplicate(ExitAirplane01)	Saída#airplane_011b	857
 airplane_01,240,40,1	duplicate(ExitAirplane01)	Saída#airplane_012a	857
 airplane_01,247,40,1	duplicate(ExitAirplane01)	Saída#airplane_012b	857
 
-airplane_01,250,58,2	script	Equipe do Aeroplano#airplane01	67,{
+airplane_01,250,58,2	script	Equipe do Aeroplano#airplane01	1_F_02,{
 	mes "[Equipe do Aeroplano]";
-	mes "Bem vindo";
+	mes "Bem-vind"+(Sex?"o":"a")+"";
 	mes "ao Aeroplano.";
-	mes "como posso ajudar?";
+	mes "Como posso ajudá-l"+(Sex?"o?":"a?")+"";
 	next;
 	switch (select("Usando o Aeroplano:Cabine do Capitão:Instalações:Cancelar")) {
 	case 1:
@@ -827,7 +826,7 @@ airplane_01,50,66,5	script	Mercador de Maçãs#air01	86,{
 		close;
 	}
 	mes "[Meltz]";
-	mes "Bem vindo ao Meltz's";
+	mes "Bem-vind"+(Sex?"o":"a")+" a loja do Meltz's";
 	mes "onde você pode";
 	mes "comprar maçãs ou triturá-las";
 	mes "para fazer Suco de Maçã.";
@@ -851,7 +850,7 @@ airplane_01,50,66,5	script	Mercador de Maçãs#air01	86,{
 				mes "na minha loja. Adeus!";
 				mes "Venha a qualquer hora quando";
 				mes "você sentir vontade de ter uma";
-				mes "Maçã para fazer um lanche";
+				mes "Maçã para fazer um lanche ~";
 				close;
 			}
 			else if (.@input < 1 || .@input > 500) {
@@ -866,16 +865,16 @@ airplane_01,50,66,5	script	Mercador de Maçãs#air01	86,{
 			else {
 				mes "[Meltz]";
 				mes "Um total de ^FF0000" + .@input + "^000000 Maçãs";
-				mes "que irá custar a você ^FF0000" + .@pay + " Zeny^000000.";
+				mes "que irá custar a você ^FF0000" + .@pay + " Zeny^000000 zeny.";
 				mes "Você gostaria de continuar?";
 				next;
-				if (select("Yes:No") == 2) {
+				if (select("Sim:Não") == 2) {
 					mes "[Meltz]";
 					mes "Obrigado por parar";
-					mes "na minha loja. Até mais!";
+					mes "na minha loja. Adeus!";
 					mes "Venha a qualquer hora quando";
-					mes "você sentir vontade de";
-					mes "fazer um lanche";
+					mes "você sentir vontade de ter uma";
+					mes "Maçã para fazer um lanche.";
 					close;
 				}
 				break;
@@ -884,18 +883,17 @@ airplane_01,50,66,5	script	Mercador de Maçãs#air01	86,{
 		if (Zeny < .@pay) {
 			mes "[Meltz]";
 			mes "Sinto muito, você não tem";
-			mes "dinheiro suficiente.";
-			mes "Por favor, verifique quanto ainda tem ou";
-			mes "compre poucas maçãs.";
+			mes "dinheiro suficiente com você.";
+			mes "Por favor, verifique seus zenys ou";
+			mes "compre menos maçãs.";
 			close;
 		}
 		else if (checkweight(512,.@input) == 0) {
 			mes "[Meltz]";
 			mes "Hmm, acho que você não tem";
 			mes "espaço suficiente para transportar";
-			mes "essa qauntidade enorme de maçãs.";
-			mes "Você pode liberar";
-			mes "espaço em seu inventário";
+			mes "estas muitas maçãs. Você pode";
+			mes "liberar espaço em seu inventário";
 			close;
 		}
 		else {
@@ -904,7 +902,7 @@ airplane_01,50,66,5	script	Mercador de Maçãs#air01	86,{
 			mes "[Meltz]";
 			mes "Obrigado pela visita";
 			mes "na minha loja. Espero que você goste";
-			mes "do aroma dessas Maçãs!";
+			mes "do aroma dessas Maçãs~!";
 			close;
 		}
 	case 2:
@@ -937,7 +935,7 @@ airplane_01,50,66,5	script	Mercador de Maçãs#air01	86,{
 				delitem 713,1; //Garrafa Vazia
 				getitem 531,1; //Suco de Maçã
 				mes "[Meltz]";
-				mes "Aqui está";
+				mes "Aqui está.";
 				mes "Por favor, venha novamente.";
 				close;
 			}
@@ -975,7 +973,7 @@ airplane_01,221,158,2	script	Piloto#airplane_01	852,{
 		mes "dia nublado. Sempre é difícil";
 		mes "navegar quando os céus";
 		mes "não estão limpos. Acho que nós vamos";
-		mes "precisar ampliar o radar.";
+		mes "precisar amplificar o radar.";
 		close;
 	case 3:
 		mes "[Piloto]";
@@ -1063,10 +1061,10 @@ airplane_01,71,31,2	script	Swordsman Shimizu#air_01	106,{
 //============================================================ 
 airplane_01,32,61,4	script	Nils#ein	49,1,1,{
 	mes "[Nils]";
-	mes "Bem vindo ao";
-	mes "^ff0000Desafio de Digitação do LivedRO^000000.";
+	mes "Bem-vind"+(Sex?"o":"a")+" ao";
+	mes "^ff0000Desafio de Escrita RO^000000.";
 	mes "Você gostaria de jogar";
-	mes "um jogo de digitação rápida?";
+	mes "um rápido jogo de escrita?";
 	next;
 	switch (select("Jogar ^ff0000Desafio de Escrita LivedRO^000000:Informações:Ver recordes:Cancelar")) {
 	case 1:
@@ -1171,8 +1169,8 @@ airplane_01,32,61,4	script	Nils#ein	49,1,1,{
 			mes "O recorde anterior foi";
 				mes "feito por ^0000ff" + $050320_minus1_typing$ + "^000000";
 				mes "com o total de ^0000ff" + $050320_ein_typing + "^000000 letras.";
-				mes "Porém, ^ff0000" + strcharinfo(0) + "^000000,";
-				mes "você o novo top record";
+				mes "Porém ^ff0000" + strcharinfo(0) + "^000000,";
+				mes "você é o novo top record";
 				mes "desta vez. Parabéns!";
 				set $050320_minus1_typing$, strcharinfo(0);
 				set $050320_ein_typing, .@tasoo;
@@ -1199,7 +1197,7 @@ airplane_01,32,61,4	script	Nils#ein	49,1,1,{
 		}
 	case 2:
 		mes "[Nils]";
-		mes "O ^ff0000Desafio de Escrita LivedRO^000000";
+		mes "O ^ff0000Desafio de Escrita RO^000000";
 		mes "é um jogo onde você deve digitar";
 		mes "o texto exibido o mais rápido que você";
 		mes "puder. O nome do jogador que possuir o";
@@ -1220,7 +1218,7 @@ airplane_01,32,61,4	script	Nils#ein	49,1,1,{
 		mes "atual conquistado com";
 		mes "um total de ^0000ff" + $050320_ein_typing + "^000000";
 		mes "caracteres. Tente bater";
-		mes "esse record na próxima vez";
+		mes "esse record na próxima vez~";
 		close;
 	case 4:
 		mes "[Nils]";
@@ -1232,11 +1230,10 @@ airplane_01,32,61,4	script	Nils#ein	49,1,1,{
 }
 
 //============================================================ 
-//= Jogo da Maçã
-//============================================================ 
+//= Jogo da Maçã//============================================================ 
 airplane_01,33,68,4	script	Clarice	74,{
 	mes "[Clarice]";
-	mes "Oi, eu sou Clarice";
+	mes "Oi, eu sou Clarice~";
 	mes "Você gostaria de";
 	mes "apostar algumas maçãs";
 	mes "no amigável jogo dos Dados?";
@@ -1252,7 +1249,7 @@ function	script	applegamble	{
 		mes "["+ .@npc_name$ +"]";
 		mes "Estou pronta para";
 		mes "o jogo dos dados";
-		mes "e você, está a vontade para jogar";
+		mes "e você está vontade para jogar";
 		mes "basta falar comigo";
 		mes "se sentir vontade de jogar, Ok??";
 		close;
@@ -1266,7 +1263,7 @@ function	script	applegamble	{
 		mes "bem, eu aceito apenas Maçãs.";
 		next;
 		mes "["+ .@npc_name$ +"]";
-		mes "Ei, se todo esse zeny";
+		mes "Ei, todo esse zeny";
 		mes "está fazendo um buraco no seu";
 		mes "bolso, vá ao Fruitz";
 		mes "e poderá comprar quantas";
@@ -1317,8 +1314,8 @@ function	script	applegamble	{
 		input .@amount;
 		if (.@amount == 0) {
 			mes "["+ .@npc_name$ +"]";
-			mes "Mudou de idéia?";
-			mes "Eu entendo. Bem então,";
+			mes "Mudou de idéia.";
+			mes "Eu entendo. Bem então";
 			mes "espero que possamos jogar depois.";
 			close;
 		}
@@ -1357,12 +1354,12 @@ function	script	applegamble	{
 		}
 		delitem 512,.@amount;
 		mes "["+ .@npc_name$ +"]";
-		mes "Good!";
-		mes "Now we can start";
-		mes "this game! I'll roll first~";
+		mes "Bom!";
+		mes "Agora podemos começar";
+		mes "este jogo! Irei rolar primeiro~";
 		break;
 	}
-	mes "^3355FF*Rolling and rumbling*^000000";
+	mes "^3355FF*Rolando e Caindo*^000000";
 	next;
 	set .@giveapple, .@amount*2;
 	set .@table1, rand(1,6);
@@ -1424,7 +1421,7 @@ function	script	applegamble	{
 			mes "Deixe-me jogar os dados novamente.";
 		}
 		else {
-			mes "^FF0000" + strcharinfo(0) + "^000000, you got ^FF0000" + .@player3 + "^000000 and the total is now ^FF0000" + .@playertotal + "^000000. Now it is my turn.";
+			mes "^FF0000" + strcharinfo(0) + "^000000, você possui ^FF0000" + .@player3 + "^000000 e o total agora é ^FF0000" + .@playertotal + "^000000. Agora é minha vez.";
 		}
 		break;
 	case 2:
@@ -1439,8 +1436,8 @@ function	script	applegamble	{
 				getitem 512,.@amount; //Maçã
 				end;
 			}
-			mes "Tudo bem.";
-			mes "Deixe-me jogar os dados novamente.";
+			mes "Certo.";
+			mes "Vamos rolar os dados novamente.";
 		}
 		else {
 			mes "Não faria mal tentar.";

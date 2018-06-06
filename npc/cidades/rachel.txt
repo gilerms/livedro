@@ -276,7 +276,7 @@ rachel,206,30,3	script	Sacerdote de Freya#play	920,{
 	mes "[Sacerdote de Freya]";
 	mes "Você!";
 	mes "Entretenha-me!";
-	emotion e_ag;
+	emotion ET_ANGER;
 	next;
 	if (select("O quê? Você não pode me dizer o que fazer!:Você sabe disto.") == 1) {
 		mes "[Sacerdote de Freya]";
@@ -421,7 +421,7 @@ ra_temin,138,64,5	script	Criança Seguidora#in1	921,{
 	mes "eu realmente queria somente que ele";
 	mes "descançasse e ficasse saudável de novo";
 	mes "mas ele morreu! Waaaaah!";
-	emotion e_sob;
+	emotion ET_CRY;
 	next;
 	mes "[Pequeno Discípulo]";
 	mes "Eu.. Eu vou";

@@ -43,7 +43,7 @@ comodo,171,137,1	script	Haith#um	92,{
 	next;
 	mes "[La Ed]";
 	mes "Vamos fazer isso~!!";
-	emotion e_gg;
+	emotion ET_KIK;
 	next;
 	mes "[Haith]";
 	mes "................";
@@ -108,7 +108,7 @@ comodo,171,137,1	script	Haith#um	92,{
 			mes "certeza de que o Niels vá nos";
 			mes "dizer onde ele encontrou o";
 			mes "tesouro...";
-			emotion e_hmm;
+			emotion ET_SCRATCH;
 			next;
 			mes "[La Ed]";
 			mes "Porque o Niels sempre nos trata";
@@ -247,7 +247,7 @@ umbala,70,106,3	script	Criança Utan#um	781,{
 		mes "[???]";
 		mes "Heh! Oi!";
 		mes "Meu nome é Haatan.";
-		emotion e_heh;
+		emotion ET_SMILE;
 		next;
 		mes "[Haatan]";
 		mes "...*Suspiro*";
@@ -255,7 +255,7 @@ umbala,70,106,3	script	Criança Utan#um	781,{
 		mes "com você agora. A casa dos meus pais";
 		mes "foi atingida por um raio ontem e";
 		mes "ele queimou o nosso telhado...";
-		emotion e_sob;
+		emotion ET_CRY;
 		next;
 		mes "[Haatan]";
 		mes " . . . !";
@@ -267,7 +267,7 @@ umbala,70,106,3	script	Criança Utan#um	781,{
 		mes "a reconstrução da casa dos meus pais?";
 		mes "Vocês de Rune-Midgard são todos mais";
 		mes "ricos do que os Utans! Eu imploro!";
-		emotion e_heh;
+		emotion ET_SMILE;
 		next;
 		if (select("(Acenar com a cabeça):(Negar com a cabeça)") == 1) {
 			mes "[Haatan]";
@@ -288,13 +288,13 @@ umbala,70,106,3	script	Criança Utan#um	781,{
 				mes "Parece...";
 				mes "Você não tem muito,";
 				mes "você...";
-				emotion e_pif;
+				emotion ET_HNG;
 				close;
 			}
 			next;
 			mes "[Haatan]";
 			mes "Muito obrigado!";
-			emotion e_heh;
+			emotion ET_SMILE;
 			close;
 		}
 		mes "[Haatan]";
@@ -370,7 +370,7 @@ umbala,59,243,5	script	Criança Utan#1	787,{
 		mes ".........poop!";
 		mes ".....eu gosto de carne.";
 		mes "....me dê uma carne.";
-		emotion e_rock;
+		emotion ET_ROCK  ;
 		next;
 		if (select("Dar-lhe carne.:Recusar.") == 1) {
 			if (countitem(517) > 0) {

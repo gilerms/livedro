@@ -180,7 +180,7 @@ niflheim,350,258,1	script	Alma Amaldiçoadat#nif	802,{
 	next;
 	mes "[Bruce Ashe]";
 	mes "Só porque eu sou um espírito amaldiçoado, você acha que pode aventurar-se a jogar sua maldição em mim?!";
-	emotion e_an;
+	emotion ET_FRET;
 	next;
 	mes "[Bruce Ashe]";
 	mes "Me recuso deixar";
@@ -233,7 +233,7 @@ niflheim,350,258,1	script	Alma Amaldiçoadat#nif	802,{
 		mes "E o encanto para o livrar";
 		mes "de sua maldição";
 		mes "está perdido por eras!";
-		emotion e_gg;
+		emotion ET_KIK;
 		next;
 		if (select("Clover:Klaatu:Klaytos") == 2)
 			set .@spell,.@spell+1;

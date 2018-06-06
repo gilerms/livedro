@@ -102,7 +102,7 @@ prt_in,88,101,4	script	Capitão dos Cavaleiros#knt	1_M_KNIGHTMASTER,{
 		if (select("Eu quero mudar minha classe para Cavaleiro.:Estou apenas visitando.") == 1) {
 			mes "[Capitão Herman]";
 			mes "Nossa...";
-			mes ""+((Sex==SEX_MALE)?"Rapaz":"Senhorita")+" que deseja";
+			mes ""+((Sex==SEX_MALE)?"Rapaz":"Moça")+" deseja";
 			mes "se tornar um Cavaleiro!";
 			mes "A Cavalaria de Prontera";
 			mes "irá ajudar você.";

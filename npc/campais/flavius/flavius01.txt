@@ -107,6 +107,7 @@ OnReadyCheck:
 	donpcevent "guardião#bat_b01_a::OnKill";
 	donpcevent "guardião#bat_b01_b::OnKill";
 	donpcevent "guardião#bat_b01_a::OnEnable";
+	donpcevent "guardiãO#bat_b01_b::OnEnable";
 	donpcevent "cell#bat_b01_a::OnRed";
 	donpcevent "cell#bat_b01_b::OnRed";
 	donpcevent "time#bat_b01::OnEnable";

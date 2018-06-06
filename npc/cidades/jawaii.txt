@@ -215,7 +215,7 @@ jawaii,141,200,3	script	Funcionário#sroom	798,{
 	mes "[Alowa]";
 	mes "^666666*Sniff*^000000";
 	mes "Ma-mas, eu prometo, es-se quarto é o mais bonito e li-limpo! Po-porfavor! Volte quando quiser!";
-	emotion e_sob;
+	emotion ET_CRY;
 	close;
 }
 
@@ -680,7 +680,7 @@ jawaii_in,15,104,0	script	Garçonete#jawaii	80,{
 			close;
 		}
 	}
-	emotion e_omg;
+	emotion ET_HUK;
 	mes "[Garçonete]";
 	mes "Ei, ei...!";
 	mes "Não sei porque você está aqui...";
