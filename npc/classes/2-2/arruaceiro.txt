@@ -178,7 +178,7 @@ in_rogue,363,122,4	script	Arruaceiro da Guilda#rg	4_F_ROGUE,{
 				mes "[Markie]";
 				mes "Agora...";
 				mes "É hora";
-				mes "de eu te contar";
+				mes "de te contar";
 				mes "uma coisa~ *Ahem*";
 				next;
 				mes "[Markie]";

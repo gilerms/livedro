@@ -26,22 +26,22 @@
 //= 2.2 Added warg checks. [Euphy]
 //============================================================ 
 
-// PecoPeco Breeder (for Knights) :: breeder
+// Criador de Pecopecos pada Cavaleiros :: Criador
 //============================================================
-prontera,55,350,5	script	Peco Peco Breeder#knt	105,{
+prontera,55,350,5	script	Criador de Pecopecos#knt	105,{
 	if(Upper==0) set .@price,2500; //Normal Peco - default price
 	if(Upper==1) set .@price,2500; //Armored Peco
 	if(Upper==2) set .@price,2500; //Baby Peco
 
-	mes "[Peco Peco Breeder]";
+	mes "[Criador de Pecopecos]";
 	if (BaseJob == Job_Knight && Class < Job_Rune_Knight) {
-		mes "Welcome.";
-		mes "Honorable Knight,";
+		mes "Bem vindo.";
+		mes "honorável  Cavaleiro,";
 		mes "would you like to rent";
 		mes "a Peco Peco? The rental";
 		mes "fee is "+.@price+" zeny.";
 		next;
-		switch(select("Rent Peco Peco:Cancel")) {
+		switch(select("Alugar Peco Peco:Cancelar")) {
 		case 1:
 			if (Zeny < .@price) {
 				mes "[Peco Peco Breeder]";

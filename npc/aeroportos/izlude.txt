@@ -38,7 +38,7 @@
 				end;
 			}
 			mes "[Equipe do Aeroporto]";
-			mes "Desculpe, mas você;
+			mes "Desculpe, mas você";
 			mes "possui 1,200 zenys para";
 			mes "pagar o embarque.";
 			close;

@@ -45,27 +45,25 @@ valkyrie,48,86,4	script	Valkyrie#	4_F_VALKYRIE,{
 	if (ADVJOB != 0 || Upper == 1) {
 		mes "[Valquíria]";
 		mes "Bem-vindo";
-		mes "ao Valhalla,";
-		mes "o Salão da Honra.";
+		mes "ao Salão de Honra de Valhalla.";
 		next;
 		mes "[Valquíria]";
 		mes "Sinta-se à vontade";
 		mes "enquanto estiver";
 		mes "por aqui.";
-		mes "Honra aos guerreiros!";
+		mes "Honra aos Guerreiros!";
 		close;
 	}
 	else if (BaseLevel > 98 && JobLevel > 49 && Class >= Job_Knight && Class <= Job_Crusader2) {
 		mes "[Valquíria]";
 		mes "Bem-vindo";
-		mes "ao Valhalla,";
-		mes "o Salão da Honra.";
+		mes "ao Salão de Honra de Valhalla.";
 		next;
 		mes "[Valquíria]";
 		mes "Você está prestes";
 		mes "a presenciar uma mudança";
 		mes "para uma nova vida!";
-		mes "Honra aos guerreiros!";
+		mes "Honra aos Guerreiros!";
 		next;
 		if (Weight > 0 || Zeny > 0 || checkcart() != 0 || checkfalcon() != 0 || checkriding() != 0) {
 			mes "[Valquíria]";
@@ -102,6 +100,9 @@ valkyrie,48,86,4	script	Valkyrie#	4_F_VALKYRIE,{
 				mes "negócios penhorados ou";
 				mes "inacabados em sua";
 				mes "vida atual. Cuide de encerrá-los na sua vida atual.";
+				next;
+				mes "Por favor.";
+				mes "verifique seus pontos de habilidades.";
 				close2;
 				warp "yuno_in02",93,205;
 				end;
@@ -114,20 +115,20 @@ valkyrie,48,86,4	script	Valkyrie#	4_F_VALKYRIE,{
 			next;
 			mes "[Valquíria]";
 			mes "Primeiro,";
-			mes "vou pedir à deusa Urd";
+			mes "vou pedir à Deusa Urd";
 			mes "para remover todas as";
 			mes "suas memórias presentes.";
 			next;
 			mes "[Valquíria]";
 			mes "Segundo,";
 			mes "vou pedir à";
-			mes "deusa Verdandi para manter";
+			mes "Deusa Verdandi para manter";
 			mes "as lembranças mais honráveis de toda sua vida.";
 			next;
 			mes "[Valquíria]";
 			mes "Terceiro,";
 			mes "vou pedir à";
-			mes "deusa Skuld para";
+			mes "Deusa Skuld para";
 			mes "guiá-lo até sua";
 			mes "próxima vida.";
 			next;
@@ -163,10 +164,10 @@ valkyrie,48,86,4	script	Valkyrie#	4_F_VALKYRIE,{
 			getitem 2302,1; //Camisa de Algodão
 			next;
 			mes "[Valquíria]";
-			mes "Desejo que a libertação da deusa Urd revele-se e te conceda uma bênção. Espero que Verdandi tenha guardado suas memórias e sempre honre você.";
+			mes "Desejo que a libertação da Deusa Urd revele-se e te conceda uma bênção. Espero que Verdandi tenha guardado suas memórias e sempre honre você.";
 			next;
 			mes "[Valquíria]";
-			mes "E rezo para que a nova vida que a deusa Skuld lhe concedeu seja ainda mais honrosa do que foi a sua passada.";
+			mes "E rezo para que a nova vida que a Deusa Skuld lhe concedeu seja ainda mais honrosa do que foi a sua passada.";
 			close2;
 			switch (ADVJOB) {
 			case 4008:
@@ -199,11 +200,10 @@ valkyrie,48,86,4	script	Valkyrie#	4_F_VALKYRIE,{
 	else {
 		mes "[Valquíria]";
 		mes "Bem-Vindo";
-		mes "ao Valhalla,";
-		mes "o Salão da Honra.";
+		mes "ao Salão de Honra de Valhalla,";
 		next;
 		mes "[Valquíria]";
-		mes "Infelizmente, você ainda não foi convidado para estar aqui. Peço-lhe que deixe imediatamente este local. Honra aos guerreiros!";
+		mes "Infelizmente, você ainda não foi convidado para estar aqui. Peço-lhe que deixe imediatamente este local. Honra aos Guerreiros!";
 		close2;
 		warp "yuno_in02",93,205;
 		end;
@@ -239,7 +239,7 @@ yuno_in02,88,164,5	script	Metheus Sylphe#Library	2_M_SAGE_B,{
 					close;
 				}
 				mes "[Metheus Sylphe]";
-				mes "Infelizmente, você não possui os zenys suficiente no momento. Verifique seus fundos e retorne.";
+				mes "Infelizmente, você não possui os zenys suficiente no momento. Verifique seus zenys e retorne.";
 				close;
 			}
 			mes "[Metheus Sylphe]";

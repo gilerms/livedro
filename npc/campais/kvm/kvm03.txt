@@ -365,4 +365,4 @@ bat_c03,51,130,5	script	Oficial KVM#KVM03A	419,{
 	}
 	end;
 }
-bat_c03,148,53,1	duplicate(oficial KVM#KVM03A)	oficial KVM#KVM03B	415
+bat_c03,148,53,1	duplicate(Oficial KVM#KVM03A)	Oficial KVM#KVM03B	415
