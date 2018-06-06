@@ -50,7 +50,7 @@ um_dun02,170,145,10,10	monster	Atirador Wootan	1498,1,120000,60000
 um_dun02,209,34,15,15	monster	Atirador Wootan	1498,1,120000,60000
 um_dun02,272,163,15,15	monster	Atirador Wootan	1498,1,120000,60000
 um_dun02,232,156,15,15	monster	Atirador Wootan	1498,1,120000,60000
-um_dun02,0,0	monster	DrÃ­ade	1493,25
+um_dun02,0,0	monster	Dríade	1493,25
 um_dun02,0,0	monster	Planta Amarela	1081,5,180000,90000
 um_dun02,0,0	monster	Planta Vermelha	1078,5,180000,90000
 um_dun02,0,0	monster	Planta Brilhante	1083,6,180000,90000

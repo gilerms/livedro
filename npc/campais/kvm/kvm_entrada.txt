@@ -2,20 +2,20 @@
 //= Sistema BattleGround - NPCs de Entrada KvM
 //===== Por: ================================================
 //= L0ne_W0lf
-//===== VersÃ£o atual: =======================================
+//===== Versão atual: =======================================
 //= 1,1
-//===== CompatÃ­vel com: =====================================
+//===== Compatível com: =====================================
 //= Projeto rAthena
-//===== DescriÃ§Ã£o: ==========================================
-//= [ConversÃ£o oficial]
+//===== Descrição: ==========================================
+//= [Conversão oficial]
 //= Kreiger Von Midgard NPCs de Entrada no Campo de Batalha
 //= NPCs originais descartados de bg_common.
-//===== ComentÃ¡rios adicionais: =============================
-//= 1.0 Primeira VersÃ£o.
-//= 1.1 Corrigidos alguns erros de digitaÃ§Ã£o e mudanÃ§as de mensagens.
-//= Corrigido as entradas do log de missÃµes do estilo iRO, no entanto, Ã©
-//= aconselhÃ¡vel que vocÃª nÃ£o os use, pois eles estÃ£o em conflito.
-//= 1.2 Traduzido para o portuguÃªs. [Rarord]
+//===== Comentários adicionais: =============================
+//= 1.0 Primeira Versão.
+//= 1.1 Corrigidos alguns erros de digitação e mudanças de mensagens.
+//= Corrigido as entradas do log de missões do estilo iRO, no entanto, é
+//= aconselhável que você não os use, pois eles estão em conflito.
+//= 1.2 Traduzido para o português. [Rarord]
 //===========================================================
 //KvM Officer - Guillaume
 //===========================================================
@@ -24,7 +24,7 @@ bat_room,164,178,5	script	Oficial de KVM#1	418,{
 	set .@kvm,checkquest(6026,PLAYTIME);
 	if ((.@kvm == 0) || (.@kvm == 1)) {
 		mes "[Oficial KVM de Guillaume]";
-		mes "Eu sei que vocÃª jÃ¡ estÃ¡ ao lado dos Croix. Volte para o seu time. NÃ³s nÃ£o aceitamos traidores para se juntarem ao nosso lado.";
+		mes "Eu sei que você já está ao lado dos Croix. Volte para o seu time. Nós não aceitamos traidores para se juntarem ao nosso lado.";
 		close;
 	}
 	else if (.@kvm == 2) erasequest 6026;
@@ -32,14 +32,14 @@ bat_room,164,178,5	script	Oficial de KVM#1	418,{
 	set .@permit,checkquest(6025,PLAYTIME);
 	if ((.@permit == 0) || (.@permit == 1)) {
 		mes "[Oficial KVM de Guillaume]";
-		mes "VocÃª jÃ¡ participou recentemente de uma batalha de KVM. VocÃª deve aguardar 5 minutos antes de se inscrever novamente.";
+		mes "Você já participou recentemente de uma batalha de KVM. Você deve aguardar 5 minutos antes de se inscrever novamente.";
 		close;
 	}
 	else if (.@permit == 2) erasequest 6025;
 	mes "[Oficial KVM de Guillaume]";
-	mes "Parece que vocÃª recentemente participou de uma batalha KVM. VocÃª deve esperar 5 minutos antes de se inscrever novamente.";
+	mes "Parece que você recentemente participou de uma batalha KVM. Você deve esperar 5 minutos antes de se inscrever novamente.";
 	next;
-	switch(select("Eu vou lutar com vocÃª.:Fim de dialogo.")) {
+	switch(select("Eu vou lutar com você.:Fim de dialogo.")) {
 	case 1:
 		mes "[Oficial KVM de Guillaume]";
 		mes "Mostre a eles o quanto somos fortes.";
@@ -61,57 +61,57 @@ bat_room,164,178,5	script	Oficial de KVM#1	418,{
 //============================================================
 bat_room,167,178,5	script	Cavaleiro de Guillaume#kvm	417,{
 	mes "[Cavaleiro de Guillaume]";
-	mes "OlÃ¡.";
-	mes "O que vocÃª quer saber?";
+	mes "Olá.";
+	mes "O que você quer saber?";
 	next;
-	switch(select("Inscrever-me para KVM.:O que Ã© KVM?:Como participo do KVM?:Quero saber quantos Pontos Kreiger tenho.")) {
+	switch(select("Inscrever-me para KVM.:O que é KVM?:Como participo do KVM?:Quero saber quantos Pontos Kreiger tenho.")) {
 	case 1:
 		mes "[Cavaleiro de Guillaume]";
-		mes "As inscriÃ§Ãµes ainda nÃ£o estÃ£o abertas.";
-		mes "Para se inscrever, vocÃª precisa falar com um Oficial de Alistamento do KVM.";
+		mes "As inscrições ainda não estão abertas.";
+		mes "Para se inscrever, você precisa falar com um Oficial de Alistamento do KVM.";
 		close;
 	case 2:
 		mes "[Cavaleiro de Guillaume]";
-		mes "KVM Ã© a abreviaÃ§Ã£o Kreiger Von Midgard.";
-		mes "Aventureiro, vocÃª jÃ¡ sabe do novo mundo que foi descoberto?";
+		mes "KVM é a abreviação Kreiger Von Midgard.";
+		mes "Aventureiro, você já sabe do novo mundo que foi descoberto?";
 		next;
 		mes "[Cavaleiro de Guillaume]";
-		mes "NÃ³s, da AdministraÃ§Ã£o de Guillaume, formamos vÃ¡rios planos para colonizar o novo mundo.";
-		mes "E o KVM Ã© um deles.";
+		mes "Nós, da Administração de Guillaume, formamos vários planos para colonizar o novo mundo.";
+		mes "E o KVM é um deles.";
 		next;
 		mes "[Cavaleiro de Guillaume]";
-		mes "NÃ³s, de um dos muitos paÃ­ses do continente de Midgard,";
-		mes "decidimos empregar aventureiros para o avanÃ§o imediato sobre o novo mundo.";
+		mes "Nós, de um dos muitos países do continente de Midgard,";
+		mes "decidimos empregar aventureiros para o avanço imediato sobre o novo mundo.";
 		next;
 		mes "[Cavaleiro de Guillaume]";
 		mes "Portanto, para escolher os melhores aventureiros, organizamos o KVM.";
 		mes "Esperamos receber muitos candidatos.";
 		next;
 		mes "[Cavaleiro de Guillaume]";
-		mes "E tambÃ©m damos algumas recompensas!";
-		mes "Para saber delas, entre em contato com um Oficial de LogÃ­stica do KVM.";
+		mes "E também damos algumas recompensas!";
+		mes "Para saber delas, entre em contato com um Oficial de Logística do KVM.";
 		close;
 	case 3:
 		mes "[Cavaleiro de Guillaume]";
-		mes "Basicamente, o KVM Ã© uma batalha 5 contra 5.";
-		mes "Primeiro, vocÃª se inscreve com um recepcionista do KVM, em grupo ou individualmente.";
+		mes "Basicamente, o KVM é uma batalha 5 contra 5.";
+		mes "Primeiro, você se inscreve com um recepcionista do KVM, em grupo ou individualmente.";
 		next;
 		mes "[Cavaleiro de Guillaume]";
-		mes "As inscriÃ§Ãµes em grupo servem para quando vocÃª quer entrar no KVM com os membros do seu grupo,";
-		mes "e uma inscriÃ§Ã£o pessoal serve para quando vocÃª quer entrar no KVM por conta prÃ³pria.";
+		mes "As inscrições em grupo servem para quando você quer entrar no KVM com os membros do seu grupo,";
+		mes "e uma inscrição pessoal serve para quando você quer entrar no KVM por conta própria.";
 		next;
 		mes "[Cavaleiro de Guillaume]";
-		mes "Por favor, faÃ§a a inscriÃ§Ã£o com um oficial do KVM, e ele entrarÃ¡ em contato com vocÃª mais tarde, em Prontera.";
+		mes "Por favor, faça a inscrição com um oficial do KVM, e ele entrará em contato com você mais tarde, em Prontera.";
 		next;
 		mes "[Cavaleiro de Guillaume]";
-		mes "EntÃ£o, vocÃª poderÃ¡ entrar e seguir as instruÃ§Ãµes no campo de batalha.";
+		mes "Então, você poderá entrar e seguir as instruções no campo de batalha.";
 		next;
 		mes "[Cavaleiro de Guillaume]";
-		mes "Mas lembre-se, a menos que vocÃª esteja no escritÃ³rio do KVM, ele nÃ£o poderÃ¡ entrar em contato com vocÃª.";
+		mes "Mas lembre-se, a menos que você esteja no escritório do KVM, ele não poderá entrar em contato com você.";
 		close;
 	case 4:
 		mes "[Cavaleiro de Guillaume]";
-		mes "Seus Pontos Kreiger sÃ£o:";
+		mes "Seus Pontos Kreiger são:";
 		mes ""+kvm_point+".";
 		close;
 	}
@@ -124,7 +124,7 @@ bat_room,164,121,1	script	Oficial de KVM#2	414,{
 	set .@kvm,checkquest(6025,PLAYTIME);
 	if ((.@kvm == 0) || (.@kvm == 1)) {
 		mes "[Oficial KVM de Croix]";
-		mes "Eu sei que vocÃª jÃ¡ assinou com o Guillaume. Volte e junte-se ao time deles. NÃ³s nÃ£o vamos aceitar traidores para lutar por nÃ³s.";
+		mes "Eu sei que você já assinou com o Guillaume. Volte e junte-se ao time deles. Nós não vamos aceitar traidores para lutar por nós.";
 		close;
 	}
 	else if (.@kvm == 2) erasequest 6025;
@@ -132,18 +132,18 @@ bat_room,164,121,1	script	Oficial de KVM#2	414,{
 	set .@permit,checkquest(6025,PLAYTIME);
 	if ((.@permit == 0) || (.@permit == 1)) {
 		mes "[Oficial KVM de Croix]";
-		mes "Parece que vocÃª recentemente participou de uma batalha KVM. VocÃª deve esperar 5 minutos antes de se inscrever novamente.";
+		mes "Parece que você recentemente participou de uma batalha KVM. Você deve esperar 5 minutos antes de se inscrever novamente.";
 		close;
 	}
 	else if (.@permit == 2) erasequest 6025;
 	mes "[Oficial KVM de Croix]";
 	mes "Vamos mostrar o verdadeiro poder dos Croix!";
 	next;
-	switch(select("Vou lutar com vocÃªs.:Terminar conversa.")) {
+	switch(select("Vou lutar com vocês.:Terminar conversa.")) {
 	case 1:
 		mes "[Oficial KVM de Croix]";
-		mes "Mostre a eles o quanto vocÃª Ã© forte.";
-		mes "Hoje, todos ouvirÃ£o o grito de triunfo de Croix!";
+		mes "Mostre a eles o quanto você é forte.";
+		mes "Hoje, todos ouvirão o grito de triunfo de Croix!";
 		close2;
 		//setquest 6026;
 		if (BaseLevel > 79) warp "bat_room",169,207;
@@ -161,57 +161,57 @@ bat_room,164,121,1	script	Oficial de KVM#2	414,{
 //============================================================
 bat_room,167,121,1	script	Cavaleiro de Croix#kvm	413,{
 	mes "[Cavaleiro de Croix]";
-	mes "OlÃ¡.";
-	mes "O que vocÃª quer saber?";
+	mes "Olá.";
+	mes "O que você quer saber?";
 	next;
-	switch(select("Inscrever-me para KVM.:O que Ã© KVM?:Como participo do KVM?:Quero saber quantos Pontos Kreiger tenho.")) {
+	switch(select("Inscrever-me para KVM.:O que é KVM?:Como participo do KVM?:Quero saber quantos Pontos Kreiger tenho.")) {
 	case 1:
 		mes "[Cavaleiro de Croix]";
-		mes "As inscriÃ§Ãµes ainda nÃ£o estÃ£o abertas.";
-		mes "Para se inscrever, vocÃª precisa falar com um Oficial de Alistamento do KVM.";
+		mes "As inscrições ainda não estão abertas.";
+		mes "Para se inscrever, você precisa falar com um Oficial de Alistamento do KVM.";
 		close;
 	case 2:
 		mes "[Cavaleiro de Croix]";
-		mes "KVM Ã© a abreviaÃ§Ã£o Kreiger Von Midgard.";
-		mes "Aventureiro, vocÃª jÃ¡ sabe do novo mundo que foi descoberto?";
+		mes "KVM é a abreviação Kreiger Von Midgard.";
+		mes "Aventureiro, você já sabe do novo mundo que foi descoberto?";
 		next;
 		mes "[Cavaleiro de Croix]";
-		mes "NÃ³s, da AdministraÃ§Ã£o de Croix, formamos vÃ¡rios planos para colonizar o novo mundo.";
-		mes "E o KVM Ã© um deles.";
+		mes "Nós, da Administração de Croix, formamos vários planos para colonizar o novo mundo.";
+		mes "E o KVM é um deles.";
 		next;
 		mes "[Cavaleiro de Croix]";
-		mes "NÃ³s, de um dos muitos paÃ­ses do continente de Midgard,";
-		mes "decidimos empregar aventureiros para o avanÃ§o imediato sobre o novo mundo.";
+		mes "Nós, de um dos muitos países do continente de Midgard,";
+		mes "decidimos empregar aventureiros para o avanço imediato sobre o novo mundo.";
 		next;
 		mes "[Cavaleiro de Croix]";
 		mes "Portanto, para escolher os melhores aventureiros, organizamos o KVM.";
 		mes "Esperamos receber muitos candidatos.";
 		next;
 		mes "[Cavaleiro de Croix]";
-		mes "E tambÃ©m damos algumas recompensas!";
-		mes "Para saber delas, entre em contato com um Oficial de LogÃ­stica do KVM.";
+		mes "E também damos algumas recompensas!";
+		mes "Para saber delas, entre em contato com um Oficial de Logística do KVM.";
 		close;
 	case 3:
 		mes "[Cavaleiro de Croix]";
-		mes "Basicamente, o KVM Ã© uma batalha 5 contra 5.";
-		mes "Primeiro, vocÃª se inscreve com um recepcionista do KVM, em grupo ou individualmente.";
+		mes "Basicamente, o KVM é uma batalha 5 contra 5.";
+		mes "Primeiro, você se inscreve com um recepcionista do KVM, em grupo ou individualmente.";
 		next;
 		mes "[Cavaleiro de Croix]";
-		mes "As inscriÃ§Ãµes em grupo servem para quando vocÃª quer entrar no KVM com os membros do seu grupo,";
-		mes "e uma inscriÃ§Ã£o pessoal serve para quando vocÃª quer entrar no KVM por conta prÃ³pria.";
+		mes "As inscrições em grupo servem para quando você quer entrar no KVM com os membros do seu grupo,";
+		mes "e uma inscrição pessoal serve para quando você quer entrar no KVM por conta própria.";
 		next;
 		mes "[Cavaleiro de Croix]";
-		mes "Por favor, faÃ§a a inscriÃ§Ã£o com um oficial do KVM, e ele entrarÃ¡ em contato com vocÃª mais tarde, em Prontera.";
+		mes "Por favor, faça a inscrição com um oficial do KVM, e ele entrará em contato com você mais tarde, em Prontera.";
 		next;
 		mes "[Cavaleiro de Croix]";
-		mes "EntÃ£o, vocÃª poderÃ¡ entrar e seguir as instruÃ§Ãµes no campo de batalha.";
+		mes "Então, você poderá entrar e seguir as instruções no campo de batalha.";
 		next;
 		mes "[Cavaleiro de Croix]";
-		mes "Mas lembre-se, a menos que vocÃª esteja no escritÃ³rio do KVM, ele nÃ£o poderÃ¡ entrar em contato com vocÃª.";
+		mes "Mas lembre-se, a menos que você esteja no escritório do KVM, ele não poderá entrar em contato com você.";
 		close;
 	case 4:
 		mes "[Cavaleiro de Croix]";
-		mes "Seus Pontos Kreiger sÃ£o:";
+		mes "Seus Pontos Kreiger são:";
 		mes ""+kvm_point+".";
 		close;
 	}

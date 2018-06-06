@@ -20,7 +20,7 @@
 ayo_dun01,0,0	monster	Gato de Folha	1586,65
 ayo_dun01,0,0	monster	Sussurro	1179,10
 ayo_dun01,0,0	monster	Kraben	1587,5
-ayo_dun01,0,0	monster	CarniÃ§al	1036,30
+ayo_dun01,0,0	monster	Carniçal	1036,30
 
 //==================================================
 // ayo_dun02 - Inside Ancient Shrine

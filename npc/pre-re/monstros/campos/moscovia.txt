@@ -12,7 +12,7 @@
 //==================================================
 // mosk_fild02 - Moscovia Field
 //==================================================
-mosk_fild02,0,0	monster	PÃ© Grande	1060,40
+mosk_fild02,0,0	monster	Pé Grande	1060,40
 mosk_fild02,0,0	monster	Caramelo	1103,20
 mosk_fild02,0,0	monster	Louva-a-Deus	1139,30
 mosk_fild02,0,0	monster	Poring	1002,10

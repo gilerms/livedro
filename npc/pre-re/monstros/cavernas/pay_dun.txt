@@ -137,7 +137,7 @@ pay_dun03,179,133	monster	Mandragora	1020,1,300000,100000
 pay_dun03,179,132	monster	Mandragora	1020,1,300000,100000
 pay_dun03,179,131	monster	Mandragora	1020,1,300000,100000
 pay_dun03,179,130	monster	Mandragora	1020,1,300000,100000
-pay_dun03,0,0	monster	Guardi√£o da Floresta	1277,3
+pay_dun03,0,0	monster	Guardi„o da Floresta	1277,3
 pay_dun03,0,0	monster	Planta Vermelha	1078,15,180000,90000
 pay_dun03,246,56,20,20	monster	Planta Branca	1082,3,180000,90000
 pay_dun03,52,262,10,4	monster	Planta Branca	1082,2,180000,90000
@@ -148,7 +148,7 @@ pay_dun03,52,262,10,4	monster	Planta Branca	1082,2,180000,90000
 pay_dun04,0,0	monster	Dokebi	1110,40
 pay_dun04,0,0	monster	Horong	1129,30
 pay_dun04,120,115,0,0	boss_monster	Flor do Luar	1150,1,3600000,600000,1
-pay_dun04,0,0	monster	Guardi√£o da Floresta	1277,15
+pay_dun04,0,0	monster	Guardi„o da Floresta	1277,15
 pay_dun04,0,0	monster	Esqueleto Arqueiro	1016,15
 pay_dun04,0,0	monster	Nove Caudas	1180,30,60000,30000
 pay_dun04,0,0	monster	Esqueleto General	1290,1

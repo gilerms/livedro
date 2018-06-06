@@ -24,10 +24,10 @@ mag_dun01,0,0	monster	Grizzly	1381,10
 //==================================================
 // mag_dun02 - Nogg Road F2
 //==================================================
-mag_dun02,0,0	monster	Ferr√£o	1387,10
+mag_dun02,0,0	monster	Ferr„o	1387,10
 mag_dun02,0,0	monster	Exterminador	1384,25
-mag_dun02,0,0	monster	Delet√©rio	1385,25
-mag_dun02,0,0	monster	Diab√≥lico	1382,10,120000,30000
+mag_dun02,0,0	monster	DeletÈrio	1385,25
+mag_dun02,0,0	monster	DiabÛlico	1382,10,120000,30000
 mag_dun02,0,0	monster	Pesadelo Sombrio	1379,15
 mag_dun02,0,0	monster	Pesadelo Sombrio	1379,10,60000,30000
 mag_dun02,110,190,50,20	monster	Labareda	1367,5,300000,150000
@@ -36,8 +36,8 @@ mag_dun02,200,120,40,40	monster	Labareda	1367,15,300000,150000
 mag_dun02,103,102,58,59	monster	Pesadelo Sombrio	1379,10,300000,150000
 mag_dun02,120,202,20,20	monster	Exterminador	1384,3,300000,150000
 mag_dun02,184,170,43,55	monster	Exterminador	1384,7,300000,150000
-mag_dun02,184,170,43,55	monster	Delet√©rio	1385,10,300000,150000
+mag_dun02,184,170,43,55	monster	DeletÈrio	1385,10,300000,150000
 mag_dun02,184,170,43,55	monster	Pesadelo Sombrio	1379,7,300000,150000
 mag_dun02,197,59,50,37	monster	Exterminador	1384,3,300000,150000
-mag_dun02,197,59,50,37	monster	Delet√©rio	1385,5,300000,150000
-mag_dun02,197,59,50,37	monster	Diab√≥lico	1382,5,300000,30000
+mag_dun02,197,59,50,37	monster	DeletÈrio	1385,5,300000,150000
+mag_dun02,197,59,50,37	monster	DiabÛlico	1382,5,300000,30000

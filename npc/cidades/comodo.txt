@@ -32,12 +32,12 @@ cmd_in02,73,81,4	script	Martine#cmd	48,{
 	mes "aqui em Comodo conhecidos como";
 	mes "Cassinos, e uma forma de";
 	mes "entretenimento melhor do que jogos de azar.";
-	mes "VocÃª sabe o que eu quero dizer?";
+	mes "Você sabe o que eu quero dizer?";
 	next;
 	mes "[Martine]";
 	mes "Eu perdi";
 	mes "todo o meu dinheiro jogando";
-	mes "neste cassino, mas eu nÃ£o";
+	mes "neste cassino, mas eu não";
 	mes "me arrependo. Eu ganharei";
 	mes "mais dinheiro";
 	mes "ou posso perder tudo novamente!";
@@ -45,53 +45,53 @@ cmd_in02,73,81,4	script	Martine#cmd	48,{
 	mes "[Martine]";
 	mes "Bwahahahaahah~!";
 	mes "Sim, posso perder";
-	mes "muitas vezes atÃ© eu acertar o";
-	mes "jackpot! VocÃª vÃª, vocÃª vÃª?";
+	mes "muitas vezes até eu acertar o";
+	mes "jackpot! Você vê, você vê?";
 	mes "Eu estou jogando as probabilidades loucas.";
 	close;
 }
 
-cmd_in02,48,55,4	script	PatinaÃ§Ã£o#cmd	51,{
-	mes "[PatinaÃ§Ã£o]";
+cmd_in02,48,55,4	script	Patinação#cmd	51,{
+	mes "[Patinação]";
 	mes "Droga! Onde esse";
 	mes "cara vai? Ele me prometeu que";
 	mes "facilmente dobraria meu dinheiro!";
-	mes "Espere.Oh, espere.Oh... Oh nÃ£o...";
+	mes "Espere.Oh, espere.Oh... Oh não...";
 	next;
-	mes "[PatinaÃ§Ã£o]";
-	mes "NÃ£o me diga que eu acabei";
+	mes "[Patinação]";
+	mes "Não me diga que eu acabei";
 	mes "perder todo meu dinheiro!";
-	mes "Oh nÃ£o! Ainda assim, Ã© melhor eu relatar";
+	mes "Oh não! Ainda assim, é melhor eu relatar";
 	mes "isso para as autoridades competentes,";
-	mes "nÃ£o importa o quÃ£o envergonhado eu me sinta ...";
+	mes "não importa o quão envergonhado eu me sinta ...";
 	close;
 }
 
 cmd_in02,64,43,4	script	Roberto#cmd	709,{
 	mes "[Roberto]";
 	mes "Heh heh heh...";
-	mes "O que Ã© uma crÃ©dula";
+	mes "O que é uma crédula";
 	mes "cara. Eu peguei o dinheiro dele";
-	mes "tÃ£o facilmente! Quero dizer,";
-	mes "tive que inventar uma Ã³tima";
+	mes "tão facilmente! Quero dizer,";
+	mes "tive que inventar uma ótima";
 	mes "de uma mentira, e ele acreditou!";
 	close;
 }
 
 cmd_in02,89,72,4	script	Deniroz#cmd	89,{
 	mes "[Deniroz]";
-	mes "Tudo que eu preciso Ã© que esse";
-	mes "pequeno pedaÃ§o de aÃ§o caia";
-	mes "no buraco certo. EntÃ£o,";
-	mes "Eu vou ganhar o prÃªmio. Tudo bem.";
-	mes "Aqui vai. Uma Ãºltima vez ...";
+	mes "Tudo que eu preciso é que esse";
+	mes "pequeno pedaço de aço caia";
+	mes "no buraco certo. Então,";
+	mes "Eu vou ganhar o prêmio. Tudo bem.";
+	mes "Aqui vai. Uma última vez ...";
 	next;
 	mes "[Deniroz]";
-	mes "NÃ£o! NÃ£o, eu estava tÃ£o perto!";
-	mes "Tudo bem, da prÃ³xima vez";
+	mes "Não! Não, eu estava tão perto!";
+	mes "Tudo bem, da próxima vez";
 	mes "vou chegar mais perto, certo? Sim.";
-	mes "Ok, desta vez serÃ¡ a";
-	mes "Ãºltima vez. NÃ£o de novo! Tudo bem,";
+	mes "Ok, desta vez será a";
+	mes "última vez. Não de novo! Tudo bem,";
 	mes "apenas mais uma tentativa...";
 	close;
 }
@@ -99,21 +99,21 @@ cmd_in02,89,72,4	script	Deniroz#cmd	89,{
 cmd_in02,178,92,4	script	Shalone#cmd	101,{
 	mes "[Shalone]";
 	mes "Oh, me desculpe, senhor";
-	mes "mas parece que vocÃª";
-	mes "perdeu novamente. Talvez vocÃª";
+	mes "mas parece que você";
+	mes "perdeu novamente. Talvez você";
 	mes "deve sair agora...";
-	mes "VocÃª estÃ¡ tendo um dia";
+	mes "Você está tendo um dia";
 	mes "muito corride e de muito azar...";
 	close;
 }
 
 cmd_in02,178,86,4	script	Stonae#cmd	98,{
 	mes "[Stonae]";
-	mes "N-nÃ£o...";
+	mes "N-não...";
 	mes "Eu perdi de novo?!";
-	mes "Mas eu nÃ£o posso desistir";
+	mes "Mas eu não posso desistir";
 	mes "Eu vou ficar tentando";
-	mes "sÃ³ irei deixar este lugar";
+	mes "só irei deixar este lugar";
 	mes "quando me tornar um vencedor!";
 	close;
 }
@@ -121,78 +121,78 @@ cmd_in02,178,86,4	script	Stonae#cmd	98,{
 cmd_in02,172,105,4	script	G . J#cmd	86,{
 	mes "[GJ]";
 	mes "Quanto mais eu penso sobre isso,";
-	mes "parece mais fÃ¡cil se tornar";
+	mes "parece mais fácil se tornar";
 	mes "rico trabalhando, salvando e";
-	mes "fazendo investimentos sÃ¡bios";
-	mes "para, vocÃª sabe... Confie em alguns";
-	mes "prÃªmios da mÃ¡quina caÃ§a-nÃ­quel.";
+	mes "fazendo investimentos sábios";
+	mes "para, você sabe... Confie em alguns";
+	mes "prêmios da máquina caça-níquel.";
 	next;
 	mes "[GJ]";
 	mes "O jogo parece divertido, mas";
 	mes "parece mais inteligente fazer";
 	mes "dinheiro de outras maneiras. Claro,";
-	mes "trabalhar duro nÃ£o Ã© divertido, mas";
+	mes "trabalhar duro não é divertido, mas";
 	mes "existem maneiras de usar seu dinheiro para fazer mais, certo?";
 	next;
 	mes "[GJ]";
-	mes "HÃ¡ tambÃ©m a questÃ£o de";
-	mes "ser inteligente e responsÃ¡vel";
-	mes "sobre o seu dinheiro - quero dizer, vocÃª estÃ¡ mais propÃ­cio a gastar todo o seu dinheiro";
-	mes "se vocÃª vencer, certo? Sim, vocÃª";
-	mes "precisa ser sÃ¡bio sobre tudo isso ...";
+	mes "Há também a questão de";
+	mes "ser inteligente e responsável";
+	mes "sobre o seu dinheiro - quero dizer, você está mais propício a gastar todo o seu dinheiro";
+	mes "se você vencer, certo? Sim, você";
+	mes "precisa ser sábio sobre tudo isso ...";
 	close;
 }
 
 cmd_in02,174,126,4	script	Loyar#cmd	83,{
 	mes "[Loyar]";
 	mes "Interior do Cassino de Comodo";
-	mes "Ã© tÃ£o agradÃ¡vel para o";
-	mes "olhos, tÃ£o limpo e simples.";
-	mes "A atmosfera aqui Ã© perfeita";
+	mes "é tão agradável para o";
+	mes "olhos, tão limpo e simples.";
+	mes "A atmosfera aqui é perfeita";
 	mes "e isso me faz querer jogar";
-	mes "em mais. Tudo bem, vamos lÃ¡!";
+	mes "em mais. Tudo bem, vamos lá!";
 	next;
 	switch(rand(1,3)) {
 	case 1:
 		mes "[Loyar]";
 		mes "Hmm... Talvez seja melhor";
-		mes "ir para casa. Eu nÃ£o quero";
+		mes "ir para casa. Eu não quero";
 		mes "gastar todo o dinheiro que";
 		mes "eu reservei neste jogo";
-		mes "bem, mas nÃ£o Ã© um boa";
-		mes "idÃ©ia de ficar fora por muito tempo.";
+		mes "bem, mas não é um boa";
+		mes "idéia de ficar fora por muito tempo.";
 		close;
 	case 2:
 		mes "[Loyar]";
 		mes "Eu tenho que admitir, a";
 		mes "atmosfera deste lugar";
-		mes "Ã© emocionante e viciante.";
-		mes "Mesmo quando vocÃª estÃ¡ cansado, a";
+		mes "é emocionante e viciante.";
+		mes "Mesmo quando você está cansado, a";
 		mes "energia deste lugar apenas";
-		mes "entra em vocÃª, vocÃª sabe?";
+		mes "entra em você, você sabe?";
 		next;
 		mes "[Loyar]";
 		mes "Embora esse tipo de lugar";
 		mes "pode encorajar as pessoas com";
-		mes "sÃ©rios problemas de jogo,";
-		mes "Ã© muito melhor apostar";
-		mes "aqui do que em um lugar que Ã©";
-		mes "mais sujo e mais questionÃ¡vel.";
+		mes "sérios problemas de jogo,";
+		mes "é muito melhor apostar";
+		mes "aqui do que em um lugar que é";
+		mes "mais sujo e mais questionável.";
 		close;
 	case 3:
 		mes "[Loyar]";
 		mes "Whoa whoa whoa...";
 		mes "Por que esse cara fez";
 		mes "essa aposta? Que amador...";
-		mes "Ei, eu acho que vocÃª nÃ£o sabe";
+		mes "Ei, eu acho que você não sabe";
 		mes "muito sobre este jogo.";
-		mes "Quanto a mim, sou apenas um fÃ£~";
+		mes "Quanto a mim, sou apenas um fã~";
 		next;
 		mes "[Loyar]";
-		mes "Sou um grande fÃ£ de muito";
+		mes "Sou um grande fã de muito";
 		mes "desses jogos, mas eu vou";
 		mes "admitir que eu sou ainda melhor";
-		mes "que vocÃª! Ainda assim, eu tenho";
+		mes "que você! Ainda assim, eu tenho";
 		mes "senso suficiente para ficar fora";
 		mes "daqueles jogos de altas apostas.";
 		close;
@@ -203,31 +203,31 @@ cmd_in02,57,62,4	script	Moo#cmd	109,{
 	mes "[Moo]";
 	if (rand(1,10) == 1) {
 		mes "Aqueles trapaceiros punks!";
-		mes "Eles nunca terÃ£o coragem";
-		mes "de entrar aqui novamente: caso contrÃ¡rio";
-		mes "eles vÃ£o ficar novos em folha";
-		mes "Oh-Desculpe, eu nÃ£o";
-		mes "vi vocÃª aÃ­~Hahahaha~";
+		mes "Eles nunca terão coragem";
+		mes "de entrar aqui novamente: caso contrário";
+		mes "eles vão ficar novos em folha";
+		mes "Oh-Desculpe, eu não";
+		mes "vi você aí~Hahahaha~";
 		close;
 	}
-	mes "SaudaÃ§Ãµes, eu sou Moo";
+	mes "Saudações, eu sou Moo";
 	mes "gerente do Cassino de";
 	mes "Comodo. Nos orgulhamos de";
 	mes "atendendo a todos os nossos clientes";
-	mes "se precisar farei de tudo para que sua visita seja inesquecÃ­vel.";
+	mes "se precisar farei de tudo para que sua visita seja inesquecível.";
 	next;
 	mes "[MOO]";
-	mes "Todos os nossos hÃ³spedes podem desfrutar";
-	mes "da nossa Ã¡rea de jogos e";
-	mes "nÃ³s tambÃ©m fornecemos uma Ã¡rea VIP";
+	mes "Todos os nossos hóspedes podem desfrutar";
+	mes "da nossa área de jogos e";
+	mes "nós também fornecemos uma área VIP";
 	mes "onde os grandes apostadores podem jogar";
 	mes "emocionantes jogos de apostas.";
 	next;
 	mes "[MOO]";
-	mes "NÃ³s sempre damos as boas vindas a todos";
-	mes "suas sugestÃµes, e estamos";
+	mes "Nós sempre damos as boas vindas a todos";
+	mes "suas sugestões, e estamos";
 	mes "sempre buscando melhorar";
-	mes "sua experiÃªncia aqui";
+	mes "sua experiência aqui";
 	mes "no Casino de Comodo.";
 	close;
 }
@@ -240,41 +240,41 @@ cmd_fild04,188,74,4	script	Zyosegirl#cmd	93,{
 	mes "Senhora do Mar porque eu estou";
 	mes "sempre aqui trabalhando com";
 	mes "ostras e outros frutos";
-	mes "do mar para vender. Ã‰";
+	mes "do mar para vender. É";
 	mes "uma boa vida, na verdade.";
 	next;
 	mes "[Zyosegirl]";
-	mes "Ã‰ legal poder trabalhar";
+	mes "É legal poder trabalhar";
 	mes "ao ar livre, mas algum dia eu quero";
 	mes "economizar dinheiro e me mudar";
-	mes "para a cidade. Eu ainda sou jovem, vocÃª sabe, e eu tenho sonhos";
+	mes "para a cidade. Eu ainda sou jovem, você sabe, e eu tenho sonhos";
 	mes "que eu quero cumprir~";
 	close;
 }
 
 cmd_fild04,248,86,4	script	Ziyaol#cmd	709,{
 	mes "[Ziyaol]";
-	mes "Ahhh, Ã© bom ser";
-	mes "um pescador. VocÃª apenas";
+	mes "Ahhh, é bom ser";
+	mes "um pescador. Você apenas";
 	mes "relaxa e deixe que o peixe";
-	mes "vem para vocÃª. Bem, Ã© preciso";
+	mes "vem para você. Bem, é preciso";
 	mes "alguma habilidade para pegar tanto";
-	mes "peixe, como eu faÃ§o sem esforÃ§o~";
+	mes "peixe, como eu faço sem esforço~";
 	next;
 	mes "[Ziyaol]";
 	mes "Eu gosto do lazer envolvido";
-	mes "no meu trabalho, mas se nÃ£o for um";
-	mes "coisa, Ã© outra. Sim, isso";
-	mes "filha minha lÃ¡ ela";
-	mes "nÃ£o vai parar de falar sobre";
+	mes "no meu trabalho, mas se não for um";
+	mes "coisa, é outra. Sim, isso";
+	mes "filha minha lá ela";
+	mes "não vai parar de falar sobre";
 	mes "mudar para a cidade grande.";
 	next;
 	mes "[Ziyaol]";
 	mes "Por que ela quer deixar";
-	mes "este local? Mas se eu nÃ£o";
+	mes "este local? Mas se eu não";
 	mes "deixe ela ir, ela vai fugir.";
 	mes "O que eu vou fazer com";
-	mes "aquela menina? Bem, eu nÃ£o posso realmente";
+	mes "aquela menina? Bem, eu não posso realmente";
 	mes "impedi-la de sonhar...";
 	close;
 }
@@ -282,7 +282,7 @@ cmd_fild04,248,86,4	script	Ziyaol#cmd	709,{
 cmd_fild04,267,137,4	script	Daeguro#cmd	703,{
 	mes "[Daeguro]";
 	mes "Eu amo brincar";
-	mes "na areia - Ã© tÃ£o macia";
+	mes "na areia - é tão macia";
 	mes "limpa e bonita!";
 	mes "Mas quando eu crescer,";
 	mes "Eu quero ir para Alberta";
@@ -293,7 +293,7 @@ cmd_fild04,267,137,4	script	Daeguro#cmd	703,{
 cmd_fild07,192,58,4	script	Rahasu#cmd	100,{
 	mes "[Rahasu]";
 	mes "Ei, eu sou Rahasu.";
-	mes "Se vocÃª quer aprender";
+	mes "Se você quer aprender";
 	mes "um pouco mais sobre";
 	mes "Farol de Paros, eu vou";
 	mes "lhe contar.";
@@ -303,44 +303,44 @@ cmd_fild07,192,58,4	script	Rahasu#cmd	100,{
 		mes "Por muitos anos, esse";
 		mes "farol guiou muitos";
 		mes "navios para a costa. Isso foi";
-		mes "hÃ¡ muito tempo: agora esse";
-		mes "farol estÃ¡ sem funcionar";
+		mes "há muito tempo: agora esse";
+		mes "farol está sem funcionar";
 		mes "e nunca mais foi usado.";
 		next;
 		mes "[Rahasu]";
 		mes "Embora este lugar";
-		mes "nÃ£o Ã© o centro de";
-		mes "comÃ©rcio e o comÃ©rcio";
+		mes "não é o centro de";
+		mes "comércio e o comércio";
 		mes "costumava atrair, muitas";
 		mes "pessoas que ainda viajam para essa";
-		mes "Ã¡rea. Eu me pergunto por que, exatamente ...";
+		mes "área. Eu me pergunto por que, exatamente ...";
 		close;
 	}
 	mes "[Rahasu]";
 	mes "Ei, antes de ir,";
-	mes "vocÃª realmente deveria checar";
+	mes "você realmente deveria checar";
 	mes "a vista do farol.";
-	mes "Ã‰ ... Ã© de tirar o fÃ´lego...";
+	mes "É ... é de tirar o fôlego...";
 	close;
 }
 
 cmd_fild07,52,280,4	script	Hallosu#cmd	100,{
 	mes "[Hallosu]";
-	mes "OlÃ¡, este Ã© um dos";
-	mes "farÃ³is que compÃµem o";
+	mes "Olá, este é um dos";
+	mes "faróis que compõem o";
 	mes "Farol de Paros. No entanto,";
-	mes "agora estÃ¡ passando por";
-	mes "reparos, entÃ£o nÃ£o estÃ¡";
-	mes "aberto ao pÃºblico.";
+	mes "agora está passando por";
+	mes "reparos, então não está";
+	mes "aberto ao público.";
 	close;
 }
 
 cmd_fild07,299,83,4	script	Zain#cmd	100,{
 	set .@n$,"["+strnpcinfo(1)+"]";
 	mes .@n$;
-	mes "VocÃª gostaria de";
+	mes "Você gostaria de";
 	mes "embarcar em um navio na";
-	mes "rota de Reudelus? VocÃª";
+	mes "rota de Reudelus? Você";
 	mes "pode viajar de Reudelus";
 	mes "para Alberta ou Izlude.";
 	next;
@@ -360,36 +360,36 @@ cmd_fild07,299,83,4	script	Zain#cmd	100,{
 		end;
 	case 3:
 		mes .@n$;
-		mes "Viajar de navio Ã©";
+		mes "Viajar de navio é";
 		mes "ainda o meio mais seguros e";
-		mes "confiÃ¡vel metÃ³do de";
-		mes "transporte. Eu convido vocÃª";
+		mes "confiável metódo de";
+		mes "transporte. Eu convido você";
 		mes "para tentar viajar ao redor de Reudelus em breve~";
 		close;
 	}
 	mes .@n$;
-	mes "Sinto muito, mas vocÃª";
-	mes "nÃ£o tem zeny suficiente";
+	mes "Sinto muito, mas você";
+	mes "não tem zeny suficiente";
 	mes "para pagar a tarifa de embarque.";
 	close;
 }
 cmd_fild07,94,134,4	duplicate(Zain#cmd)	Sarumane#cmd	100
 
-cmd_in02,146,180,4	script	CoorporaÃ§Ã£o Kafra::kaf_comodo2	721,{
+cmd_in02,146,180,4	script	Coorporação Kafra::kaf_comodo2	721,{
 	cutin "kafra_07",2;
 	mes "[Kafra Misty]";
 	mes "Bem vindo a";
-	mes "CorporaÃ§Ã£o Kafra.";
-	mes "VocÃª sabe que pode contar";
-	mes "com nossos serviÃ§os sempre";
+	mes "Corporação Kafra.";
+	mes "Você sabe que pode contar";
+	mes "com nossos serviços sempre";
 	mes "que precisar.";
 	next;
 	mes "[Kafra Misty]";
-	mes "A CorporaÃ§Ã£o Kafra";
-	mes "DivisÃ£o Ocidental promete";
-	mes "o melhor serviÃ§o de qualidade que";
+	mes "A Corporação Kafra";
+	mes "Divisão Ocidental promete";
+	mes "o melhor serviço de qualidade que";
 	mes "enfatiza a confiabilidade e";
-	mes "satisfaÃ§Ã£o total do consumidor.";
+	mes "satisfação total do consumidor.";
 	mes "Obrigado pelo seu apoio~";
 	close2;
 	cutin "", 255;
@@ -400,18 +400,18 @@ cmd_in02,146,180,4	script	CoorporaÃ§Ã£o Kafra::kaf_comodo2	721,{
 //============================================================
 moc_fild12,35,303,4	script	Serutero#cmd	59,{
 	mes "[Serutero]";
-	mes "OlÃ¡, sou Serutero";
-	mes "guardiÃ£o das estradas que";
+	mes "Olá, sou Serutero";
+	mes "guardião das estradas que";
 	mes "levar a Fortaleza de Sandaruman.";
-	mes "Se vocÃª realmente quer ir para lÃ¡,";
-	mes "Eu vou permitir que vocÃª continue, mas vocÃª deve tomar cuidado com os perigos...";
+	mes "Se você realmente quer ir para lá,";
+	mes "Eu vou permitir que você continue, mas você deve tomar cuidado com os perigos...";
 	next;
-	switch(select("Eu vou para lÃ¡!:Fortaleza de Sandaruman?:Cancelar.")) {
+	switch(select("Eu vou para lá!:Fortaleza de Sandaruman?:Cancelar.")) {
 	case 1:
 		mes "[Serutero]";
-		mes "EntÃ£o vocÃª vai mesmo";
+		mes "Então você vai mesmo";
 		mes "para Sandaruman";
-		mes "Tudo bem entÃ£o";
+		mes "Tudo bem então";
 		mes "boa sorte, e tenha cuidado!";
 		close2;
 		warp "cmd_fild08",331,319;
@@ -419,23 +419,23 @@ moc_fild12,35,303,4	script	Serutero#cmd	59,{
 	case 2:
 		mes "[Serutero]";
 		mes "Embora a Fortaleza Sandaruman";
-		mes "agora estÃ¡ infestada de";
+		mes "agora está infestada de";
 		mes "monstros, ela costumava ser";
-		mes "uma provÃ­ncia onde as pessoas viviam em paz.";
+		mes "uma província onde as pessoas viviam em paz.";
 		mes "No entanto, eram sempre invadida...";
 		next;
 		mes "[Serutero]";
 		mes "os habitantes de Sandaruman";
 		mes "se adptaram para as";
-		mes "invasÃµes, desenvolvendo";
-		mes "sinais de fumaÃ§a e fortificaÃ§Ãµes para";
+		mes "invasões, desenvolvendo";
+		mes "sinais de fumaça e fortificações para";
 		mes "resistir aos estragos da guerra.";
-		mes "EntÃ£o, Comodo foi construÃ­da...";
+		mes "Então, Comodo foi construída...";
 		next;
 		mes "[Serutero]";
 		mes "Comodo cresceu com o poder e";
 		mes "influencia e finalmente anexou Sandaruman. Mais e mais pessoas";
-		mes "mudaram da fortaleza para Comodo atÃ© a fortaleza de Sandaruman ser";
+		mes "mudaram da fortaleza para Comodo até a fortaleza de Sandaruman ser";
 		mes "totalmente abandonado.";
 		next;
 		mes "[Serutero]";
@@ -443,24 +443,24 @@ moc_fild12,35,303,4	script	Serutero#cmd	59,{
 		mes "permanecendo em Sandaruman,";
 		mes "mas eles se revoltaram e";
 		mes "o governo entrou em cena";
-		mes "por lÃ¡. Os monstros pegaram";
+		mes "por lá. Os monstros pegaram";
 		mes "a chance de assumir...";
 		next;
 		mes "[Serutero]";
-		mes "NÃ£o hÃ¡ nada por perto de";
+		mes "Não há nada por perto de";
 		mes "Sandaruman agora. Bem, nada";
 		mes "exceto talvez Farol de Paros,";
-		mes "que Ã© a sudoeste daqui. Esse lugar pode ser de interesse para";
-		mes "Iniciantes a Rogues, eu ouÃ§o...";
+		mes "que é a sudoeste daqui. Esse lugar pode ser de interesse para";
+		mes "Iniciantes a Rogues, eu ouço...";
 		close;
 	case 3:
 		mes "[Serutero]";
-		mes "VocÃª sabe, se estÃ¡";
-		mes "cansado de viajar, vocÃª";
+		mes "Você sabe, se está";
+		mes "cansado de viajar, você";
 		mes "pode descansar em ^3355FFComodo^000000. Isso";
 		mes "um lugar muito popular com";
-		mes "atraÃ§Ã£o turÃ­stica, especialmente";
-		mes "para vÃ¡rios tipos aventureiros.";
+		mes "atração turística, especialmente";
+		mes "para vários tipos aventureiros.";
 		close;
 	}
 }

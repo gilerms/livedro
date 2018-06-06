@@ -46,7 +46,7 @@ cmd_fild02,0,0	monster	Pingu	1391,20
 //==================================================
 // cmd_fild03 - Zenhai Marsh
 //==================================================
-cmd_fild03,0,0	monster	Drag√£o Mutante	1262,1
+cmd_fild03,0,0	monster	Drag„o Mutante	1262,1
 cmd_fild03,0,0	monster	Peste	1256,30
 cmd_fild03,0,0	monster	Poporing	1031,10
 cmd_fild03,0,0	monster	Anolian	1206,90
@@ -192,9 +192,9 @@ cmd_fild08,130,201,10,10	monster	Planta Amarela	1081,4,1800000,900000
 //==================================================
 // cmd_fild09 - Fortress Saint Darmain (South)
 //==================================================
-cmd_fild09,0,0	monster	Chonchon de A√ßo	1042,20
+cmd_fild09,0,0	monster	Chonchon de AÁo	1042,20
 cmd_fild09,0,0	monster	Drops	1113,20
 cmd_fild09,0,0	monster	Anaconda	1030,60
 cmd_fild09,0,0	monster	Condor	1009,20
 cmd_fild09,142,325,40,50	monster	Hode	1127,3,150000
-cmd_fild09,140,323,40,50	monster	G√°rgula	1253,2,150000
+cmd_fild09,140,323,40,50	monster	G·rgula	1253,2,150000

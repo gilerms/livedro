@@ -21,37 +21,37 @@
 -	script	::Aibakthing_ayothaya	-1,{
 	mes "[Aibakthing]";
 	mes "Hoo! Hah! Hoo! Hah!";
-	mes "Deixe-me levÃ¡-lo para";
+	mes "Deixe-me levá-lo para";
 	mes "um lugar espiritual distante,";
-	mes "uma terra de mistÃ©rio exÃ³tico";
+	mes "uma terra de mistério exótico";
 	mes "minha cidade natal Ayothaya!";
 	next;
 	switch(select("Sobre Ayothaya: Ir para Ayothaya.:Cancelar")) {
 	case 1:
 		mes "[Aibakthing]";
-		mes "NÃ³s Ayotayans somos um povo piedoso que valoriza a paz e a sinceridade. NÃ³s nos esforÃ§amos para levar vida simples, mas nobre, em harmonia com a natureza.";
+		mes "Nós Ayotayans somos um povo piedoso que valoriza a paz e a sinceridade. Nós nos esforçamos para levar vida simples, mas nobre, em harmonia com a natureza.";
 		next;
 		mes "[Aibakthing]";
-		mes "Nossa cozinha tradicional Ã© mundialmente famosa. NÃ£o Ã© nenhuma surpresa quando servimos pratos como Tom Yum Goong, feito de CamarÃ£o, LimÃ£o e PimentÃµes, que tem um aroma e sabor irresistÃ­veis alÃ©m da imaginaÃ§Ã£o.";
+		mes "Nossa cozinha tradicional é mundialmente famosa. Não é nenhuma surpresa quando servimos pratos como Tom Yum Goong, feito de Camarão, Limão e Pimentões, que tem um aroma e sabor irresistíveis além da imaginação.";
 		next;
 		mes "[Aibakthing]";
-		mes "Para aqueles que anseiam por aventuras, hÃ¡ uma velha histÃ³ria sobre o Tigre Samambaia, uma criatura do mal que assombra nossas ruÃ­nas do templo.";
+		mes "Para aqueles que anseiam por aventuras, há uma velha história sobre o Tigre Samambaia, uma criatura do mal que assombra nossas ruínas do templo.";
 		next;
 		mes "[Aibakthing]";
 		mes "Hoo! Hahh! Hoo! Hahh!";
 		mes "Nenhum homem vivo pode resistir";
 		mes "a esta linda terra.";
-		mes "Todos de Rune-Midgardians sÃ£o";
+		mes "Todos de Rune-Midgardians são";
 		mes "sempre bem vindo!";
 		close;
 	case 2:
 		mes "[Aibakthing]";
-		mes "Ah, vocÃª deve pagar 10.000 Zeny";
-		mes "se vocÃª quiser visitar Ayothaya.";
-		mes "Se vocÃª estiver pronto, podemos sair";
+		mes "Ah, você deve pagar 10.000 Zeny";
+		mes "se você quiser visitar Ayothaya.";
+		mes "Se você estiver pronto, podemos sair";
 		mes "agora~";
 		next;
-		if (select("Estou pronto, vamos!:NÃ£o.") == 1) {
+		if (select("Estou pronto, vamos!:Não.") == 1) {
 			if (Zeny > 9999) {
 				mes "[Aibakthing]";
 				mes "Hoo! Hah! Hoo! Hah!";
@@ -63,21 +63,21 @@
 				end;
 			}
 			mes "[Aibakthing]";
-			mes "Eu sinto muito, mas vocÃª nÃ£o tem o 10.000 Zeny para viajar para Ayotaya. Esse preÃ§o nÃ£o Ã© nada comparado Ã s experiÃªncias que esperam por vocÃª!";
+			mes "Eu sinto muito, mas você não tem o 10.000 Zeny para viajar para Ayotaya. Esse preço não é nada comparado às experiências que esperam por você!";
 			close;
 		}
 		mes "[Aibakthing]";
-		mes "VocÃª jÃ¡ sonhou";
+		mes "Você já sonhou";
 		mes "com um belo lugar cheio";
-		mes "de serenidade espiritual? VocÃª";
+		mes "de serenidade espiritual? Você";
 		mes "deve ter sonhado";
 		mes "de Ayotaya, meu amigo.";
 		close;
 	case 3:
 		mes "[Aibakthing]";
-		mes "VocÃª jÃ¡ sonhou";
+		mes "Você já sonhou";
 		mes "com um belo lugar cheio";
-		mes "de serenidade espiritual? VocÃª";
+		mes "de serenidade espiritual? Você";
 		mes "deve ter sonhado";
 		mes "de Ayotaya, meu amigo.";
 		close;
@@ -87,11 +87,11 @@
 ayothaya,152,68,1	script	Aibakthing#ayo2	843,{
 	mes "[Aibakthing]";
 	mes "Hoo! Hah! Hmm! Hah!";
-	mes "EntÃ£o, como vocÃª gostou de Ayotaya? VocÃª teve a chance de experimentar Tom Yum Goong? Quando vocÃª estiver pronto, eu levarei vocÃª de volta para casa.";
+	mes "Então, como você gostou de Ayotaya? Você teve a chance de experimentar Tom Yum Goong? Quando você estiver pronto, eu levarei você de volta para casa.";
 	next;
 	if (select("Volta para Alberta.:Cancelar.") == 1) {
 		mes "[Aibakthing]";
-		mes "VocÃª serÃ¡ bem vindo para voltar quando quiser. Espero que nos vejamos novamente em breve. Obrigado ~";
+		mes "Você será bem vindo para voltar quando quiser. Espero que nos vejamos novamente em breve. Obrigado ~";
 		close2;
 		if (checkre(0))
 			warp "alberta",235,45;
@@ -100,25 +100,25 @@ ayothaya,152,68,1	script	Aibakthing#ayo2	843,{
 		end;
 	}
 	mes "[Aibakthing]";
-	mes "Ah sim. Eu entendo que Ã© difÃ­cil se afastar de um lugar tÃ£o bonito. NÃ£o se preocupe";
+	mes "Ah sim. Eu entendo que é difícil se afastar de um lugar tão bonito. Não se preocupe";
 	mes "e leve seu tempo.";
 	close;
 }
 
-// NPCs Ayothaya GenÃ©ricos
+// NPCs Ayothaya Genéricos
 //============================================================
 ayothaya,189,120,3	script	Young Man#Thang	843,{
 	mes "[Thang]";
-	mes "HÃ¡ um antigo";
-	mes "prÃ©dio horrÃ­vel em";
-	mes "Ayotaya que ninguÃ©m";
+	mes "Há um antigo";
+	mes "prédio horrível em";
+	mes "Ayotaya que ninguém";
 	mes "aqui se atreve a entrar...";
 	next;
 	mes "[Thang]";
-	mes "No passado, algumas pessoas curiosas entraram, apesar das histÃ³rias de horror, e nunca mais voltaram. O que diabos poderia estar acontecendo dentro daquele lugar?";
+	mes "No passado, algumas pessoas curiosas entraram, apesar das histórias de horror, e nunca mais voltaram. O que diabos poderia estar acontecendo dentro daquele lugar?";
 	next;
 	mes "[Thang]";
-	mes "No entanto, se vocÃª quer provar sua coragem para os outros, confrontar o perigo pode ser um desafio digno para um aventureiro...";
+	mes "No entanto, se você quer provar sua coragem para os outros, confrontar o perigo pode ser um desafio digno para um aventureiro...";
 	mes "eu acho.";
 	close;
 }
@@ -127,24 +127,24 @@ ayothaya,171,152,5	script	Girl#Lalitha	838,{
 	set .@sit,rand(1,5);
 	if (.@sit > 0 && .@sit < 3) {
 		mes "[Lalitha]";
-		mes "OlÃ¡!";
-		mes "Eu nÃ£o acho";
+		mes "Olá!";
+		mes "Eu não acho";
 		mes "nos conhecemos antes.";
 		next;
 		mes "[Lalitha]";
-		mes "VocÃª deve ser";
+		mes "Você deve ser";
 		mes "de Rune-Midgard.";
-		mes "Afinal, eu conheÃ§o todas as pessoas que vivem nesta vila.";
+		mes "Afinal, eu conheço todas as pessoas que vivem nesta vila.";
 		mes "Heh heh~";
 		next;
 		mes "[Lalitha]";
 		mes "Hmm...";
-		mes "Posso perguntar sobre a terra que vocÃª";
+		mes "Posso perguntar sobre a terra que você";
 		mes "vem? Estou curiosa sobre";
 		mes "muitas coisas no mundo exterior.";
 		next;
 		mes "[Lalitha]";
-		mes "VocÃª sabe, como os vestidos e jÃ³ias que as mulheres usam em outros paÃ­ses, se os homens sÃ£o bonitos ou nÃ£o, que tipo de mÃºsica vocÃª tem, que tipo de garotas que os caras gostam...";
+		mes "Você sabe, como os vestidos e jóias que as mulheres usam em outros países, se os homens são bonitos ou não, que tipo de música você tem, que tipo de garotas que os caras gostam...";
 		emotion ET_QUESTION;
 		next;
 		mes "["+strcharinfo(0)+"]";
@@ -163,22 +163,22 @@ ayothaya,171,152,5	script	Girl#Lalitha	838,{
 	}
 	else if (.@sit > 2 && .@sit < 6) {
 		mes "[Lalitha]";
-		mes "Quando vocÃª for para o leste da";
-		mes "aldeia, vocÃª chegarÃ¡ Ã s ruÃ­nas de um antigo santuÃ¡rio. Agora Ã©";
+		mes "Quando você for para o leste da";
+		mes "aldeia, você chegará às ruínas de um antigo santuário. Agora é";
 		mes "um ninho cheio de monstros assustadores.";
 		next;
 		mes "[Lalitha]";
-		mes "Se vocÃª planeja se aventurar por essas ruÃ­nas, Ã© melhor vocÃª se preparar";
-		mes "tanto quanto vocÃª puder!";
+		mes "Se você planeja se aventurar por essas ruínas, é melhor você se preparar";
+		mes "tanto quanto você puder!";
 		next;
 		mes "[Lalitha]";
 		mes "Ah...";
 		mes "Eu me pergunto de onde";
-		mes "meu Cavaleiro Negro Ã©~";
+		mes "meu Cavaleiro Negro é~";
 		emotion ET_THROB;
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "VocÃª nÃ£o quer dizer...";
+		mes "Você não quer dizer...";
 		mes "Cavaleiro de armadura brilhante";
 		mes "montando um cavalo branco?";
 		next;
@@ -191,95 +191,95 @@ ayothaya,171,152,5	script	Girl#Lalitha	838,{
 	}
 	mes "[Lalitha]";
 	mes "Mmm ...?";
-	mes "O que estÃ¡ acontecendo?";
+	mes "O que está acontecendo?";
 	close;
 }
 
 ayothaya,143,102,5	script	Velho Homem#ayothaya	842,{
-	mes "[AldeÃ£o]";
+	mes "[Aldeão]";
 	mes "Ummm.";
 	mes "Hmmmmm...";
 	mes "Ummmmm...?";
 	next;
-	mes "[AldeÃ£o]";
-	mes "VocÃª deve ser";
+	mes "[Aldeão]";
+	mes "Você deve ser";
 	mes "um estranho.";
 	mes "Sim. Sim, de fato.";
 	next;
-	mes "[AldeÃ£o]";
-	mes "VocÃª acabou de perguntar";
+	mes "[Aldeão]";
+	mes "Você acabou de perguntar";
 	mes "para onde eu vou?";
 	mes "Por que, para o ponto de pesca";
-	mes "logo Ã  frente. Isso Ã© o que";
-	mes "nÃ³s velhos fazemos: Pescar.";
+	mes "logo à frente. Isso é o que";
+	mes "nós velhos fazemos: Pescar.";
 	next;
-	mes "[AldeÃ£o]";
+	mes "[Aldeão]";
 	mes "Hmmm...";
-	mes "VocÃª gostaria de ouvir";
-	mes "algo interessante? Ouvi dizer que alguÃ©m encontrou um anel dentro";
+	mes "Você gostaria de ouvir";
+	mes "algo interessante? Ouvi dizer que alguém encontrou um anel dentro";
 	mes "um peixe que ele pegou no";
 	mes "Ponto de Pesca";
 	next;
-	mes "[AldeÃ£o]";
-	mes "Supostamente, hÃ¡ muitas histÃ³rias sobre pessoas encontrando objetos de valor dentro dos peixes que eles estÃ£o pegando lÃ¡.";
+	mes "[Aldeão]";
+	mes "Supostamente, há muitas histórias sobre pessoas encontrando objetos de valor dentro dos peixes que eles estão pegando lá.";
 	next;
-	mes "[AldeÃ£o]";
-	mes "Se vocÃª tiver sorte o suficiente,";
-	mes "vocÃª pode atÃ© se tornar";
-	mes "um milionÃ¡rio.";
+	mes "[Aldeão]";
+	mes "Se você tiver sorte o suficiente,";
+	mes "você pode até se tornar";
+	mes "um milionário.";
 	mes "Heh heh heh~";
 	next;
-	mes "[AldeÃ£o]";
+	mes "[Aldeão]";
 	mes "...!?";
-	mes "Ah, eu entrei no mercado de peixes! ^666666*Suspiro*^000000 Parece que eu fui no caminho errado. O Ponto de Pesca estÃ¡ no lado oposto desta vila.";
+	mes "Ah, eu entrei no mercado de peixes! ^666666*Suspiro*^000000 Parece que eu fui no caminho errado. O Ponto de Pesca está no lado oposto desta vila.";
 	next;
-	mes "[AldeÃ£o]";
-	mes "Desde que eu estou aqui, nÃ£o seria";
-	mes "uma mÃ¡ idÃ©ia de olhar em volta. Todos os frutos do mar neste mercado sÃ£o frescos e saborosos. VocÃª vai se arrepender se nÃ£o experimentar alguns desses frutos do mar";
+	mes "[Aldeão]";
+	mes "Desde que eu estou aqui, não seria";
+	mes "uma má idéia de olhar em volta. Todos os frutos do mar neste mercado são frescos e saborosos. Você vai se arrepender se não experimentar alguns desses frutos do mar";
 	mes "pelo menos uma vez.";
 	close;
 }
 
 ayothaya,197,189,5	script	Young Man#1ayothaya	841,{
 	mes "[Kwan]";
-	mes "Ufa, nÃ£o ta";
-	mes "tÃ£o quente hoje?";
+	mes "Ufa, não ta";
+	mes "tão quente hoje?";
 	next;
 	mes "[Kwan]";
-	mes "VocÃª deve ser";
+	mes "Você deve ser";
 	mes "de Rune-Midgard, hein?";
 	mes "Eu vi muitos turistas";
-	mes "vindo de lÃ¡ recentemente.";
+	mes "vindo de lá recentemente.";
 	next;
 	mes "[Kwan]";
-	mes "Ã‰ melhor ter muito cuidado se vocÃª viajar para fora da vila. FaÃ§a o que fizer, nÃ£o entre";
-	mes "nas ruÃ­nas de um antigo santuÃ¡rio";
+	mes "É melhor ter muito cuidado se você viajar para fora da vila. Faça o que fizer, não entre";
+	mes "nas ruínas de um antigo santuário";
 	mes "na floresta.";
 	next;
 	mes "[Kwan]";
-	mes "Esse lugar Ã© muito";
-	mes "perigoso para visitar. Ainda assim, eu ouvi que se vocÃª tivesse algum tipo de amuleto, vocÃª poderia ir lÃ¡ com";
-	mes "um pouco menos de preocupaÃ§Ã£o ...";
+	mes "Esse lugar é muito";
+	mes "perigoso para visitar. Ainda assim, eu ouvi que se você tivesse algum tipo de amuleto, você poderia ir lá com";
+	mes "um pouco menos de preocupação ...";
 	next;
 	mes "[Kwan]";
-	mes "Bem, de qualquer forma, ainda Ã© uma boa idÃ©ia ficar longe desse lugar. Espero que vocÃª goste de visitar Ayotaya, e que vocÃª mantenha a seguranÃ§a ~";
+	mes "Bem, de qualquer forma, ainda é uma boa idéia ficar longe desse lugar. Espero que você goste de visitar Ayotaya, e que você mantenha a segurança ~";
 	close;
 }
 
 ayothaya,214,142,5	script	Jovem Rapaz#5ayothaya	843,{
 	mes "[Detzi]";
-	mes "Em Ayotaya, nÃ³s temos nossas prÃ³prias artes marciais tradicionais. NÃ³s, os jovens da vila, praticamos nossas artes marciais tradicionais para nos tornarmos fortes.";
+	mes "Em Ayotaya, nós temos nossas próprias artes marciais tradicionais. Nós, os jovens da vila, praticamos nossas artes marciais tradicionais para nos tornarmos fortes.";
 	next;
 	mes "[Detzi]";
-	mes "Por que vocÃª nÃ£o aprende nossas artes marciais? Eu garanto que isso vai te ajudar muito em suas viagens.";
+	mes "Por que você não aprende nossas artes marciais? Eu garanto que isso vai te ajudar muito em suas viagens.";
 	close;
 }
 
 ayothaya,241,264,5	script	Jovem Rapaz#5ayothaya2	843,{
 	mes "[Eik]";
 	mes "Ei ...";
-	mes "VocÃª parece muito forte";
-	mes "VocÃª quer se desafiado";
+	mes "Você parece muito forte";
+	mes "Você quer se desafiado";
 	mes "para um jogo?";
 	next;
 	if (select("Claro!: Nah~") == 1) {
@@ -289,12 +289,12 @@ ayothaya,241,264,5	script	Jovem Rapaz#5ayothaya2	843,{
 		mes "brincando, cara!";
 		next;
 		mes "[Eik]";
-		mes "Eu nÃ£o sou tÃ£o rude a ponto de lutar com estranhos sem motivo!";
+		mes "Eu não sou tão rude a ponto de lutar com estranhos sem motivo!";
 		emotion ET_KEK;
 		close;
 	}
 	mes "[Eik]";
-	mes "Poder real Ã© desenvolvido depois de ter milhares de partidas com outras pessoas. EntÃ£o, nÃ£o tenha medo de lutar, ok?";
+	mes "Poder real é desenvolvido depois de ter milhares de partidas com outras pessoas. Então, não tenha medo de lutar, ok?";
 	emotion ET_HNG;
 	close;
 }
@@ -303,17 +303,17 @@ ayothaya,241,264,5	script	Jovem Rapaz#5ayothaya2	843,{
 //Antigo changelog
 //================================================ ============
 //= 0.1 Adicionado um NPC Sailor para voltar a Alberta [ZoDIaC]
-//= 0.2 coords fixos, diÃ¡logos
-//= 0.3 Nome fixo do Warp, ayotaya nÃ£o existe, mesmo que o iRO
-//= decidi chamar Ayotaya, Ã© realmente Ayothaya, como
+//= 0.2 coords fixos, diálogos
+//= 0.3 Nome fixo do Warp, ayotaya não existe, mesmo que o iRO
+//= decidi chamar Ayotaya, é realmente Ayothaya, como
 //= aquela coisa Yuno / Juno
 //= 0.4 Adicionado o warp npc oficial para o Ayothaya. [MasterOfMuppets]
-//= 1.0 Adicionado a maioria dos npcs oficiais. As seguintes missÃµes foram adicionadas: [MasterOfMuppets]
+//= 1.0 Adicionado a maioria dos npcs oficiais. As seguintes missões foram adicionadas: [MasterOfMuppets]
 //= Tom Yum Goong, quest Holy Threads e Holier threads quest.
-//= 1.0a algumas verificaÃ§Ãµes, otimizaÃ§Ã£o [Lupus]
+//= 1.0a algumas verificações, otimização [Lupus]
 //= 1.1 Delitem em falta fixado por Poki # 3 [Lupus]
-//= 1.1a Corrigido um erro de digitaÃ§Ã£o e esclarecido um comentÃ¡rio na parte inferior do script [MasterOfMuppets]
-//= 1.2 ExploraÃ§Ãµes fixas [Lupus]
+//= 1.1a Corrigido um erro de digitação e esclarecido um comentário na parte inferior do script [MasterOfMuppets]
+//= 1.2 Explorações fixas [Lupus]
 //= 1.3 Duplicados removidos [silencioso]
 //= 1.4 Mover quests para quests / quests_ayothaya.txt [Evera]
 //= 1.5 Movido alguns NPC's para quests / quests_ayothaya.txt [MasterOfMuppets]
