@@ -1,5 +1,5 @@
 //===== rAthena Script ======================================= 
-//= Corp. Eventos Incr√≠veis
+//= Corp. Eventos IncrÌveis
 //===== By: ================================================== 
 //= Gepard
 //===== Current Version: ===================================== 
@@ -7,16 +7,16 @@
 //===== Compatible With: ===================================== 
 //= rAthena Project
 //===== Description: ========================================= 
-//= Corp. Eventos Incr√≠veis (Save, Storage & Pushcart Service)
+//= Corp. Eventos IncrÌveis (Save, Storage & Pushcart Service)
 //= in Arunafeltz Region.
 //===== Additional Comments: ================================= 
 //= 1.0 First version, iRO Sakray X.4 [Gepard]
 //= 1.1 Optimized, fixed a conditional bug [Lupus]
 //= 1.1a Redo back. It wasn't a bug [Lupus]
-//= 1.2 Added Rachel Corp. Eventos Incr√≠veis [Playtester]
+//= 1.2 Added Rachel Corp. Eventos IncrÌveis [Playtester]
 //= 1.3 Added cutins, closed Kafra Password exploit
 //=     until we got a client/packet based password support [Lupus]
-//= 1.4 Added Veins Corp. Eventos Incr√≠veis. [L0ne_W0lf]
+//= 1.4 Added Veins Corp. Eventos IncrÌveis. [L0ne_W0lf]
 //= 1.5 Cool Event Corp staff is now more iRO like. [L0ne_W0lf]
 //= 1.6 Wrote a basic function and added VIP features. [Euphy]
 //============================================================ 
@@ -24,48 +24,48 @@
 //callfunc "F_CoolEventCorp","<menu>","<location>","<save map>",<x>,<y>,"<warp map>";
 function	script	F_CoolEventCorp	{
 	cutin "zonda_01",2;
-	mes "[Corp. Eventos Incr√≠veis]";
-	mes "Bem-vindo a Corpora√ß√£o Eventos Incr√≠veis.";
-	mes "Nossa equipe est√° sempre trabalhando";
+	mes "[Corp. Eventos IncrÌveis]";
+	mes "Bem-vindo a CorporaÁ„o Eventos IncrÌveis.";
+	mes "Nossa equipe est· sempre trabalhando";
 	mes "para superar suas expectativas";
-	mes "a respeito da qualidade de servi√ßo. Ent√£o";
-	mes "como posso ajud√°-lo hoje?";
+	mes "a respeito da qualidade de serviÁo. Ent„o";
+	mes "como posso ajud·-lo hoje?";
 	next;
 	switch(select(getarg(0))) {
 	case 1:
-		mes "[Corp. Eventos Incr√≠veis]";
+		mes "[Corp. Eventos IncrÌveis]";
 		mes "Seu ponto de retorno";
 		mes "foi salvo aqui.";
 		mes getarg(1)+".";
-		mes "Obrigado por usar o servi√ßo";
-		mes "da Corp. Eventos Incr√≠veis~";
+		mes "Obrigado por usar o serviÁo";
+		mes "da Corp. Eventos IncrÌveis~";
 		savepoint getarg(2),getarg(3),getarg(4),1,1;
 		close2;
 		break;
 	case 2:
-		mes "[Corp. Eventos Incr√≠veis]";
+		mes "[Corp. Eventos IncrÌveis]";
 		if(!callfunc("F_CanOpenStorage")){
-			mes "Me desculpe, mas voc√™";
+			mes "Me desculpe, mas vocÍ";
 			mes "precisa ser um Aprendiz";
-			mes "com habilidades b√°sicas nivel 6";
-			mes "para usar o servi√ßo de armaz√©m.";
+			mes "com habilidades b·sicas nivel 6";
+			mes "para usar o serviÁo de armazÈm.";
 			close2;
 			break;
 		}
 		if(Zeny < 40){
-			mes "Me desculpe, mas voc√™ n√£o tem";
+			mes "Me desculpe, mas vocÍ n„o tem";
 			mes "Zeny suficiente para usare";
-			mes "o servi√ßo de armaz√©m. Nosso";
-			mes "servi√ßo de armaz√©m custa 40 Zeny.";
+			mes "o serviÁo de armazÈm. Nosso";
+			mes "serviÁo de armazÈm custa 40 Zeny.";
 			close2;
 			break;
 		}
 		set Zeny, Zeny - 40;
-		mes "Deixe-me abrir seu armaz√©m";
-		mes "pessoal para voc√™ imediatamente.";
+		mes "Deixe-me abrir seu armazÈm";
+		mes "pessoal para vocÍ imediatamente.";
 		mes "Obrigado por apoiar a";
-		mes "Corpora√ß√£o de eventos incr√≠veis. por usar";
-		mes "nossos servi√ßos. Tenha um bom dia~";
+		mes "CorporaÁ„o de eventos incrÌveis. por usar";
+		mes "nossos serviÁos. Tenha um bom dia~";
 		callfunc("F_CheckKafCode");	//check your storage password, if set
 		close2;
 		openstorage;
@@ -93,24 +93,24 @@ function	script	F_CoolEventCorp	{
 				end;
 			}
 			else {
-				mes "[Corp. Eventos Incr√≠veis]";
-				mes "Me desculpe, mas voc√™ n√£o tem";
-				mes "Zeny suficiente para usar o servi√ßo";
+				mes "[Corp. Eventos IncrÌveis]";
+				mes "Me desculpe, mas vocÍ n„o tem";
+				mes "Zeny suficiente para usar o serviÁo";
 				mes "de teletransporte. A taxa para se teletransportar";
-				mes "para "+ .@destination$ +" √© de "+.@cost+" Zeny.";
+				mes "para "+ .@destination$ +" È de "+.@cost+" Zeny.";
 			}
 		}
 		close2;
 		break;
 	case 4:
-		mes "[Corp. Eventos Incr√≠veis]";
+		mes "[Corp. Eventos IncrÌveis]";
 		if(BaseClass != Job_Merchant){
-			mes "Me desculpe, mas o servi√ßo ";
-			mes "de aluguel de carrinho de m√£o";
+			mes "Me desculpe, mas o serviÁo ";
+			mes "de aluguel de carrinho de m„o";
 			if (checkre(0))
-				mes "est√° dispon√≠vel apenas para a classe Mercador.";
+				mes "est· disponÌvel apenas para a classe Mercador.";
 			else {
-				mes "est√° dispon√≠vel para mercadores,";
+				mes "est· disponÌvel para mercadores,";
 				mes "Ferreiros, Mestre Ferreiro,";
 				mes "Alquimista e Criador.";
 			}
@@ -118,15 +118,15 @@ function	script	F_CoolEventCorp	{
 			break;
 		}
 		if(getskilllv("MC_PUSHCART") == 0){
-			mes "Voc√™ s√≥ pode alugar um carrinho";
+			mes "VocÍ sÛ pode alugar um carrinho";
 			mes "depois de aprender a habilidade Carrihno.";
 			close2;
 			break;
 		}
 		if(checkcart() == 1){
-			mes "Voc√™ j√° possui um";
+			mes "VocÍ j· possui um";
 			mes "carrinho equipado.";
-			mes "Infelizmente, n√≥s n√£o podemos";
+			mes "Infelizmente, nÛs n„o podemos";
 			mes "alugar mais de um";
 			mes "carrinho por vez.";
 			close2;
@@ -138,15 +138,15 @@ function	script	F_CoolEventCorp	{
 			close2;
 			break;
 		}
-		mes "O aluguel do carrinho de m√£o";
-		mes "custar√° 800 Zeny. Voc√™";
-		mes "deseja alugar um carrinho de m√£o?";
+		mes "O aluguel do carrinho de m„o";
+		mes "custar· 800 Zeny. VocÍ";
+		mes "deseja alugar um carrinho de m„o?";
 		next;
 		if(select("Alugar Carrinho.:Cancelar") == 1){
 			if(Zeny < 800){
-				mes "[Corp. Eventos Incr√≠veis]";
-				mes "Lamento, mas voc√™";
-				mes "n√£o possui Zeny";
+				mes "[Corp. Eventos IncrÌveis]";
+				mes "Lamento, mas vocÍ";
+				mes "n„o possui Zeny";
 				mes "suficientes para alugar um carrinho.";
 				mes "O aluguel custa 800 Zeny.";
 			} else {
@@ -157,16 +157,16 @@ function	script	F_CoolEventCorp	{
 		close2;
 		break;
 	case 5:
-		callfunc("F_SetKafCode","[Corp. Eventos Incr√≠veis]","Cool Event Corp.");
+		callfunc("F_SetKafCode","[Corp. Eventos IncrÌveis]","Cool Event Corp.");
 		//the function closes msg and removes cutins
 	case 6:
 	default:
-		mes "[Corp. Eventos Incr√≠veis]";
-		mes "Corpora√ß√£o de Eventos Incr√≠veis. est√° sempre";
-		mes "se esfor√ßando para oferecer os melhores";
-		mes "servi√ßos para nossos clientes.";
+		mes "[Corp. Eventos IncrÌveis]";
+		mes "CorporaÁ„o de Eventos IncrÌveis. est· sempre";
+		mes "se esforÁando para oferecer os melhores";
+		mes "serviÁos para nossos clientes.";
 		mes "Ajude-nos a ser melhor,";
-		mes "fornecendo-nos suas opini√µes";
+		mes "fornecendo-nos suas opiniıes";
 		mes "e feedback sincero. Obrigado.";
 		close2;
 	}
@@ -174,23 +174,23 @@ function	script	F_CoolEventCorp	{
 	end;
 }
 
-hugel,88,168,4	script	Corp. Eventos Incr√≠veis::CoolEventCorpStaffHugel	874,{
+hugel,88,168,4	script	Corp. Eventos IncrÌveis::CoolEventCorpStaffHugel	874,{
 	callfunc "F_CoolEventCorp",
-		"Salvar:Usar Armaz√©m::Alugar Carrinho:Senha do Armaz√©m:Cancelar",
+		"Salvar:Usar ArmazÈm::Alugar Carrinho:Senha do ArmazÈm:Cancelar",
 		"na vila de Hugel","hugel",96,155;
 	end;
 }
 
-rachel,109,138,5	script	Corp. Eventos Incr√≠veis::CoolEventCorpStaffRachel	874,{
+rachel,109,138,5	script	Corp. Eventos IncrÌveis::CoolEventCorpStaffRachel	874,{
 	callfunc "F_CoolEventCorp",
-		"Salvar:Usar Armaz√©m:Servi√ßo de teletransporte:Alugar Carrinho:Senha do Armaz√©m:Cancelar",
+		"Salvar:Usar ArmazÈm:ServiÁo de teletransporte:Alugar Carrinho:Senha do ArmazÈm:Cancelar",
 		"na cidade de Rachel","rachel",113,137,"Veins";
 	end;
 }
 
-veins,208,128,5	script	Corp. Eventos Incr√≠veis::CoolEventCorpStaffVeins	874,{
+veins,208,128,5	script	Corp. Eventos IncrÌveis::CoolEventCorpStaffVeins	874,{
 	callfunc "F_CoolEventCorp",
-		"Salvar:Usar Armaz√©m:Servi√ßo de teletransporte:Alugar Carrinho:Senha do Armaz√©m:Cancelar",
+		"Salvar:Usar ArmazÈm:ServiÁo de teletransporte:Alugar Carrinho:Senha do ArmazÈm:Cancelar",
 		"na cidade de Veins","veins",204,103,"Rachel";
 	end;
 }
