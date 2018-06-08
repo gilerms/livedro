@@ -19,12 +19,12 @@
 //= 1.3 Added Quest Log commands. [Kisuka]
 //============================================================
 
-payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
+payon,215,102,3	script	Moohyun#job_star	828,3,3,{
 	if (Class == Job_Taekwon) {
 		if (STGL_Q == 0) {
 			mes "[Moohyun]";
 			if (Sex == SEX_MALE)
-				mes "Ei, Garot Taekwon!";
+				mes "Ei, Garoto Taekwon!";
 			else
 				mes "Ei, Garota Taekwon!";
 				mes "Venha aqui por um minuto.";
@@ -40,17 +40,17 @@ payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
 					mes "" + strcharinfo(0) + ".";
 					next;
 					mes "[Moohyun]";
-					mes "Nossa, você é tão direto.";
-					mes "Um pouco de calor, um pouco";
+					mes "Arghh, você é tão direto.";
+					mes "Um pouco de";
 					mes "amizade não mataria";
-					mes "você, agora faria? De qualquer forma,";
-					mes "você já pensou em alguma coisa";
-					mes "quanto ao que você quer ser?";
+					mes "você, mataria? De qualquer forma,";
+					mes "você já pensou em algo no";
+					mes "que deseja se tornar?";
 					next;
 					mes "[Moohyun]";
-					mes "Se seu coração já não é";
-					mes ", por que você não se torna";
-					mes "um ^ 4D4DFFwarrior do Sol, a Lua, ^ FFFFFF ^ 4D4DFF e as Estrelas ^ 000000? Apenas considere isso.";
+					mes "Se seu coração já é";
+					mes "puro por que você não se torna";
+					mes "um ^4D4DFFGuerreido do Sol, da Lua, ^FFFFFF ^4D4DFF ou das Estrelas ^000000? Apenas considere isso.";
 					next;
 					mes "[" + strcharinfo(0) + "]";
 					mes "Guerreiro do wha--?";
@@ -66,23 +66,23 @@ payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
 					mes "Legal, hein? De qualquer forma, interessado";
 					mes "em ser um mestre de Taekwon?";
 					next;
-					if (select("Sim, eu sou!: Não, não tanto") == 1) {
+					if (select("Sim, eu sou!:Não, não tanto") == 1) {
 						if (JobLevel> 39) {
 							mes "[Moohyun]";
-							mes "Ótimo, ótimo ~ eu sabia que você";
+							mes "Ótimo, ótimo~ eu sabia que você iria";
 							mes "ver as coisas do meu jeito. Tudo bem,";
 							mes "você parece estar pronto o suficiente.";
 							mes "Tudo que você precisa agora é alguém";
-							mes "quem pode treinar você para se tornar";
+							mes "que irá treinar você para se tornar";
 							mes "um Mestre Taekwon.";
 							next;
 							mes "[Moohyun]";
 							mes "Você gostaria de ^4D4dffmudar";
-							mes "sua classe para o Mestre Taekwon ^000000?";
+							mes "sua classe para Mestre Taekwon ^000000?";
 							mes "Se você fizer, eu te apresentarei a alguém que possa ajudar";
 							mes "você atinge esse objetivo.";
 							next;
-							if (select("Sim, eu faço.", "Deixe-me pensar sobre isso ...") == 1) {
+							if (select("Sim, eu faço.","Deixe-me pensar sobre isso ...") == 1) {
 								mes "[Moohyun]";
 								mes "Excelente! Agora, como você pode";
 								mes "adivinhou, Taekwon Masters";
@@ -90,10 +90,10 @@ payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
 								mes "para reunir, mas também temos menos regras e maior liberdade.";
 								next;
 								mes "[Moohyun]";
-								mes "Quem está por perto agora ...? Umm ...";
-								mes "Ah, você deveria visitar ^ 4D4DFFMoogang ^ 000000.";
+								mes "Quem está por perto agora ...? Umm...";
+								mes "Ah, você deveria visitar ^4D4DFFMoogang ^000000.";
 								mes "Ele é um dos poucos Taekwon";
-								mes "Mestres interessados ??em receber";
+								mes "Mestres interessados em receber";
 								mes "novos alunos, então ele terá certeza";
 								mes "para guiá-lo em seu treinamento.";
 								next;
@@ -150,7 +150,7 @@ payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
 				mes "Ah, não seja assim.";
 				mes "Não lhe custa um zeny";
 				mes "para ouvir meu discurso. Venha";
-				mes "apenas me ouça ...";
+				mes "apenas me ouça...";
 				close;
 			}
 			else if (STGL_Q == 1) {
@@ -170,7 +170,7 @@ payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
 				mes "parece preocupado. Você está em";
 				mes "algum tipo de problema?";
 				next;
-				if (select ("Não, eu estou bem. Sobre o enigma de Beeryu ...") == 1) {
+				if (select("Não, eu estou bem.:Sobre o enigma de Beeryu...") == 1) {
 					mes "[Moohyun]";
 					mes "Está tudo bem para ser independente";
 					mes "e resolver problemas no seu";
@@ -204,7 +204,7 @@ payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
 				mes "você diz para si mesmo quando";
 				mes "sua vida parece sem esperança?";
 				next;
-				if (select ("Eu não vou desistir!: eu ... eu não sei?") == 1) {
+				if (select("Eu não vou desistir!:Eu... Eu não sei?") == 1) {
 					mes "[" + strcharinfo (0) + "]";
 					mes "Eu não vou desistir!";
 					mes "Eu vou fazer meus sonhos";
@@ -272,7 +272,7 @@ payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
 			mes "uma coisa maravilhosa?";
 			close;
 		}
-	else if (Classe == Job_Novice) {
+	else if (Class == Job_Novice) {
 		mes "[Moohyun]";
 		mes "Ei, garoto. Você quer";
 		mes "aprender Taekwon Do?";
@@ -298,13 +298,13 @@ payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
 	mes "[Moohyun]";
 	mes "Cara ...";
 	mes "O que você quer?";
-	if (Sexo == SEX_MALE) {
+	if (Sex == SEX_MALE) {
 		mes "Você quer se juntar";
 		mes "com minhas artes marciais";
 		mes "escola? É tarde demais";
 		mes "para você, desculpe pal ~";
 	}
-	outro {
+	else {
 		mes "Oh, eu não percebi que--";
 		mes "Y-você é tão linda";
 		mes "senhora! Eu acho que você deveria";
@@ -328,7 +328,7 @@ payon,215,102,3	script	Moohyun#job_star	4_M_ROGUE,3,3,{
 	close;
 
 OnTouch_:
-	if (classe == Job_Taekwon) {
+	if (Class == Job_Taekwon) {
 		if (STGL_Q == 0) {
 			mes "[Moohyun]";
 			mes "Hum ...? Oh, você é apenas";
@@ -349,7 +349,7 @@ OnTouch_:
 		close;
 	}
 	mes "[Moohyun]";
-	mes "Whoa, whoa ~";
+	mes "Whoa, whoa~";
 	mes "Afaste-se, você vai?";
 	mes "Você está bloqueando meu sol!";
 	close;
@@ -359,12 +359,12 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 	if (Class == Job_Taekwon) {
 		if (STGL_Q == 1) {
 			mes "[Moogang]";
-			mes "" + strcharinfo (0) + "...";
+			mes ""+ strcharinfo (0) +"...";
 			mes "Eu tenho esperado você.";
 			mes "Moohyun me contou sobre";
 			mes "sua chegada e seu desejo";
 			mes "para se tornar um Mestre de Taekwon.";
-			mes "Eu vou confiar em seu julgamento ...";
+			mes "Eu vou confiar em seu julgamento...";
 			next;
 			mes "[Moogang]";
 			mes "Sim, Moohyun é habilidoso em";
@@ -373,15 +373,15 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 			mes "Você está pronto para o primeiro teste, para usar seus punhos e pernas no";
 			mes "serviço do grande cosmos?";
 			next;
-			if (select ("Sim, deixe-me fazer o teste!: Espere, preciso pensar sobre isso!") == 1) {
+			if (select("Sim, deixe-me fazer o teste!:Espere, preciso pensar sobre isso!") == 1) {
 				if (SkillPoint) {
 					mes "[Moogang]";
 					mes "Hm? Você ainda tem habilidade";
 					mes "Pontos que você ainda não";
 					mes "alocado. Use-os, aprenda";
-				if (Sexo == SEX_FEMALE)
+				if (Sex == SEX_FEMALE)
 					mes "e melhore sua Garota Taekwon";
-				outro
+				else
 					mes "e melhorar o seu garoto Taekwon";
 					mes "habilidades. Quando você terminar, volte aqui para o seu treinamento.";
 					close;
@@ -514,7 +514,7 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 			mes "um Mestre de Taekwon? Então,";
 			mes "Eu te guiarei ao altar.";
 			next;
-			if (select ("Aguarde, preciso de mais tempo!: Sim, estou pronto.") == 1) {
+			if (select("Aguarde, preciso de mais tempo!:Sim, estou pronto.") == 1) {
 				mes "[Moogang]";
 				mes "Eu vejo. Bem então, por favor";
 				mes "deixe-me saber quando você";
@@ -588,7 +588,7 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 			mes "para completar seu Taekwon";
 			mes "Mestre em testes e treinamento?";
 			next;
-			if (select ("Sim, por favor: mais tarde") == 1) {
+			if (select("Sim, por favor:Mais tarde") == 1) {
 				mes "[Moogang]";
 				mes "Não desanime ...";
 				mes "Eu espero que você";
@@ -613,7 +613,7 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 			mes "Você gostaria que eu mandasse";
 			mes "você para a Sala das Estrelas agora?";
 			next;
-			if (select ("Sim, por favor: mais tarde") == 1) {
+			if (select("Sim, por favor:Mais tarde") == 1) {
 				mes "[Moogang]";
 				mes "Não desanime ...";
 				mes "Eu espero que você";
@@ -759,7 +759,7 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 		mes "que você deseja. Você gostaria";
 		mes "para visitar algum deles agora?";
 		next;
-		switch (select ("Talvez da próxima vez.:Para a Sala do Sol !: Para a Sala da Lua!: Para a Sala das Estrelas!")) {
+		switch(select("Talvez da próxima vez.:Para a Sala do Sol !: Para a Sala da Lua!: Para a Sala das Estrelas!")) {
 		case 1:
 			mes "[Moogang]";
 			mes "Tudo bem. Eu sempre serei";
@@ -767,9 +767,9 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 			mes "sinto vontade de ir a qualquer um dos";
 			mes "esses lugares, apenas venha";
 			mes "e fale comigo. Adeus";
-			mes "por enquanto," + strcharinfo (0) + "~";
+			mes "por enquanto,"+strcharinfo(0)+"~";
 			close;
-		caso 2:
+		case 2:
 			mes "[Moogang]";
 			mes "Ah, você deve perder";
 			mes "o calor glorioso";
@@ -779,7 +779,7 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 			close2;
 			warp "job_star", 34,12;
 			end;
-		caso 3:
+		case 3:
 			mes "[Moogang]";
 			mes "Hum? Você precisa";
 			mes "da luz suave de";
@@ -789,7 +789,7 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 			close2;
 			warp "job_star", 100,13;
 			end;
-		caso 4:
+		case 4:
 			mes "[Moogang]";
 			mes "Ah, existem incontáveis";
 			mes "razões pelas quais você iria querer";
@@ -819,7 +819,7 @@ comodo,172,230,3	script	Wandering Master#job_sta	730,{
 }
 
 job_star, 29,33,0 script Daru # job_star 59, {
-	if (classe == Job_Taekwon) {
+	if (Class == Job_Taekwon) {
 		if (STGL_Q == 3) {
 			mes "[Daru]";
 			mes "Ah, saudações.";
@@ -835,15 +835,15 @@ job_star, 29,33,0 script Daru # job_star 59, {
 			mes "que você vê?";
 			next;
 			switch (select ("O Sol: A Lua: As Estrelas: Eu não tenho ideia"))) {
-			caso 1:
+			case 1:
 				mes "[Daru]";
 				mes "Sim! É o sol!";
 				mes "Eu acho que você pode pensar";
 				mes "da humanidade como os filhos de";
 				mes "o sol. Bom, muito bom ...";
-				set. @ sun_point,. @ sun_point + 10;
+				set .@sun_point,.@sun_point+10;
 				break;
-			caso 2:
+			case 2:
 				mes "[Daru]";
 				mes "A ... A lua?";
 				mes "Mm. Mas esse é o";
@@ -855,9 +855,9 @@ job_star, 29,33,0 script Daru # job_star 59, {
 				mes "Eu suponho que você pode pensar em";
 				mes "o Sol como um dos milhares";
 				mes "de estrelas no universo ...";
-				set. @ sun_point,. @ sun_point + 5;
+				set .@sun_point,.@sun_point+5;
 				break;
-				caso 4:
+			case 4:
 				mes "[Daru]";
 				mes "Não ... idéia?";
 				mes "Hmm. Você deveria";
@@ -873,35 +873,35 @@ job_star, 29,33,0 script Daru # job_star 59, {
 			mes "sol. Você sabe o que é";
 			mes "precisa mais do sol?";
 			next;
-			switch (select ("Calor: Conforto: Luz: Nada")) {
-			caso 1:
+			switch(select("Calor:Conforto:Luz:Nada")) {
+			case 1:
 				mes "[Daru]";
 				mes "Isso é certo.";
 				mes "Sem o calor";
 				mes "do sol, nosso mundo";
 				mes "não só seja frio, mas";
 				mes "seria completamente sem vida.";
-				set. @ sun_point,. @ sun_point + 10;
+				set .@sun_point,.@sun_point+10;
 				break;
-			caso 2:
+			case 2:
 				mes "[Daru]";
 				mes "Conforto ...?";
 				mes "Ah, sim. O calor";
 				mes "do sol traz conforto.";
 				mes "E sem conforto, é a vida";
 				mes "realmente vale a pena viver? Boa resposta.";
-				set. @ sun_point,. @ sun_point + 10;
+				set .@sun_point,.@sun_point+10;
 				break;
-			caso 3:
+			case 3:
 				mes "[Daru]";
 				mes "Sim. Sem o";
 				mes "gloriosa luz do sol";
 				mes "não veríamos nada.";
 				mes "Nós não saberíamos nada.";
 				mes "Nós não seríamos nada.";
-				set. @ sun_point,. @ sun_point + 10;
+				set .@sun_point,.@sun_point+10;
 				break;
-			caso 4:
+			case 4:
 				mes "[Daru]";
 				mes "Mmm ...";
 				mes "A resposta deveria";
@@ -933,7 +933,7 @@ job_star, 29,33,0 script Daru # job_star 59, {
 			mes "todos eles? Pense cuidadosamente ...";
 			next;
 			if (select("2º, Marsh, Knights: 4º, Desert, Sand: 10th, Desert, Knights: 5º, Deep Cave, Wolves") == 2)
-				set. @ sun_point,. @ sun_point + 10;
+				set .@sun_point,.@sun_point+10;
 			mes "[Daru]";
 			mes "Bem, isso será tudo.";
 			mes "Eu não posso saber tudo";
@@ -1086,7 +1086,7 @@ job_star, 29,33,0 script Daru # job_star 59, {
 	mes "teste de mudança de emprego. Então, seria";
 	mes "você gosta de voltar para a cidade?";
 	next;
-	if (select("Retornar para Payon: Cancelar") == 1) {
+	if (select("Retornar para Payon:Cancelar") == 1) {
 		mes "[Daru]";
 		mes "Eu vejo. Deixe-me";
 		mes "guie você de volta";
@@ -1104,7 +1104,7 @@ job_star, 29,33,0 script Daru # job_star 59, {
 }
 
 job_star, 95,33,0 script Beeryu # job_star 106, {
-	if (classe == Job_Taekwon) {
+	if (Class == Job_Taekwon) {
 		if (STGL_Q == 4) {
 			mes "[Beeryu]";
 			mes "Bem vindo ao Quarto da Lua.";
@@ -1121,24 +1121,24 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 			mes "lua, e como isso muda";
 			mes "em certas noites.";
 			next;
-			switch (select ("Lua Vermelha: Lua Azul: Lua de Ouro: ...?")) {
-			caso 1:
+			switch (select("Lua Vermelha: Lua Azul: Lua de Ouro: ...?")) {
+			case 1:
 				mes "[Beeryu]";
 				mes "A Lua Vermelha ...?";
 				mes "É uma visão assustadora";
 				mes "geralmente comparado a encharcar o céu com a cor do sangue.";
 				mes "A Lua Vermelha desperta sentimentos sombrios que não devemos abraçar completamente ...";
 				break;
-			caso 2:
+			case 2:
 				mes "[Beeryu]";
 				mes "A Lua Azul ...?";
 				mes "Ah, sim. É uma calma e";
 				mes "lua suave cujo suave";
 				mes "a luz ajuda você a pensar claramente.";
 				mes "É uma lua de descanso tranquilo ...";
-				set. @ ponto_da_luna,. @ ponto_da_limite + 10;
+				set .@moon_point,.@moon_point+10;
 				break;
-			caso 3:
+			case 3:
 				mes "[Beeryu]";
 				mes "A Lua Dourada ...?";
 				mes "Ah, isso é uma lua de";
@@ -1148,7 +1148,7 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 				mes "aspirações é o auge da vida.";
 				set. @ ponto_da_luna,. @ ponto_da_limite + 10;
 				break;
-			caso 4:
+			case 4:
 				mes "[Beeryu]";
 				mes "Hmm ...?";
 				mes "Você não tem um";
@@ -1166,8 +1166,8 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 			mes "use o poder do";
 			mes "cosmo lunar?";
 			next;
-			switch (select("Justiça: Auto-Prática: Preservação da Natureza: Vingança")) {
-			caso 1:
+			switch(select("Justiça:Auto-Prática:Preservação da Natureza:Vingança")) {
+			case 1:
 				mes "[Beeryu]";
 				mes "Sim. Justiça é sempre uma";
 				mes "final que vale a pena lutar";
@@ -1177,7 +1177,7 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 				mes "forma mais verdadeira de justiça.";
 				set. @ ponto_da_luna,. @ ponto_da_limite + 10;
 				break;
-			caso 2:
+			case 2:
 				mes "[Beeryu]";
 				mes "Auto treinamento?";
 				mes "Isso é aceitável";
@@ -1187,7 +1187,7 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 				mes "eu, senão você perde o seu caminho.";
 				set. @ ponto_da_luna,. @ ponto_da_limite + 10;
 				break;
-			caso 3:
+			case 3:
 				mes "[Beeryu]";
 				mes "A preservação de";
 				mes "a natureza é a responsabilidade";
@@ -1196,7 +1196,7 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 				mes "responder em termos de Taekwon";
 				mes "Maestria como uma arte marcial ...";
 				break;
-			caso 4:
+			case 4:
 				mes "[Beeryu]";
 				mes "Às vezes, a vingança pode";
 				mes "parece ser o melhor curso de";
@@ -1241,13 +1241,13 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 				mes "evoca fortemente o";
 				mes "luz da lua?";
 				next;
-				if (select("2º, Marsh, Cavaleiros das Trevas: 4º, o Deserto, a Areia: 10º, Caverna Profunda, Cavaleiro das Trevas: 5º, Marsh, Lobos") == 4)
-					set.@moon_point,. @moon_point+10;
+				if (select("2º, Marsh, Cavaleiros das Trevas: 4º, o Deserto, a Areia:10º, Caverna Profunda, Cavaleiro das Trevas: 5º, Marsh, Lobos") == 4)
+					set	.@moon_point,.@moon_point+10;
 						mes "[Beeryu]";
 						mes "Bem, eu perguntei ao";
 						mes "perguntas que eu queria definir";
 						mes "antes de você. Você deve aprender";
-						if (. @ ponto_da_a lua> 20) {
+						if (.@moon_point > 20) {
 						mes "o vínculo entre o luar";
 						mes "com as sombras da lua.";
 						mes "Então, você se tornará um mestre.";
@@ -1299,7 +1299,7 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 					mes "para que ele possa mandar você para mim.";
 					set STGL_Q, 7;
 					close2;
-					urdidura "payon", 164,58;
+					warp "payon", 164,58;
 					end;
 				}
 				else if (STGL_Q == 5) {
@@ -1341,7 +1341,7 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 					mes "sobre o que pode ser. Agora,";
 					mes "Vou mandar você de volta para a cidade ...";
 					close2;
-					urdidura "payon", 164,58;
+					warp "payon", 164,58;
 					end;
 				}
 				else if (STGL_Q == 8) {
@@ -1391,7 +1391,7 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 				mes "mais importante para fazer, então";
 				mes "deixe-me mandar você de volta para a cidade ...";
 				close2;
-				urdidura "payon", 164,58;
+				warp "payon", 164,58;
 				end;
 			}
 			mes "[Beeryu]";
@@ -1402,11 +1402,11 @@ job_star, 95,33,0 script Beeryu # job_star 106, {
 			mes "Ah, e me avise quando";
 			mes "você quer voltar para Payon.";
 			next;
-			if (select("Retornar para Payon: Cancelar") == 1) {
+			if (select("Retornar para Payon:Cancelar") == 1) {
 			mes "[Beeryu]";
 			mes "Esteja seguro!";
 			close2;
-			urdidura "payon", 164,58;
+			warp "payon", 164,58;
 			end;
 		}
 		mes "[Beeryu]";
@@ -1476,7 +1476,7 @@ job_star,161,33,0	script	Cheehee#job_star	77,{
 			mes "não os trouxe com você, então você não os encontrará aqui. Você";
 			mes "tem que sair e encontrá-los antes de trazê-los para mim.";
 			close2;
-			urdidura "payon", 164,58;
+			warp "payon", 164,58;
 			end;
 		}
 		else if (STGL_Q == 11) {
@@ -1599,7 +1599,7 @@ job_star,161,33,0	script	Cheehee#job_star	77,{
 		mes "eles? Você gostaria de";
 		mes "retornar a Payon agora?";
 		next;
-		if (select ("Sim:Não") == 1) {
+		if (select("Sim:Não") == 1) {
 			mes "[Cheehee]";
 			mes "eu vejo.";
 			mes "Deixe-me guiar";
@@ -1620,7 +1620,7 @@ job_star,161,33,0	script	Cheehee#job_star	77,{
 	mes "eles? Você gostaria de";
 	mes "retornar a Payon agora?";
 	next;
-	if (select ("Sim:Não") == 1) {
+	if (select("Sim:Não") == 1) {
 		mes "[Cheehee]";
 		mes "eu vejo.";
 		mes "Deixe-me guiar";

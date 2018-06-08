@@ -23,7 +23,7 @@
 //= 1.6 Updated to match the latest official script. [Euphy]
 //============================================================ 
 
-morocc_in,174,30,6	script	Garoto#link1	4_M_KID2,{
+morocc_in,174,30,6	script	Garoto#link1	716,{
 	if (Class == Job_Soul_Linker) {
 		mes "[Maia]";
 		mes "Boa sorte em sua";
@@ -91,7 +91,7 @@ morocc_in,174,30,6	script	Garoto#link1	4_M_KID2,{
 				mes "para você! Você pode me ver";
 				mes "como uma criança, Mas eu tenho";
 				mes "mais de 300 anos de idade!";
-				emotion e_pif;
+				emotion ET_HNG;
 				next;
 				mes "[Garoto]";
 				mes "Agora ouça...";
@@ -100,7 +100,7 @@ morocc_in,174,30,6	script	Garoto#link1	4_M_KID2,{
 				mes "É uma arte respeitável, mas";
 				mes "eu gostaria de lhe fazer";
 				mes "uma proposta.";
-				emotion e_heh;
+				emotion ET_SMILE;
 				next;
 				mes "[Garoto]";
 				mes "Eu estive olhando para você, e eu";
@@ -149,13 +149,13 @@ morocc_in,174,30,6	script	Garoto#link1	4_M_KID2,{
 				mes "mas eu sei que isso vai ser possível";
 				mes "para você. E então o que me diz?";
 				next;
-				if (select("No. At least, not now...:Alright. What do I have to do?") == 1) {
-					mes "[Kid]";
-					mes "Ah, alright. Well,";
-					mes "if you ever decide to";
-					mes "become a Soul Linker,";
-					mes "then please come back";
-					mes "and talk to me at any time.";
+				if (select("Não. Pelo menos, não agora...:Tudo bem. O que eu tenho que fazer?") == 1) {
+					mes "[Garoto]";
+					mes "Ah, tudo bem. Bem,";
+					mes "se você decidir";
+					mes "tornar-se um criador de almas,";
+					mes "então, por favor, volte";
+					mes "e fale comigo a qualquer momento.";
 					close;
 				}
 				set SOUL_Q,1;
@@ -229,7 +229,7 @@ morocc_in,174,30,6	script	Garoto#link1	4_M_KID2,{
 					mes "vá e me traga tudo";
 					mes "que eu havia";
 					mes "te pedido, ok?";
-					emotion e_pif;
+					emotion ET_HNG;
 					next;
 					mes "[Garoto]";
 					mes "Eu sei que você sabe o que";
