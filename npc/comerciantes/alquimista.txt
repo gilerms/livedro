@@ -99,7 +99,7 @@ alde_alche,24,188,3	script	Negociante da Guilda	740,{
 		mes "O que você precisa?";
 		mes "Os manuais geralmente são 100.000 zenys. Mas há alguns manuais especiais que custam mais.";
 		next;
-		switch(select(Guia de Criação de Poções:Guia de Criação de Álcool:Guia de Criação de Granadas:Guia de Criação de Frasco de Ácido:Guia de Criação de Frasco de Plantas:Guia de Criação de Frasco de Esferas Marinhas:Guia de Criação de Poção Condensada:Cancelar Negociação.")) {
+		switch(select("Guia de Criação de Poções:Guia de Criação de Álcool:Guia de Criação de Granadas:Guia de Criação de Frasco de Ácido:Guia de Criação de Frasco de Plantas:Guia de Criação de Frasco de Esferas Marinhas:Guia de Criação de Poção Condensada:Cancelar Negociação.")) {
 		case 1:
 			callsub S_SellManual,7144,100000; //Normal_Potion_Book
 			break;
