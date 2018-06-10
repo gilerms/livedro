@@ -87,340 +87,340 @@ alberta_in,55,142,7	script	Hair Dresser	91,{
 					close2; cutin "",255; end;
 				}
 					mes "Oh, esse é o estilo 'Frost Diver'!";
-mes "As tranças emprestam um inocente";
-mes "recatada procure por aqueles Magos";
-mes "e magos que geralmente assustam";
-mes "fora os meninos com suas magias.";
+					mes "As tranças emprestam um inocente";
+					mes "recatada procure por aqueles Magos";
+					mes "e magos que geralmente assustam";
+					mes "fora os meninos com suas magias.";
 					close2; cutin "",255; end;
 			case 4:
 				if(Sex == SEX_MALE) {
 					mes "Oh, esse é o 'Double Strafe'";
-mes "estilo! O arranjo do";
-mes "cabelo conduz ambiente estático";
-mes "eletricidade, naturalmente limpando";
-mes "a mente. Pelo menos, isso é o que";
-mes "Eu fui ensinado na escola de moda.";
+					mes "estilo! O arranjo do";
+					mes "cabelo conduz ambiente estático";
+					mes "eletricidade, naturalmente limpando";
+					mes "a mente. Pelo menos, isso é o que";
+					mes "Eu fui ensinado na escola de moda.";
 					close2; cutin "",255; end;
 				}
 					mes "Oh, esse é o estilo 'Arrow Shower'!";
-mes "Para o Bowswoman que não";
-mes "quer que a moda interfira";
-mes "sua percepção de profundidade. Muito mais";
-mes "atraente do que aqueles horríveis";
-mes "hairbuns estilo vovó.";
+					mes "Para o Bowswoman que não";
+					mes "quer que a moda interfira";
+					mes "sua percepção de profundidade. Muito mais";
+					mes "atraente do que aqueles horríveis";
+					mes "hairbuns estilo vovó.";
 					close2; cutin "",255; end;
 			case 5:
 				if(Sex == SEX_MALE) {
 					mes "Oh, esse é o estilo 'Angelus'!";
-mes "É para pessoas calmas e devotas";
-mes "assim como aqueles tímidos,";
-mes "tipos moderados";
+					mes "É para pessoas calmas e devotas";
+					mes "assim como aqueles tímidos,";
+					mes "tipos moderados";
 					close2; cutin "",255; end;
 				}
 					mes "Oh, esse é o estilo 'Curar'!";
-mes "Isso está em tendência entre";
-mes "Sacerdotes e Acólitos desde";
-mes "esse estilo é apropriado";
-mes "para situações formais, mas";
-mes "também é prático em batalha.";
+					mes "Isso está em tendência entre";
+					mes "Sacerdotes e Acólitos desde";
+					mes "esse estilo é apropriado";
+					mes "para situações formais, mas";
+					mes "também é prático em batalha.";
 					close2; cutin "",255; end;
 			case 6:
 				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Push Cart' style!";
-					mes "It was based on the design of a";
-					mes "cart...at least, that's what";
-					mes "I learned in beautician school.";
-					close2; cutin "",255; end;
-				}
-					mes "Ooh, that's 'Vending' style!";
-					mes "It's the hairdo of money";
-					mes "makers...and if I may say so,";
-					mes "it's also economical.";
-					close2; cutin "",255; end;
+					mes "Oh, isso é estilo 'Empurrar Carrinho'";
+					mes "Foi baseado no design de um";
+					mes "carrinho ... pelo menos, é o que";
+					mes "Eu aprendi na escola de esteticista.";
+					close2; cutin "", 255; fim;
+					}
+					mes "Ooh, isso é estilo 'vendendo'!";
+					mes "É o penteado do dinheiro";
+					show "criadores ... e se posso dizer,";
+					mes "também é econômico.";
+					close2; cutin "", 255; fim;
 			case 7:
-				if(Sex == SEX_MALE) {
-					mes "Ooh, that's 'Envenom' style!";
-					mes "It looks great on Thieves and";
-					mes "and Assassins when they're";
-					mes "out poisoning people and animals.";
-					mes "It's fashion for the aggressive";
-					mes "and eclectic~!";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Double Attack' style!";
-					mes "The adorable pigtail, paired with";
-					mes "those provacative bangs are sure";
-					mes "to help you steal the heart of";
-					mes "some cute guy.";
-					close2; cutin "",255; end;
+				if (Sex == SEX_MALE) {
+					mes "Ooh, isso é estilo 'Envenom'!";
+					mes "Parece ótimo em Ladrões e";
+					mes "e Assassinos quando eles estão";
+					mes "envenenando pessoas e animais.";
+					mes "É moda para o agressivo";
+					mes "e eclético ~!";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, esse é o estilo 'Duplo Ataque'!";
+					mes "O pigtail adorável, emparelhado com";
+					mes "essas franjas provinativas são certas";
+					mes "para ajudar você a roubar o coração de";
+					mes "algum cara fofo.";
+					close2; cutin "", 255; fim;
 			case 8:
-				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Bowling Bash' style!";
-					mes "A popular style for Knights, its";
-					mes "manly, rugged look tends to";
-					mes "attract all of the ladies,";
-					mes "and looks great on men with";
-					mes "strong chins.";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Gloria' style!";
-					mes "It's very elegant and looks";
-					mes "great on holy Priests. This";
-					mes "style is most attractive to";
-					mes "ladies who aren't that used";
-					mes "to fighting with their hands.";
-					close2; cutin "",255; end;
+				if (Sex == SEX_MALE) {
+					mes "Oh, esse é o estilo 'Bowling Bash'!";
+					mes "Um estilo popular para os Cavaleiros, é";
+					mes "viril, visual robusto tende a";
+					mes "atrair todas as mulheres";
+					mes "e parece ótimo em homens com";
+					mes "queixos fortes.";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, esse é o estilo de Gloria!";
+					mes "É muito elegante e parece";
+					mes "ótimo em santos sacerdotes. Isso";
+					mes "o estilo é mais atraente para";
+					mes "senhoras que não são tão usadas";
+					mes "para lutar com as mãos deles.";
+					close2; cutin "", 255; fim;
 			case 9:
-				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Venom Dust' style!";
-					mes "Definitely a look for rebels,";
-					mes "the sweeping, yet decidedly";
-					mes "luxorious locks seems to enchant";
-					mes "girls with a fatal attraction.";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'SP Recovery' style!";
-					mes "To add more body to the special";
-					mes "style of these bangs, I use a";
-					mes "special conditioner that makes";
-					mes "you feel like you're regaining SP";
-					mes "...Although, it acutally doesn't.";
-					close2; cutin "",255; end;
+				if (Sex == SEX_MALE) {
+					mes "Oh, esse é o estilo 'Venom Dust'!";
+					mes "Definitivamente, um olhar para os rebeldes";
+					mes "a varredura, ainda que decididamente";
+					mes "luxuosa fechadura parece encantar";
+					mes "garotas com uma atração fatal.";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, esse é o estilo 'SP Recovery'!";
+					mes "Para adicionar mais corpo ao especial";
+					mes "estilo dessas franja, eu uso um";
+					mes "condicionador especial que faz";
+					mes "você sente que está recuperando o SP";
+					mes "... Embora, acutally não.";
+					close2; cutin "", 255; fim;
 			case 10:
-				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Turn Undead' style!";
-					mes "This is popular among Priests";
-					mes "that want a serious, yet a bit";
-					mes "of a wild, agressive look.";
-					mes "Definitely more attractive";
-					mes "than the 'Holy Light' mullet.";
-					close2; cutin "",255; end;
+				if (Sex == SEX_MALE) {
+					mes "Oh, esse é o estilo 'Turn Undead'!";
+					mes "Isso é popular entre os padres";
+					mes "que quer um sério, mas um pouco";
+					mes "de um visual selvagem e agressivo.";
+					mes "Definitivamente mais atraente";
+					mes "do que a tainha da" Luz Sagrada ".";
+					close2; cutin "", 255; fim;
 				}
-					mes "Oh, that's 'Prepare Potion' style!";
-					mes "The flared out tresses are chosen";
-					mes "by beginning Alchemists, since";
-					mes "early, explosive experiments would";
-					mes "make their hair to stick out anyway.";
-					close2; cutin "",255; end;
+					mes "Oh, esse é o estilo 'Prepare Poção'!";
+					mes "As tranças são escolhidas";
+					mes "começando Alquimistas, desde";
+					mes "primeiros experimentos explosivos";
+					mes "faça seu cabelo ficar fora de qualquer maneira.";
+					close2; cutin "", 255; fim;
 			case 11:
-				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Dragonology' style!";
-					mes "It's neat and clean cut, perfect";
-					mes "for studious people and looks";
-					mes "great with eyeglasses. This";
-					mes "is a fashion well suited to";
-					mes "intellectual types.";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Grand Cross' style!";
-					mes "It's in style among those pious";
-					mes "Crusaders that need hair that";
-					mes "won't muss during fighting, yet";
-					mes "is respectable enough to attend";
-					mes "religious services.";
-					close2; cutin "",255; end;
+				if (Sex == SEX_MALE) {
+					mes "Oh, esse é o estilo 'Dragonologia'!";
+					mes "É puro e limpo, perfeito";
+					mes "para pessoas estudiosas e parece";
+					mes "ótimo com óculos. Isso";
+					mes "é uma moda bem adequada para";
+					mes "tipos intelectuais.";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, isso é estilo 'Grand Cross'!";
+					mes "É em grande estilo entre aqueles piedosos";
+					mes "Crusaders que precisam de cabelo que";
+					mes "não vai mexer durante a luta, ainda";
+					mes "é respeitável o suficiente para assistir";
+					mes "serviços religiosos.";
+					close2; cutin "", 255; fim;
 			case 12:
-				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Mace Mastery' style!";
-					mes "A lot of care goes into making";
-					mes "that tussled hair say, 'I don't";
-					mes "care how I look at all.'";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Intimidate' style!";
-					mes "The Rogue women seem to like";
-					mes "this style...although I imagine";
-					mes "that more of them would prefer";
-					mes "something wilder to match those";
-					mes "stockings...";
-					close2; cutin "",255; end;
+				if (Sex == SEX_MALE) {
+					mes "Oh, esse é o estilo 'Mace Maestria'!";
+					mes "Muito cuidado entra em fazer";
+					mes "que o cabelo bagunçado diga" eu não ";
+					mes "se importa como eu vejo tudo. '";
+					close2; cutin "", 255; fim;
+					}
+					mes "Ah, isso é estilo 'Intimidar'!";
+					mes "As mulheres desonestas parecem gostar";
+					mes "esse estilo ... embora eu imagine";
+					mes "que mais deles prefeririam";
+					mes "algo mais selvagem para combinar com aqueles";
+					mes "meias ...";
+					close2; cutin "", 255; fim;
 			case 13:
-				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Thunder Storm' style!";
-					mes "This hot, flamboyant hairstyle";
-					mes "flares out wildly like thunder.";
-					mes "...And you will too with this new look.";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Spiritual Sphere";
-					mes "Absorption' style! There's a";
-					mes "charismatic quality to this";
-					mes "fashion: it's tough, slightly";
-					mes "tomboyish, but not so much";
-					mes "that it can't be cute.";
-					close2; cutin "",255; end;
+				if (Sex == SEX_MALE) {
+					mes "Oh, esse é o estilo do 'Thunder Storm'!";
+					mes "Esse penteado quente e extravagante";
+					mes "explode como um trovão.";
+					mes "... E você também vai com esse novo visual.";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, isso é" Esfera Espiritual ";
+					mes "Estilo de absorção! Há um";
+					mes "qualidade carismática para isso";
+					mes "moda: é difícil, um pouco";
+					mes "moleca, mas não tanto";
+					mes "que não pode ser fofo.";
+					close2; cutin "", 255; fim;
 			case 14:
 				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Encore' style!";
-					mes "The elegant, flowing locks";
-					mes "fit well with Bards, or men who";
-					mes "appreciate the value of male";
-					mes "beauty.";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Gypsy's Kiss' style!";
-					mes "Dancers seem to like this style,";
-					mes "although personally, I think";
-					mes "this fashion fits very well";
-					mes "with glasses.";
-					close2; cutin "",255; end;
+					mes "Oh, isso é estilo 'Encore'!";
+					mes "As fechaduras elegantes e fluidas";
+					mes "se encaixam bem com bardos ou homens que";
+					mes "apreciar o valor do masculino";
+					mes "beleza";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, esse é o estilo 'Gypsy's Kiss'!";
+					mes "Dançarinos parecem gostar desse estilo";
+					mes "embora pessoalmente, eu acho";
+					mes "essa moda se encaixa muito bem";
+					mes "com óculos.";
+					close2; cutin "", 255; fim;
 			case 15:
 				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Grimtooth' style!";
-					mes "Spiky and unkempt, this style";
-					mes "is a popular counterculture";
-					mes "street fashion. You might";
-					mes "not want to wear your hair";
-					mes "this way at a wedding, though.";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Counter Attack' style!";
-					mes "This is an intimidating look for";
-					mes "girls that want to say 'You hit";
-					mes "me, I'll hit you back!' It really";
-					mes "emphasizes strong looking";
-					mes "foreheads and cheekbones.";
-					close2; cutin "",255; end;
+					mes "Oh, esse é o estilo 'Grimtooth'!";
+					mes "Spiky and unkempt, este estilo";
+					mes "é uma contracultura popular";
+					mes "moda de rua. Você pode";
+					mes "não quer usar seu cabelo";
+					mes "desta forma em um casamento, no entanto.";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, esse é o estilo 'Counter Attack'!";
+					mes "Este é um olhar intimidador para";
+					mes "garotas que querem dizer 'você bateu';
+					mes "eu vou te bater de volta! ' É realmente ";
+					mes "enfatiza a aparência forte";
+					mes "testa e maçãs do rosto.";
+					close2; cutin "", 255; fim;
 			case 16:
 				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Blitz Beat' style!";
-					mes "A funky and lively fashion,";
-					mes "this style was developed for a";
-					mes "Hunter who liked really long";
-					mes "bangs and wanted to see";
-					mes "through them at the same time.";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Anke Snare' style!";
-					mes "The style style is specially";
-					mes "made for Hunters that don't like";
-					mes "to get their hair tangled...";
-					mes "After all, what kind of Hunter";
-					mes "lets their hair get trapped?";
-					close2; cutin "",255; end;
+					mes "Oh, esse é o estilo 'Blitz Beat'!";
+					mes "Uma moda divertida e animada";
+					mes "esse estilo foi desenvolvido para um";
+					mes "Caçador que gostou muito tempo";
+					mes "bate e queria ver";
+					mes "através deles ao mesmo tempo.";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, esse é o estilo 'Anke Snare'!";
+					mes "O estilo de estilo é especialmente";
+					mes "feito para Caçadores que não gostam";
+					mes "para deixar o cabelo embaraçado ...";
+					mes "Afinal, que tipo de caçador";
+					mes "deixa o cabelo preso?";
+					close2; cutin "", 255; fim;
 			case 17:
 				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Find Ore' style!";
-					mes "It's a practical, economical look";
-					mes "that is popular among Blacksmiths.";
-					mes "Some swear that this fashion helps";
-					mes "them in finding ores, but where's";
-					mes "the science in that??";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Hammer Fall' style!";
-					mes "For the woman that doesn't want";
-					mes "her hair to get in the way when";
-					mes "she's savagely swinging heavy";
-					mes "objects. Of course, this is a";
-					mes "Blacksmith favorite.";
-					close2; cutin "",255; end;
+					mes "Oh, esse é o estilo 'Find Ore'!";
+					mes "É uma aparência prática e econômica";
+					mes "que é popular entre os Ferreiros.";
+					mes "Alguns juram que essa moda ajuda";
+					mes "eles em encontrar minérios, mas onde está";
+					mes "a ciência nisso?";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, esse é o estilo 'Hammer Fall'!";
+					mes "Para a mulher que não quer";
+					mes "o cabelo dela para ficar no caminho quando";
+					mes "ela está selvagemente balançando pesado";
+					mes "objetos. Claro, isso é um";
+					mes "Ferreiro favorito.";
+					close2; cutin "", 255; fim;
 			case 18:
 				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Fire Pillar' style!";
-					mes "It's a trendy look, in which";
-					mes "you cover one eye for that";
-					mes "intrigue effect. The element";
-					mes "of mystery is always in";
-					mes "fashion, don't you think?";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Jupitel Thunder'";
-					mes "style! A look that strikes";
-					mes "like lightening, without";
-					mes "any of that annoying static";
-					mes "cling or muss. This fashion";
-					mes "looks great with Mage Hats.";
-					close2; cutin "",255; end;
+					mes "Oh, esse é o estilo 'Fire Pillar'!";
+					mes "É um visual moderno, no qual";
+					mes "você cobre um olho para isso";
+					mes "efeito de intriga. O elemento";
+					mes "de mistério está sempre em";
+					mes "moda, você não acha?";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, isso é 'Jupitel Trovão'";
+					mes "estilo! Um olhar que impressiona";
+					mes "como um raio, sem";
+					mes "qualquer uma daquelas estáticas irritantes";
+					mes "se agarre ou muss. Essa moda";
+					mes "parece ótimo com os Mage Hats.";
+					close2; cutin "", 255; fim;
 			case 19:
-				if(Sex == SEX_MALE) {
-					mes "Oh, that's 'Guillotine Fist'";
-					mes "style! The smooth, slicked back";
-					mes "pompadour shows that you're";
-					mes "serious about your passion";
-					mes "for brawling... or just your passion.";
-					close2; cutin "",255; end;
-				}
-					mes "Oh, that's 'Whirlwind' style!";
-					mes "A favorite among the studious";
-					mes "Sages, the hair is tied back";
-					mes "in a stylish braid so that";
-					mes "it doesn't fly around after";
-					mes "casting those windy spells.";
-					close2; cutin "",255; end;
+				if (Sex == SEX_MALE) {
+					mes "Oh, isso é 'Punho de Guilhotina'";
+					mes "estilo! O liso, penteado para trás";
+					mes "pompadour mostra que você é";
+					mes "sério sobre sua paixão";
+					mes "por brigas ... ou apenas por sua paixão.";
+					close2; cutin "", 255; fim;
+					}
+					mes "Oh, esse é o estilo 'Whirlwind'!";
+					mes "Um favorito entre os estudiosos";
+					mes "Sábios, o cabelo está amarrado";
+					mes "em uma trança elegante para que";
+					mes "não voa depois";
+					mes "lançando esses feitiços ventosos.";
+					close2; cutin "", 255; fim;
 			}
 		}
 	case 2:
 		if(BaseLevel < 60) {
 			mes "[Veronica]";
-			mes "Oh, dear, you're looking fabulous with";
-			mes "your current hairstyle. Why don't you";
-			mes "try a new hair accessory rather than changing your look?";
+			mes "Oh, querida, você está fabulosa com";
+			mes "seu penteado atual. Por que você não";
+			mes "tente um novo acessório para o cabelo ao invés de mudar seu visual?";
 			close;
 		} else if((countitem(973) < 3) || (countitem(974) < 3) || (countitem(901) <100) || (countitem(1094) <100) || (countitem(1020) <100) || (countitem(1060) <100) || (countitem(7152) <100) || (Zeny < 99800)) {
 			mes "[Veronica]";
-			mes "If you wish to change your";
-			mes "hairstyle, you should meet some";
-			mes "requirements. I suggest that you";
-			mes "write down all the items that";
-			mes "you will need.";
+			mes "Se você quiser mudar seu";
+			mes "penteado, você deveria conhecer alguns";
+			mes "requisitos. Eu sugiro que você";
+			mes "anote todos os itens que";
+			mes "você precisará.";
 			next;
 			mes "[Veronica]";
 			mes "3 Counteragent,";
-			mes "3 Mixture,";
-			mes "100 Danggie,";
-			mes "100 Short Danggie,";
-			mes "100 Black Hair,";
-			mes "100 Golden Hair,";
-			mes "100 Glossy Hair, and lastly...";
+			mes "3 Mistura";
+			mes "100 Danggie";
+			mes "100 Curto Danggie,";
+			mes "100 Cabelo Preto";
+			mes "100 cabelos dourados,";
+			mes "100 Cabelo Lustroso, e por último ...";
 			next;
 			mes "[Veronica]";
-			mes "You will need 99,800 zeny.";
-			mes "Please come back when you're";
-			mes "ready. I will make you look";
-			mes "fabulous. Hohohohoho~";
+			mes "Você precisará de 99.800 zeny.";
+			mes "Por favor volte quando você estiver";
+			mes "pronto. Eu vou fazer você parecer";
+			mes "fabuloso. Hohohohoho ~";
 			close;
 		}
 		mes "[Veronica]";
-		mes "Okay now, please choose the style";
-		mes "you desire from styles no.1 to";
-		mes "no.19.  I will do my best to";
-		mes "make you look your very best.";
+		mes "Ok, por favor, escolha o estilo";
+		mes "você deseja dos estilos no.1 a";
+		mes "no.19 Eu farei o meu melhor para";
+		mes "fazer você parecer o seu melhor.";
 		next;
 		input .@style;
 		if(.@style > 19) {
 			mes "[Veronica]";
-			mes "I am sorry, you chose an unavailable style.";
-			mes "Make sure you enter the correct number.";
+			mes "Desculpe, você escolheu um estilo não disponível.";
+			mes "Certifique-se de digitar o número correto.";
 			close;
 		} else if(.@style == 0) {
 			mes "[Veronica]";
-			mes "You have canceled your request.";
+mes "Você cancelou seu pedido.";
 			close;
 		} else if(getlook(1) == .@style) {
 			mes "[Veronica]";
-			mes "I am sorry, but you are already";
-			mes "wearing the style you have";
-			mes "requested. Would you please";
-			mes "choose a different style?";
+			mes "Sinto muito, mas você já está";
+			mes "vestindo o estilo que você tem";
+			mes "solicitado. Você poderia por favor";
+			mes "escolher um estilo diferente?";
 			close;
 		}
 			callsub L_cutin,.@style;
 			mes "[Veronica]";
-			mes "You have chosen style no. (" + .@style + ").";
-			mes "I shall proceed with your request.";
-			mes "Would you mind?";
+			mes "Você escolheu o estilo não (" +. @ style + ").";
+			mes "Eu continuarei com o seu pedido.";
+			mes "Você se importaria?";
 			next;
-			if(select("No, I don't mind.:Yes, let me choose another one.") == 1) {
+			if(select("Não, não me importo.:Sim, deixe-me escolher outro") == 1) {
 				if(getlook(6) == 0) {
 					mes "[Veronica]";
-					mes "Oh, my, you haven't dyed your hair";
-					mes "at all. You would look even more";
-					mes "fabulous if you dyed your hair...";
-					mes "Oh well, I will do it for free.";
-					mes "So what kind of color would you like?";
+					mes "Oh, você não tingiu seu cabelo";
+					mes "em tudo. Você pareceria ainda mais";
+					mes "fabuloso se você tingiu seu cabelo ...";
+					mes "Oh bem, eu farei isso de graça.";
+					mes "Então, que tipo de cor você gostaria?";
 					next;
-					switch(select("Red.:Yellow.:Purple.:Orange.:Green.:Blue.:White.:Dark Brown.:Cancel.")) {
+					switch(select("Vermelho.:Amarelo.:Roxo.:Laranja.:Verde.:Azul.:Branco.:Marrom Escuro.:Cancelar.")) {
 					case 1:
 						set .@pallete,8;
 						break;
@@ -447,24 +447,24 @@ mes "também é prático em batalha.";
 						break;
 					case 9:
 						mes "[Veronica]";
-						mes "Oh, I was gonna do it for free.";
-						mes "Well, if you change your mind, please come again.";
-						mes "The color of your hair enhances your look.";
+						mes "Oh, eu ia fazer isso de graça.";
+						mes "Bem, se você mudar de idéia, por favor, venha novamente.";
+						mes "A cor do seu cabelo melhora sua aparência.";
 						close;
 					}
 				}
 				nude;
 				mes "[Veronica]";
-				mes "Now, let's get started. Try to";
-				mes "stay still, dear. If you move,";
-				mes "it might ruin the perfect look";
-				mes "I intend to give you. Trust me,";
-				mes "I will make you look fabulous~";
+				mes "Agora, vamos começar. Tente";
+				mes "fique quieto, querido. Se você se mover,";
+				mes "pode arruinar a aparência perfeita";
+				mes "Eu pretendo dar a você. Confie em mim";
+				mes "Eu vou fazer você parecer fabulosa ~";
 				next;
 				mes "[Veronica]";
-				mes "- *snip snip snip snip* -";
-				mes "- *bzzzzzzz bzzzzzzz bzzzzzzz bzzzzzzz* -";
-				mes "- *snip snip snip snip* -";
+				mes "- * snip snip snip snip * -";
+				mes "- * bzzzzzzz bzzzzzzz bzzzzzzz bzzzzzzz * -";
+				mes "- * snip snip snip snip * -";
 				mes "- *bzzzzzzz bzzzzzzz bzzzzzzz bzzzzzzz* -";
 				next;
 				set Zeny, Zeny-99800;
@@ -479,26 +479,26 @@ mes "também é prático em batalha.";
 				setlook 6,.@pallete;
 				cutin "",255;
 				mes "[Veronica]";
-				mes "Alright, it's done~";
-				mes "I hope you like";
-				mes "this style no.(" + .@style + ").";
-				mes "Feel free to come back anytime";
-				mes "when you want a new hairstyle. Hohohohohoho~";
+				mes "Tudo bem, está feito~";
+				mes "Eu espero que você goste";
+				mes "esse estilo não (" + .@style + ").";
+				mes "Sinta-se à vontade para voltar a qualquer momento";
+				mes "quando você quer um novo penteado. Hohohohohoho ~";
 				setlook 1,.@style;
 				setlook 6,.@pallete;
 				close;
 			}
 			mes "[Veronica]";
-			mes "Okay then, please choose one";
-			mes "a hairstyle again. I believe";
-			mes "you will find the look that's best for you.";
+			mes "Ok então, por favor escolha um";
+			mes "um penteado de novo. Eu acredito";
+			mes "você encontrará o visual que é melhor para você.";
 			close;
 	case 3:
 		mes "[Veronica]";
-		mes "Everybody deserves the right to";
-		mes "pursue beauty. I hope that you";
-		mes "will find the right hairstyle";
-		mes "one of these days.";
+		mes "Todo mundo merece o direito de";
+		mes "perseguir a beleza. Espero que você";
+		mes "vai encontrar o penteado certo";
+		mes "um desses dias.";
 		close;
 	}
 
@@ -518,163 +518,163 @@ L_cutin:
 	return;
 }
 
-// Roving Hair Dresser
+// Cabeleileiro Roving
 // ============================================================
-alberta,33,141,7	script	Roving Hair Dresser	87,{
+alberta,33,141,7	script	Cabeleileiro Roving	87,{
 	mes "[Rui Vishop]";
-	mes "That Veronica...";
-	mes "Hah! Best hair dresser my ass.";
-	mes "She's not the best hair dresser...";
+	mes "Essa Verônica ...";
+	mes "Hah! Melhor cabeleireiro minha bunda.";
+	mes "Ela não é a melhor cabeleireira ...";
 	mes "...";
-	mes "I am!";
+	mes "eu sou!";
 	next;
 	mes "[Rui Vishop]";
-	mes "I, Rui Vishop, the man to whom";
-	mes "all scalps are canvases";
-	mes "waiting to be transformed into";
-	mes "works of magnificent art~!";
+	mes "Eu, Rui Vishop, o homem a quem";
+	mes "todos os escalpes são telas";
+	mes "esperando para ser transformado em";
+	mes "obras de arte magnífica ~!";
 	next;
-	switch(select("What are you?:Do my hair, please!:.....")) {
+	switch(select("O que você é?: Do meu cabelo, por favor!: .....")) {
 	case 1:
 		mes "[Rui Vishop]";
-		mes "Do you not know that I, Rui";
-		mes "Vishop, maestro of the shears";
-		mes "and sculptor of hair, am an";
-		mes "artist far ahead of his time?!";
-		mes "Well, I suppose an adventurer";
-		mes "like yourself wouldn't know...";
+		mes "Você não sabe que eu, Rui";
+		mes "bispo, maestro das tesouras";
+		mes "e escultor de cabelo, sou um";
+		mes "artista muito à frente do seu tempo ?!";
+		mes "Bem, suponho que um aventureiro";
+		mes "como você não saberia ...";
 		next;
 		mes "[Rui Vishop]";
-		mes "As a hair sculptor, I find joy";
-		mes "in bestowing upon others the";
-		mes "supreme favour of doing their";
-		mes "hairstyle at a reasonable price.";
+		mes "Como escultor de cabelo, eu acho alegria";
+		mes "em conceder aos outros o";
+		mes "favor supremo de fazer o seu";
+		mes "penteado a um preço razoável.";
 		next;
 		mes "[Rui Vishop]";
-		mes "Recently, however, I happened to";
-		mes "overhear that some tyro has had";
-		mes "the audacity to call herself a";
-		mes "hair dresser.";
+		mes "Recentemente, no entanto, aconteceu";
+		mes "ouvir que algum tyro teve";
+		mes "a audácia de se chamar de";
+		mes "cabeleireiro.";
 		next;
 		mes "[Rui Vishop]";
-		mes "So one day I went there,";
-		mes "pretending to be a customer.";
-		mes "I was apalled to see the boring,";
-		mes "lifeless hairstyles that she was";
-		mes "giving all of her clients...";
+		mes "Então um dia eu fui lá";
+		mes "fingindo ser um cliente.";
+		mes "Eu estava apalado para ver o chato";
+		mes "penteados sem vida que ela era";
+		mes "dando todos os seus clientes ...";
 		next;
 		mes "[Rui Vishop]";
-		mes "It wasn't hard to notice that her";
-		mes "skills, or lack thereof, are a";
-		mes "joke. She brings shame to the";
-		mes "great and honorable";
-		mes "profession of hair dressing.";
-		mes "A complete and utter disgrace!";
+		mes "Não foi difícil perceber que ela";
+		mes "habilidades, ou falta dela, são um";
+		mes "piada. Ela traz vergonha ao";
+		mes "grande e honrado";
+		mes "profissão de cabeleireiro.";
+		mes "Uma completa e absoluta desgraça!";
 		next;
 		mes "[Rui Vishop]";
-		mes "But the worst part was...";
-		mes "she forced her customers to";
-		mes "choose a hairstyle before she";
-		mes "styled their hair!";
+		mes "Mas a pior parte foi ...";
+		mes "ela forçou seus clientes a";
+		mes "escolha um penteado antes que ela";
+		mes "estilizou seus cabelos!";
 		next;
 		mes "[Rui Vishop]";
-		mes "That's not how talented hair";
-		mes "dressers do their job! She";
-		mes "should know what hair style will";
-		mes "fit a customer without ever";
-		mes "asking them!";
+		mes "Não é assim que o cabelo é talentoso";
+		mes "os armários fazem o trabalho deles! Ela";
+		mes "deve saber o que o estilo de cabelo vai";
+		mes "encaixa um cliente sem nunca";
+		mes "pedindo a eles!";
 		next;
 		mes "[Rui Vishop]";
-		mes "If by any chance you decide to";
-		mes "do your hair, don't even think";
-		mes "about giving her patronage.";
-		mes "Instead, you may ask for my";
-		mes "services. I assure you, I am";
-		mes "faaaar better than her.";
+		mes "Se por acaso você decidir";
+		mes "faça o seu cabelo, nem pense";
+		mes "sobre dar seu patrocínio.";
+		mes "Em vez disso, você pode pedir pelo meu";
+		mes "serviços. Eu garanto a você que eu sou";
+		mes "faaaar melhor que ela.";
 		next;
 		mes "[Rui Vishop]";
-		mes "Do you understand? I mean, don't";
-		mes "let her ruin your hair needlessly!";
-		mes "You could get a Swordman to hack";
-		mes "away at your hair if you want a";
-		mes "hairstyle that horrible~!";
+		mes "Você entende? Quero dizer, não";
+		mes "deixe-a arruinar seu cabelo desnecessariamente!";
+		mes "Você pode pegar um espadachim para hackear";
+		show "no seu cabelo se você quiser um";
+		mes "penteado que horrível ~!";
 		close;
 	case 2:
 		if(BaseLevel < 60) {
 			mes "[Rui Vishop]";
-			mes "Hmm, I must say, your current";
-			mes "style fits you best. Trust me, I know what I am saying.";
+			mes "Humm, devo dizer, sua corrente";
+			mes "estilo você se encaixa melhor. Confie em mim, eu sei o que estou dizendo.";
 			close;
-		} else if(Zeny < 199800) {
+		} else if (Zeny<199800) {
 			mes "[Rui Vishop]";
-			mes "Ah, I see that that you can";
-			mes "recognize genius when it is";
-			mes "right before you. In light";
-			mes "of your good taste, I will";
-			mes "only require money for my";
-			mes "services.";
+			mes "Ah, eu vejo que você pode";
+			mes "reconhece o gênio quando é";
+			mes "bem antes de você. Na luz";
+			mes "do seu bom gosto, eu vou";
+			mes "só precisa de dinheiro para o meu";
+			mes "serviços.";
 			next;
 			mes "[Rui Vishop]";
-			mes "Simply pay me the small";
-			mes "fee of 199,800 zeny. You must";
-			mes "know that I am doing you a";
-			mes "huge favor by charging you";
-			mes "such a small amount. My";
-			mes "art is priceless, after all.";
+			mes "Simplesmente me pague o pequeno";
+			mes "taxa de 199.800 zeny. Você deve";
+			mes "saiba que estou fazendo um";
+			mes "grande favor cobrando você";
+			mes "uma quantia tão pequena. Meu";
+			mes "a arte é inestimável, afinal.";
 			close;
 		}
 		mes "[Rui Vishop]";
-		mes "Alright, I will be taking my";
-		mes "199,800 zeny service charge now.";
+		mes "Tudo bem, eu vou pegar meu";
+		mes "199.800 zeny taxa de serviço agora.";
 		next;
 		mes "[Rui Vishop]";
-		mes "If you don't wish to do";
-		mes "this right now, though I can't";
-		mes "imagine why, you may ask that";
-		mes "stupid hair dresser to";
-		mes "do her clumsy work on you...";
+		mes "Se você não quiser fazer";
+		mes "isso agora, embora eu não possa";
+		mes "imagine por que, você pode perguntar isso";
+		mes "cabeleireiro estúpido para";
+		mes "faça seu trabalho desajeitado em você ...";
 		next;
-		if(select("No, please do my hair.:Umm, I changed my mind.") ==1 ) {
+		if (select("Não, por favor, faça meu cabelo.:Umm, eu mudei de idéia.") == 1) {
 			mes "[Rui Vishop]";
-			mes "O~k~a~y!";
-			mes "Now, let us begin~!";
+			mes "O ~ k ~ a ~ y!";
+			mes "Agora, vamos começar ~!";
 			next;
 			mes "[Rui Vishop]";
-			mes "Wooooo~oooohhhh!! Toohhhhh~oooohhhh!!";
+			mes "Wooooo ~ oooohhhh !! Toohhhhh ~ oooohhhh !!";
 			next;
 			mes "[Rui Vishop]";
-			mes "Woooooo~aaaaaaahhhhh!!";
+			mes "Woooooo ~ aaaaaaahhhhh !!";
 			next;
 			mes "[Rui Vishop]";
 			mes "Voila!";
 			next;
 			mes "[Rui Vishop]";
-			mes "Oh, great~ it's awesome!";
-			mes "Another Vishop masterpiece~";
-			mes "Once more I've outdone myself.";
-			mes "It's such a unique and talented";
-			mes "style! Yes, I am the best! Wooohahahahahaha!";
+			mes "Oh, ótimo ~ é incrível!";
+			mes "Outra obra-prima do bispo ~";
+			mes "Mais uma vez eu me superei.";
+			mes "É tão único e talentoso";
+			mes "estilo! Sim, eu sou o melhor! Wooohahahahahaha!";
 			set Zeny, Zeny-199800;
 			setlook 1,rand(1,19);
 			setlook 6,rand(1,8);
 			close;
 		}
 		mes "[Rui Vishop]";
-		mes "Bah! Alright! It's your decision.";
-		mes "But don't blame me later!";
-		mes "One day you'll wake up, realize";
-		mes "you're ugly and regret not";
-		mes "having my genius shape every lock";
-		mes "of hair on your head.";
+		mes "Bah! Tudo bem! É sua decisão.";
+		mes "Mas não me culpe depois!";
+		mes "Um dia você vai acordar, perceber";
+		mes "você é feia e não se arrepende";
+		mes "tendo meu gênio moldando cada cadeado";
+		mes "de cabelo em sua cabeça.";
 		close;
-	case 3:
+		case 3:
 		mes "[Rui Vishop]";
-		mes "What? What a shame!";
-		mes "Will you let that...that";
-		mes "charlatan of a hair dresser ruin";
-		mes "your hairstyle!? I'm sure the";
-		mes "heavens are crying tears of";
-		mes "pity at mankind's ignorance...";
+		mes "O que? Que vergonha!";
+		mes "Você vai deixar isso ... aquilo";
+		mes "charlatão de cabeleireiro ruína";
+		mes "seu penteado !? Tenho certeza que o";
+		mes "céus estão chorando lágrimas de";
+		mes "pena da ignorância da humanidade ...";
 		close;
 	}
 }
