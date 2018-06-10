@@ -1439,7 +1439,7 @@ OnTimer187000:
 in_moc_16,68,158,0	script	01_1::SinTrap	-1,0,0,{
 OnTouch_:
 	if (getvariableofnpc(.DisableTraps,"Beholder#ASNTEST")  < 1) {
-		mapannounce "in_moc_16",strcharinfo(0) + ", you're trapped. You will be sent back.",bc_map;
+		mapannounce "in_moc_16",strcharinfo(0) + ", Está preso. Você será enviado de volta.",bc_map;
 		set ASSIN_Q,2;
 		warp "in_moc_16",19,161;
 		donpcevent "Beholder#ASNTEST::OnResetMob";
@@ -1611,7 +1611,7 @@ OnTouch_:
 			mes "[Thomas]";
 			mes "Não se esqueça de salvar o seu ponto de desova na cidade.";
 			close2;
-			mapannounce "in_moc_16",strcharinfo(0) + " got scared and quit the test...Who's Next?!",bc_map;
+			mapannounce "in_moc_16",strcharinfo(0) + " ficou com medo e quer parar o teste... Quem é o próximo?!",bc_map;
 			set ASSIN_Q,0;
 			set ASSIN_Q2,0;
 			set ASSIN_Q3,0;
@@ -1870,8 +1870,9 @@ OnTouch_:
 			switch (select("Para ampliar minhas habilidades. É um objetivo meu. Para melhoria espiritual.")) {
 			case 1:
 				set ASSIN_Q,14;
-				mes "[Guildmaster]";
-				mes "Aprender habilidades vem naturalmente com o trabalho de Assassino. Mas não pense em habilidades como o melhor valor de seu treinamento.";
+				mes "[Chefe da Guilda]";
+				mes "Habilidades de aprendizagem vem naturalmente com o trabalho duro.";
+				mes "Mas não acho que de habilidades como o melhor valor de seu treinamento...";
 				next;
 				mes "[Lider dos Mercenários]";
 				mes "Você não ficará satisfeito em se tornar um mercenário, se você acha que isso...";
@@ -1993,43 +1994,48 @@ OnTouch_:
 				else
 					mes "Mas você nunca deve revelar a ele o lado Assassino da sua vida, não importa o que for preciso.";
 					next;
-					mes "[Guildmaster]";
-					mes "Ame seu amado para sempre, mesmo que você não possa expressá-lo abertamente. Às vezes, a vida não permite que você encontre o amor verdadeiro mais de uma vez.";
+				mes "[Lider dos Mercenários]";
+				mes "Ame o seu amado para sempre, mesmo que você não pode expressar abertamente.";
+				mes "Às vezes, a vida não permite que você para encontrar o amor verdadeiro mais do que uma vez..";
 					next;
 				break;
 			}
 			break;
 		case 3:
-			mes "[Guildmaster]";
-			mes "That's most admirable. Is there anything that you would like to ask me about?";
+			mes "[Chefe da Guilda]";
+			mes "Admirável sua atitude.";
+			mes "Existe algo que gostaria de me perguntar?";
 			next;
-			switch(select("Places where Assassins can level up...:Main goals as an Assassin.:Financial consulting.")) {
+			switch(select("Lugares para subir de Level?:Objetivos do Mercenário?:Onde Ganhar dinheiro?")) {
 			case 1:
 				set .@assassin_sangdam,.@assassin_sangdam+5;
-				mes "[Guildmaster]";
-				mes "It all depends on your mind. Any place could be the best to level up according to your mind state.";
+				mes "[Lider dos Mercenários]";
+				mes "Tudo depende de sua mente.";
+				mes "Qualquer lugar pode ser o melhor para o nível máximo de acordo com seu estado de espírito..";
 				next;
-				mes "[Guildmaster]";
-				mes "You must know how to";
-				mes "survive in any situation.";
+				mes "[Lider dos Mercenários]";
+				mes "Você deve saber sobreviver em qualquer situação.";
 				next;
 				break;
 			case 2:
-				mes "[Guildmaster]";
-				mes "There are many Assassins out there. Look to them as your trainers, and ask for their opinions.";
+				mes "[Lider dos Mercenários]";
+				mes "Há muitos mercenários lá fora.";
+				mes "Olhe para eles como seus treinadores, e pedir suas opiniões.";
 				next;
-				mes "[Guildmaster]";
-				mes "I hope you will become an excellent Assassin. And when you reach a certain level, you must guide newbies as your trainers have.";
+				mes "[Lider dos Mercenários]";
+				mes "Eu espero que você se torne um excelente mercenário e quando você alcança um certo nível.";
+				mes "Você deve guiar novatos como seus conhecimentos..";
 				next;
 				break;
 			case 3:
 				set .@assassin_sangdam,.@assassin_sangdam+10;
-				mes "[Guildmaster]";
-				mes "Oh my lord...";
-				mes "Are you planning to become an Assassin in order to make money?";
+				mes "[Lider dos Mercenários]";
+				mes "Oh meu senhor ...";
+				mes "Você está planejando se tornar um mercenário, a fim de ganhar dinheiro?";
 				next;
-				mes "[Guildmaster]";
-				mes "People of that nature are unwelcome. If such is your goal, you may wish to reconsider your job...";
+				mes "[Chefe da Guilda]";
+				mes "As pessoas dessa natureza não são bem-vindas.";
+				mes "Se tal é o seu objetivo, você pode querer reconsiderar o sua classe....";
 				next;
 				break;
 			}

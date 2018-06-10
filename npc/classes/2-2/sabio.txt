@@ -114,8 +114,8 @@ yuno_in02,38,61,5	script	Dean of the Academy#sa	743,{
 		if (countitem(1550) > 0) {
 			if (JobLevel < 40) {
 				set SAGE_Q,0;
-				mes "You don't seem to be qualified yet.";
-				mes "Remember, you must reach at least job level 40 to become a Sage.";
+				mes "Você não parece estar qualificado ainda.";
+				mes "Você precisa ter nível 40 de classe pra se tornar um Sábio.";
 				close2;
 				cutin "job_sage_kayron",255;
 				end;
@@ -217,8 +217,8 @@ yuno_in03,154,35,4	script	Equipe da Academia#a	2_M_SAGE_B,{
 			mes "São sempre bem vindos novos estudantes.";
 			next;
 			mes "[Metheus Sylphe]";
-			mes "People who are at job jevel 40 as Mage class are qualified to apply for enrollment.";
-			mes "By passing selected courses, we will then approve them as Sages.";
+			mes "As pessoas que estão com Nível de Classe 40 como Mago, as inscrições estão abertas.";
+			mes "Passando por cursos selecionados, vamos então aprová-los como Sábios.";
 			next;
 			mes "[Metheus Sylphe]";
 			mes "Se você está interessado na classe Sábio, favor entrar novamente.";
@@ -314,8 +314,8 @@ yuno_in03,154,35,4	script	Equipe da Academia#a	2_M_SAGE_B,{
 					mes "Em recompensa pelo seu esforço, você estará isento da taxa de inscrição!";
 					next;
 					mes "[Metheus Sylphe]";
-					mes "Yes, everything's ready.";
-					mes "Next, you will take an entrance test.";
+						mes "Sim, tudo está pronto.";
+					mes "Em seguida, você terá um teste de entrada.";
 					set SAGE_Q,4;
 					setquest 2041;
 					next;
@@ -332,8 +332,8 @@ yuno_in03,154,35,4	script	Equipe da Academia#a	2_M_SAGE_B,{
 					if (Zeny > 69999) {
 						set Zeny, Zeny-70000;
 						mes "[Metheus Sylphe]";
-						mes "Thank you, your application has been accepted.";
-						mes "Next, you will take an entrance test.";
+						mes "Muito obrigado, seu pedido foi aceito.";
+						mes "Em seguida, você terá um teste de entrada.";
 						set SAGE_Q,4;
 						setquest 2041;
 						next;
@@ -351,8 +351,8 @@ yuno_in03,154,35,4	script	Equipe da Academia#a	2_M_SAGE_B,{
 					delitem 1006,1; //Old_Magic_Book
 					delitem 1007,1; //Penetration
 					mes "[Metheus Sylphe]";
-					mes "Thank you, your application has been accepted.";
-					mes "Next, you will take the entrance test.";
+					mes "Muito obrigado, seu pedido foi aceito.";
+					mes "Em seguida, você terá um teste de entrada.";
 					set SAGE_Q,4;
 					setquest 2041;
 					next;
@@ -390,8 +390,8 @@ yuno_in03,154,35,4	script	Equipe da Academia#a	2_M_SAGE_B,{
 					mes "Seu nome é ... " + strcharinfo(0) + ". É um nome muito bonito.";
 					next;
 					mes "[Metheus Sylphe]";
-					mes "Yes, everything's ready.";
-					mes "Next, you will take the entrance test.";
+					mes "Sim, tudo está pronto.";
+					mes "Em seguida, você vai fazer o teste de entrada.";
 					set SAGE_Q,4;
 					setquest 2041;
 					next;
@@ -497,14 +497,14 @@ yuno_in03,154,35,4	script	Equipe da Academia#a	2_M_SAGE_B,{
 			delitem 1006,1; //Old_Magic_Book
 			delitem 1007,1; //Penetration
 			mes "[Metheus Sylphe]";
-			mes "Well done. Let me proceed with your application request.";
+			mes "Feito. Deixe-me continuar com seu pedido de aplicação.";
 			set SAGE_Q,4;
 			next;
 		}
 		else if (Zeny > 69999) {
 			set Zeny, Zeny-70000;
 			mes "[Metheus Sylphe]";
-			mes "Well done. Let me proceed with your application request.";
+			mes "Feito. Deixe-me continuar com seu pedido de aplicação.";
 			set SAGE_Q,4;
 			next;
 		}
@@ -534,7 +534,7 @@ yuno_in03,154,35,4	script	Equipe da Academia#a	2_M_SAGE_B,{
 						delitem .@item[.@i], .@count[.@i];  
 					set Zeny, Zeny-30000;
 					mes "[Metheus Sylphe]";
-					mes "Well done. Let me proceed with your application request.";
+					mes "Feito. Deixe-me continuar com seu pedido de aplicação.";
 					set .@SAGE_Q_T,SAGE_Q;
 					set SAGE_Q,4;
 					next;
@@ -579,8 +579,8 @@ yuno_in03,154,35,4	script	Equipe da Academia#a	2_M_SAGE_B,{
 		}
 		next;
 		mes "[Metheus Sylphe]";
-		mes "Ah yes, everything is in readiness.";
-		mes "Next, you will take an entrance test.";
+		mes "Ah sim, está tudo pronto.";
+		mes "Em seguida, você terá um teste de entrada.";
 		set SAGE_Q,4;
 		if(checkquest(2043) != -1) {
 			changequest 2043,2041;
@@ -1303,7 +1303,7 @@ yuno_in03,62,176,2	script	Professor de História#sa	4_M_MANAGER,{
 					mes "Isso é apenas um dos dons de Yggdrasil.";
 					next;
 					mes "[Saphien Layless]";
-					mes "Yggdrasil is the name of the tree that is the source of life in this world.";
+					mes "Yggdrasil é o nome da árvore que é a fonte da vida neste mundo.";
 					break;
 				case 2:
 					mes "[Saphien Layless]";
@@ -2598,7 +2598,7 @@ OnReset:
 OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
-		mapannounce "job_sage"," " + strcharinfo(0) + ", successfully defeat all the monsters.",bc_map;
+		mapannounce "job_sage"," "+strcharinfo(0)+", derrotou todos os monstros.",bc_map;
 		donpcevent "Arena#2::OnEnable";
 		stopnpctimer;
 	}
@@ -2704,7 +2704,7 @@ OnReset:
 OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
-		mapannounce "job_sage"," " + strcharinfo(0) + ", successfully defeat all the monsters.",bc_map;
+		mapannounce "job_sage"," "+strcharinfo(0)+", derrotou todos os monstros.",bc_map;
 		donpcevent "Arena#Doorkeeper::OnEnable";
 		donpcevent "Arena#3::OnEnable";
 		stopnpctimer;

@@ -42,7 +42,7 @@
 //= 3.3 Fixed missing changequest. [Joseph]
 //============================================================ 
 
-prt_in,88,101,4	script	Capitão dos Cavaleiros#knt	1_M_KNIGHTMASTER,{
+prt_in,88,101,4	script	Chefe dos Cavaleiros#knt	1_M_KNIGHTMASTER,{
 	mes "[Capitão Herman]";
 	if (Upper == 1) {
 		mes "Hm? É você ... O que há contigo? Tenho sido um cavaleiro honrado por um longo tempo, mas eu não consigo entender esse sentimento que estou recebendo de você...";
@@ -1997,7 +1997,7 @@ OnTouch_:
 	end;
 }
 
-// Test 5, and creates Claymores for knights
+// Teste 5, Criação de Claymores para cavaleiros
 //==========================================================
 prt_in,87,92,4	script	Sir Gray#knt	119,{
 	mes "[Sir Gray]";

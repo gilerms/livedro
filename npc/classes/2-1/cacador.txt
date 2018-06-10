@@ -57,7 +57,7 @@
 
 // Notices in the old Hunter Guild.
 //============================================================
-in_hunter,99,99,4	script	Informação aos Caçadores#hnt::HntNotice	4_F_JOB_HUNTER,{
+in_hunter,99,99,4	script	Informação aos Caçadores#hnt::HntNotice	727,{
 	mes "============ Notícia ============";
 	mes "Gostaríamos de informar que o local do teste de Caçador";
 	mes "foi transferido para ^ff0000Hugel^000000 na República Schwartzwald.";
@@ -78,7 +78,7 @@ pay_fild10,148,252,3	duplicate(HntNotice)	Local da Mudança de Classe#hu	4_BOARD3
 
 // Actual Job quest start
 //============================================================
-hu_in01,386,373,4	script	Caçadora da Guilda#hnt	4_F_JOB_HUNTER,{
+hu_in01,386,373,4	script	Caçadora da Guilda#hnt	727,{
 	if (Upper == 1) {
 		mes "[Caçadora Sherin]";
 		mes "Vomo você tem estado? Já faz um longo tempo, não é?";
@@ -161,7 +161,7 @@ hu_in01,386,373,4	script	Caçadora da Guilda#hnt	4_F_JOB_HUNTER,{
 			mes "Vou deixá-lo mudar de classe, mas você deve trazer de volta um 'Colar da Sabedoria (penetração),' não importa o que aconteça.";
 			close;
 		}
-		else if (HNTR_Q == 17 && countitem(1007) > 0 && JobLevel > 39) {
+		else if (HNTR_Q == 17 && countitem(1007) > 0) {
 			mes "[Caçadora Sherin]";
 			mes "Nossa...?";
 			mes "Você passou";
@@ -322,7 +322,7 @@ hu_in01,386,373,4	script	Caçadora da Guilda#hnt	4_F_JOB_HUNTER,{
 				mes "[Caçadora Sherin]";
 				mes "Vamos dizer que você estava tendo muito trabalho em caçar os Hodes e  teve que voltar para a cidade. Agora você está com pouco HP e um sacerdote passa do seu lado. Como você pediria uma Cura?";
 			next;
-			if (select ("Seria possível obter uma cura, por favor?", "Cure, por favor", "Cure-me") == 1)
+			if (select ("Seria possível obter uma cura, por favor?", "Cure, por favor", "Cure-me." ) == 1)
 				.@hunter_t += 10;
 				mes "[Caçadora Sherin]";
 				mes "Por sorte, você encontrou um item raro, enquanto você estava vendo seu inventário. Você sai para vender o item, e há muitas pessoas com lojas e salas abertas.";
@@ -352,7 +352,7 @@ hu_in01,386,373,4	script	Caçadora da Guilda#hnt	4_F_JOB_HUNTER,{
 				mes "alguém que está perdido.";
 				mes "O que você deve fazer?";
 			next;
-				switch(select("Digo a ele qual caminho deve seguir.:O guio até seu destino.:Ignoro.")) {
+				switch(select("Digo a ele qual caminho deve seguir.","O guio até seu destino.","Ignoro." )) {
 			case 1:
 			case 2:
 				.@hunter_t += 10;
@@ -451,7 +451,7 @@ hu_in01,386,373,4	script	Caçadora da Guilda#hnt	4_F_JOB_HUNTER,{
 	close;
 }
 
-hu_in01,382,382,4	script	Recepcionista da Guilda#hnt	4_M_JOB_HUNTER,{
+hu_in01,382,382,4	script	Recepcionista da Guilda#hnt	732,{
 	if (HNTR_Q == 2) {
 		mes "[Recepcionista da Guilda]";
 		mes "Saudações. Eles me chamam... de ^660000O Caçador de Demônio^000000. Eu sou o encarregado pelas aplicações de classe. Seu nome é... "+strcharinfo(0)+", correto?";
@@ -780,7 +780,7 @@ payon_in03,131,7,3	script	Caçador#htnGM	1_M_ORIENT01,{
 	}
 }
 
-payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
+payon_in02,21,31,1	script	Caçador#htnGM2	59,{
 	cutin "job_huntermaster",2;
 	if (HNTR_Q == 11) {
 		mes "[Líder da Guilda de Caçadores]";
@@ -965,7 +965,7 @@ payon_in02,21,31,1	script	Caçador#htnGM2	1_M_ORIENT01,{
 	}
 }
 
-job_hunte,178,32,1	script	Guia#hnt	1_M_PAY_ELDER,5,2,{
+job_hunte,178,32,1	script	Guia#hnt	107,5,2,{
 OnTouch_:
 	if (HNTR_Q == 12) {
 		mes "[Guia]";
@@ -1020,7 +1020,7 @@ OnTouch_:
 	end;
 }
 
-job_hunte,178,38,1	script	Sala de Espera#hnt	1_F_01,{
+job_hunte,178,38,1	script	Sala de Espera#hnt	66,{
 	end;
 
 OnInit:
@@ -1243,7 +1243,7 @@ OnEnable:
 	end;
 }
 
-job_hunte,89,139,0	script	Saída#hnttest	WARPNPC,2,2,{
+job_hunte,89,139,0	script	Saída#hnttest	45,2,2,{
 	end;
 OnInit:
 	disablenpc "Saída#hnttest";

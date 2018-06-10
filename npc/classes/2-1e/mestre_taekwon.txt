@@ -1622,7 +1622,7 @@ job_star,161,33,0	script	Cheehee#job_star	77,{
 	next;
 	if (select("Sim:Não") == 1) {
 		mes "[Cheehee]";
-		mes "eu vejo.";
+		mes "Eu vejo.";
 		mes "Deixe-me guiar";
 		mes "você de volta para Payon.";
 		close2;

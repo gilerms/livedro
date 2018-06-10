@@ -62,7 +62,7 @@ alberta,30,65,3	script	Akagi	4_M_JOB_ASSASSIN,{
 	}
 }
 
-que_ng,30,65,3	script	Cougar#nq	4_M_JOB_ASSASSIN,{
+que_ng,30,65,3	script	Cougar#nq	730,{
 	if (Upper == 2) {
 		mes "[Cougar]";
 		mes "Eu... Eu nunca vi uma criancinha tão poderosa quanto você!";
@@ -366,10 +366,10 @@ einbroch,184,194,3	script	Suspicious Man#nq	 	881,{
 		mes "Permanecer oculto nas sombras é realmente nosso poder supremo.";
 		next;
 		mes "["+strcharinfo(0)+"]";
-		mes "Entendo... ...........";
+		mes "Entendo..............";
 		next;
 		mes "[Leopardo Vermelho]";
-		mes "Por agora, deixe-me ler esta carta.";
+		mes "Agora, deixe-me ler esta carta.";
 		mes "Vamos ver... Hm.";
 		mes "Pensei que Cougar queria me desafiar de novo, mas na verdade ele quer uma trégua temporária? Hah!";
 		next;

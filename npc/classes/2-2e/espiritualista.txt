@@ -151,10 +151,10 @@ morocc_in,174,30,6	script	Garoto#link1	716,{
 				next;
 				if (select("Não. Pelo menos, não agora...:Tudo bem. O que eu tenho que fazer?") == 1) {
 					mes "[Garoto]";
-					mes "Ah, tudo bem. Bem,";
+					mes "Ah, Tudo bem. Mas,";
 					mes "se você decidir";
-					mes "tornar-se um criador de almas,";
-					mes "então, por favor, volte";
+					mes "tornar-se um Espiritualista,";
+					mes "volte até aqui";
 					mes "e fale comigo a qualquer momento.";
 					close;
 				}
@@ -177,7 +177,7 @@ morocc_in,174,30,6	script	Garoto#link1	716,{
 				mes "por muito tempo, ok?";
 				close;
 			}
-			mes "[Kid]";
+			mes "[Garoto]";
 			mes "Huh...?";
 			mes "Espere, para onde";
 			mes "você vai? Eu...";
@@ -460,7 +460,7 @@ OnTouch_:
 			warp "morocc",157,47;
 			end;
 		}
-		set getvariableofnpc(.SoulLinkerTest,"Kid#link1"),0;
+		set getvariableofnpc(.SoulLinkerTest,"Garoto#link1"),0;
 		mes "[Maia]";
 		mes "Hmm...?";
 		mes "Parece que o seu tempo";
@@ -533,7 +533,7 @@ job_soul,30,35,6	script	Espírito do Monge#link4	4_M_GRANDMONK,{
 		mes "para os Monges de hoje.";
 		close;
 	}
-	mes "[Monk Spirit]";
+	mes "[Espírito do Monge]";
 	mes "...";
 	close;
 }

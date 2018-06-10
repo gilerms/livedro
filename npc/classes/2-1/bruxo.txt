@@ -29,7 +29,7 @@
 //= 3.3 Fixed waitingroom bug. [Euphy]
 //============================================================ 
 
-gef_tower,111,37,4	script	Bruxa da Guilda	1_F_GYPSY,{
+gef_tower,111,37,4	script	Bruxa da Guilda	70,{
 	if (Upper == 1) {
 		mes "[Catherine]";
 		mes "? Com licença, acho que nós nos encontramos antes, não...?";
@@ -199,9 +199,9 @@ gef_tower,111,37,4	script	Bruxa da Guilda	1_F_GYPSY,{
 			mes "Perfeito! Você pegou todos os itens!~";
 			mes "Esses itens serão bem úteis para nossa guilda. ~Hehehee.";
 			next;
-			delitem 716,10; //Red_Gemstone
-			delitem 717,10; //Blue_Gemstone
-			delitem 715,10; //Yellow_Gemstone
+			delitem 716,10; //Gema Vermelha
+			delitem 717,10; //Gema Azul
+			delitem 715,10; //Gema Amarela
 			set WIZ_Q,3;
 			changequest 9013,9015;
 			mes "[Catherine]";
@@ -289,7 +289,7 @@ gef_tower,111,37,4	script	Bruxa da Guilda	1_F_GYPSY,{
 		switch(select("Me dê algumas dicas, por favor.:Eu quero tentar sozinho!")) {
 		case 1:
 			if (countitem(531) > 0) {
-				delitem 531,1; //Apple_Juice
+				delitem 531,1; //Suco de Maçã
 				mes "[Catherine]";
 				mes "Delicia! Suco de Maçã é o melhor...";
 				mes "Gulp gulp gulp... Haaaaaah... ~Hehe";
@@ -1088,7 +1088,7 @@ OnStart:
 
 // Water Room (Test 2 part 1)
 //==========================================================
-job_wiz,1,1,1	script	Room of Water	1_F_01,{
+job_wiz,1,1,1	script	Room of Water	66,{
 OnInit:
 	disablenpc "Room of Water";
 	end;
@@ -1120,7 +1120,7 @@ OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
 		set WIZ_Q2,WIZ_Q2+1;
-		mapannounce "job_wiz",strcharinfo(0)+" has succeeded in eliminating the monsters.",bc_map;
+		mapannounce "job_wiz",strcharinfo(0)+" conseguiu eliminar os monstros.",bc_map;
 		donpcevent "Room of Water#Door::OnEnable";
 		stopnpctimer;
 	}
@@ -1182,7 +1182,7 @@ OnTimer186000:
 	end;
 }
 
-job_wiz,1,2,1	script	Room of Water#Door	1_F_01,{
+job_wiz,1,2,1	script	Room of Water#Door	66,{
 OnInit:
 	disablenpc "Room of Water#Door";
 	end;
@@ -1207,7 +1207,7 @@ OnDisable:
 OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
-		mapannounce "job_wiz",strcharinfo(0)+" has succeeded in eliminating the monsters.",bc_map;
+		mapannounce "job_wiz",strcharinfo(0)+" conseguiu eliminar os monstros.",bc_map;
 		percentheal 100,100;
 		warp "job_wiz",116,97;
 		donpcevent "Room of Water#Door::OnDisable";
@@ -1294,7 +1294,7 @@ OnDisable:
 OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
-		mapannounce "job_wiz",strcharinfo(0) + " eliminou todos os monstros.",bc_map;
+		mapannounce "job_wiz",strcharinfo(0) + "conseguiu eliminar os monstros.",bc_map;
 		donpcevent "Room of Earth#Door::OnEnable";
 		stopnpctimer;
 	}
@@ -1356,7 +1356,7 @@ OnTimer186000:
 	end;
 }
 
-job_wiz,1,4,1	script	Room of Earth#Door	1_F_01,{
+job_wiz,1,4,1	script	Room of Earth#Door	66,{
 OnInit:
 	disablenpc "Room of Earth#Door";
 	end;
@@ -1387,7 +1387,7 @@ OnDisable:
 OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
-		mapannounce "job_wiz",strcharinfo(0) + " has succeeded in eliminating the monster.",bc_map;
+		mapannounce "job_wiz",strcharinfo(0) + " conseguiu eliminar todos os monstros.",bc_map;
 		percentheal 100,100;
 		warp "job_wiz",46,99;
 		donpcevent "Room of Earth#Door::OnDisable";
@@ -1441,7 +1441,7 @@ OnTouch_:
 
 // Fire Room (Test 2 part 3)
 //==========================================================
-job_wiz,1,5,1	script	Room of Fire	1_F_01,{
+job_wiz,1,5,1	script	Room of Fire	66,{
 OnInit:
 	disablenpc "Room of Fire";
 	end;
@@ -1472,7 +1472,7 @@ OnDisable:
 OnMyMobDead:
 	set .MyMobs,.MyMobs-1;
 	if (.MyMobs < 1) {
-		mapannounce "job_wiz",strcharinfo(0) + " has succeeded in eliminating the monsters.",bc_map;
+		mapannounce "job_wiz",strcharinfo(0) + " conseguiu eliminar todos os monstros.",bc_map;
 		donpcevent "Room of Fire#Door::OnEnable";
 		stopnpctimer;
 	}
@@ -1659,7 +1659,7 @@ OnTimer9000:
 	end;
 }
 
-gef_tower,107,36,4	script	Cachorro Branco#wiz	4_DOG01,{
+gef_tower,107,36,4	script	Cachorro Branco#wiz	81,{
 	if (BaseJob != Job_Mage) {
 		if (BaseJob == Job_Wizard) {
 			mes "[Maria]";

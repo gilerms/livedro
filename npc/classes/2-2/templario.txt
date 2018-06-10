@@ -845,7 +845,7 @@ prt_castle,35,151,5	script	Bliant Piyord	4_M_CRU,{
 		mes "capazes de se juntar a nós.";
 		next;
 		mes "[Bliant Piyord]";
-		mes "To become a Crusader, you must train until you are Job Level 40. For more details, please speak with our leader inside.";
+		mes "Para se tornar um Templário, você precisa estar no Nivel de Classe 40. Para mais detalhes, por favor fale com nosso lider.";
 		next;
 		mes "[Bliant Piyord]";
 		mes "Que Odin";
