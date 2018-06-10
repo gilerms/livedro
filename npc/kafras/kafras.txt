@@ -227,7 +227,7 @@ prontera,152,326,3	script	Funcionária da Kafra::kaf_prontera	112,{
 	callfunc "F_KafEnd",0,1,"na cidade de Prontera";
 }
 
-prontera,151,29,0	script	Funcionária da Kafra::kaf_prontera2	115,{
+prontera,150,35,0	script	Funcionária da Kafra::kaf_prontera2	115,{
 	cutin "kafra_03",2;
 	callfunc "F_KafSet";
 	mes "[Funcionária da Kafra]";

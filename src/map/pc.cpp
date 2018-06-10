@@ -5902,7 +5902,7 @@ int pc_jobid2mapid(unsigned short b_class)
 	switch(b_class)
 	{
 	//Novice And 1-1 Jobs
-		case JOB_NOVICE:                return MAPID_NOVICE;
+		case JOB_APRENDIZ:              return MAPID_APRENDIZ;
 		case JOB_SWORDMAN:              return MAPID_SWORDMAN;
 		case JOB_MAGE:                  return MAPID_MAGE;
 		case JOB_ARCHER:                return MAPID_ARCHER;
