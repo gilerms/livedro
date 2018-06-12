@@ -70,11 +70,11 @@ y_airport,143,49,3	script	Equipe da Recepção#y_air2a::y_airport2	90,{
 			end;
 		}
 	}
-	mes "[Airport Staff]";
-	mes "Alright, thank you";
-	mes "for your patronage";
-	mes "and I hope you have";
-	mes "a pleasant flight~";
+	mes "[Funcionários do Aeroporto]";
+	mes "Tudo bem, obrigado";
+	mes "pelo seu apaio";
+	mes "e eu espero que você tenha";
+	mes "um vôo agradável~";
 	close;
 }
 
@@ -96,7 +96,7 @@ y_airport,145,63,5	script	Voos Domésticos	91,{
 	mes "[Equipe de Bordo]";
 	mes "Muito bem, então.";
 	mes "Obrigad"+(Sex?"o":"a")+" por";
-	mes "se tornar um cliente, espero";
+	mes "se tornar um"+(sex?"a")+" cliente, espero";
 	mes "uma viajem divertida";
 	close;
 }

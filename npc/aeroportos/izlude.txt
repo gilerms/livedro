@@ -12,7 +12,7 @@
 //= 1.0 First version.
 //============================================================ 
 
--	script	::Airship_Staff_izlude	-1,{
+-	script	::Assistente do Aeroplano	-1,{
 	mes "[Equipe do Aeroporto]";
 	mes "Bem-vind"+(Sex?"o":"a")+"! Gostaria de";
 	mes "embarcar no vôo que te leva a";
@@ -22,13 +22,13 @@
 		mes "[Equipe do Aeroporto]";
 		mes "O vôo tem um custo de";
 		mes "1,200 zeny. Ou caso você tenha";
-		mes "um Bilhete para o Aeroplano,";
+		mes "um Bilhete para Aeroplano,";
 		mes "sua taxa não será cobrada. Então";
 		mes "gostaria de embarcar?";
 		next;
 		if (select("Sim:Não") == 1) {
 			if (countitem(7311) > 0) {
-				delitem 7311,1; //Bilhete para o Aeroplano
+				delitem 7311,1; //Bilhete para Aeroplano
 				warp "airplane_01",244,58;
 				end;
 			}

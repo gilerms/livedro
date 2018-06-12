@@ -23,129 +23,129 @@
 -	script	Dolangmal	-1,{
 	if (checkquest(5091) == -1) {
 		mes "[Dolangmal]";
-		mes "Hey~! Hi human~ This is Mr. Dolangmal. kakaka~";
+		mes "Ei~! Oi humano~ Eu sou o Sr. Dolangmal. kakaka~";
 		next;
 		mes "[Dolangmal]";
-		mes "We are sent to here to take you to the heaven of cats, ^A2314BMalangdo^000000.";
+		mes "Nós somos enviados para cá para levá-lo ao paraíso dos gatos, ^A2314BMalangdo^000000.";
 		next;
 		mes "[Dolangmal]";
-		set .@s$,"Why don't you go to ^A2314BMalangdo^000000?";
-		switch(atoi(strnpcinfo(2))) {
-			case 1: mes "How is that? The crowded city of Prontera is good, but why don't you go our heaven of the cats, ^A2314BMalangdo^000000?"; break;
-			case 2: mes "Why don't you go to ^A2314BMalangdo^000000? That place is better than Geffen, where there are only crowds of simple honest wizards."; break;
-			case 3: mes "The fresh air of Payon is not bad, but why don't you go better place like the heaven of the cats, ^A2314BMalangdo^000000?"; break;
-			case 4: mes .@s$+"The beautiful and quiet place is better than Aldebaran, where it's so noisy with the tick-tock sound of the clock."; break;
-			case 5: mes .@s$+"The beautiful and quiet place is better than Morroc, with its heat and sandstorms."; break;
-			case 6: mes .@s$+"The beautiful place is better than Yuno, which is full of books and headaches."; break;
-			case 7: mes .@s$+"The complex place is better than Rachel, where it's too horribly quiet."; break;
-			case 8: mes .@s$+"The safe place is better than Lighthanlzen, which is too dangerous."; break;
-			case 9: mes .@s$+"The smell of this sea place is better than Mora, which is full of a grassy smell."; break;
+		set.@s$, "Por que você não vai para ^A2314BMalangdo^000000?";
+		switch (atoi(strnpcinfo (2))) {
+			case 1: mes "Como é isso? A cidade apinhada de Prontera é boa, mas por que você não vai para o céu dos gatos, ^A2314BMalangdo^000000?"; break;
+			case 2: mes "Por que você não vai para ^A2314BMalangdo ^000000? Esse lugar é melhor que Geffen, onde há apenas multidões de magos honestos e simples."; break;
+			case 3: mes "O ar fresco de Payon não é ruim, mas por que você não vai melhor como o paraíso dos gatos, ^A2314BMalangdo^000000?"; break;
+			case 4: mes .@s$+"O lugar bonito e tranquilo é melhor que Aldebaran, onde é tão barulhento com o som do relógio."; break;
+			case 5: mes .@s$+"O lugar bonito e tranquilo é melhor que o Morroc, com seu calor e tempestades de areia."; break;
+			case 6: mes .@s$+"O lugar bonito é melhor que Juno, cheio de livros e dores de cabeça."; break;
+			case 7: mes .@s$+"O lugar complexo é melhor que Rachel, onde é horrivelmente silencioso."; break;
+			case 8: mes .@s$+"O lugar seguro é melhor que Lighthanlzen, que é muito perigoso."; break;
+			case 9: mes .@s$+"O cheiro deste lugar no mar é melhor que Mora, que é cheio de um cheiro de erva."; break;
 		}
 		next;
-		if(select("No:^A2314BMalangdo^000000~ Go~ Go~") == 1) {
+		if (select("Não:Ir para ^A2314BMalangdo^000000") == 1) {
 			mes "[Dolangmal]";
-			mes "What!? You don't want to go ^A2314BMalangdo^000000? Chet!";
+			mes "O quê? Você não quer ir a ^A2314BMalangdo^000000? certo!";
 			next;
 			mes "[Dolangmal]";
-			mes "You're such an annoying guy. If you don't go, why did you talk to me... but...";
+			mes "Você é um cara tão chato. Se você não quer ir, por que você falou comigo... mas...";
 			next;
 			mes "[Dolangmal]";
-			mes "^9E1837Admiral Tomas^000000 said to kidnap humans... No... Bring them politely?";
+			mes "^9E1837Admiral Tomas^000000 disse para sequestrar seres humanos... Não... Traga-os educadamente?";
 			next;
 			mes "[Dolangmal]";
-			mes "Anyway, I got you. Whenever you want to go, just tell me.";
+			mes "De qualquer forma, eu tenho você. Sempre que você quiser ir, apenas me diga.";
 			close;
 		}
 		mes "[Dolangmal]";
-		mes "Ok! I like your attitude. Full of passion.";
+		mes "Ok! Eu gosto da sua atitude. Cheia de paixão.";
 		next;
 		mes "[Dolangmal]";
-		mes "Now, before you go ^A2314BMalangdo^000000, let me give you some warnings.";
+		mes "Agora, antes de você ir para ^A2314BMalangdo^000000, deixe-me dar alguns avisos.";
 		next;
 		mes "[Dolangmal]";
-		mes "First!! It is natural that when you arrive on ^A2314BMalangdo^000000, you should notify ^9E1837Admiral Tomas^000000 that you are here.";
+		mes "Primeiro!! É natural que quando você chegar ^A2314BMalangdo^000000, você deve notificar ao ^9E1837Admiral Tomas^000000 que você está aqui.";
 		next;
 		mes "[Dolangmal]";
-		mes "If you don't do that, you might be attacked by scary and wild cats when you walk through dark streets.";
+		mes "Se você não fizer isso, você pode ser atacado por gatos assustadores e selvagens quando você anda por ruas escuras.";
 		next;
 		mes "[Dolangmal]";
-		mes "Secondly!! This ^A2314BMalangdo^000000 is absolutely our island of cats, even though we open to humans.";
+		mes "Em segundo lugar!! A cidade de  ^A2314BMalangdo^000000 é absolutamente nossa ilha de gatos, apesar que abrirmos para humanos.";
 		next;
 		mes "[Dolangmal]";
-		mes "We have a personality... no... no... respect us like one catality because we are cats.";
+		mes "Nós temos uma personalidade... não... não... nos respeite como uma catalidade porque somos gatos.";
 		next;
 		mes "[Dolangmal]";
-		mes "And the next one is...";
+		mes "E o próximo é...";
 		next;
-		mes "Dolangmal proceeds and gives hundreds of warnings.";
+		mes "Dolangmal prossegue e dá centenas de avisos.";
 		next;
 		mes "[Dolangmal]";
-		mes "Ok! Those are all the warnings!! They're easy and simple... right? Can you remember them?";
+		mes "Ok! Esses são todos os avisos! Eles são fáceis e simples... certo? Você consegue se lembrar deles?";
 		next;
-		switch(select("Remember his warnings:Can't remember")) {
+		switch(select("Lembre-se de seus avisos.:Não lembra")) {
 		case 1:
 			mes "[Dolangmal]";
-			mes "Ok! Do not bite two mice with one mouth. ^9E1837Admiral Tomas^000000 is located at the ^A2314Bcenter of the ship in Malangdo^000000.";
+			mes "Ok! Não morda dois ratos com uma só boca. ^9E1837Admiral Tomas^000000 está localizado no ^A2314Bcentro do navio em Malangdo^000000.";
 			next;
 			mes "[Dolangmal]";
-			mes "Don't forget to give him notice of your arrival.";
+			mes "Não esqueça de lhe dar aviso de sua chegada.";
 			next;
 			mes "[Dolangmal]";
-			mes "Alright. Let's go to the heaven of the cats, ^A2314BMalangdo^000000~";
+			mes "Tudo bem. Vamos para o céu dos gatos, ^A2314BMalangdo^000000~";
 			setquest 5091;
 			completequest 5091;
 			warp "malangdo",217,85;
 			close;
 		case 2:
 			mes "[Dolangmal]";
-			mes "What!? Can't you keep these easy rules? Chet!";
+			mes "O quê!? Você não pode manter essas regras fáceis? Droga!";
 			next;
 			mes "[Dolangmal]";
-			mes "You're such an annoying guy. If you can't keep these, why didn't you tell me during our conversation? I told you everything... but..";
+			mes "Você é um cara tão chato. Se você não pode ficar com eles, por que você não me contou durante a nossa conversa? Eu contei tudo... mas...";
 			next;
 			mes "[Dolangmal]";
-			mes "^9E1837Admiral Tomas^000000 said to kidnap humans... No... Bring them politely?";
+			mes "^9E1837Admiral Tomas^000000 disse para sequestrar seres humanos... Não... Traga-os educadamente?";
 			next;
 			mes "[Dolangmal]";
-			mes "Anyway, I got you. Just tell me whenever you want to go.";
+			mes "De qualquer forma, eu tenho você. Apenas me diga quando você quiser ir.";
 			close;
 		}
 	}
 	mes "[Dolangmal]";
-	mes "Uh? You must be the one from last time...? Alright. Did you visit ^A2314BMalangdo^000000?";
+	mes "Uh? Você deve ser o da última vez...? Tudo bem. Você visitou ^A2314BMalangdo^000000?";
 	next;
-	switch(select("Take me to ^A2314BMalangdo^000000 again:I have visited")) {
+	switch (select ("Leve-me para ^A2314BMalangdo^000000 novamente: eu visitei")) {
 	case 1:
 		mes "[Dolangmal]";
-		mes "I really want to send you there, but I can't because of the policy. It is difficult to send people who have visited ^A2314BMalangdo^000000 already.";
+		mes "Eu realmente quero mandar você para lá, mas não posso por causa da política. É difícil enviar pessoas que já visitaram ^A2314BMalangdo^000000.";
 		next;
 		mes "[Dolangmal]";
-		mes "And that was roughly it... It's supposed to be rule 53...";
+		mes "E isso foi mais ou menos... É a regra 53...";
 		next;
 		mes "[Dolangmal]";
-		mes "Actually, let me tell you rule 53. I am an indulgent cat.";
+		mes "Na verdade, deixe-me dizer a regra 53. Eu sou um gato indulgente.";
 		next;
 		mes "[Dolangmal]";
-		mes "If you want to go back to ^A2314BMalangdo^000000, take the ship at Izlude or Alberta.";
+		mes "Se você quiser voltar para ^A2314BMalangdo^000000, pegue o navio em Izlude ou Alberta.";
 		next;
 		mes "[Dolangmal]";
-		mes "If you enjoy that pleasant sea trip, you will arrive at the heaven of cats, ^A2314BMalangdo^000000.";
+		mes "Se você aproveitar aquela agradável viagem de mar, você chegará ao paraíso dos gatos, ^A2314BMalangdo^000000.";
 		next;
 		mes "[Dolangmal]";
-		mes "So easy! Isn't it? Well, good bye~";
+		mes "Tão fácil! Não é? Bem, adeus~";
 		close;
 	case 2:
 		mes "[Dolangmal]";
-		mes "How was it? You liked it? I knew it. Kakaka~";
+		mes "Como foi? Você gostou? Eu sabia disso. Kakaka~";
 		next;
 		mes "[Dolangmal]";
-		mes "Ah! I just want to make sure...";
+		mes "Ah! Eu só quero ter certeza ...";
 		next;
 		mes "[Dolangmal]";
-		mes "Again, if you want to go back to ^A2314BMalangdo^000000, do you know where to take a ship at Izlude or Alberta?";
+		mes "Novamente, se você quiser voltar para ^A2314BMalangdo^000000, você sabe onde pegar um navio em Izlude ou Alberta?";
 		next;
 		mes "[Dolangmal]";
-		mes "Hm~ You might know because you're a smart person. Well, see you again~";
+		mes "Hm~ Você pode saber porque você é uma pessoa inteligente. Bem, te vejo de novo~";
 		close;
 	}
 }
@@ -160,34 +160,34 @@ lighthalzen,254,83,5	duplicate(Dolangmal)	Dolangmal#8	553
 mora,57,150,4	duplicate(Dolangmal)	Dolangmal#9	553
 
 -	script	::Odgnalam	-1,{
-	mes "This cat is sleeping in the warm "+((strnpcinfo(2) == "albe")?"Alberta":"Izlude")+" sun.";
+	mes "Esse gato está dormindo no calor" +((strnpcinfo (2) == "albe")?"Alberta":"Izlude")+"  do sol.";
 	next;
-	if(select("Let him sleep:Talk to him") == 1) close;
-	mes "[Odgnalam]";
-	mes "Meow? Huh?";
-	next;
+	if (select ("Deixe-o dormir: Fale com ele") == 1) close;
+		mes "[Odgnalam]";
+		mes "Meow? Huh?";
+		next;
 	if (ep13_yong1 == 0) {
 		set .@price,1000;
-		set .@s1$,"Huh! You are so annoying. Let me send you to ^A2314BMalangdo^000000 for ^0000FF1000 Zeny^000000.";
-		set .@s2$,"Money? Where is the money? You can't go anywhere without the money. Shame on you.";
+		set .@s1$,"Huh! Você é tão chato. Deixe-me mandar para ^A2314BMalangdo^000000 por ^0000FF1000Zeny's^000000.";
+		set .@s2$,"Dinheiro? Onde está o dinheiro? Você não pode ir a lugar algum sem o dinheiro. Que vergonha para você.";
 	} else if (ep13_yong1 < 60) {
 		set .@price,999;
-		set .@s1$,"You have a little relationship with fleet of cat. I'll give you special discount price ^0000FF999 Zeny^000000 to ^A2314BMalangdo^000000, because you have relationship with fleet.";
-		set .@s2$,"Where is the money? You don't have a sense of honor.";
+		set .@s1$,"Você tem um pouco de relacionamento com a frota de gatos. Eu lhe darei um de desconto especial de ^0000FF999Zeny^000000 a ^A2314BMalangdo^000000, porque você tem relação com a frota.";
+		set .@s2$,"Onde está o dinheiro? Você não tem senso de honra.";
 	} else if (ep13_yong1 > 59 && ep13_yong1 < 80) {
 		set .@price,500;
-		set .@s1$,"You gave several help to our cat's fleet so let me give you special that with 50% discount price ^0000FF500 Zeny^000000. I'll send you to ^A2314BMalangdo^000000.";
-		set .@s2$,"You don't have any money for paying 50% discount price? I can't believe it.";
+		set .@s1$,"Você deu várias ajudas para a frota do nossos gatos, então deixe-me dar-lhe um desconto especial de 50% no preço ^0000FF500Zeny^000000. Vou mandar você para ^A2314BMalangdo^000000.";
+		set .@s2$,"Você não tem dinheiro para pagar 50% de desconto? Eu não acredito.";
 	} else {
 		mes "[Odgnalam]";
-		mes "You are a hero of cat's fleet. Your activity is the legend between us.";
-		next;
+		mes "Você é um herói da frota de gatos. Sua atividade é a lenda entre nós.";
+		Próximo;
 		mes "[Odgnalam]";
-		mes "As you are a hero of the cat fleet let me send you to ^A2314BMalangdo^000000 for free.";
-		next;
-		if(select("Send me to Malangdo!:Do not go.") == 1) {
+		mes "Como você é um herói da frota de gatos, deixe-me mandar você para ^ A2314BMalangdo ^ 000000 de graça.";
+		Próximo;
+		if(select("Envie-me para Malangdo!:Agora não.") == 1) {
 			mes "[Odgnalam]";
-			mes "Have a comfortable trip... Alright let's go~";
+			mes "Tudo bem vamos... Tenha uma boa viagem.";
 			warp "malangdo",217,85;
 		}
 		close;
@@ -195,15 +195,15 @@ mora,57,150,4	duplicate(Dolangmal)	Dolangmal#9	553
 	mes "[Odgnalam]";
 	mes .@s1$;
 	next;
-	if(select("Send me to Malangdo!:Do not go.") == 2) close;
+	if(select("Envie-me para Malangdo!:Agora não.") == 2) close;
 	if (Zeny < .@price) {
 		mes "[Odgnalam]";
-		mes "Money? Where is the money? You can't go anywhere without the money. Shame on you.";
+		mes "Dinheiro? Onde está o dinheiro? Você não pode ir a lugar algum sem o dinheiro. Que vergonha para você.";
 		close;
 	}
 	set Zeny, Zeny - .@price;
 	mes "[Odgnalam]";
-	mes "Let me send you right away. Let's go~";
+	mes "Deixe-me mandar você imediatamente. Let's go~";
 	warp "malangdo",217,85;
 	close;
 }
@@ -216,55 +216,55 @@ izlude_d,182,218,4	duplicate(Odgnalam)	Odgnalam#iz_d	554
 
 malangdo,219,86,4	script	Kong#malang	545,{
 	mes "[Kong]";
-	mes "Did you have fun in Malangdo?";
-	mes "The fleet has a service to Izlude and Alberta.";
+	mes "Você se divertiu em Malangdo?";
+	mes "A frota tem um serviço para Izlude e Alberta.";
 	next;
 	if (ep13_yong1 == 0) {
 		set .@price,1000;
-		set .@s1$, "1000 zeny";
-		set .@s2$, "Have a nice day in Malangdo.";
-		set .@no_money$, "It is difficult for free.";
-		set .@yes_money$, "Have a nice trip.";
+		set .@s1$,"1000 zeny";
+		set .@s2$,"Tenha um bom dia em Malangdo.";
+		set .@no_money$,"É difícil de graça.";
+		set .@yes_money$,"Tenha uma boa viagem.";
 		mes "[Kong]";
-		mes "The fee of ship is only 1000 zeny, where do you want to go?";
+		mes "A taxa do navio é de apenas 1000 zenys, para onde você quer ir?";
 		next;
 	} else if (ep13_yong1 < 60) {
 		set .@price,999;
 		set .@s1$,"999 zeny";
-		set .@s2$, "Have a full of fortune day in Malangdo...";
-		set .@no_money$, "It is difficult even though you have a relationship with the fleet.";
-		set .@yes_money$, "Thanks, have a wonderful trip.";
+		set .@s2$,"Tenha um dia cheio de fortunas em Malangdo ...";
+		set .@no_money$,"É difícil mesmo que você tenha um relacionamento com a frota.";
+		set .@yes_money$,"Obrigado, tenha uma viagem maravilhosa.";
 		mes "[Kong]";
-		mes "You have a connection with our fleet. Apply special price 999 zeny. Where do you want to go?";
+		mes "Você tem uma conexão com nossa frota. Aplique um preço especial 999 zeny. Onde você quer ir?";
 		next;
 	} else if (ep13_yong1 > 59 && ep13_yong1 < 80) {
 		set .@price,500;
 		set .@s1$,"500 zeny";
-		set .@s2$, "There are full of fortune and jackpot in Malangdo.";
-		set .@no_money$, "Oh my god. You don't have 500 zeny? It is difficult for free.";
-		set .@yes_money$, "Have a nice trip and come again.";
+		set .@s2$, "Há cheio de fortuna e jackpot em Malangdo.";
+		set .@no_money$, "Oh meu deus. Você não tem 500 zeny? É difícil de graça.";
+		set .@yes_money$, "Tenha uma boa viagem e venha novamente.";
 		mes "[Kong]";
-		mes "Wow~ You contributed to our fleet a lot. Alright!! Special discount price 500 zeny. Where do you want to go?";
+		mes "Uau ~ Você contribuiu muito para a nossa frota. Tudo bem !! Preço com desconto especial 500 zeny. Onde você quer ir?";
 		next;
 	} else {
 		set .@price,0;
-		set .@s1$,"Free for the hero of our fleet!!";
-		set .@s2$, "No one objects to the hero of our fleet staying in Malangdo...";
+		set .@s1$,"Livre para o herói da nossa frota !!";
+		set .@s2$, "Ninguém se opõe ao herói de nossa frota que fica em Malangdo ...";
 		mes "[Kong]";
-		mes "Ah... You are the legendary hero of our cat's fleet.";
+		mes "Ah... Você é o lendário herói da frota do nossos gatos.";
 		next;
 		mes "[Kong]";
-		mes "We can't charge the hero of our fleet. What is your destination?";
+		mes "Não podemos cobrar o herói de nossa frota. Qual é o seu destino?";
 		next;
 	}
-	set .@i, select("- Izlude destination --- "+.@s1$+":- Alberta destination --- "+.@s1$+":- Stay on Malangdo");
+	set .@i, select("- Izlude --- "+.@s1$+":- Alberta --- "+.@s1$+":- Ficar em Malangdo");
 	mes "[Kong]";
 	if (.@i == 3) {
 		mes .@s2$;
 		close;
 	}
 	if (ep13_yong1 > 80) {
-		mes "Have a comfortable trip.";
+		mes "Tenha uma viagem confortável.";
 		if (.@i == 1)
 			warp "izlude",195,212; // Old coordinates: (194,180)
 		else
@@ -287,16 +287,16 @@ malangdo,219,86,4	script	Kong#malang	545,{
 // Generic Malangdo NPCs :: malang_tre
 //============================================================
 malangdo,147,117,3	script	Innkeeper#malang	554,{
-	mes "You see a lazy cat standing on a chair.";
-	mes "You guess that this is the Innkeeper.";
+	mes "Você vê um gato preguiçoso de pé em uma cadeira.";
+	mes "Você adivinha que este é o Innkeeper.";
 	next;
-	switch(select("Umm... Can I rest here?:Psst... Can I save here?:Leave.")) {
+	switch(select("Umm... Posso descansar aqui?:Psst... Posso salvar aqui?:Sair.")) {
 	case 1:
 		mes "[Innkeeper]";
 		mes "Eh?";
-		mes "Uh, sure you can use this hammock if you give me ^FF00005 Malangdo Cans^000000.";
+		mes "Uh, claro que você pode usar esta rede se você me der ^FF00005 Malangdo Cans^000000.";
 		next;
-		switch(select("Here you go.:Never mind.")) {
+		switch(select("Aqui vai.:Não importa.")) {
 		case 1:
 			if (countitem(12636) > 4) {
 				delitem 12636,5; //Malang_Sp_Can
@@ -310,23 +310,23 @@ malangdo,147,117,3	script	Innkeeper#malang	554,{
 				close;
 			}
 			mes "[Innkeeper]";
-			mes "This ain't no charity.";
+			mes "Isso não é caridade.";
 			close;
 		case 2:
 			mes "[Innkeeper]";
-			mes "Let me know if you want to relax.";
+			mes "Deixe-me saber se você quer relaxar.";
 			close;
 		}
 	case 2:
 		mes "[Innkeeper]";
-		mes "Location saved. We should keep company, haha~";
+		mes "Local salvo. Devemos fazer companhia, haha ~";
 		savepoint "malangdo",142,118,1,1;
 		close;
 	case 3:
 		mes "[Innkeeper]";
-		mes "Sometimes you just have to relax.";
+		mes "Às vezes você só precisa relaxar.";
 		next;
-		mes "- Wow, this is the laziest cat ever. -";
+		mes "- Uau, esse é o gato mais preguiçoso de todos os tempos. -";
 		close;
 	}
 	close;
@@ -334,18 +334,18 @@ malangdo,147,117,3	script	Innkeeper#malang	554,{
 
 malangdo,151,120,3	script	Minstrel#mal	479,{
 	mes "[Minstrel]";
-	mes "Boy, that lazy cat makes me want to just nap all day long.";
+	mes "Rapaz, esse gato preguiçoso me faz querer cochilar o dia todo.";
 	next;
-	mes "[Minstrel]";
-	mes "He makes life look so simple.";
+	mes "[menestrel]";
+	mes "Ele faz a vida parecer tão simples.";
 	close;
 }
 
 malangdo,149,120,5	script	Wanderer#mal	485,5,1,{
-	mes "[Wanderer]";
-	mes "The cats living in here are so energetic.";
-	mes "Is it weird that they make me want to dance all day?";
-	mes "La di dah di dah~!";
+	mes "[Andarilho]";
+	mes "Os gatos que vivem aqui são tão energéticos.";
+	mes "É estranho que eles me façam querer dançar o dia todo?";
+	mes "La di dah di dah ~!";
 	close;
 OnTouch:
 	switch(rand(5)) {
@@ -369,67 +369,67 @@ OnTouch:
 	end;
 }
 
-malangdo,216,168,3	script	Cat Trainer#mal1	558,0,8,{
+malangdo,216,168,3	script	Treinador de gatos#mal1	558,0,8,{
 	emotion ET_COOL;
-	mes "[Cat Trainer]";
-	mes "Ooo~ their soft puffy tails and soft fur~";
-	mes "I can't stand it, this is heaven~~!!";
+	mes "[Treinador de gatos]";
+	mes "Ooo ~ suas caudas inchadas macias e pele macia";
+	mes "Eu não aguento, isso é o paraíso!!";
 	next;
 	emotion ET_KIK;
-	mes "[Cat Trainer]";
-	mes "My hidden card, ^FF0000Silvervine Fruit^000000, can make all cats in Malangdo my slaves~ haha!";
+	mes "[Treinador de gatos]";
+	mes "Meu cartão oculto, ^ FF0000Fruto Silvestre ^ 000000, pode fazer todos os gatos em Malangdo meus escravos ~ haha!";
 	next;
 	select("^FF0000Silvervine Fruit^000000?");
-	mes "[Cat Trainer]";
-	mes "It is such a rare item!";
-	mes "I can barely get it.";
-	mes "But these cudly cats can't resist it~";
+	mes "[Treinador de gatos]";
+	mes "É um item tão raro!";
+	mes "Eu mal consigo entender.";
+	mes "Mas esses gatos fofinhos não conseguem resistir";
 	next;
-	select("Where can I get ^FF0000Silvervine Fruit^000000?");
-	mes "[Cat Trainer]";
-	mes "Why would I tell you when I can barely get it?";
-	mes "I wouldn't even tell you for all the zeny in the world~!";
+	select("Onde posso obter ^FF0000Silvervine Fruit^000000?");
+	mes "[Treinador de gatos]";
+	mes "Por que eu te contaria quando mal conseguisse?";
+	mes "Eu nem te contaria por todo o zeny do mundo~!";
 	next;
 	emotion ET_KIK;
-	mes "[Cat Trainer]";
-	mes "All the Malangdo cats are mine~!";
-	mes "Muahahahaha~";
-	mes "With enough ^FF0000Silvervine Fruit^000000 I can be a queen in Malangdo~ ohhhh!!!";
+	mes "[Treinador de gatos]";
+	mes "Todos os gatos Malangdo são meus~!";
+	mes "Muahahahaha ~";
+	mes "Com o suficiente ^FF0000Fruto de Lilivine^000000 Eu posso ser uma rainha em Malangdo~ ohhhh !!!";
 	close;
 OnTouch:
 	emotion ET_SPARK;
 	end;
 }
 
-malangdo,164,203,3	script	Cat Trainer#mal2	853,{
+malangdo,164,203,3	script	Treinador de gatos#mal2	853,{
 	emotion ET_COOL;
-	mes "[Cat Trainer]";
-	mes "Ooo~ their soft puffy tails and soft fur~";
-	mes "I can't stand it, this is heaven~~!!";
-	next;
+	mes "[Treinador de gatos]";
+	mes "Ooo ~ suas caudas inchadas macias e pele macia ~";
+	mes "Eu não aguento, isso é o paraíso!!";
+	Próximo;
 	emotion ET_KIK;
-	mes "[Cat Trainer]";
-	mes "This is my little secret called";
-	mes "^FF0000Silvervine Fruit^000000. I can use";
-	mes "it to make the Malangdo cats my";
-	mes "slaves~ muahahahaha~!";
+	mes "[Treinador de gatos]";
+	mes "Esse é o meu pequeno segredo chamado";
+	mes "^FF0000Fruitilvervine Fruit^000000. Eu posso usar";
+	mes "fazer os gatos Malangdo meu";
+	mes "escravos~ muahahahaha ~!";
 	next;
 	select("^FF0000Silvervine Fruit^000000?");
-	mes "[Cat Trainer]";
-	mes "Hmm, I guess it's no wonder you don't know.";
-	mes "These Malangdo cats can't resist it.";
-	mes "But it's too rare of an item to get so you shouldn't bother trying to find it.";
-	next;
-	select("Where can I get ^FF0000Silvervine Fruit^000000?");
-	mes "[Cat Trainer]";
-	mes "Actually, it's simple. You just...";
-	next;
-	mes "[Cat Trainer]";
-	mes "Hey, you almost made me tell my secret.";
-	next;
+	mes "[Treinador de gatos]";
+	mes "Hmm, eu acho que não é de admirar que você não saiba.";
+	mes "Esses gatos Malangdo não conseguem resistir.";
+	mes "Mas é muito raro um item para você não se incomodar em tentar encontrá-lo.";
+	Próximo;
+	select("Onde posso obter ^FF0000Silvervine Fruit^000000?");
+	mes "[Treinador de gatos]";
+	mes "Na verdade, é simples. Você só ...";
+	Próximo;
+	mes "[Treinador de gatos]";
+	mes "Ei, você quase me fez contar meu segredo.";
+	Próximo;
 	emotion ET_KIK;
-	mes "[Cat Trainer]";
-	mes "One day these cats will be mine.";
-	mes "I can be a king in Malangdo~ ohhh~!";
+	mes "[Treinador de gatos]";
+	mes "Um dia esses gatos serão meus.";
+	mes "Eu posso ser um rei em Malangdo ~ ohhh ~!";
 	close;
 }

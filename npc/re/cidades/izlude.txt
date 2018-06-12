@@ -17,11 +17,11 @@
 
 // Izlude
 //============================================================
-izlude,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude	4W_SAILOR
-izlude_a,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude_a	4W_SAILOR
-izlude_b,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude_b	4W_SAILOR
-izlude_c,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude_c	4W_SAILOR
-izlude_d,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude_d	4W_SAILOR
+izlude,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude	4W_SAILOR
+izlude_a,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude_a	4W_SAILOR
+izlude_b,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude_b	4W_SAILOR
+izlude_c,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude_c	4W_SAILOR
+izlude_d,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude_d	4W_SAILOR
 
 izlude,71,92,2	duplicate(Bonne_izlude)	Bonne#izlude	4_F_01
 izlude_a,71,92,2	duplicate(Bonne_izlude)	Bonne#izlude_a	4_F_01
@@ -65,33 +65,33 @@ izlude_b,55,159,2	duplicate(Cebalis_izlude)	Cebalis#izlude_b	4W_M_02
 izlude_c,55,159,2	duplicate(Cebalis_izlude)	Cebalis#izlude_c	4W_M_02
 izlude_d,55,159,2	duplicate(Cebalis_izlude)	Cebalis#izlude_d	4W_M_02
 
-izlude,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude	8W_SOLDIER
-izlude_a,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude_a	8W_SOLDIER
-izlude_b,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude_b	8W_SOLDIER
-izlude_c,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude_c	8W_SOLDIER
-izlude_d,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude_d	8W_SOLDIER
+izlude,165,156,2	duplicate(Soldado)	Soldado#izlude	8W_SOLDIER
+izlude_a,165,156,2	duplicate(Soldado)	Soldado#izlude_a	8W_SOLDIER
+izlude_b,165,156,2	duplicate(Soldado)	Soldado#izlude_b	8W_SOLDIER
+izlude_c,165,156,2	duplicate(Soldado)	Soldado#izlude_c	8W_SOLDIER
+izlude_d,165,156,2	duplicate(Soldado)	Soldado#izlude_d	8W_SOLDIER
 
--	script	::Guard_izlude	-1,{
-	mes "[Izlude Guard]";
-	mes "Welcome to Izlude.";
+-	script	::Guarda	-1,{
+	mes "[Guarda de Izlude]";
+	mes "Bem vindo a Izlude.";
 	close;
 }
-prt_fild08,350,219,4	duplicate(Guard_izlude)	Guard#izlude	8W_SOLDIER
-prt_fild08a,350,219,4	duplicate(Guard_izlude)	Guard#izlude_a	8W_SOLDIER
-prt_fild08b,350,219,4	duplicate(Guard_izlude)	Guard#izlude_b	8W_SOLDIER
-prt_fild08c,350,219,4	duplicate(Guard_izlude)	Guard#izlude_c	8W_SOLDIER
-prt_fild08d,350,219,4	duplicate(Guard_izlude)	Guard#izlude_d	8W_SOLDIER
+prt_fild08,350,219,4	duplicate(Guarda)	Guarda#izlude	8W_SOLDIER
+prt_fild08a,350,219,4	duplicate(Guarda)	Guarda#izlude_a	8W_SOLDIER
+prt_fild08b,350,219,4	duplicate(Guarda)	Guarda#izlude_b	8W_SOLDIER
+prt_fild08c,350,219,4	duplicate(Guarda)	Guarda#izlude_c	8W_SOLDIER
+prt_fild08d,350,219,4	duplicate(Guarda)	Guarda#izlude_d	8W_SOLDIER
 
 // Channel Warper :: channel
 //============================================================
 function	script	F_IzludeChannel	{
-	mes "[Channel Warp Official]";
-	mes "Izlude is a verly lively place is it not?";
-	mes "I am here to help make Izlude feel more smooth!";
-	mes "I can send you to another copy of Izlude.";
-	mes "Do you want to go to another copy?";
+	mes "[Oficial da Warp do Canal]";
+	mes "Izlude é um lugar muito animado, não é?";
+	mes "Estou aqui para ajudar para te ajudar no que precisar!";
+	mes "Ou posso mandar você para a outra Izlude.";
+	mes "Você quer ir para outra Izlude?";
 	next;
-	set .@i, select(getarg(0)+":Never mind");
+	set .@i, select(getarg(0)+":Deixa pra lá");
 	if (.@i < 6) {
 		setarray .@maps$[1],"izlude","izlude_a","izlude_b","izlude_c","izlude_d";
 		savepoint .@maps$[.@i],128,98,1,1;
@@ -108,63 +108,63 @@ izlude_d,122,105,5	script	Channel Warp Official#_d	1_M_WIZARD,{ callfunc "F_Izlu
 
 // Talking NPCs
 //============================================================
-izlude,143,205,7	script	Talkative Kid#iz	4_F_KID2,{
+izlude,143,205,7	script	Garoto Falador#iz	4_F_KID2,{
 	end;
 
 OnTimer64000:
-	npctalk "Talkative Kid : I used all my Novice Red Potions. What should I do?";
+	npctalk "Garoto Falador: Eu usei todas as minhas Poções Vermelhas Iniciantes. O que devo fazer?";
 	end;
 
 OnTimer72000:
-	npctalk "Talkative Kid : Where is the shop?";
+	npctalk "Garoto Falador: Onde fica a loja?";
 	end;
 
 OnTimer136000:
-	npctalk "Talkative Kid : Idiot! You do not know about the 'shortcut window'?";
+	npctalk "Garoto Falador: Idiota! Você não sabe sobre a 'janela de atalhos'?";
 	end;
 
 OnTimer144000:
-	npctalk "Talkative Kid : The items in your inventory can be dragged and put in the shortcut window.";
+	npctalk "Garoto Falador: Os itens em seu inventário podem ser arrastados e colocados na janela de atalho.";
 	end;
 
 OnTimer212000:
-	npctalk "Talkative Kid : I got so many beginner's items in the Academy!";
+	npctalk "Garoto Falador: Eu tenho muitos itens para iniciantes na Academia!";
 	end;
 
 OnTimer276000:
-	npctalk "Talkative Kid : They even gave me weapons and a shield!";
+	npctalk "Garoto Falador: Eles até me deram armas e um escudo!";
 	end;
 
 OnTimer284000:
-	npctalk "Talkative Kid : Just press  <Ctrl+~key> to open the map you have.";
+	npctalk "Garoto Falador: Basta pressionar a tecla <Ctrl+~Key> para abrir o mapa que você tem.";
 	end;
 
 OnTimer344000:
-	npctalk "Talkative Kid : Then do you want to go Criatura Academy with me? I'm learning how to battle from Instructor Subino!";
+	npctalk "Garoto Falador: Então você quer ir para a Academia Criatura comigo? Estou aprendendo a lutar com o instrutor Subino!";
 	end;
 
 OnTimer348000:
-	npctalk "Talkative Kid : The Academy is in North side of Izlude. Let's go~!";
+	npctalk "Garoto Falador: A Academia fica no lado norte de Izlude. Vamos lá ~!";
 	end;
 
 OnTimer416000:
-	npctalk "Talkative Kid : It's a system to guide you to a destination.";
+	npctalk "Garoto Falador: É um sistema para guiá-lo até um destino.";
 	end;
 
 OnTimer424000:
-	npctalk "Talkative Kid : In the basic menu, please click the [Navigation] button.";
+	npctalk "Garoto Falador: No menu básico, por favor clique no botão [Navegação].";
 	end;
 
 OnTimer492000:
-	npctalk "Talkative Kid : Whee, Ain't gonna use your brain? Please type /where in the chat window now!";
+	npctalk "Garoto Falador: Whee, não vai usar o seu cérebro? Por favor digite /where na janela de bate-papo agora!";
 	end;
 
 OnTimer552000:
-	npctalk "Talkative Kid : In this case, you can push the <Enter> key.";
+	npctalk "Garoto Falador: Neste caso, você pode apertar a tecla <Enter>.";
 	end;
 
 OnTimer560000:
-	npctalk "Talkative Kid : We are just repeating the same dialog. HaHaha.";
+	npctalk "Garoto Falador: Estamos apenas repetindo o mesmo diálogo. HaHaha.";
 	end;
 
 OnTimer565000:
@@ -173,76 +173,76 @@ OnInit:
 	end;
 }
 
-izlude_a,143,205,7	duplicate(Talkative Kid#iz)	Talkative Kid#iza	4_F_KID2
-izlude_b,143,205,7	duplicate(Talkative Kid#iz)	Talkative Kid#izb	4_F_KID2
-izlude_c,143,205,7	duplicate(Talkative Kid#iz)	Talkative Kid#izc	4_F_KID2
-izlude_d,143,205,7	duplicate(Talkative Kid#iz)	Talkative Kid#izd	4_F_KID2
+izlude_a,143,205,7	duplicate(Garoto Falador#iz)	Garoto Falador#iza	4_F_KID2
+izlude_b,143,205,7	duplicate(Garoto Falador#iz)	Garoto Falador#izb	4_F_KID2
+izlude_c,143,205,7	duplicate(Garoto Falador#iz)	Garoto Falador#izc	4_F_KID2
+izlude_d,143,205,7	duplicate(Garoto Falador#iz)	Garoto Falador#izd	4_F_KID2
 
-izlude,146,205,7	script	Talkative Adventurer#iz	4_M_KID1,{
+izlude,146,205,7	script	Aventureiro Falador#iz	4_M_KID1,{
 	end;
 
 OnTimer69000:
-	npctalk "Talkative Adventurer : You can buy potion from Merchants.";
+	npctalk "Aventureiro Falador: Você pode comprar poções de comerciantes.";
 	end;
 
 OnTimer77000:
-	npctalk "Talkative Adventurer : It's the Potion image in the mini map.";
+	npctalk "Aventureiro Falador: É a imagem da Poção no mini mapa.";
 	end;
 
 OnTimer131000:
-	npctalk "Talkative Adventurer : Is there any way to use items easily?";
+	npctalk "Aventureiro Falador: Existe alguma maneira de usar itens facilmente?";
 	end;
 
 OnTimer141000:
-	npctalk "Talkative Adventurer : Shortcut window? The slots at the top of the screen? How can I use it?";
+	npctalk "Aventureiro Falador: janela de atalho? Os slots na parte superior da tela? Como posso usá-lo?";
 	end;
 
 OnTimer149000:
-	npctalk "Talkative Adventurer : For inventory, do you mean 'item' menu? Oh, it is!";
+	npctalk "Aventureiro Falador: Para inventário, você quer dizer menu 'item'? Ah, é!";
 	end;
 
 OnTimer217000:
-	npctalk "Talkative Adventurer : I have a bunch of potions?";
+	npctalk "Aventureiro Falador: Eu tenho um monte de poções?";
 	end;
 
 OnTimer281000:
-	npctalk "Talkative Adventurer : What?! I should go to the Academy now!";
+	npctalk "Aventureiro Falador: O que?! Eu deveria ir para a Academia agora!";
 	end;
 
 OnTimer279000:
-	npctalk "Talkative Adventurer : Where is Izlude? In the center?";
+	npctalk "Aventureiro Falador: Onde está Izlude? No centro?";
 	end;
 
 OnTimer339000:
-	npctalk "Talkative Adventurer : I do not know what to do.";
+	npctalk "Aventureiro Falador: Eu não sei o que fazer.";
 	end;
 
 OnTimer349000:
-	npctalk "Talkative Adventurer : Oh yea? I want to know so many things~ I will go with you!";
+	npctalk "Aventureiro Falador: Oh sim? Eu quero saber tantas coisas ~ eu vou com você!";
 	end;
 
 OnTimer411000:
-	npctalk "Talkative Adventurer : Navigation, What is that?";
+	npctalk "Aventureiro Falador: Navegação, o que é isso?";
 	end;
 
 OnTimer421000:
-	npctalk "Talkative Adventurer : Oh-! Should I search for a Kafra Employee?";
+	npctalk "Aventureiro Falador: Oh-! Devo procurar por um funcionário Kafra?";
 	end;
 
 OnTimer487000:
-	npctalk "Talkative Adventurer : What is the town name?";
+	npctalk "Aventureiro Falador: Qual é o nome da cidade?";
 	end;
 
 OnTimer497000:
-	npctalk "Talkative Adventurer : I cannot see the part where I can write something in the chat window?";
+	npctalk "Aventureiro Falador: Eu não consigo ver a parte onde eu posso escrever algo na janela de chat?";
 	end;
 
 OnTimer557000:
-	npctalk "Talkative Adventurer : Oh you smarty...";
+	npctalk "Aventureiro Falador: Oh você sabe tudo ...";
 	end;
 
 OnTimer555000:
-	npctalk "Talkative Adventurer : A while ago, one Novice talked to me like hey 'Talkative Adventurer'?. HaHaha.";
+	npctalk "Aventureiro Falador: Há um tempo atrás, um novato falou para mim como hey 'aventureiro falador'. Hahaha.";
 	end;
 
 OnTimer565000:
@@ -251,26 +251,27 @@ OnInit:
 	end;
 }
 
-izlude_a,146,205,7	duplicate(Talkative Adventurer#iz)	Talkative Adventurer#iza	4_M_KID1
-izlude_b,146,205,7	duplicate(Talkative Adventurer#iz)	Talkative Adventurer#izb	4_M_KID1
-izlude_c,146,205,7	duplicate(Talkative Adventurer#iz)	Talkative Adventurer#izc	4_M_KID1
-izlude_d,146,205,7	duplicate(Talkative Adventurer#iz)	Talkative Adventurer#izd	4_M_KID1
+izlude_a,146,205,7	duplicate(Aventureiro Falador#iz)	Aventureiro Falador#iza	4_M_KID1
+izlude_b,146,205,7	duplicate(Aventureiro Falador#iz)	Aventureiro Falador#izb	4_M_KID1
+izlude_c,146,205,7	duplicate(Aventureiro Falador#iz)	Aventureiro Falador#izc	4_M_KID1
+izlude_d,146,205,7	duplicate(Aventureiro Falador#iz)	Aventureiro Falador#izd	4_M_KID1
 
-prt_fild08,338,217,7	script	Resting Adventurer#iz	4_F_SITDOWN,{
+prt_fild08,338,217,7	script	Aventureiro Descançado#iz	4_F_SITDOWN,{
 	end;
 
 OnTimer60000:
-	npctalk "Resting Adventurer : You know what? If you are sitting, HP and SP recovery is faster.";
+	npctalk "Aventureiro Descansado: Sabe de uma coisa? Se você está sentado, a recuperação HP e SP é mais rápida.";
 	end;
 
 OnTimer65000:
-	npctalk "Resting Adventurer : Sitting is possible if your basic job skill level is more than 3. Shortcut is pressing the <INSERT> key.";
+	npctalk "Aventureiro Descansado: Sentar é possível se o seu nível de habilidades básicas for maior que 3. Para usar a habilidade pressione a tecla <INSERT>.";
+	end;
 OnInit:
 	initnpctimer;
 	end;
 }
 
-prt_fild08a,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#iza	4_F_SITDOWN
-prt_fild08b,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izb	4_F_SITDOWN
-prt_fild08c,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izc	4_F_SITDOWN
-prt_fild08d,338,217,7	duplicate(Resting Adventurer#iz)	Resting Adventurer#izd	4_F_SITDOWN
+prt_fild08a,338,217,7	duplicate(Aventureiro Descansado#iz)	Aventureiro Descansado#iza	4_F_SITDOWN
+prt_fild08b,338,217,7	duplicate(Aventureiro Descansado#iz)	Aventureiro Descansado#izb	4_F_SITDOWN
+prt_fild08c,338,217,7	duplicate(Aventureiro Descansado#iz)	Aventureiro Descansado#izc	4_F_SITDOWN
+prt_fild08d,338,217,7	duplicate(Aventureiro Descansado#iz)	Aventureiro Descansado#izd	4_F_SITDOWN

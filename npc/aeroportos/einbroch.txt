@@ -14,7 +14,7 @@
 
 airport,143,43,5	script	Equipe do Aeroporto#airport1a::airport1	90,{
 	mes "[Equipe do Aeroporto]";
-	mes "Bem vindo ao";
+	mes "Bem vind"+(sex?"o":"a")+" ao";
 	mes "Aeroporto de Einbroch";
 	mes "onde oferecemos sem parar";
 	mes "vôos para as cidades de";
@@ -24,7 +24,7 @@ airport,143,43,5	script	Equipe do Aeroporto#airport1a::airport1	90,{
 		mes "[Equipe do Aeroporto]";
 		mes "A taxa de embarque";
 		mes "é 1.200 zeny, mas se você tiver";
-		mes "tenho um Bilhete Gratuito,";
+		mes "um Bilhete para Aeroplano,";
 		mes "a taxa não será cobrada.";
 		mes "e você poderá embarcar no dirigível.";
 		next;
@@ -40,11 +40,11 @@ airport,143,43,5	script	Equipe do Aeroporto#airport1a::airport1	90,{
 				end;
 			}
 			mes "[Equipe do Aeroporto]";
-			mes "Sinto muito, mas você";
-			mes "tem um Bilhete Gratuito para";
+			mes "Sinto muito, mas você não";
+			mes "tem um Bilhete para Aeroplano para";
 			mes "embarque no Dirigível e nem";
 			mes "zeny suficiente para";
-			mes "o embaarque. Lembre-se, a";
+			mes "o embarque. Lembre-se, a";
 			mes "taxa de embarque é 1.200 zenys.";
 			close;
 		}
@@ -67,7 +67,7 @@ airport,143,49,3	script	Equipe de Recepção#airport2a::airport2	90,{
 	mes "Juno, Lighthalzen ou Hugel.";
 	next;
 	if (select("Sair ao terminal principal: Cancelar") == 1) {
-		mes "[Equipe de Recep?]";
+		mes "[Equipe de Recepção]";
 		mes "Quando você stiver no terminal principal, você irá precisar pagar a taxa novamente";
 		mes "para embarcar em um dirigível. Você só deverá.";
 		mes "sair da cidade de Einbroch";
@@ -87,8 +87,8 @@ airport,143,49,3	script	Equipe de Recepção#airport2a::airport2	90,{
 	close;
 }
 
-airport,126,51,3	duplicate(airport2)	Equipe de Recep?#airport2b	90
-airport,158,50,3	duplicate(airport2)	Equipe de Recep?#airport2c	90
+airport,126,51,3	duplicate(airport2)	Equipe de Recepção#airport2b	90
+airport,158,50,3	duplicate(airport2)	Equipe de Recepção#airport2c	90
 
 einbroch,94,267,3	script	Equipe do Aeroporto#ein01	91,{
 	mes "[Equipe do Aeroporto]";
