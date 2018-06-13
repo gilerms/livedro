@@ -12,7 +12,7 @@
 //= 1.0 First version.
 //============================================================ 
 
--	script	::Assistente do Aeroplano	-1,{
+-	script	::Airship_Staff_izlude	-1,{
 	mes "[Equipe do Aeroporto]";
 	mes "Bem-vind"+(Sex?"o":"a")+"! Gostaria de";
 	mes "embarcar no vôo que te leva a";

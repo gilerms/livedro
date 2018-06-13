@@ -102,4 +102,4 @@ ecl_in02,135,45,5	script	Laphine Ferido	442,{
 	mes "O quê? De jeito nenhum... por favor... doutor !!Não!!";
 	close;
 }
-ecl_in02,137,44,3	duplicate(Injured Laphine)	Médico Laphine#doctor	441
+ecl_in02,137,44,3	duplicate(Laphine Ferido)	Médico Laphine#doctor	441

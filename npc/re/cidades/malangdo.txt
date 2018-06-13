@@ -168,7 +168,7 @@ mora,57,150,4	duplicate(Dolangmal)	Dolangmal#9	553
 		next;
 	if (ep13_yong1 == 0) {
 		set .@price,1000;
-		set .@s1$,"Huh! Você é tão chato. Deixe-me mandar para ^A2314BMalangdo^000000 por ^0000FF1000Zeny's^000000.";
+		set .@s1$,"Huh! Você é tão chato. Deixe-me mandar para ^A2314BMalangdo^000000 por ^0000FF1000 Zeny's^000000.";
 		set .@s2$,"Dinheiro? Onde está o dinheiro? Você não pode ir a lugar algum sem o dinheiro. Que vergonha para você.";
 	} else if (ep13_yong1 < 60) {
 		set .@price,999;
@@ -181,10 +181,10 @@ mora,57,150,4	duplicate(Dolangmal)	Dolangmal#9	553
 	} else {
 		mes "[Odgnalam]";
 		mes "Você é um herói da frota de gatos. Sua atividade é a lenda entre nós.";
-		Próximo;
+		next;
 		mes "[Odgnalam]";
 		mes "Como você é um herói da frota de gatos, deixe-me mandar você para ^ A2314BMalangdo ^ 000000 de graça.";
-		Próximo;
+		next;
 		if(select("Envie-me para Malangdo!:Agora não.") == 1) {
 			mes "[Odgnalam]";
 			mes "Tudo bem vamos... Tenha uma boa viagem.";
@@ -406,7 +406,7 @@ malangdo,164,203,3	script	Treinador de gatos#mal2	853,{
 	mes "[Treinador de gatos]";
 	mes "Ooo ~ suas caudas inchadas macias e pele macia ~";
 	mes "Eu não aguento, isso é o paraíso!!";
-	Próximo;
+	next;
 	emotion ET_KIK;
 	mes "[Treinador de gatos]";
 	mes "Esse é o meu pequeno segredo chamado";
@@ -419,14 +419,14 @@ malangdo,164,203,3	script	Treinador de gatos#mal2	853,{
 	mes "Hmm, eu acho que não é de admirar que você não saiba.";
 	mes "Esses gatos Malangdo não conseguem resistir.";
 	mes "Mas é muito raro um item para você não se incomodar em tentar encontrá-lo.";
-	Próximo;
+	next;
 	select("Onde posso obter ^FF0000Silvervine Fruit^000000?");
 	mes "[Treinador de gatos]";
 	mes "Na verdade, é simples. Você só ...";
-	Próximo;
+	next;
 	mes "[Treinador de gatos]";
 	mes "Ei, você quase me fez contar meu segredo.";
-	Próximo;
+	next;
 	emotion ET_KIK;
 	mes "[Treinador de gatos]";
 	mes "Um dia esses gatos serão meus.";

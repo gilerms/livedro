@@ -301,7 +301,7 @@ dic_in01,149,104,5	script	Piom Cansado#b	4_MAN_PIOM2,{
 		mes "Vou precisar de outra dose de Bradium.";
 		mes "Acho que os efeitos estão mais fracos do que antes,";
 		mes "Ou será que é só comigo?";
-		emotion e_what;
+		emotion ET_QUESTION;
 		close; 
 	}
 	mes "¡ð¡Ð¡ú ¡ø ¢²";

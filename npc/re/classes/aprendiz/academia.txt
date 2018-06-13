@@ -24,14 +24,14 @@ OnTouch:
 	if (getd(".start" + strnpcinfo(1)) == 0) {
 		setd ".start" + strnpcinfo(1), 1;
 		initnpctimer;
-		mapannounce strnpcinfo(4), "[Tip] VocÃª pode mover para o ponto desejado clicando no chÃ£o com o botÃ£o esquerdo do mouse.", bc_map,0xFF0000;
+		mapannounce strnpcinfo(4), "[Dica] Você pode mover para o ponto desejado clicando no chão com o botão esquerdo do mouse.", bc_map,0x008B8B;
 	}
 	end;
 OnTimer9000:
-	mapannounce strnpcinfo(4), "[Tip] Mantendo pressionado o botÃ£o direito do mouse, arraste para girar a tela.", bc_map,0xFF0000;
+	mapannounce strnpcinfo(4), "[Dica] Mantendo pressionado o botão direito do mouse, arraste para girar a tela.", bc_map,0x008B8B;
 	end;
 OnTimer18000:
-	mapannounce strnpcinfo(4), "[Tip] VocÃª pode sair atravÃ©s do portÃ£o azulado.", bc_map,0xFF0000;
+	mapannounce strnpcinfo(4), "[Dica] Você pode sair através do portal azul.", bc_map,0x008B8B;
 	emotion ET_SURPRISE, getnpcid(0, "#room_out" + replacestr( strnpcinfo(4), "iz_int", "" ));
 	end;
 OnTimer21000:
@@ -41,7 +41,7 @@ OnTimer24000:
 	emotion ET_SURPRISE, getnpcid(0, "#room_out" + replacestr( strnpcinfo(4), "iz_int", "" ));
 	end;
 OnTimer27000:
-	mapannounce strnpcinfo(4), "[Tip] Deixe esta Ã¡rea para continuar.", bc_map,0xFF0000;
+	mapannounce strnpcinfo(4), "[Dica] Deixe esta área para continuar.", bc_map,0x008B8B;
 	stopnpctimer;
 	setd ".start" + strnpcinfo(1), 0;
 	end;
@@ -95,31 +95,31 @@ iz_int,56,32,3	script	Espadachim Ferido#intro_npc02_iz_int	HIDDEN_WARP_NPC,{
 	if (isbegin_quest(21001) == 0) {
 		mes "[Ferido]";
 		mes "Uau! Muito obrigado!";
-		mes "Eu nÃ£o sei como isso aconteceu com o nosso navio";
-		mes "mas devemos ir ver o capitÃ£o.";
+		mes "Eu não sei como isso aconteceu com o nosso navio";
+		mes "mas devemos ir ver o capitão.";
 		next;
 		mes "[Ferido]";
-		mes "... ohh, parece que meu corpo estÃ¡ muito machucado.";
-		mes "Talvez vocÃª possa ir sem mim?";
+		mes "... ohh, parece que meu corpo está muito machucado.";
+		mes "Talvez você possa ir sem mim?";
 		setquest 21001;
 		next;
 		cutin "tutorial02",4;
-		mes "^4d4dff!- InformaÃ§Ã£o -!^00000";
+		mes "^4d4dff!- Informação -!^00000";
 		mes "Quest Recebida.";
 	}
 	else {
 		mes "[Ferido]";
-		mes "Felizmente a Ã¡gua nÃ£o entrou no navio.";
-		mes "Vou esperar aqui, vocÃª deveria ir ver o capitÃ£o.";
+		mes "Felizmente a água não entrou no navio.";
+		mes "Vou esperar aqui, você deveria ir ver o capitão.";
 		next;
 		mes "[Ferido]";
 		mes "Estou bem! Estou bem!";
-		mes "NÃ£o se preocupe comigo, vocÃª realmente deveria ir ao capitÃ£o!";
+		mes "Não se preocupe comigo, você realmente deveria ir ao capitão!";
 		next;
-		mes "^4d4dff!- InformaÃ§Ã£o -!^000000";
+		mes "^4d4dff!- Informação -!^000000";
 	}
-	mes "^4d4dffO atalho para inforaÃ§Ãµes sobre QUEST'S Ã© Alt + U^000000";
-	mes "VocÃª pode verificar o seu status de busca lÃ¡ a qualquer momento.";
+	mes "^4d4dffO atalho para inforações sobre QUEST'S é Alt + U^000000";
+	mes "Você pode verificar o seu status de busca lá a qualquer momento.";
 	close2;
 	cutin "",255;
 	end;
@@ -133,42 +133,42 @@ iz_int02,56,32,3	duplicate(Espadachim Ferido#intro_npc02_iz_int)	Espadachim Feri
 iz_int03,56,32,3	duplicate(Espadachim Ferido#intro_npc02_iz_int)	Espadachim Ferido#intro_npc02_iz_int03	HIDDEN_WARP_NPC
 iz_int04,56,32,3	duplicate(Espadachim Ferido#intro_npc02_iz_int)	Espadachim Ferido#intro_npc02_iz_int04	HIDDEN_WARP_NPC
 
-// - CapitÃ£o Carocc (Ship)
+// - Capitão Carocc (Ship)
 // -----------------------------------------------------------------------------
-int_land,78,103,5	script	CapitÃ£o Carocc#intro_npc03	4_M_REINDEER,{
+int_land,78,103,5	script	Capitão Carocc#intro_npc03	4_M_REINDEER,{
 	switch( isbegin_quest(21008) ) {
 	case 0:
-		mes "[CapitÃ£o Carocc]";
-		mes "Ainda hÃ¡ pessoas nas cabines?!";
-		mes "Pelo menos vocÃª estÃ¡ seguro.";
-		mes "VocÃª estÃ¡ bem?";
+		mes "[Capitão Carocc]";
+		mes "Ainda há pessoas nas cabines?!";
+		mes "Pelo menos você está seguro.";
+		mes "Você está bem?";
 		next;
-		if (select("Estou bem, mas outros precisam de ajuda", "Eu acho que sou o Ãºltimo?") == 1) {
-			mes "[CapitÃ£o Carocc]";
-			mes "HÃ¡ mais pessoas sobrando?";
+		if (select("Estou bem, mas outros precisam de ajuda", "Eu acho que sou o último?") == 1) {
+			mes "[Capitão Carocc]";
+			mes "Há mais pessoas sobrando?";
 			mes "Vou mandar uma equipe de resgate para eles.";
-			mes "Obrigado pelo seu relatÃ³rio.";
+			mes "Obrigado pelo seu relatório.";
 		} else {
-			mes "[CapitÃ£o Carocc]";
-			mes "Tudo bem, isso Ã© bom.";
-			mes "A tempestade chegou inesperadamente, mas eu nunca pensei que isso iria nos atingir tÃ£o forte.";
+			mes "[Capitão Carocc]";
+			mes "Tudo bem, isso é bom.";
+			mes "A tempestade chegou inesperadamente, mas eu nunca pensei que isso iria nos atingir tão forte.";
 		}
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Pelo menos a maioria das pessoas chegou em seguranÃ§a.";
+		mes "[Capitão Carocc]";
+		mes "Pelo menos a maioria das pessoas chegou em segurança.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Olhe para as Ã¡rvores lÃ¡, ^4d4dffsiga para o sudoeste^000000 para encontrar um novo navio.";
-		mes "O navio irÃ¡ levÃ¡-lo para ^4d4dffIzlude^000000, nosso destino original.";
+		mes "[Capitão Carocc]";
+		mes "Olhe para as árvores lá, ^4d4dffsiga para o sudoeste^000000 para encontrar um novo navio.";
+		mes "O navio irá levá-lo para ^4d4dffIzlude^000000, nosso destino original.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Ah! Falando nisso, aqueles ^4d4dffPorings^000000 nesta ilha derrubam vÃ¡rios itens que poderÃ­amos usar para reparos.";
+		mes "[Capitão Carocc]";
+		mes "Ah! Falando nisso, aqueles ^4d4dffPorings^000000 nesta ilha derrubam vários itens que poderíamos usar para reparos.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "^4d4dffMate os Porings e traga 2 Lumbers para a tripulaÃ§Ã£o do sul^000000.";
+		mes "[Capitão Carocc]";
+		mes "^4d4dffMate os Porings e traga 2 troncos para a tripulação do sul^000000.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Ã‰ uma tarefa difÃ­cil, mas vocÃª parece forte o suficiente.";
+		mes "[Capitão Carocc]";
+		mes "É uma tarefa difícil, mas você parece forte o suficiente.";
 		specialeffect2 EF_HEAL2;
 		heal 9999,0;
 		skilleffect 34,0;
@@ -181,28 +181,28 @@ int_land,78,103,5	script	CapitÃ£o Carocc#intro_npc03	4_M_REINDEER,{
 		}
 		setquest 21008;
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Por falar em Porings, vocÃª tem que equipar seus equipamentos.";
-		mes "VocÃª deve ter umz ^4d4dffarma e uma armadura^000000 equipada.";
+		mes "[Capitão Carocc]";
+		mes "Por falar em Porings, você tem que equipar seus equipamentos.";
+		mes "Você deve ter umz ^4d4dffarma e uma armadura^000000 equipada.";
 		next;
 		cutin "tutorial03",4;
-		mes "! - InformaÃ§Ã£o -!";
-		mes "^4d4dffVocÃª pode equipar equipamentos ou usar itens simplesmente clicando duas vezes neles.";
-		mes "A janela de itens pode ser aberta pressionando Alt + E ou usando o botÃ£o de menu.^000000";
+		mes "! - Informação -!";
+		mes "^4d4dffVocê pode equipar equipamentos ou usar itens simplesmente clicando duas vezes neles.";
+		mes "A janela de itens pode ser aberta pressionando Alt + E ou usando o botão de menu.^000000";
 		next;
-		mes "! - InformaÃ§Ã£o -!";
+		mes "! - Informação -!";
 		mes "^4d4dffItens equipados podem ser vistos pressionando Alt + Q.";
 		mes "Clique duas vezes ou arraste e solte para equipar ou desequipar.^000000";
 
 		next;
 		cutin "",255;
-		mes "[CapitÃ£o Carlock]";
-		mes "VocÃª verificou todo o seu equipamento?";
+		mes "[Capitão Carocc]";
+		mes "Você verificou todo o seu equipamento?";
 		mes "^4d4dffOs pontos de Atributos^000000 devem ser adicionadas.";
 		next;
-		mes "[CapitÃ£o Carlock]";
-		mes "Para uma batalha suave, vocÃª tem que distribuir seus pontos de artibutos corretamente.";
-		mes "^4d4dffSe vocÃª quiser aumentar sua forÃ§a, vocÃª precisa aumentar o STR^000000.^4d4dffSe vocÃª quiser aumentar seu acerto, vocÃª deve aumentar DES^000000.";
+		mes "[Capitão Carocc]";
+		mes "Para uma batalha suave, você tem que distribuir seus pontos de artibutos corretamente.";
+		mes "^4d4dffSe você quiser aumentar sua força, você precisa aumentar o STR^000000.^4d4dffSe você quiser aumentar seu acerto, você deve aumentar DES^000000.";
 		break;
 	case 1:
 		mes "[Captain Carocc]";
@@ -212,28 +212,28 @@ int_land,78,103,5	script	CapitÃ£o Carocc#intro_npc03	4_M_REINDEER,{
 		sc_start SC_BLESSING,240000,10;
 		skilleffect 29,0;
 		sc_start SC_INCREASEAGI,240000,10;
-		mes "^4d4dffA Nave^000000 estÃ¡ ancorada no sudoeste. Ela levarÃ¡ vocÃª para Izlude.";
-		mes "NÃ£o esqueÃ§a de ^4d4dffcoletar algumas Madeiras Serradas^000000 para o navio.";
+		mes "^4d4dffO Navio^000000 está ancorada no sudoeste. Ela levará você para Izlude.";
+		mes "Não esqueça de ^4d4dffcoletar algumas Madeiras Serradas^000000 para o navio.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "NÃ£o esqueÃ§a de aumentar suas ^4d4dffHabilidades^000000.";
+		mes "[Capitão Carocc]";
+		mes "Não esqueça de aumentar suas ^4d4dffHabilidades^000000.";
 		break;
 	case 2:
-		mes "[CapitÃ£o Carocc]";
-		mes "Tudo estÃ¡ pronto para navegar atÃ© Izlude.";
-		mes "O navio estÃ¡ localizado na parte sudoeste da ilha.";
+		mes "[Capitão Carocc]";
+		mes "Tudo está pronto para navegar até Izlude.";
+		mes "O navio está localizado na parte sudoeste da ilha.";
 		close;
 	}
 	next;
-	mes "!- InformaÃ§Ã£o -!";
-	mes "^4d4dffVocÃª recebe um bÃ´nus de atribtos para cada nÃ­vel que vocÃª aumenta.";
+	mes "!- Informação -!";
+	mes "^4d4dffVocê recebe um bônus de atribtos para cada nível que você aumenta.";
 	mes "A janela de status pode ser aberta e fechada com o atalho Alt + A ^000000.";
 	next;
-	mes "!- InformaÃ§Ã£o -!";
-	mes "^4d4dffPor favor coloque corretamente os pontos de atributos que vocÃª precisa para batalhar^000000.";
+	mes "!- Informação -!";
+	mes "^4d4dffPor favor coloque corretamente os pontos de atributos que você precisa para batalhar^000000.";
 	next;
-	mes "[CapitÃ£o Carocc]";
-	mes "Mate Porings e traga a Madeira para a tripulaÃ§Ã£o.";
+	mes "[Capitão Carocc]";
+	mes "Mate Porings e traga a Madeira para a tripulação.";
 	mes "Boa sorte!";
 	close;
 
@@ -242,10 +242,10 @@ OnInit:
 	end;
 }
 
-int_land01,78,103,5	duplicate(CapitÃ£o Carocc#intro_npc03)	CapitÃ£o Carocc#intro_npc03_01	4_M_REINDEER
-int_land02,78,103,5	duplicate(CapitÃ£o Carocc#intro_npc03)	CapitÃ£o Carocc#intro_npc03_02	4_M_REINDEER
-int_land03,78,103,5	duplicate(CapitÃ£o Carocc#intro_npc03)	CapitÃ£o Carocc#intro_npc03_03	4_M_REINDEER
-int_land04,78,103,5	duplicate(CapitÃ£o Carocc#intro_npc03)	CapitÃ£o Carocc#intro_npc03_04	4_M_REINDEER
+int_land01,78,103,5	duplicate(Capitão Carocc#intro_npc03)	Capitão Carocc#intro_npc03_01	4_M_REINDEER
+int_land02,78,103,5	duplicate(Capitão Carocc#intro_npc03)	Capitão Carocc#intro_npc03_02	4_M_REINDEER
+int_land03,78,103,5	duplicate(Capitão Carocc#intro_npc03)	Capitão Carocc#intro_npc03_03	4_M_REINDEER
+int_land04,78,103,5	duplicate(Capitão Carocc#intro_npc03)	Capitão Carocc#intro_npc03_04	4_M_REINDEER
 
 //== Lumin (int_land) ==========================================
 int_land,73,100,3	script	Lumin#new_ship	4_M_NOV_RUMIN,{
@@ -256,32 +256,32 @@ int_land,73,100,3	script	Lumin#new_ship	4_M_NOV_RUMIN,{
 		mes "..?";
 		next;
 		cutin "fly_trock.bmp", 2;
-		mes "[CapitÃ£o Carocc]";
+		mes "[Capitão Carocc]";
 		mes "Teve um bom sonho?";
-		mes "Logo, chegaremos a Izlude. E vocÃª pode conversar com outras pessoas como vocÃª que acabaram de falar comigo.";
+		mes "Logo, chegaremos a Izlude. E você pode conversar com outras pessoas como você que acabaram de falar comigo.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Eu acho que aquele cara ali perdeu a memÃ³ria. Eu dei a ele um novo nome.";
+		mes "[Capitão Carocc]";
+		mes "Eu acho que aquele cara ali perdeu a memória. Eu dei a ele um novo nome.";
 		mes "Lumin.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Muitos jovens visitam o ^4d4dffReino de Rune-Midgarts^000000 para perseguir seus sonhos.";
-		mes "Izlude Ã© uma cidade satÃ©lite de Prontera, a capital do Reino de Rune-Midgard.";
+		mes "[Capitão Carocc]";
+		mes "Muitos jovens visitam o ^4d4dffReino de Rune-Midgard^000000 para seguir com seus sonhos.";
+		mes "Izlude é uma cidade satélite de Prontera, a capital do Reino de Rune-Midgard.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Izlude sempre recebe jovens aventureiros como vocÃª que acabaram de iniciar sua jornada pelo mundo.";
-		mes "VocÃª Ã© um deles, Ã© claro.";
+		mes "[Capitão Carocc]";
+		mes "Izlude sempre recebe jovens aventureiros como você que acabaram de iniciar sua jornada pelo mundo.";
+		mes "Você é um deles, é claro.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Eu gostaria de contar mais histÃ³rias, mas Ã© hora de se preparar para a chegada.";
-		mes "HÃ¡ uma academia em Izlude para recÃ©m-chegados como vocÃª.";
+		mes "[Capitão Carocc]";
+		mes "Eu gostaria de contar mais histórias, mas é hora de se preparar para a chegada.";
+		mes "Há uma academia em Izlude para recém-chegados como você.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Deixe-me dar mais detalhes mais tarde. Vejo vocÃª de volta ao convÃ©s do porto.";
+		mes "[Capitão Carocc]";
+		mes "Deixe-me dar mais detalhes mais tarde. Vejo você de volta ao convés do porto.";
 		next;
-		mes "[CapitÃ£o Carocc]";
-		mes "Para sair desta nave, vocÃª deve entrar no ^4d4dffPortal Brilhante^000000 por lÃ¡.";
-		mes "Todo o transporte Ã© feito atravÃ©s dos portais.";
+		mes "[Capitão Carocc]";
+		mes "Para sair desta nave, você deve entrar no ^4d4dffPortal Brilhante^000000 por lá.";
+		mes "Todo o transporte é feito através dos portais.";
 		setquest 7471;
 		completequest 7471;
 		next;
@@ -289,11 +289,11 @@ int_land,73,100,3	script	Lumin#new_ship	4_M_NOV_RUMIN,{
 		mes "[Lumin]";
 		mes "Sim.";
 		next;
-		classchange HIDDEN_WARP_NPC,"", bc_self; // todo: mudanÃ§a de classe permanece no mapa
+		classchange HIDDEN_WARP_NPC,"", bc_self; // todo: mudança de classe permanece no mapa
 		cutin "fly_trock.bmp", 2;
-		mes "[CapitÃ£o Carocc]";
+		mes "[Capitão Carocc]";
 		mes "Oh garoto.";
-		mes "Que reaÃ§Ã£o fofa.";
+		mes "Que reação fofa.";
 		close2;
 		cutin "", 255;
 		end;
@@ -302,7 +302,7 @@ int_land,73,100,3	script	Lumin#new_ship	4_M_NOV_RUMIN,{
 	mes "[Lumin]";
 	mes ".....";
 	next;
-	select("Devo me apresentar?", "Meu nome Ã©~!");
+	select("Devo me apresentar?", "Meu nome é~!");
 	mes "[" + strcharinfo(0) + "]";
 	mes "Eu sou" + strcharinfo(0) + "!";
 	next;
@@ -311,17 +311,17 @@ int_land,73,100,3	script	Lumin#new_ship	4_M_NOV_RUMIN,{
 	next;
 	mes "[Lu]";
 	mes ".....";
-	mes "....EntÃ£o?";
+	mes "....Então?";
 	next;
-	classchange HIDDEN_WARP_NPC,"", bc_self; // todo: mudanÃ§a de classe permanece no mapa
-	mes "-Lu apenas se afastou com um olhar cÃ­nico no rosto.";
+	classchange HIDDEN_WARP_NPC,"", bc_self; // todo: mudança de classe permanece no mapa
+	mes "-Lu apenas se afastou com um olhar cínico no rosto.";
 	next;
 	cutin "fly_trock.bmp", 2;
-	mes "[CapitÃ£o Carocc]";
-	mes "Parece que... ele tem uma personalidade tÃ­mida.";
-	mes "Quando vocÃª for a Izlude, vocÃª vai checÃ¡-lo?";
+	mes "[Capitão Carocc]";
+	mes "Parece que... ele tem uma personalidade tímida.";
+	mes "Quando você for a Izlude, você vai checá-lo?";
 	next;
-	mes "[CapitÃ£o Carocc]";
+	mes "[Capitão Carocc]";
 	mes "De agora em diante eu estarei navegando pela ilha.";
 	mes "Vamos, vamos?";
 	close2;
@@ -342,42 +342,42 @@ int_land,58,69,5	script	Marinheiro#intro_npc04	4W_SAILOR,{
 	if (isbegin_quest(21008) == 1) {
 		if (countitem(6008) < 2) {
 			mes "[Marinheiro]";
-			mes "Esses Porings roubaram meus materiais para consertar o navio. VocÃª pode me ajudar a recuperÃ¡-los?";
-			mes "HÃ¡ muitos Porings nesta ilha.";
+			mes "Esses Porings roubaram meus materiais para consertar o navio. Você pode me ajudar a recuperá-los?";
+			mes "Há muitos Porings nesta ilha.";
 			next;
 			mes "[Marinheiro]";
-			mes "Eu realmente aprecio se vocÃª me ajudar.";
-			mes "Eu nÃ£o tenho permissÃ£o para pisar nesta ilha.";
-			mes "Ã‰ por isso que peÃ§o sua ajuda ~";
+			mes "Eu realmente aprecio se você me ajudar.";
+			mes "Eu não tenho permissão para pisar nesta ilha.";
+			mes "É por isso que peço sua ajuda ~";
 			close;
 		}
 		mes "[Marinheiro]";
-		mes "InacreditÃ¡vel, perfeito! Alguma chance de vocÃª querer se juntar Ã  minha equipe?";
+		mes "Inacreditável, perfeito! Alguma chance de você querer se juntar à minha equipe?";
 		mes "Chega de falar !!";
 		mes "Vamos, estamos prontos para navegar!";
 		mes "Muito obrigado!";
 		next;
 		mes "[Marinheiro]";
-		mes "Se vocÃª quiser navegar conosco atÃ© Izlude, pule a bordo!";
+		mes "Se você quiser navegar conosco até Izlude, pule a bordo!";
 		delitem 6008,2;
 		getexp 100,100;
 		getitem 611,5;
 		completequest 21008;
 		next;
 		mes "[Marinheiro]";
-		mes "Ah, e pegue estes ^ 4d4dffMagnificadores ^ 000000.";
-		mes "Quando vocÃª caÃ§ar monstros, vocÃª pode encontrar ^ 4d4dos itens nÃ£o identificados ^ 000000.";
+		mes "Ah, e pegue estas ^4d4dffLupas^000000.";
+		mes "Quando você caçar monstros, você pode encontrar ^4d4dffitens não identificados^000000.";
 		next;
 		mes "[Marinheiro]";
-		mes "Usar uma Lupa identificarÃ¡ o item.";
+		mes "Usar uma Lupa identificará o item.";
 		next;
 		mes "[Marinheiro]";
-		mes "Talvez vocÃª jÃ¡ tenha alguns itens nÃ£o identificados de suas lutas com os Porings?";
+		mes "Talvez você já tenha alguns itens não identificados de suas lutas com os Porings?";
 		close;
 	}
 	mes "[Marinheiro]";
-	mes "O navio estÃ¡ indo para Izlude em breve~!";
-	mes "Eu vou deixar vocÃª saber quando nÃ³s partirmos~!";
+	mes "O navio está indo para Izlude em breve~!";
+	mes "Eu vou deixar você saber quando nós partirmos~!";
 	close;
 
 OnInit:
@@ -391,298 +391,298 @@ int_land02,58,69,5	duplicate(Marinheiro#intro_npc04)	Marinheiro#intro_npc04_02	4
 int_land03,58,69,5	duplicate(Marinheiro#intro_npc04)	Marinheiro#intro_npc04_03	4W_SAILOR
 int_land04,58,69,5	duplicate(Marinheiro#intro_npc04)	Marinheiro#intro_npc04_04	4W_SAILOR
 
-// - CapitÃ£o Carocc
+// - Capitão Carocc
 // -----------------------------------------------------------------------------
-izlude,198,213,3	script	CapitÃ£o Carocc#iz	4_M_REINDEER,5,5,{
+izlude,198,213,3	script	Capitão Carocc#iz	4_M_REINDEER,5,5,{
 	cutin "fly_trock.bmp", 2;
 	if (Class == Job_Novice && BaseLevel < 15) {
 		if (isbegin_quest(4269) == 2) {
 			if (isbegin_quest(7471) == 2 || isbegin_quest(7472) > 0) {
 				mes "[Carocc]";
 				mes "Oh," + strcharinfo (0) + "!";
-				mes "Por que vocÃª estÃ¡ aqui no cais?";
-				mes "Eu acho que vocÃª estÃ¡ indo bem na academia.";
+				mes "Por que você está aqui no cais?";
+				mes "Eu acho que você está indo bem na academia.";
 				next;
 				mes "[Carocc]";
 				mes "Eu vou estar atracando e consertando o navio aqui por um tempo.";
 				mes "Eu vou tomar o mesmo caminho que eu tentei antes.";
 			} else {
 				mes "[Carocc]";
-				mes "Hmm? VocÃª deve ser um estudante da Academia Criatura?";
-				mes "VocÃª estava no meu navio?";
-				mes "Hmm, nÃ£o consigo me lembrar.";
+				mes "Hmm? Você deve ser um estudante da Academia Criatura?";
+				mes "Você estava no meu navio?";
+				mes "Hmm, não consigo me lembrar.";
 				next;
 				mes "[Carocc]";
-				mes "Bem, tudo estÃ¡ bem.";
-				mes "Devo ser fÃ¡cil com vocÃª desde que vocÃª disse que era estudante da Academia?";
-				mes "Eu ainda sou o capitÃ£o do navio, independente disso.";
+				mes "Bem, tudo está bem.";
+				mes "Devo ser fácil com você desde que você disse que era estudante da Academia?";
+				mes "Eu ainda sou o capitão do navio, independente disso.";
 			}
 			next;
 			mes "[Carocc]";
 			mes "Eu planejo decolar assim que os reparos estiverem completos.";
-			mes "A rota serÃ¡ aberta com ^4d4dffPharos Lighthouse^000000 atÃ© lÃ¡.";
+			mes "A rota será aberta com ^4d4dffPharos Lighthouse^000000 até lá.";
 		} else {
 			if (isbegin_quest(7471) == 2) {
 				if (!isbegin_quest(7472)) {
 					mes "[Carocc]";
-					mes "Isso Ã© Izlude.";
-					mes "A melhor cidade para vocÃª ter asas para seus sonhos.";
+					mes "Isso é Izlude.";
+					mes "A melhor cidade para você ter asas para seus sonhos.";
 					next;
 					mes "[Carocc]";
-					mes "Embora eu nÃ£o tenha nenhum sentimento especial por vocÃª,";
-					mes "Eu vi muitos jovens como vocÃª, enquanto navegava por esses mares.";
+					mes "Embora eu não tenha nenhum sentimento especial por você,";
+					mes "Eu vi muitos jovens como você, enquanto navegava por esses mares.";
 					next;
 					mes "[Carocc]";
 					mes "Havia aqueles entre eles que tiveram sucesso e falharam e voltaram depois de serem incapazes de se ajustar.";
-					mes "Eu quero que vocÃª tenha um bom comeÃ§o com este lugar.";
+					mes "Eu quero que você tenha um bom começo com este lugar.";
 					next;
 					mes "[Carocc]";
-					mes "VocÃª sabia disso?";
-					mes "Izlude tem um novo instituto para aventureiros iniciantes como vocÃª!";
+					mes "Você sabia disso?";
+					mes "Izlude tem um novo instituto para aventureiros iniciantes como você!";
 					next;
-					select ("VocÃª quer dizer a Academia?");
+					select ("Você quer dizer a Academia?");
 					mes "[Carocc]";
-					mes "Sim! Chama-se ^ 4d4dffFerramenta de CriaÃ§Ã£o Real ^ 000000.";
+					mes "Sim! Chama-se ^4d4dffFerramenta de Criação Real^000000.";
 					mes "Fundada pela linhagem Rune Midgard para ajudar novos aventureiros.";
 					next;
 					mes "[Carocc]";
-					mes "Um amigo meu trabalha lÃ¡, entÃ£o eu vou te dar a introduÃ§Ã£o para ele.";
-					mes "Ele poderia tornar muitas coisas mais fÃ¡ceis para vocÃª.";
+					mes "Um amigo meu trabalha lá, então eu vou te dar a introdução para ele.";
+					mes "Ele poderia tornar muitas coisas mais fáceis para você.";
 					next;
 					mes "[Carocc]";
 					mes "Ele geralmente fala com novos aventureiros perto da entrada da academia.";
-					mes "VÃ¡ e encontre-o lÃ¡.";
+					mes "Vá e encontre-o lá.";
 					next;
 					if (!isbegin_quest(7473)) {
 						mes "[Carocc]";
-						mes "O nome dele Ã© ^ 4d4dffHun ^ 000000";
-						mes "Eu vou marcar o seu lugar no mapa entÃ£o vÃ¡ vÃª-lo.";
+						mes "O nome dele é ^4d4dffHun^000000";
+						mes "Eu vou marcar o seu lugar no mapa então vá vê-lo.";
 						setquest 7472;
 						viewpoint 1,122,207,0,0x4d4dff;
 						next;
-						mes "! - InformaÃ§Ã£o -!";
-						mes "O mapa ^ 4d4dffMini pode ser visto na parte superior direita da tela.";
-						mes "VocÃª pode aumentar o zoom com +, diminuir o zoom com -. O waypoint do NPC serÃ¡ marcado nele. ^ 000000";
+						mes "! - Informação -!";
+						mes "O mapa ^4d4dffMini pode ser visto na parte superior direita da tela.";
+						mes "Você pode aumentar o zoom com +, diminuir o zoom com -. O waypoint do NPC será marcado nele.^000000";
 						next;
 						cutin "tutorial02.bmp", 4;
-						mes "! - InformaÃ§Ã£o -!";
-						mes "Recebi uma missÃ£o de ^ 4d4dffCaptain Carocc.";
-						mes "O conteÃºdo da missÃ£o pode ser verificado na janela da missÃ£o.";
+						mes "! - Informação -!";
+						mes "Recebi uma missão de ^4d4dffCapitão Carocc.";
+						mes "O conteúdo da missão pode ser verificado na janela da missão.";
 						next;
-						mes "! - InformaÃ§Ã£o -!";
-						mes "A janela da missÃ£o pode ser aberta pressionando ^ 4d4dffAlt + u ^ 000000 chaves juntas.";
+						mes "! - Informação -!";
+						mes "A janela da missão pode ser aberta pressionando ^4d4dffAlt + u^000000 chaves juntas.";
 						next;
 						cutin "", 255;
 						mes "[Carocc]";
-						mes "Se vocÃª precisar de mais ajuda com o mapa, pressione <NAVI> [Hun] <INFO> izlude, 122,207 </ INFO> </ NAVI> aqui";
+						mes "Se você precisar de mais ajuda com o mapa, pressione <NAVI>[Hun]<INFO> zlude, 22,207</INFO></NAVI> aqui";
 						mes "Sim, a parte que diz 'Hun'.";
 						next;
-						mes "! - InformaÃ§Ã£o -!";
-						mes "^ 4d4dffO Ã­cone durante a conversa <NAVI> [Hun] <INFO> izlude, 122,207 </ INFO> </ NAVI> significa um link para as direÃ§Ãµes de navegaÃ§Ã£o.";
+						mes "! - Informação -!";
+						mes "^ 4d4dffO ícone durante a conversa <NAVI>[Hun]<INFO>izlude,122,207</INFO></NAVI> significa um link para as direções de navegação.";
 						cutin "navi01.bmp", 4;
 						next;
-						mes "! - InformaÃ§Ã£o -!";
-						mes "Se vocÃª pressionar info depois de selecionar uma tarefa nos objetivos ^ 4d4dff,";
-						mes "uma seta apontando para a localizaÃ§Ã£o do objetivo aparecerÃ¡ junto com a ajuda de navegaÃ§Ã£o.";
+						mes "! - Informação -!";
+						mes "Se você pressionar info depois de selecionar uma tarefa nos objetivos ^ 4d4dff,";
+						mes "uma seta apontando para a localização do objetivo aparecerá junto com a ajuda de navegação.";
 						cutin "navi02.bmp", 4;
 						next;
 						cutin "", 255;
 						mes "[Carocc]";
-						mes "De qualquer forma, meu amigo ajudarÃ¡ vocÃª a se registrar na academia";
-						mes "Espero que possa ajudÃ¡-lo em seu futuro.";
+						mes "De qualquer forma, meu amigo ajudará você a se registrar na academia";
+						mes "Espero que possa ajudá-lo em seu futuro.";
 						close;
 					} else {
-						select("Eu sei de quem vocÃª estÃ¡ falando");
+						select("Eu sei de quem você está falando");
 						mes "[Carocc]";
-						mes "EntÃ£o nÃ£o hÃ¡ preocupaÃ§Ã£o.";
-						mes "Ele te apresentarÃ¡ para a academia.";
+						mes "Então não há preocupação.";
+						mes "Ele te apresentará para a academia.";
 						next;
 						mes "[Carocc]";
-						mes "OK. Eu vou te mostrar a direÃ§Ã£o. VocÃª tenta de novo.";
-						mes "A propÃ³sito, eu te disse o nome dele? O nome dele Ã© ^ 4d4dffHun ^ 000000";
+						mes "OK. Eu vou te mostrar a direção. Você tenta de novo.";
+						mes "A propósito, eu te disse o nome dele? O nome dele é ^4d4dffHun^000000";
 						viewpoint 1,122,207,1,0x4d4dff;
 						next;
-						mes "! - InformaÃ§Ã£o -!";
-						mes "^ 4d4dff O mini mapa pode ser visto no canto superior direito da tela.";
-						mes "VocÃª pode aumentar o zoom com +, diminuir o zoom com -. O waypoint do NPC serÃ¡ marcado nele. ^ 000000";
+						mes "! - Informação -!";
+						mes "^4d4dff O mini mapa pode ser visto no canto superior direito da tela.";
+						mes "Você pode aumentar o zoom com +, diminuir o zoom com -. O waypoint do NPC será marcado nele. ^000000";
 						next;
 						mes "[Carocc]";
-						mes "Se vocÃª precisar de mais ajuda com o mapa, pressione <NAVI>[Hun]<INFO>izlude,122,207</INFO></NAVI> aqui";
+						mes "Se você precisar de mais ajuda com o mapa, pressione <NAVI>[Hun]<INFO>izlude,122,207</INFO></NAVI> aqui";
 						mes "Sim, a parte que diz [Hun].";
 						next;
-						mes "!- InformaÃ§Ã£o -!";
-						mes "^4d4dff o Ã­cone durante a conversa <NAVI>[Hun]<INFO>izlude,122,207</ INFO></NAVI> significa";
-						mes "um link para direÃ§Ãµes de navegaÃ§Ã£o.";
+						mes "!- Informação -!";
+						mes "^4d4dff o ícone durante a conversa <NAVI>[Hun]<INFO>izlude,122,207</INFO></NAVI> significa";
+						mes "um link para direções de navegação.";
 						cutin "navi01.bmp", 4;
 						next;
-						mes "!- InformaÃ§Ã£o -!";
-						mes "Se vocÃª pressionar info depois de selecionar uma tarefa nos objetivos ^ 4d4dff,";
-						mes "uma seta apontando para a localizaÃ§Ã£o do objetivo aparecerÃ¡ junto com a ajuda de navegaÃ§Ã£o";
+						mes "!- Informação -!";
+						mes "Se você pressionar info depois de selecionar uma tarefa nos objetivos ^4d4dff,";
+						mes "uma seta apontando para a localização do objetivo aparecerá junto com a ajuda de navegação";
 						cutin "navi02.bmp", 4;
 						next;
 						cutin "", 255;
 						mes "[Carocc]";
-						mes "De qualquer forma, meu amigo ajudarÃ¡ vocÃª a se registrar na academia";
+						mes "De qualquer forma, meu amigo ajudará você a se registrar na academia";
 						mes "Eu espero que isso te ajude em sua jornada";
 						close;
 					}
 				} else if (isbegin_quest(7472) == 1) {
 					mes "[Carocc]";
-					mes "Se vocÃª quiser, vocÃª pode avanÃ§ar para o mundo imediatamente.";
-					mes "No entanto, eu recomendo que vocÃª visite a Academia primeiro.";
+					mes "Se você quiser, você pode avançar para o mundo imediatamente.";
+					mes "No entanto, eu recomendo que você visite a Academia primeiro.";
 					next;
 					mes "[Carocc]";
-					mes "O mundo Ã© um lugar solitÃ¡rio para ficar sozinho.";
-					mes "A Academia tem pessoas que vocÃª pode fazer como companheiros da vida.";
+					mes "O mundo é um lugar solitário para ficar sozinho.";
+					mes "A Academia tem pessoas que você pode fazer como companheiros da vida.";
 					next;
 					mes "[Carocc]";
-					mes "Meu amigo Hun estarÃ¡ por perto da entrada da academia.";
-					mes "Se vocÃª nÃ£o sabe o caminho que eu vou mostrar para vocÃª novamente.";
+					mes "Meu amigo Hun estará por perto da entrada da academia.";
+					mes "Se você não sabe o caminho que eu vou mostrar para você novamente.";
 					viewpoint 1,122,207,0,0x4d4dff;
 					next;
 					mes "[Carocc]";
-					mes "Se vocÃª precisar de mais ajuda com o mapa, pressione <NAVI> [Hun] <INFO> izlude, 122,207 </ INFO> </ NAVI> aqui";
+					mes "Se você precisar de mais ajuda com o mapa, pressione <NAVI>[Hun]<INFO>izlude,122,207</INFO></NAVI> aqui";
 					mes "Sim, a parte que diz '' Hun ''.";
 					next;
-					mes "! - InformaÃ§Ã£o -!";
-					mes "^ 4d4dff o Ã­cone durante a conversa <NAVI> [Hun] <INFO> izlude, 122,207 </ INFO> </ NAVI> significa";
-					mes "um link para direÃ§Ãµes de navegaÃ§Ã£o.";
+					mes "! - Informação -!";
+					mes "^4d4dff o ícone durante a conversa <NAVI>[Hun]<INFO>izlude,122,207</INFO> </NAVI> significa";
+					mes "um link para direções de navegação.";
 					cutin "navi01.bmp", 4;
 					next;
-					mes "! - InformaÃ§Ã£o -!";
-					mes "Se vocÃª pressionar info depois de selecionar uma tarefa nos objetivos ^ 4d4dff,";
-					mes "uma seta apontando para a localizaÃ§Ã£o do objetivo aparecerÃ¡ junto com a ajuda de navegaÃ§Ã£o.";
+					mes "! - Informação -!";
+					mes "Se você pressionar info depois de selecionar uma tarefa nos objetivos ^4d4dff,";
+					mes "uma seta apontando para a localização do objetivo aparecerá junto com a ajuda de navegação.";
 					cutin "navi02.bmp", 4;
 					next;
 					cutin "", 255;
 					mes "[Carocc]";
-					mes "De qualquer forma, meu amigo ajudarÃ¡ vocÃª a se registrar na academia.";
-					mes "Espero que isso ajude vocÃª em sua jornada.";
+					mes "De qualquer forma, meu amigo ajudará você a se registrar na academia.";
+					mes "Espero que isso ajude você em sua jornada.";
 					close;
 				} else {
 					mes "[Carocc]";
 					mes "Oh," + strcharinfo(0) + "!";
-					mes "Ainda estÃ¡ sendo diligente?";
-					mes "Eu tenho estado ocupado tambÃ©m.";
+					mes "Ainda está sendo diligente?";
+					mes "Eu tenho estado ocupado também.";
 					mes "Eu estava consertando o navio.";
 					next;
 					mes "[Carocc]";
 					mes "Vou decolar assim que os reparos estiverem completos.";
-					mes "Naquela Ã©poca, a rota de navegaÃ§Ã£o para ^ 4d4dffPharos lighthouse ^ 000000serÃ¡ aberta.";
+					mes "Naquela época, a rota de navegação para ^4d4dffPharos lighthouse^000000será aberta.";
 					mes "Fique animado com isso.";
 				}
 			} else {
 				if (!isbegin_quest(7472)) {
 					mes "[Carocc]";
-					mes "OlÃ¡?";
-					mes "Ã‰ sua primeira vez em Izlude?";
+					mes "Olá?";
+					mes "É sua primeira vez em Izlude?";
 					next;
-					switch (select ("OlÃ¡?", "Deixe-me entrar na nave!", "Eu nÃ£o sei o que fazer.")) {
+					switch (select ("Olá?", "Deixe-me entrar na nave!", "Eu não sei o que fazer.")) {
 				case 1:
 					mes "[Carocc]";
-					mes "VocÃª parece forte e capaz!";
-					mes "Eu gosto de pessoas capazes como vocÃª!";
-					mes "Sempre seja saudÃ¡vel e forte como vocÃª Ã© agora.";
+					mes "Você parece forte e capaz!";
+					mes "Eu gosto de pessoas capazes como você!";
+					mes "Sempre seja saudável e forte como você é agora.";
 					break;
 				case 2:
 					mes "[Carocc]";
-					mes "Eu costumo viajar para ^ 4d4dffPharos Lighthouse ^ 000000.";
+					mes "Eu costumo viajar para ^4d4dffPharos Lighthouse ^000000.";
 					mes "Mas estou descansando devido a alguns problemas.";
 					next;
 					mes "[Carocc]";
-					mes "Se for Alberta ou Ilha Byalan, fale com o prÃ³ximo marinheiro.";
+					mes "Se for Alberta ou Ilha Byalan, fale com o próximo marinheiro.";
 					break;
 				case 3:
 					mes "[Carocc]";
-					mes "Hmm? VocÃª disse que nÃ£o sabia o que fazer.";
-					mes "JÃ¡ que vocÃª estÃ¡ no Izlude, por que vocÃª nÃ£o visita ^ 4d4dffCriatura Academy ^ 000000?";
+					mes "Hmm? Você disse que não sabia o que fazer.";
+					mes "Já que você está no Izlude, por que você não visita ^4d4dffCriatura Academy ^000000?";
 					next;
 					mes "[Carocc]";
-					mes "Izlude tem o Instituto para receber aventureiros como vocÃª";
-					mes "Um amigo meu trabalha lÃ¡, entÃ£o eu vou te dar a introduÃ§Ã£o para ele.";
+					mes "Izlude tem o Instituto para receber aventureiros como você";
+					mes "Um amigo meu trabalha lá, então eu vou te dar a introdução para ele.";
 					next;
 					mes "[Carocc]";
 					mes "Ele usualmente fala com novos aventureiros perto da entrada de uma academia.";
-					mes "VÃ¡ e encontre-o pessoalmente.";
+					mes "Vá e encontre-o pessoalmente.";
 					next;
 						if (!isbegin_quest(7473)) {
 							mes "[Carocc]";
-							mes "O nome dele Ã© ^ 4d4dffHun ^ 000000";
-							mes "Vou marcar sua localizaÃ§Ã£o no mapa, entÃ£o vÃ¡ vÃª-lo.";
+							mes "O nome dele é ^4d4dffHun ^000000";
+							mes "Vou marcar sua localização no mapa, então vá vê-lo.";
 							setquest 7472;
 							viewpoint 1,122,207,0,0x4d4dff;
 							next;
-							mes "!- InformaÃ§Ã£o -!";
+							mes "!- Informação -!";
 							mes "^ 4d4dff O mini mapa pode ser visto no canto superior direito da tela.";
-							mes "VocÃª pode aumentar o zoom com +, diminuir o zoom com -. O waypoint do NPC serÃ¡ marcado nele. ^ 000000";
+							mes "Você pode aumentar o zoom com +, diminuir o zoom com -. O waypoint do NPC será marcado nele. ^ 000000";
 							next;
-							mes "! - InformaÃ§Ã£o -!";
-							mes "Recebi uma missÃ£o de ^ 4d4dffCaptain Carocc.";
-							mes "O conteÃºdo da sua MissÃ£o pode ser monitorado na janela de informaÃ§Ãµes da Quest.";
+							mes "! - Informação -!";
+							mes "Recebi uma missão de ^4d4dffCaptain Carocc.";
+							mes "O conteúdo da sua Missão pode ser monitorado na janela de informações da Quest.";
 							next;
-							mes "!- InformaÃ§Ã£o -!";
-							mes "A janela da MissÃ£o pode ser aberta pressionando a tecla ^ 4d4dffAlt + u ^ 000000.";
+							mes "!- Informação -!";
+							mes "A janela da Missão pode ser aberta pressionando a tecla ^4d4dffAlt + u^000000.";
 							next;
 							mes "[Carocc]";
-							mes "Se vocÃª precisar de mais ajuda com o mapa, pressione <NAVI> [Hun] <INFO> izlude, 122,207 </ INFO> </ NAVI> aqui";
+							mes "Se você precisar de mais ajuda com o mapa, pressione <NAVI>[Hun]<INFO>izlude,122,207</INFO></NAVI> aqui";
 							mes "Sim, a parte que diz [Hun].";
 							next;
-							mes "! - InformaÃ§Ã£o -!";
-							mes "^ 4d4dff o Ã­cone durante a conversa <NAVI> [Hun] <INFO> izlude, 122,207 </ INFO> </ NAVI> significa";
-							mes "um link para direÃ§Ãµes de navegaÃ§Ã£o.";
+							mes "! - Informação -!";
+							mes "^ 4d4dff o ícone durante a conversa <NAVI>[Hun]<INFO>izlude,122,207</INFO></NAVI> significa";
+							mes "um link para direções de navegação.";
 							cutin "navi01.bmp", 4;
 							next;
-							mes "! - InformaÃ§Ã£o -!";
-							mes "Se vocÃª pressionar info depois de selecionar uma tarefa nos objetivos ^ 4d4dff,";
-							mes "uma seta apontando para a localizaÃ§Ã£o do objetivo aparecerÃ¡ junto com a ajuda de navegaÃ§Ã£o";
+							mes "! - Informação -!";
+							mes "Se você pressionar info depois de selecionar uma tarefa nos objetivos ^ 4d4dff,";
+							mes "uma seta apontando para a localização do objetivo aparecerá junto com a ajuda de navegação";
 							cutin "navi02.bmp", 4;
 							next;
 							cutin "", 255;
 							mes "[Carocc]";
-							mes "De qualquer forma, meu amigo ajudarÃ¡ vocÃª a se registrar na academia";
+							mes "De qualquer forma, meu amigo ajudará você a se registrar na academia";
 							mes "Eu espero que isso te ajude em sua jornada";
 							close;
 						} else {
-							select("Eu sei de quem vocÃª estÃ¡ falando.");
+							select("Eu sei de quem você está falando.");
 							mes "[Carocc]";
-							mes "EntÃ£o nÃ£o hÃ¡ preocupaÃ§Ã£o.";
-							mes "Ele te apresentarÃ¡ para a academia.";
+							mes "Então não há preocupação.";
+							mes "Ele te apresentará para a academia.";
 							next;
 							mes "[Carocc]";
-							mes "OK. Eu vou te mostrar a direÃ§Ã£o. VocÃª tenta de novo.";
-							mes "A propÃ³sito, eu te disse o nome dele? O nome dele Ã© ^ 4d4dffHun ^ 000000";
+							mes "OK. Eu vou te mostrar a direção. Você tenta de novo.";
+							mes "A propósito, eu te disse o nome dele? O nome dele é ^4d4dffHun^000000";
 							viewpoint 1,122,207,1,0x4d4dff;
 							next;
-							mes "!- InformaÃ§Ã£o -!";
-							mes "^ 4d4dff O mini mapa pode ser visto no canto superior direito da tela.";
-							mes "VocÃª pode aumentar o zoom com +, diminuir o zoom com -. O waypoint do NPC serÃ¡ marcado nele. ^ 000000";
+							mes "!- Informação -!";
+							mes "^4d4dff O mini mapa pode ser visto no canto superior direito da tela.";
+							mes "Você pode aumentar o zoom com +, diminuir o zoom com -. O waypoint do NPC será marcado nele.^000000";
 							next;
 							mes "[Carocc]";
-							mes "Se vocÃª precisar de mais ajuda com o mapa, pressione <NAVI> [Hun] <INFO> izlude, 122,207 </ INFO> </ NAVI> aqui";
+							mes "Se você precisar de mais ajuda com o mapa, pressione <NAVI>[Hun]<INFO>izlude,122,207</INFO></NAVI> aqui";
 							mes "Sim, a parte que diz [Hun].";
 							next;
-							mes "!- InformaÃ§Ã£o -!";
-							mes "^ 4d4dff o Ã­cone durante a conversa <NAVI> [Hun] <INFO> izlude, 122,207 </ INFO> </ NAVI> significa";
-							mes "um link para direÃ§Ãµes de navegaÃ§Ã£o.";
+							mes "!- Informação -!";
+							mes "^ 4d4dff o ícone durante a conversa <NAVI>[Hun]<INFO>izlude,122,207 </INFO></NAVI> significa";
+							mes "um link para direções de navegação.";
 							cutin "navi01.bmp", 4;
 							next;
-							mes "!- InformaÃ§Ã£o -!";
-							mes "Se vocÃª pressionar info depois de selecionar uma tarefa nos objetivos ^ 4d4dff,";
-							mes "uma seta apontando para a localizaÃ§Ã£o do objetivo aparecerÃ¡ junto com a ajuda de navegaÃ§Ã£o";
+							mes "!- Informação -!";
+							mes "Se você pressionar info depois de selecionar uma tarefa nos objetivos ^4d4dff,";
+							mes "uma seta apontando para a localização do objetivo aparecerá junto com a ajuda de navegação";
 							cutin "navi02.bmp", 4;
 							next;
 							cutin "", 255;
 							mes "[Carocc]";
-							mes "De qualquer forma, meu amigo ajudarÃ¡ vocÃª a se registrar na academia";
+							mes "De qualquer forma, meu amigo ajudará você a se registrar na academia";
 							mes "Eu espero que isso te ajude em sua jornada";
 							close;
 						}
 					}
 				} else if (isbegin_quest(7472) == 1) {
 					mes "[Carocc]";
-					mes "Ah, Ã© vocÃª.";
-					mes "Esse cara tambÃ©m decidiu se registrar na Academia Criatura.";
-					mes "Isso pode ser um bom destino para vocÃª. Espero que vocÃª e ele possam ser bons amigos.";
+					mes "Ah, é você.";
+					mes "Esse cara também decidiu se registrar na Academia Criatura.";
+					mes "Isso pode ser um bom destino para você. Espero que você e ele possam ser bons amigos.";
 					next;
 					cutin "nov_lumin01.bmp", 0;
 					mes "[Lumin]";
@@ -690,41 +690,41 @@ izlude,198,213,3	script	CapitÃ£o Carocc#iz	4_M_REINDEER,5,5,{
 					next;
 					cutin "", 255;
 					mes "[Carocc]";
-					mes "Se vocÃª quiser, vocÃª pode avanÃ§ar para o mundo imediatamente.";
-					mes "No entanto, eu recomendo que vocÃª visite a Academia primeiro.";
+					mes "Se você quiser, você pode avançar para o mundo imediatamente.";
+					mes "No entanto, eu recomendo que você visite a Academia primeiro.";
 					next;
 					mes "[Carocc]";
-					mes "O mundo Ã© um lugar solitÃ¡rio para ficar sozinho.";
-					mes "A Academia tem pessoas que vocÃª poderia transformar em companheiros da vida.";
+					mes "O mundo é um lugar solitário para ficar sozinho.";
+					mes "A Academia tem pessoas que você poderia transformar em companheiros da vida.";
 					next;
 					mes "[Carocc]";
-					mes "Meu amigo <NAVI> [Hun] <INFO> izlude, 122,207 </ INFO> </ NAVI> estarÃ¡ em volta da entrada da academia.";
-					mes "Se vocÃª nÃ£o sabe o caminho que eu vou mostrar para vocÃª novamente.";
+					mes "Meu amigo <NAVI>[Hun]<INFO>izlude,122,207</INFO></NAVI> estará em volta da entrada da academia.";
+					mes "Se você não sabe o caminho que eu vou mostrar para você novamente.";
 					viewpoint 1,122,207,1,0x4d4dff;
 					next;
 					mes "[Carocc]";
-					mes "entÃ£o, boa sorte!";
+					mes "então, boa sorte!";
 					close;
 				} else {
 					mes "[Carocc]";
 					mes "Oh, nos encontraremos novamente.";
-					mes "VocÃª por acaso precisa de um navio?";
+					mes "Você por acaso precisa de um navio?";
 					mes "Eu costumo viajar para o porto em Paros.";
-					mes "Se vocÃª precisar ir atÃ© Paros depois, venha me ver.";
+					mes "Se você precisar ir até Paros depois, venha me ver.";
 				}
 			}
 		}
 	} else {
 		if (isbegin_quest(7471) == 2 || isbegin_quest(7472) > 0) {
 			mes "[Carocc]";
-			mes "JÃ¡ faz um tempo!";
-			mes "Olhando para a sua expressÃ£o, vocÃª deve estar indo bem.";
+			mes "Já faz um tempo!";
+			mes "Olhando para a sua expressão, você deve estar indo bem.";
 			next;
 			switch (select ("Leve-me ao Pharos Lighthouse", "para Alberta", "Conversa")) {
 			case 1:
 				mes "[Carocc]";
-				mes "VocÃª quer ir ao Farol Faros na costa sul de Marrocos?";
-				mes "A taxa Ã© de 2800 zeny. Eu tenho uma equipe que precisa de pagamento, entÃ£o essa taxa nÃ£o Ã© negociÃ¡vel.";
+				mes "Você quer ir ao Farol Faros na costa sul de Marrocos?";
+				mes "A taxa é de 2800 zeny. Eu tenho uma equipe que precisa de pagamento, então essa taxa não é negociável.";
 				next;
 				if (select ("Farol Faros!", "Cancelar") == 1) {
 					if (Zeny > 2799) {
@@ -736,39 +736,39 @@ izlude,198,213,3	script	CapitÃ£o Carocc#iz	4_M_REINDEER,5,5,{
 						end;
 					} else {
 						mes "[Carocc]";
-						mes "Desculpe, mas vocÃª estÃ¡ com falta da taxa de embarque.";
+						mes "Desculpe, mas você está com falta da taxa de embarque.";
 						mes "Eu preciso de 2800z para operar.";
 					}
 				} else {
 					mes "[Carocc]";
 					mes "OK.";
-					mes "VocÃª sabe disso, a propÃ³sito?";
-					mes "^ 4d4dffHÃ¡ um esconderijo de Rogue no Pharos Lighthouse ^ 000000.";
-					mes "VocÃª jÃ¡ sabia disso?";
+					mes "Você sabe disso, a propósito?";
+					mes "^4d4dffHá um esconderijo de Rogue no Pharos Lighthouse ^000000.";
+					mes "Você já sabia disso?";
 				}
 				break;
 			case 2:
 				mes "[Carocc]";
-				mes "Eu pensei que vocÃª soubesse que eu sÃ³ vou a Pharos?";
-				mes "Pergunte ao marinheiro lÃ¡, ele Ã© o que vai lÃ¡ com freqÃ¼Ãªncia.";
+				mes "Eu pensei que você soubesse que eu só vou a Pharos?";
+				mes "Pergunte ao marinheiro lá, ele é o que vai lá com freqüência.";
 				next;
 				mes "[Carocc]";
-				mes "HÃ¡ muitos outros navios que viajam para as Ilhas Alberta e Byalan.";
+				mes "Há muitos outros navios que viajam para as Ilhas Alberta e Byalan.";
 				break;
 			case 3:
 				mes "[Carocc]";
-				mes "Hmm. Estou contente com o bem estar de vocÃª e outros aventureiros que passaram por mim.";
+				mes "Hmm. Estou contente com o bem estar de você e outros aventureiros que passaram por mim.";
 				next;
 				mes "[Carocc]";
-				mes "Lumin deve estar indo bem tambÃ©m.";
-				mes "Eu me pergunto por que vocÃª se sente como meu prÃ³prio filho, embora tenhamos nos encontrado apenas do mar.";
+				mes "Lumin deve estar indo bem também.";
+				mes "Eu me pergunto por que você se sente como meu próprio filho, embora tenhamos nos encontrado apenas do mar.";
 				break;
 			}
 		} else {
 			mes "[Carocc]";
-mes "Eu sou Carocc, a legenda desta nave.";
-mes "VocÃª precisa de um navio?";
-next;
+			mes "Eu sou Carocc, a Lenda deste Navio.";
+			mes "Você precisa de um navio?";
+			next;
 			if (select("Pharos Lighthouse - 2800z", "Don't need it.") == 1) {
 				if (Zeny > 2799) {
 					mes "[Carocc]";
@@ -780,12 +780,12 @@ next;
 					end;
 				} else {
 					mes "[Carocc]";
-mes "Desculpe, mas vocÃª estÃ¡ com falta da taxa de embarque.";
-mes "Eu preciso de 2800z para operar.";
+					mes "Desculpe, mas você está com falta da taxa de embarque.";
+					mes "Eu preciso de 2800z para operar.";
 				}
 			} else {
 				mes "[Carocc]";
-mes "EntÃ£o use da prÃ³xima vez.";
+				mes "Então use da próxima vez.";
 			}
 		}
 	}
@@ -807,70 +807,70 @@ OnTouch:
 	end;
 }
 
-izlude_a,198,213,3	duplicate(CapitÃ£o Carocc#iz)	CapitÃ£o Carocc#iz_a	4_M_REINDEER,5,5
-izlude_b,198,213,3	duplicate(CapitÃ£o Carocc#iz)	CapitÃ£o Carocc#iz_b	4_M_REINDEER,5,5
-izlude_c,198,213,3	duplicate(CapitÃ£o Carocc#iz)	CapitÃ£o Carocc#iz_c	4_M_REINDEER,5,5
-izlude_d,198,213,3	duplicate(CapitÃ£o Carocc#iz)	CapitÃ£o Carocc#iz_d	4_M_REINDEER,5,5
+izlude_a,198,213,3	duplicate(Capitão Carocc#iz)	Capitão Carocc#iz_a	4_M_REINDEER,5,5
+izlude_b,198,213,3	duplicate(Capitão Carocc#iz)	Capitão Carocc#iz_b	4_M_REINDEER,5,5
+izlude_c,198,213,3	duplicate(Capitão Carocc#iz)	Capitão Carocc#iz_c	4_M_REINDEER,5,5
+izlude_d,198,213,3	duplicate(Capitão Carocc#iz)	Capitão Carocc#iz_d	4_M_REINDEER,5,5
 
 // - Staff da Academia Criatura
-// - Ensina o jogador sobre o InventÃ¡rio.
+// - Ensina o jogador sobre o Inventário.
 // -----------------------------------------------------------------------------
-izlude,122,207,3	script	Equipe da Academia Criatura#0	4_M_KHKYEL,3,3,{
+izlude,122,207,3	script	Equipe da Academia#0	4_M_KHKYEL,3,3,{
 	if (!checkweight(1304,3)) {
-		mes "A missÃ£o nÃ£o pode ser continuada devido ao inventÃ¡rio sobrecarregado.";
-mes "Continue a missÃ£o depois de organizar o inventÃ¡rio.";
+		mes "A missão não pode ser continuada devido ao inventário sobrecarregado.";
+		mes "Continue a missão depois de organizar o inventário.";
 		close;
 	}
 	viewpoint 2,122,207,1,0xFFFFFF;
 	if (Class == Job_Novice && BaseLevel < 15) {
 		if (isbegin_quest(7472) == 1) {
 			mes "[Hun]";
-			mes "Oh .. vocÃª deve ser o aventureiro sobre o qual Carocc estava falando.";
-			mes "Eu nÃ£o sei onde sua terra natal Ã©, mas Midgard Ã© um bom lugar para comeÃ§ar a jornada de sua vida.";
+			mes "Oh .. você deve ser o aventureiro sobre o qual Carocc estava falando.";
+			mes "Eu não sei onde sua terra natal é, mas Midgard é um bom lugar para começar a jornada de sua vida.";
 			next;
 			mes "[Hun]";
-			mes "Ã‰ uma boa visÃ£o ver novos aventureiros comeÃ§arem sua jornada.";
-			mes "VocÃª deve estar cansado. Precisa de uma bebida?";
+			mes "É uma boa visão ver novos aventureiros começarem sua jornada.";
+			mes "Você deve estar cansado. Precisa de uma bebida?";
 			completequest 7472;
 			getexp 200,0;
 			setquest 7473;
 			getitem 531,1; // Apple_Juice
 			next;
 			mes "[Hun]";
-			mes "VocÃª pode abrir a janela Item clicando no Ã­cone 'item' na parte superior esquerda da tela.";
+			mes "Você pode abrir a janela Item clicando no ícone 'item' na parte superior esquerda da tela.";
 			next;
 			mes "[Hun]";
-			mes "Os itens sÃ£o automaticamente categorizados por 'consumÃ­veis' 'equipamentos' 'etc.' e 'pessoais' adequados para cada uso.";
-			mes "Ele farÃ¡ a classificaÃ§Ã£o automÃ¡tica por uso individual para";
+			mes "Os itens são automaticamente categorizados por 'consumíveis' 'equipamentos' 'etc.' e 'pessoais' adequados para cada uso.";
+			mes "Ele fará a classificação automática por uso individual para";
 			next;
 			mes "[Hun]";
-			mes "Clique no item ^ 000000 que vocÃª pretende usar";
-			mes "ou arraste-o para ^ 4d4dff na janela do equipamento e use-o ^ 000000";
+			mes "Clique no item que você pretende usar";
+			mes "ou arraste-o para ^4d4dff para a janela do equipamento^000000";
 			next;
 			cutin "tutorial03.bmp", 4;
-			mes "! - InformaÃ§Ã£o -!";
-			mes "^ 4d4dffItems podem ser usados â€‹â€‹ou equipados simplesmente clicando duas vezes.";
+			mes "!- Informação -!";
+			mes "^4d4dffItems podem ser usados ou equipados simplesmente clicando duas vezes.";
 			mes "A janela de itens pode ser aberta com a tecla de atalho Alt + E";
 			next;
-			mes "! - InformaÃ§Ã£o -!";
+			mes "!- Informação -!";
 			mes "^ 4d4dff Itens equipados podem ser verificados com Alt + Q";
-			mes "Itens tambÃ©m podem ser arrastados para o local onde vocÃª deseja equipÃ¡-lo.";
+			mes "Itens também podem ser arrastados para o local onde você deseja equipá-lo.";
 			next;
 			cutin "", 255;
 			mes "[Hun]";
-			mes "Para informaÃ§Ãµes detalhadas sobre itens individuais ^ 4d4dff, clique com o botÃ£o direito em ^ 000000no item.";
-			mes "VocÃª pode verificar as informaÃ§Ãµes detalhadas sobre o item.";
+			mes "Para informações detalhadas sobre itens individuais ^4d4dff, clique com o botão direito em^000000no item.";
+			mes "Você pode verificar as informações detalhadas sobre o item.";
 			next;
 			cutin "tutorial04.bmp", 4;
-			mes "! - InformaÃ§Ã£o -!";
-			mes "^ 4d4dffClicando com o botÃ£o direito do mouse no Ã­cone do item ^ 4d4dff traz informaÃ§Ãµes detalhadas sobre o item.";
+			mes "!- Informação -!";
+			mes "^ 4d4dffClicando com o botão direito do mouse no ícone do item ^ 4d4dff traz informações detalhadas sobre o item.";
 			next;
-			mes "! - InformaÃ§Ã£o -!";
-			mes "^ 4d4dffQuando vocÃª seleciona outros jogadores, vocÃª pode negociar, juntar-se a eles com a janela da comunidade que aparece.";
+			mes "!- Informação -!";
+			mes "^4d4dffQuando você seleciona outros jogadores, você pode negociar, juntar-se a eles com a janela da comunidade que aparece.";
 			next;
 			cutin "", 255;
 			mes "[Hun]";
-			mes "Ok agora ^ 4d4dfffixe o suco de maÃ§Ã£ que eu dei ^ 000000.";
+			mes "Ok agora ^4d4dfffUse o suco de maçã que eu dei^000000.";
 			close;
 		} else {
 			if (!isbegin_quest(7473)) {
@@ -879,144 +879,144 @@ mes "Continue a missÃ£o depois de organizar o inventÃ¡rio.";
 				mes "Descanse um pouco.";
 				next;
 				mes "[Hun]";
-				mes "Ã‰ alegre ver novos aventureiros comeÃ§ando.";
-				mes "VocÃª quer algo para beber enquanto estÃ¡ descansando?";
+				mes "É alegre ver novos aventureiros começando.";
+				mes "Você quer algo para beber enquanto está descansando?";
 				setquest 7473;
-				getitem 531,1; // Suco de MaÃ§Ã£
+				getitem 531,1; // Suco de Maçã
 				next;
 				mes "[Hun]";
-				mes "Clicar com o botÃ£o direito do mouse no Ã­cone do item ^ 4d4dffon a janela bÃ¡sica do item no canto superior esquerdo traz informaÃ§Ãµes detalhadas sobre o item";
+				mes "Clicar com o botão direito do mouse no ícone do item ^4d4dffabre a janela básica^000000 do item no canto superior esquerdo e traz informações detalhadas sobre o item";
 				next;
 				mes "[Hun]";
-				mes "Os itens sÃ£o automaticamente categorizados por 'consumÃ­veis' 'equipamentos' 'etc.' e 'pessoais' adequados para cada uso.";
-				mes "Ele farÃ¡ a classificaÃ§Ã£o automÃ¡tica por uso individual para";
+				mes "Os itens são automaticamente categorizados por 'consumíveis' 'equipamentos' 'etc.' e 'pessoais' adequados para cada uso.";
+				mes "Ele fará a classificação automática por uso individual para";
 				next;
 				mes "[Hun]";
-				mes "Clique no item ^ 000000 que vocÃª pretende usar";
-				mes "ou arraste-o para ^ 4d4dff na janela do equipamento e use-o ^ 000000";
+				mes "Clique no item que você pretende usar";
+				mes "ou arraste-o para ^4d4dff na janela do equipamento e use-o^000000";
 				next;
 				mes "[Hun]";
-				mes "Para informaÃ§Ãµes detalhadas sobre itens individuais ^ 4d4dff, clique com o botÃ£o direito em ^ 000000no item.";
-				mes "VocÃª pode verificar as informaÃ§Ãµes detalhadas sobre o item.";
+				mes "Para informações detalhadas sobre itens individuais ^4d4dff, clique com o botão direito em^000000no item.";
+				mes "Você pode verificar as informações detalhadas sobre o item.";
 				next;
 				cutin "tutorial04.bmp", 3;
-				mes "! - InformaÃ§Ã£o -!";
-				mes "Clique com o botÃ£o direito do mouse no Ã­cone do item ^ 4d4dffbrings up the detailed info on the item";
+				mes "! - Informação -!";
+				mes "Clique com o botão direito do mouse no ícone do item ^4d4dffbrings up the detailed info on the item^000000";
 				next;
-				mes "! - InformaÃ§Ã£o -!";
-				mes "Quando vocÃª seleciona em outros jogadores ^ 4d4dff, vocÃª pode negociar, juntar-se a eles com a janela da comunidade que aparece.";
+				mes "! - Informação -!";
+				mes "Quando você seleciona em outros jogadores ^4d4dff, você pode negociar, juntar-se a eles com a janela da comunidade que aparece.^000000";
 				next;
 				cutin "", 255;
 				mes "[Hun]";
-				mes "Ok agora ^ 4d4dfffixe o suco de maÃ§Ã£ que eu dei ^ 000000.";
+				mes "Ok agora ^4d4dfffixe o suco de maçã que eu dei^000000.";
 				close;
 			} else if (isbegin_quest(7473) == 1) {
 				if (countitem(531) > 0) {
 					mes "[Hun]";
-					mes "Consuma o suco de maÃ§Ã£ que eu te dei no seu inventÃ¡rio.";
-					mes "EntÃ£o vamos conversar.";
+					mes "Consuma o suco de maçã que eu te dei no seu inventário.";
+					mes "Então vamos conversar.";
 					close;
 				} else {
 					if (isbegin_quest(4269) > 0) {
 						mes "[Hun]";
-						mes "Como estÃ¡ o gosto?";
-						mes "Muito bom gosto de doce e azedo, certo? Pode nÃ£o ser muito, mas tambÃ©m tem propriedades curativas.";
+						mes "Como está o gosto?";
+						mes "Muito bom gosto de doce e azedo, certo? Pode não ser muito, mas também tem propriedades curativas.";
 						next;
 						mes "[Hun]";
-						mes "Eu quero te dar mais, mas isso foi o Ãºltimo de tudo";
-						mes "De qualquer forma, aqui estÃ£o algumas poÃ§Ãµes. Elas serÃ£o Ãºteis quando vocÃª comeÃ§ar a lutar.";
+						mes "Eu quero te dar mais, mas isso foi o último de tudo";
+						mes "De qualquer forma, aqui estão algumas poções. Elas serão úteis quando você começar a lutar.";
 						completequest 7473;
 						getitem 569,30; // Novice_Potion
 						getexp 200,0;
 						next;
 						mes "[Hun]";
-						mes "Academia da Criatura Ã© um bom lugar para construir experiÃªncia para o futuro.";
-						mes "E eu nÃ£o estou dizendo isso porque eu trabalho aqui.";
+						mes "Academia da Criatura é um bom lugar para construir experiência para o futuro.";
+						mes "E eu não estou dizendo isso porque eu trabalho aqui.";
 						next;
 						mes "[Hun]";
 						mes "Eu sou de verdade ... haha";
 						close;
 					} else {
 						mes "[Hun]";
-						mes "Como estÃ¡ o gosto?";
-						mes "Muito bom gosto de doce e azedo, certo? Pode nÃ£o ser muito, mas tambÃ©m tem propriedades curativas.";
+						mes "Como está o gosto?";
+						mes "Muito bom gosto de doce e azedo, certo? Pode não ser muito, mas também tem propriedades curativas.";
 						next;
 						mes "[Hun]";
-						mes "Eu quero te dar mais, mas isso foi o Ãºltimo de tudo";
-						mes "De qualquer forma, aqui estÃ£o algumas poÃ§Ãµes. Elas serÃ£o Ãºteis quando vocÃª comeÃ§ar a lutar.";
+						mes "Eu quero te dar mais, mas isso foi o último de tudo";
+						mes "De qualquer forma, aqui estão algumas poções. Elas serão úteis quando você começar a lutar.";
 						completequest 7473;
 						getitem 569,30; // Novice_Potion
 						getexp 200,0;
 						next;
 						mes "[Hun]";
-						mes "O que vocÃª planeja fazer a partir de agora?";
-						mes "VocÃª encontrou um lugar para ficar?";
+						mes "O que você planeja fazer a partir de agora?";
+						mes "Você encontrou um lugar para ficar?";
 						next;
-						switch(select("Eu preciso de ajuda com isso", "Qualquer coisa vai fazer realmente.", "NÃ£o se preocupe")) {
+						switch(select("Eu preciso de ajuda com isso", "Qualquer coisa vai fazer realmente.", "Não se preocupe")) {
 						case 1:
 							mes "[Hun]";
 							mes "Mas ainda assim,";
-							mes "Ã‰ difÃ­cil ficar sozinho em um lugar novo.";
-							mes "Ã‰ por isso que a Academia Criatura estÃ¡ lÃ¡.";
+							mes "É difícil ficar sozinho em um lugar novo.";
+							mes "É por isso que a Academia Criatura está lá.";
 							next;
 							mes "[Hun]";
-							mes "Carocc enviou vocÃª para mim provavelmente pelo mesmo motivo.";
-							mes "Mesmo que eu seja apenas uma mÃ£o de obra aqui, eu poderia te mostrar.";
+							mes "Carocc enviou você para mim provavelmente pelo mesmo motivo.";
+							mes "Mesmo que eu seja apenas uma mão de obra aqui, eu poderia te mostrar.";
 							next;
 							mes "[Hun]";
-							mes "Se vocÃª seguir essa estrada atÃ© o norte, vocÃª pode ver";
-							mes "<NAVI> [o prÃ©dio da Academia] <INFO> iz_ac01,100,39 </ INFO> </ NAVI>.";
-							mes "Qualquer um pode se inscrever, entÃ£o aproveite-o.";
+							mes "Se você seguir essa estrada até o norte, você pode ver";
+							mes "<NAVI>[o prédio da Academia]<INFO>iz_ac01,100,39</INFO></NAVI>.";
+							mes "Qualquer um pode se inscrever, então aproveite-o.";
 							next;
-							emotion ET_SURPRISE, getnpcid (0, "InformaÃ§Ãµes da equipe #" + strnpcinfo (2));
-							mes "[Equipe de InformaÃ§Ãµes]";
+							emotion ET_SURPRISE, getnpcid (0, "Informações da equipe #" + strnpcinfo (2));
+							mes "[Equipe de Informações]";
 							mes "Desculpe interromper.";
-							mes "Mas ^ 4d4dffif vocÃª precisa de informaÃ§Ãµes de localizaÃ§Ã£o, por favor me pergunte. ^ 000000";
+							mes "Mas ^4d4dffif você precisa de informações de localização, por favor me pergunte.^000000";
 							next;
-							mes "[Equipe de InformaÃ§Ãµes]";
-							mes "A informaÃ§Ã£o de Hun tem limites";
+							mes "[Equipe de Informações]";
+							mes "A informação de Hun tem limites";
 							close;
 						case 2:
 							mes "[Hun]";
-							mes "Que otimista de vocÃª.";
-							mes "Se vocÃª precisar de ajuda, fique Ã  vontade para visitar a Academia de Criatura a qualquer momento.";
+							mes "Que otimista de você.";
+							mes "Se você precisar de ajuda, fique à vontade para visitar a Academia de Criatura a qualquer momento.";
 							next;
 							mes "[Hun]";
-							mes "NÃ£o hÃ¡ exigÃªncia ou pagamento para se inscrever, entÃ£o seria uma grande ajuda para vocÃª.";
-							mes "Quando vocÃª passar por este caminho para o norte, vocÃª encontrarÃ¡";
-							mes "<NAVI> [o prÃ©dio da academia] <INFO> iz_ac01,100,39 </ INFO> </ NAVI>.";
+							mes "Não há exigência ou pagamento para se inscrever, então seria uma grande ajuda para você.";
+							mes "Quando você passar por este caminho para o norte, você encontrará";
+							mes "<NAVI>[o prédio da academia]<INFO>iz_ac01,100,39</INFO></NAVI>.";
 							next;
 							mes "[Hun]";
-							mes "Se houver mais aventureiros como vocÃª, o futuro serÃ¡ mais brilhante.";
+							mes "Se houver mais aventureiros como você, o futuro será mais brilhante.";
 							mes "Hahahaha.";
 							next;
-							emotion ET_SURPRISE, getnpcid (0, "InformaÃ§Ãµes da equipe #" + strnpcinfo (2));
-							mes "[Equipe de InformaÃ§Ãµes]";
+							emotion ET_SURPRISE, getnpcid (0, "Informações da equipe #" + strnpcinfo (2));
+							mes "[Equipe de Informações]";
 							mes "Desculpe interromper.";
-							mes "Mas ^ 4d4dffif vocÃª precisa de informaÃ§Ãµes de localizaÃ§Ã£o, por favor me pergunte. ^ 000000";
+							mes "Mas ^4d4dffif você precisa de informações de localização, por favor me pergunte.^000000";
 							next;
-							mes "[Equipe de InformaÃ§Ãµes]";
-							mes "A informaÃ§Ã£o de Hun tem limites";
+							mes "[Equipe de Informações]";
+							mes "A informação de Hun tem limites";
 							close;
 						case 3:
 							mes "[Hun]";
-							mes "VocÃª jÃ¡ tem um plano planejado?";
+							mes "Você já tem um plano planejado?";
 							mes "Bem preparado.";
-							mes "Mas apenas no caso, se vocÃª estÃ¡ curioso sobre a Academia Criatura, faÃ§a uma visita.";
+							mes "Mas apenas no caso, se você está curioso sobre a Academia Criatura, faça uma visita.";
 							next;
 							mes "[Hun]";
-							mes "Quando vocÃª passar por este caminho para o norte, vocÃª encontrarÃ¡";
-							mes "<NAVI> [o prÃ©dio da academia] <INFO> iz_ac01,100,39 </ INFO> </ NAVI>.";
-							mes "O que estÃ¡ bem, estÃ¡ bem, nÃ£o estÃ¡?";
+							mes "Quando você passar por este caminho para o norte, você encontrará";
+							mes "<NAVI>[o prédio da academia]<INFO>iz_ac01,100,39</INFO></NAVI>.";
+							mes "O que está bem, está bem, não está?";
 							next;
-							emotion ET_SURPRISE, getnpcid (0, "InformaÃ§Ãµes da equipe #" + strnpcinfo (2));
-							mes "[Equipe de InformaÃ§Ãµes]";
-							mes "VocÃª estÃ¡ correto.";
-							mes "Preperation Ã© a chave.";
-							mes "Mas ^ 4d4dffif vocÃª precisa de informaÃ§Ãµes de localizaÃ§Ã£o, por favor me pergunte. ^ 000000";
+							emotion ET_SURPRISE, getnpcid (0, "Informações da equipe #" + strnpcinfo (2));
+							mes "[Equipe de Informações]";
+							mes "Você está correto.";
+							mes "Preperation é a chave.";
+							mes "Mas ^4d4dffif você precisa de informações de localização, por favor me pergunte.^000000";
 							next;
-							mes "[Equipe de InformaÃ§Ãµes]";
-							mes "A informaÃ§Ã£o de Hun tem limites.";
+							mes "[Equipe de Informações]";
+							mes "A informação de Hun tem limites.";
 							close;
 						}
 					}
@@ -1024,81 +1024,81 @@ mes "Continue a missÃ£o depois de organizar o inventÃ¡rio.";
 			} else {
 				if (!isbegin_quest(4269)) {
 					mes "[Hun]";
-					mes "Ã‰ vocÃª ..";
-					mes "O que vocÃª planeja fazer a partir de agora?";
-					mes "VocÃª encontrou um lugar para ficar?";
+					mes "É você ..";
+					mes "O que você planeja fazer a partir de agora?";
+					mes "Você encontrou um lugar para ficar?";
 					next;
-					switch(select("Eu preciso de ajuda com isso", "Qualquer coisa vai fazer realmente.", "NÃ£o se preocupe")) {
+					switch(select("Eu preciso de ajuda com isso", "Qualquer coisa vai fazer realmente.", "Não se preocupe")) {
 					case 1:
 						mes "[Hun]";
 						mes "Mas ainda assim,";
-						mes "Ã‰ difÃ­cil ficar sozinho em um lugar novo.";
-						mes "Ã‰ por isso que a Academia Criatura estÃ¡ lÃ¡.";
+						mes "É difícil ficar sozinho em um lugar novo.";
+						mes "É por isso que a Academia Criatura está lá.";
 						next;
 						mes "[Hun]";
-						mes "Carocc enviou vocÃª para mim provavelmente pelo mesmo motivo.";
-						mes "Mesmo que eu seja apenas uma mÃ£o de obra aqui, eu poderia te mostrar.";
+						mes "Carocc enviou você para mim provavelmente pelo mesmo motivo.";
+						mes "Mesmo que eu seja apenas uma mão de obra aqui, eu poderia te mostrar.";
 						next;
 						mes "[Hun]";
-						mes "Se vocÃª seguir essa estrada atÃ© o norte, vocÃª pode ver";
-						mes "<NAVI> [o prÃ©dio da Academia] <INFO> iz_ac01,100,39 </ INFO> </ NAVI>.";
-						mes "Qualquer um pode se inscrever, entÃ£o aproveite-o.";
+						mes "Se você seguir essa estrada até o norte, você pode ver";
+						mes "<NAVI>[o prédio da Academia]<INFO>iz_ac01,100,39</INFO></NAVI>.";
+						mes "Qualquer um pode se inscrever, então aproveite-o.";
 						next;
-						emotion ET_SURPRISE, getnpcid (0, "InformaÃ§Ãµes da equipe #" + strnpcinfo (2));
-						mes "[Equipe de InformaÃ§Ãµes]";
+						emotion ET_SURPRISE, getnpcid (0, "Informações da equipe #" + strnpcinfo (2));
+						mes "[Equipe de Informações]";
 						mes "Desculpe interromper.";
-						mes "Mas ^ 4d4dffif vocÃª precisa de informaÃ§Ãµes de localizaÃ§Ã£o, por favor me pergunte. ^ 000000";
+						mes "Mas ^4d4dffif você precisa de informações de localização, por favor me pergunte.^000000";
 						next;
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "A informaÃ§Ã£o de Hun tem limites";
+						mes "[Equipe de Informações]";
+						mes "A informação de Hun tem limites";
 						close;
 					case 2:
 						mes "[Hun]";
-						mes "Que otimista de vocÃª.";
-						mes "Se vocÃª precisar de ajuda, fique Ã  vontade para visitar a Academia de Criatura a qualquer momento.";
+						mes "Que otimista de você.";
+						mes "Se você precisar de ajuda, fique à vontade para visitar a Academia de Criatura a qualquer momento.";
 						next;
 						mes "[Hun]";
-						mes "NÃ£o hÃ¡ exigÃªncia ou pagamento para se inscrever, entÃ£o seria uma grande ajuda para vocÃª.";
-						mes "Quando vocÃª passar por este caminho para o norte, vocÃª encontrarÃ¡";
-						mes "<NAVI> [o prÃ©dio da academia] <INFO> iz_ac01,100,39 </ INFO> </ NAVI>.";
+						mes "Não há exigência ou pagamento para se inscrever, então seria uma grande ajuda para você.";
+						mes "Quando você passar por este caminho para o norte, você encontrará";
+						mes "<NAVI>[o prédio da academia]<INFO>iz_ac01,100,39</INFO></NAVI>.";
 						next;
 						mes "[Hun]";
-						mes "Se houver mais aventureiros como vocÃª, o futuro serÃ¡ mais brilhante.";
+						mes "Se houver mais aventureiros como você, o futuro será mais brilhante.";
 						mes "Hahahaha.";
 						next;
-						emotion ET_SURPRISE, getnpcid (0, "InformaÃ§Ãµes da equipe #" + strnpcinfo (2));
-						mes "[Equipe de InformaÃ§Ãµes]";
+						emotion ET_SURPRISE, getnpcid (0, "Informações da equipe #" + strnpcinfo (2));
+						mes "[Equipe de Informações]";
 						mes "Desculpe interromper.";
-						mes "Mas ^ 4d4dffif vocÃª precisa de informaÃ§Ãµes de localizaÃ§Ã£o, por favor me pergunte. ^ 000000";
+						mes "Mas ^4d4dffse você precisa de informações de localização, por favor me pergunte.^000000";
 						next;
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "A informaÃ§Ã£o de Hun tem limites";
+						mes "[Equipe de Informações]";
+						mes "A informação de Hun tem limites";
 						close;
 						case 3:
 						mes "[Hun]";
-						mes "VocÃª jÃ¡ tem um plano planejado?";
+						mes "Você já tem um plano planejado?";
 						mes "Bem preparado.";
-						mes "Mas apenas no caso, se vocÃª estÃ¡ curioso sobre a Academia Criatura, faÃ§a uma visita.";
+						mes "Mas apenas no caso, se você está curioso sobre a Academia Criatura, faça uma visita.";
 						next;
 						mes "[Hun]";
-						mes "Quando vocÃª passar por este caminho para o norte, vocÃª encontrarÃ¡";
-						mes "<NAVI> [o prÃ©dio da academia] <INFO> iz_ac01,100,39 </ INFO> </ NAVI>.";
-						mes "O que estÃ¡ bem, estÃ¡ bem, nÃ£o estÃ¡?";
+						mes "Quando você passar por este caminho para o norte, você encontrará";
+						mes "<NAVI>[o prédio da academia]<INFO> iz_ac01,100,39</INFO></NAVI>.";
+						mes "O que está bem, está bem, não está?";
 						next;
-						emotion ET_SURPRISE, getnpcid (0, "InformaÃ§Ãµes da equipe #" + strnpcinfo (2));
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "VocÃª estÃ¡ correto.";
-						mes "Preperation Ã© a chave.";
-						mes "Mas ^ 4d4dffif vocÃª precisa de informaÃ§Ãµes de localizaÃ§Ã£o, por favor me pergunte. ^ 000000";
+						emotion ET_SURPRISE, getnpcid (0, "Informações da equipe #" + strnpcinfo (2));
+						mes "[Equipe de Informações]";
+						mes "Você está correto.";
+						mes "Preperation é a chave.";
+						mes "Mas ^4d4dffif você precisa de informações de localização, por favor me pergunte.^000000";
 						next;
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "A informaÃ§Ã£o de Hun tem limites.";
+						mes "[Equipe de Informações]";
+						mes "A informação de Hun tem limites.";
 						close;
 					}
 				} else {
 					mes "[Hun]";
-					mes "Academia da Criatura Ã© um bom lugar para construir experiÃªncia para o futuro.";
-					mes "Eu nÃ£o estou dizendo isso sÃ³ porque eu trabalho aqui.";
+					mes "Academia da Criatura é um bom lugar para construir experiência para o futuro.";
+					mes "Eu não estou dizendo isso só porque eu trabalho aqui.";
 					next;
 					mes "[Hun]";
 					mes "De verdade ... hahahaha";
@@ -1111,7 +1111,7 @@ mes "Continue a missÃ£o depois de organizar o inventÃ¡rio.";
 		mes "A Academia Real Criatura foi fundada para ajudar aventureiros em sua jornada inicial.";
 		next;
 		mes "[Hun]";
-		mes "Embora eu seja apenas uma mÃ£o de obra aqui, fico feliz em ver alunos se formarem aqui e se tornarem bons membros da sociedade.";
+		mes "Embora eu seja apenas uma mão de obra aqui, fico feliz em ver alunos se formarem aqui e se tornarem bons membros da sociedade.";
 		close;
 	}
 
@@ -1128,149 +1128,149 @@ OnTouch:
 	end;
 }
 
-izlude_a,122,207,3	duplicate(Equipe da Academia Criatura#0)	Equipe da Academia Criatura#a	4_M_KHKYEL,3,3
-izlude_b,122,207,3	duplicate(Equipe da Academia Criatura#0)	Equipe da Academia Criatura#b	4_M_KHKYEL,3,3
-izlude_c,122,207,3	duplicate(Equipe da Academia Criatura#0)	Equipe da Academia Criatura#c	4_M_KHKYEL,3,3
-izlude_d,122,207,3	duplicate(Equipe da Academia Criatura#0)	Equipe da Academia Criatura#d	4_M_KHKYEL,3,3
+izlude_a,122,207,3	duplicate(Equipe da Academia#0)	Equipe da Academia#a	4_M_KHKYEL,3,3
+izlude_b,122,207,3	duplicate(Equipe da Academia#0)	Equipe da Academia#b	4_M_KHKYEL,3,3
+izlude_c,122,207,3	duplicate(Equipe da Academia#0)	Equipe da Academia#c	4_M_KHKYEL,3,3
+izlude_d,122,207,3	duplicate(Equipe da Academia#0)	Equipe da Academia#d	4_M_KHKYEL,3,3
 
-// - Equipe de InformaÃ§Ãµes
-// - Ensina o jogador sobre o Mini-Mapa atravÃ©s de uma missÃ£o rÃ¡pida.
+// - Equipe de Informações
+// - Ensina o jogador sobre o Mini-Mapa através de uma missão rápida.
 // -----------------------------------------------------------------------------
-izlude,120,207,4	script	Equipe de InformaÃ§Ãµes#0	8W_SOLDIER,{
+izlude,120,207,4	script	Equipe de Informações#0	8W_SOLDIER,{
 	if (!checkweight(1304,3)) {
-		mes "A busca nÃ£o pode continuar devido ao inventÃ¡rio estar completo.";
+		mes "A busca não pode continuar devido ao inventário estar completo.";
 		mes "Por favor, tente novamente depois de reorganizar seus itens.";
 		close;
 	}
 
 	if (BaseLevel < 15 && !isbegin_quest(7474)) {
-		mes "[Equipe de InformaÃ§Ãµes]";
-		mes "Oi, como vocÃª estÃ¡?";
-		mes "Eu sou responsÃ¡vel pelas instruÃ§Ãµes de navegaÃ§Ã£o para os principais locais de Izlude";
-		mes "Eu gostaria de propor um jogo simples junto com a navegaÃ§Ã£o, isso seria ok?";
+		mes "[Equipe de Informações]";
+		mes "Oi, como você está?";
+		mes "Eu sou responsável pelas instruções de navegação para os principais locais de Izlude";
+		mes "Eu gostaria de propor um jogo simples junto com a navegação, isso seria ok?";
 		next;
-		if (select ("Claro, vamos brincar!", "Eu jÃ¡ conheÃ§o todos eles.") == 1) {
-			mes "[Equipe de InformaÃ§Ãµes]";
+		if (select ("Claro, vamos brincar!", "Eu já conheço todos eles.") == 1) {
+			mes "[Equipe de Informações]";
 			mes "Primeiro de tudo, como verificar o mini-mapa.";
-			mes "VocÃª pode verificar sua localizaÃ§Ã£o atravÃ©s do mini-mapa no canto superior direito da tela";
+			mes "Você pode verificar sua localização através do mini-mapa no canto superior direito da tela";
 			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Se vocÃª receber informaÃ§Ãµes sobre uma cidade ou cidade, um waypoint ^ 4d4dff + ^ 000000 pode ser marcado no mapa.";
+			mes "[Equipe de Informações]";
+			mes "Se você receber informações sobre uma cidade ou cidade, um waypoint ^4d4dff +^000000 pode ser marcado no mapa.";
 			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Pressione ^ 4d4dff [Ctrl] e [~] no seu teclado e vocÃª pode ver o mapa do mundo ^ 000000.";
+			mes "[Equipe de Informações]";
+			mes "Pressione ^4d4dff [Ctrl] e [~] no seu teclado e você pode ver o mapa do mundo^000000.";
 			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "AtravÃ©s do mapa ^ 4d4dffworld vocÃª pode verificar a localizaÃ§Ã£o de vocÃª, seus membros do grupo e o nÃ­vel de monstros na Ã¡rea. ^ 000000";
+			mes "[Equipe de Informações]";
+			mes "Através do mapa ^4d4dffvocê pode verificar sua localização, membros de seu grupo e o nível de monstros na área.^000000";
 			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Esta Ã© uma informaÃ§Ã£o Ãºtil para lembrar.";
+			mes "[Equipe de Informações]";
+			mes "Esta é uma informação útil para lembrar.";
 			mes "Agora, devemos jogar um jogo simples?";
 			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Eu vou ^ 4d4dffmar trÃªs locais especÃ­ficos no mini-mapa. ^ 000000";
-			mes "Por favor ^ 4d4dffvisite esses locais ^ 000000usando os waypoints como referÃªncia.";
+			mes "[Equipe de Informações]";
+			mes "Eu vou ^4d4dffmar três locais específicos no mini-mapa.^000000";
+			mes "Por favor ^ 4d4dffvisite esses locais ^ 000000usando os waypoints como referência.";
 			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Pense nisso como uma caÃ§a ao tesouro e vÃ¡.";
-			mes "Eu escondi alguns itens Ãºteis lÃ¡.";
+			mes "[Equipe de Informações]";
+			mes "Pense nisso como uma caça ao tesouro e vá.";
+			mes "Eu escondi alguns itens úteis lá.";
 			viewpoint 1,179,75,1,0xCCFFFF;
 			viewpoint 1,45,94,2,0x00FF00;
 			viewpoint 1,207,167,3,0xFFEB46;
 			setquest 7474;
 			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Vistam-me novamente depois de passar pelos trÃªs locais.";
+			mes "[Equipe de Informações]";
+			mes "Vistam-me novamente depois de passar pelos três locais.";
 			mes "Eu vou checar isso.";
 			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Ah, hÃ¡ alguÃ©m que comeÃ§ou bem antes de vocÃª!";
-			mes "Se vocÃª nÃ£o se apressar, essa pessoa irÃ¡ pegar todos os itens!";
-			mes "EntÃ£o, corra!";
+			mes "[Equipe de Informações]";
+			mes "Ah, há alguém que começou bem antes de você!";
+			mes "Se você não se apressar, essa pessoa irá pegar todos os itens!";
+			mes "Então, corra!";
 			npcskill "AL_INCAGI", 10, 10, 10;
 			close;
 		}
-		mes "[Equipe de InformaÃ§Ãµes]";
-		mes "VocÃª precisa de informaÃ§Ãµes sobre todos os locais de Izlude?";
-		mes "Clicando no ^ B9062F [nome do acampamento base] ^ 000000, eu lhe ofereÃ§o orientaÃ§Ã£o, entÃ£o siga as ^ B9062Fradas Arrows ^ 000000.";
+		mes "[Equipe de Informações]";
+		mes "Você precisa de informações sobre todos os locais de Izlude?";
+		mes "Clicando no ^B9062F[nome do acampamento base] ^000000, eu lhe ofereço orientação, então siga as ^B9062Fradas Arrows^000000.";
 		next;
 		while(1) {
-			switch(select("[InstalaÃ§Ãµes principais]", "[Guia & Auxiliar]", "RemoÃ§Ã£o de marcaÃ§Ã£o de mini-mapa", "Conversa final")) {
+			switch(select("[Instalações principais]", "[Guia & Auxiliar]", "Remoção de marcação de mini-mapa", "Conversa final")) {
 			case 1:
 				while (1) {
-					switch(select("Academia de Criatura", "[Cais]", "[DirigÃ­vel (Internacional)]", "[Arena]", "[Loja]", "[Guilda de Espadachim]", "[AssociaÃ§Ã£o] "," [Blacksmith's Workshop] "," Voltar ao menu anterior ")) {
+					switch(select("Academia de Criatura", "[Cais]", "[Dirigível (Internacional)]", "[Arena]", "[Loja]", "[Guilda de Espadachim]", "[Associação] "," [Blacksmith's Workshop] "," Voltar ao menu anterior ")) {
 					case 1:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Se vocÃª Ã© o primeiro aventureiro,";
-						mes "<NAVI> [Academia Criatura] <INFO> iz_ac01,100,39, </ INFO> </ NAVI>";
-						mes "pode oferecer muita informaÃ§Ã£o e ajuda.";
-						mes "VocÃª precisa de direÃ§Ãµes adicionais?";
+						mes "[Equipe de Informações]";
+						mes "Se você é o primeiro aventureiro,";
+						mes "<NAVI>[Academia Criatura]<INFO>iz_ac01,100,39,</INFO></NAVI>";
+						mes "pode oferecer muita informação e ajuda.";
+						mes "Você precisa de direções adicionais?";
 						viewpoint 1, 128, 260, 0, 0xFFD269;
 						next;
 						continue;
 					case 2:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "AtravÃ©s do <NAVI> [Wharf] <INFO> izlude, 197,205, </ INFO> </ NAVI> no nordeste,";
-						mes "^ 8B4513Alberta ^ 000000 ou ^ 8B4513a Ilha Byalan ^ 000000 pode ser visitada.";
-						mes "vocÃª pode ir.";
+						mes "[Equipe de Informações]";
+						mes "Através do <NAVI>[Wharf]<INFO>izlude,197,205,</INFO></NAVI> no nordeste,";
+						mes "^8B4513Alberta^000000 ou ^8B4513a Ilha Byalan^000000 pode ser visitada.";
+						mes "você pode ir.";
 						next;
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Byalan Island Ã© o lugar assustador com a masmorra ^ 8B4513Izlude ^ 000000 nela.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "[Equipe de Informações]";
+						mes "Byalan Island é o lugar assustador com a masmorra ^8B4513Izlude^000000 nela.";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 197, 205, 1, 0xFFFF00;
 						next;
 						continue;
 					case 3:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Para o sudeste, o <NAVI> [DirigÃ­vel] <INFO> izlude, 206,75, </ INFO> </ NAVI>";
-						mes "serÃ¡ conectado com a Capital da repÃºblica de Schwarzwald - ^ 8B4513 Yuno ^ 000000, e";
+						mes "[Equipe de Informações]";
+						mes "Para o sudeste, o <NAVI>[Dirigível]<INFO>izlude,206,75,</INFO></NAVI>";
+						mes "será conectado com a Capital da república de Schwarzwald - ^8B4513Juno^000000, e";
 						mes "A capital do Arunapeltsdom - ^ 8B4513 Raquel ^ 000000.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 210, 73, 2, 0xFF0A82;
 						next;
 						continue;
 					case 4:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "O <NAVI> [Arena] <INFO> izlude, 213,161, </ INFO> </ NAVI> localizado no leste";
-						mes "Ã© para testar sua habilidade de batalha.";
-						mes "Ã‰ um lugar excelente.";
-						mes "Vou marcar a localizaÃ§Ã£o no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "[Equipe de Informações]";
+						mes "O <NAVI>[Arena]<INFO>izlude,213,161,</INFO></NAVI> localizado no leste";
+						mes "é para testar sua habilidade de batalha.";
+						mes "É um lugar excelente.";
+						mes "Vou marcar a localização no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 213, 161, 3, 0xFFFF54;
 						next;
 						continue;
 					case 5:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [Loja] <INFO> izlude, 110,182, </ INFO> </ NAVI>";
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI>[Loja]<INFO>izlude,110,182,</INFO></ NAVI>";
 						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 108, 179, 4, 0xFFAAFF;
 						next;
 						continue;
 					case 6:
 						mes "[Information Staff]";
-						mes "<NAVI> [guilda dos Espadachins] <INFO> izlude, 51,172, </ INFO> </ NAVI> Ã© o lugar para gerenciar a transferÃªncia de emprego para um espadachim.";
-						mes "Eu vou marcar a localizaÃ§Ã£o da guilda de espadachim no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "<NAVI> [guilda dos Espadachins] <INFO> izlude, 51,172, </ INFO> </ NAVI> é o lugar para gerenciar a transferência de emprego para um espadachim.";
+						mes "Eu vou marcar a localização da guilda de espadachim no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 52, 172, 5, 0xFFDA70;
 						next;
 						continue;
 					case 7:
-					mes "[Equipe de InformaÃ§Ãµes]";
-					mes "Vou marcar a localizaÃ§Ã£o do";
-					mes "<NAVI> [AssociaÃ§Ã£o Enchant] <INFO> izlude, 97,125, </ INFO> </ NAVI>";
+					mes "[Equipe de Informações]";
+					mes "Vou marcar a localização do";
+					mes "<NAVI>[Associação Enchant]<INFO>izlude,97,125,</INFO></NAVI>";
 					mes "no mini mapa.";
-					mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+					mes "Você precisa de instruções adicionais?";
 					viewpoint 1, 97, 125, 6, 0xFFDA70;
 					next;
 						continue;
 					case 8:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [Oficina de Ferreiro] <INFO> izlude, 153,126, </ INFO> </ NAVI>";
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI>[Oficina de Ferreiro]<INFO>izlude,153,126,</INFO></ NAVI>";
 						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 153, 126, 7, 0xFFAAFF;
 						next;
 						continue;
@@ -1282,57 +1282,57 @@ izlude,120,207,4	script	Equipe de InformaÃ§Ãµes#0	8W_SOLDIER,{
 				break;
 			case 2:
 				while (1) {
-					switch(select("[Teleporter do Grupo Ã‰den]", "[FuncionÃ¡rio do Kafra]", "[Mesmerizer]", "[SecretÃ¡rio do Casamento]", "[Oficial do Mercenary Guild]"," [Taming Merchant] "," Voltar para o menu anterior ")) {
+					switch(select("[Teleporte do Grupo Éden]", "[Funcionário do Kafra]", "[Mesmerizer]", "[Secretário do Casamento]", "[Oficial do Mercenary Guild]"," [Taming Merchant] "," Voltar para o menu anterior ")) {
 					case 1:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Por enquanto, vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [Teleporter do Grupo Eden] <INFO> izlude, 131,148, </ INFO> </ NAVI>";
+						mes "[Equipe de Informações]";
+						mes "Por enquanto, vou marcar a localização do";
+						mes "<NAVI>[Teleporte do Grupo Eden]<INFO>izlude,131,148,</INFO></NAVI>";
 						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 131, 148, 8, 0xFF0A82;
 						next;
 						continue;
 					case 2:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [FuncionÃ¡rio Kafra] <INFO> izlude, 128,148, </ INFO> </ NAVI>";
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI>[Funcionário Kafra]<INFO>izlude,128,148,</INFO></NAVI>";
 						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 128, 148, 9, 0xFFFF54;
 						next;
 						continue;
 					case 3:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [Mesmerizer] <INFO> izlude, 124,127, </ INFO> </ NAVI>";
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI>[Mesmerizer]<INFO>izlude, 124,127,</INFO></NAVI>";
 						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 125, 127, 10, 0xFF0064;
 						next;
 						continue;
 					case 4:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Se vocÃª quiser visitar ^ 8B4513Jawaii ^ 000000 - o lugar do resort para um casal,";
-						mes "fale com o <NAVI> [SecretÃ¡rio de Casamentos] <INFO> izlude, 180,224, </ INFO> </ NAVI>.";
-						mes "Apenas faÃ§a a pergunta sobre isso.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "[Equipe de Informações]";
+						mes "Se você quiser visitar ^ 8B4513Jawaii ^ 000000 - o lugar do resort para um casal,";
+						mes "fale com o <NAVI>[Secretário de Casamentos]<INFO>izlude,180,224,</INFO></NAVI>.";
+						mes "Apenas faça a pergunta sobre isso.";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 180, 224, 11, 0xFFFF00;
 						next;
 						continue;
 					case 5:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Se vocÃª precisa saber sobre o Mercenary Guild, vÃ¡ para o oeste e fale com o";
-						mes "<NAVI> [Oficial Mercenary Guild] <INFO> izlude, 47,170, </ INFO> </ NAVI>.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "[Equipe de Informações]";
+						mes "Se você precisa saber sobre o Mercenary Guild, vá para o oeste e fale com o";
+						mes "<NAVI>[Oficial Mercenary Guild]<INFO>izlude,47,170,</INFO></NAVI>.";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 47, 170, 12, 0xFFDA70;
 						next;
 						continue;
 					case 6:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [Domar Mercador] <INFO> izlude, 118,163, </ INFO> </ NAVI>";
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI>[Domar Mercador]<INFO>izlude,118,163,</INFO></NAVI>";
 						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+						mes "Você precisa de instruções adicionais?";
 						viewpoint 1, 118, 163, 13, 0xFF0064;
 						next;
 						continue;
@@ -1343,275 +1343,9 @@ izlude,120,207,4	script	Equipe de InformaÃ§Ãµes#0	8W_SOLDIER,{
 				}
 				break;
 			case 3:
-				mes "[Information Staff]";
-				mes "I will erase the marks.";
-				mes "Do you need additional directions?";
-				viewpoint 2, 197, 205, 1, 0xFF0000;
-				viewpoint 2, 210, 73, 2, 0xFF0000;
-				viewpoint 2, 213, 161, 3, 0xFF0000;
-				viewpoint 2, 108, 179, 4, 0xFF0000;
-				viewpoint 2, 52, 172, 5, 0xFF0000;
-				viewpoint 2, 97, 125, 6, 0xFF0000;
-				viewpoint 2, 153, 126, 7, 0xFF0000;
-				viewpoint 2, 131, 148, 8, 0xFF0000;
-				viewpoint 2, 128, 148, 9, 0xFF0000;
-				viewpoint 2, 125, 127, 10, 0xFF0000;
-				viewpoint 2, 180, 224, 11, 0xFF0000;
-				viewpoint 2, 47, 170, 12, 0xFF0000;
-				viewpoint 2, 118, 163, 13, 0xFF0000;
-				next;
-				break;
-			case 4:
-				mes "[Equipe de InformaÃ§Ãµes]";
-				mes "Tenha uma aventura maravilhosa.";
-				mes "Adeus ~~!";
-				close;
-			}
-		}
-	} else if (isbegin_quest(7474) == 1) {
-		if ((isbegin_quest(7475) + isbegin_quest(7476) + isbegin_quest(7477)) > 2) {
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "O que hÃ¡ com o rosto comprido?";
-			mes "Parece que vocÃª encontrou todos os locais que eu marquei.";
-			next;
-			mes "[Lumin]";
-			mes "Tartaruga ...";
-			cutin "nov_lumin01.bmp", 2;
-			next;
-			select ("Como vocÃª me chama?");
-			mes "[Lumin]";
-			mes "Porque vocÃª Ã© muito devagar.";
-			mes "Sim, Ã©. Eu tenho esperado por vocÃª pelo que parece ser uma eternidade.";
-			next;
-			mes "[Lumin]";
-			mes "....... Devo compartilhar com vocÃª?";
-			cutin "nov_lumin03.bmp", 2;
-			next;
-			if (select ("Eu nÃ£o preciso da sua simpatia", "!!!!!") == 1) {
-				mes "[Lumin]";
-				mes "Ã‰ isso mesmo?";
-				mes "CapitÃ£o sempre me disse para ajudar as pessoas pobres.";
-				mes "Mas vocÃª se livra da minha chance de ajudar.";
-				cutin "nov_lumin02.bmp", 2;
-				next;
-				mes "[Lumin]";
-				mes "Ahhh. Irritante.";
-				next;
-			} else {
-				mes "[Lumin]";
-				mes "Bem, agora podemos dividir 7 a 3?";
-				mes "Eu estou bem com 6 a 4.";
-				cutin "nov_lumin02.bmp", 2;
-				next;
-				mes "[" + strcharinfo(0) + "]";
-				mes "Esse cara ...";
-				next;
-			}
-			cutin "", 255;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Ahhh, vocÃªs dois se acalmem.";
-			mes "Lumin levou todos eles.";
-			mes "" + strcharinfo (0) + "Eu te darei um conjunto separadamente.";
-			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Pense na razÃ£o, foi minha culpa deixar uma pessoa, mas enviou vocÃªs dois.";
-			next;
-			cutin "nov_lumin03.bmp", 2;
-			mes "[Lumin]";
-			mes "DecisÃ£o simples e justa.";
-			mes "OK. Agora eu vou.";
-			mes "Vejo vocÃª de novo, meu amigo.";
-			next;
-			cutin "", 255;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "VocÃªs nÃ£o sÃ£o dois amigos?";
-			mes "VocÃªs dois pareciam amigÃ¡veis, certo?";
-			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Bem, este Ã© o meu presente para vocÃª.";
-			mes "Espero que seja Ãºtil.";
-			completequest 7474;
-			erasequest 7475;
-			erasequest 7476;
-			erasequest 7477;
-			getexp 300,20;
-			getitem 12323,20;// N_Fly_Wing
-			getitem 12324,10;// N_Butterfly_Wing
-			getitem 569,20;// Novice_Potion
-			next;
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "Tenha uma jornada maravilhosa.";
-			close;
-		} else {
-			mes "[Equipe de InformaÃ§Ãµes]";
-			mes "VocÃª nÃ£o encontrou o tesouro que eu escondi.";
-			mes "Aqui estÃ£o os locais novamente.";
-			mes "Apresse-se!";
-			viewpoint 1,179,75,1,0xccffff;
-			viewpoint 1,45,94,2,0x00ff00;
-			viewpoint 1,207,167,3,0xFFEB46;
-			close;
-		}
-	} else {
-		mes "[Equipe de InformaÃ§Ãµes]";
-		mes "Aqui Ã© Izlude - a cidade-satÃ©lite de Prontera.";
-		mes "VocÃª precisa de instruÃ§Ãµes?";
-		next;
-		mes "[Equipe de InformaÃ§Ãµes]";
-		mes "Se vocÃª clicar no ^ B9062F [nome da Ã¡rea] ^ 000000, eu posso ^ B9062Fnavegar ^ 000000 um caminho para vocÃª seguir.";
-		next;
-		while(1) {
-			switch(select("[InstalaÃ§Ãµes principais]", "[Guia & Auxiliar]", "RemoÃ§Ã£o de marcaÃ§Ã£o de mini-mapa", "Conversa final")) {
-			case 1:
-				while (1) {
-					switch (select("[Academia de Criatura]: [Cais]: [DirigÃ­vel (Internacional)]: [Arena]: [Loja]: [Guilda de Espadachim]: [AssociaÃ§Ã£o de Encantamento]: [Oficina de Ferreiro]: Volte para o menu anterior ")) {
-					case 1:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Se vocÃª Ã© o primeiro aventureiro,";
-						mes "<NAVI> [Academia Criatura] <INFO> iz_ac01,100,39, </ INFO> </ NAVI>";
-						mes "pode â€‹â€‹oferecer muita informaÃ§Ã£o e ajuda.";
-						mes "VocÃª precisa de direÃ§Ãµes adicionais?";
-						viewpoint 1,128,260,0,0xFFD269;
-						next;
-						continue;
-					case 2:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "AtravÃ©s do <NAVI> [Wharf] <INFO> izlude, 197,205, </ INFO> </ NAVI> no nordeste,";
-						mes "^ 8B4513Alberta ^ 000000 ou ^ 8B4513a Ilha Byalan ^ 000000 pode ser visitada.";
-						mes "vocÃª pode ir.";
-						next;
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Byalan Island Ã© o lugar assustador com a masmorra ^ 8B4513Izlude ^ 000000 nela.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,197,205,1,0xFFFF00;
-						next;
-						continue;
-					case 3:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Para o sudeste, o <NAVI> [DirigÃ­vel] <INFO> izlude, 206,75, </ INFO> </ NAVI>";
-						mes "serÃ¡ conectado com a Capital da repÃºblica de Schwarzwald - ^ 8B4513 Yuno ^ 000000, e";
-						mes "A capital do Arunapeltsdom - ^ 8B4513 Raquel ^ 000000.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,210,73,2,0xFF0A82;
-						next;
-						continue;
-					case 4:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "O <NAVI> [Arena] <INFO> izlude, 213,161, </ INFO> </ NAVI> localizado no leste";
-						mes "Ã© para testar sua habilidade de batalha.";
-						mes "Ã‰ um lugar excelente.";
-						mes "Vou marcar a localizaÃ§Ã£o no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,213,161,3,0xFFFF54;
-						next;
-						continue;
-					case 5:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [Loja] <INFO> izlude, 110,182, </ INFO> </ NAVI>";
-						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,108,179,4, 0xFFAAFF;
-						next;
-						continue;
-					case 6:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "<NAVI> [guilda dos Espadachins] <INFO> izlude, 51,172, </ INFO> </ NAVI> Ã© o lugar para gerenciar a transferÃªncia de emprego para um espadachim.";
-						mes "Eu vou marcar a localizaÃ§Ã£o da guilda de espadachim no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,52,172,5,0xFFDA70;
-						next;
-						continue;
-					case 7:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [AssociaÃ§Ã£o Enchant] <INFO> izlude, 97,125, </ INFO> </ NAVI>";
-						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,97,125,6,0xFFDA70;
-						next;
-						continue;
-					case 8:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [Oficina de Ferreiro] <INFO> izlude, 153,126, </ INFO> </ NAVI>";
-						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,153,126,7,0xFFAAFF;
-						next;
-						continue;
-					case 9:
-						break;
-					}
-					break;
-				}
-				break;
-			case 2:
-				while (1) {
-					switch (select ("[Teleporter Grupo Eden]: [FuncionÃ¡rio Kafra]: [Mesmerizer]: [SecretÃ¡rio de casamento]: [FuncionÃ¡rio Mercenary Guild]: [Taming Merchant]: Volte para o menu anterior")) {
-					case 1:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Por enquanto, vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [Teleporter do Grupo Eden] <INFO> izlude, 131,148, </ INFO> </ NAVI>";
-						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,131,148,8,0xFF0A82;
-						next;
-						continue;
-					case 2:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [FuncionÃ¡rio Kafra] <INFO> izlude, 128,148, </ INFO> </ NAVI>";
-						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,128,148,9,0xFFFF54;
-						next;
-						continue;
-					case 3:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI> [Mesmerizer] <INFO> izlude, 124,127, </ INFO> </ NAVI>";
-						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,125,127,10,0xFF0064;
-						next;
-						continue;
-					case 4:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Se vocÃª quiser visitar ^ 8B4513Jawaii ^ 000000 - o lugar do resort para um casal,";
-						mes "fale com o <NAVI> [SecretÃ¡rio de Casamentos] <INFO> izlude, 180,224, </ INFO> </ NAVI>.";
-						mes "Apenas faÃ§a a pergunta sobre isso.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,180,224,11,0xFFFF00;
-						next;
-						continue;
-					case 5:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Se vocÃª precisa saber sobre o Mercenary Guild, vÃ¡ para o oeste e fale com o";
-						mes "<NAVI> [Oficial Mercenary Guild] <INFO> izlude, 47,170, </ INFO> </ NAVI>.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,47,170,12,0xFFDA70;
-						next;
-						continue;
-					case 6:
-						mes "[Equipe de InformaÃ§Ãµes]";
-						mes "Vou marcar a localizaÃ§Ã£o do";
-						mes "<NAVI>[Domar Mercador]<INFO>izlude,118,163,</INFO> </NAVI>";
-						mes "no mini mapa.";
-						mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
-						viewpoint 1,118,163,13,0xFF0064;
-						next;
-						continue;
-					case 7:
-						break;
-					}
-					break;
-				}
-				break;
-			case 3:
-				mes "[Equipe de InformaÃ§Ãµes]";
+				mes "[Equipe de Informações]";
 				mes "vou apagar as marcas.";
-				mes "VocÃª precisa de instruÃ§Ãµes adicionais?";
+				mes "Você precisa de instruções adicionais?";
 				viewpoint 2,197,205,1,0xFF0000;
 				viewpoint 2,210,73,2,0xFF0000;
 				viewpoint 2,213,161,3,0xFF0000;
@@ -1628,7 +1362,273 @@ izlude,120,207,4	script	Equipe de InformaÃ§Ãµes#0	8W_SOLDIER,{
 				next;
 				break;
 			case 4:
-				mes "[Equipe de InformaÃ§Ãµes]";
+				mes "[Equipe de Informações]";
+				mes "Tenha uma aventura maravilhosa.";
+				mes "Adeus ~~!";
+				close;
+			}
+		}
+	} else if (isbegin_quest(7474) == 1) {
+		if ((isbegin_quest(7475) + isbegin_quest(7476) + isbegin_quest(7477)) > 2) {
+			mes "[Equipe de Informações]";
+			mes "O que há com o rosto comprido?";
+			mes "Parece que você encontrou todos os locais que eu marquei.";
+			next;
+			mes "[Lumin]";
+			mes "Tartaruga ...";
+			cutin "nov_lumin01.bmp", 2;
+			next;
+			select ("Como você me chama?");
+			mes "[Lumin]";
+			mes "Porque você é muito devagar.";
+			mes "Sim, é. Eu tenho esperado por você pelo que parece ser uma eternidade.";
+			next;
+			mes "[Lumin]";
+			mes "....... Devo compartilhar com você?";
+			cutin "nov_lumin03.bmp", 2;
+			next;
+			if (select ("Eu não preciso da sua simpatia", "!!!!!") == 1) {
+				mes "[Lumin]";
+				mes "É isso mesmo?";
+				mes "Capitão sempre me disse para ajudar as pessoas pobres.";
+				mes "Mas você se livra da minha chance de ajudar.";
+				cutin "nov_lumin02.bmp", 2;
+				next;
+				mes "[Lumin]";
+				mes "Ahhh. Irritante.";
+				next;
+			} else {
+				mes "[Lumin]";
+				mes "Bem, agora podemos dividir 7 a 3?";
+				mes "Eu estou bem com 6 a 4.";
+				cutin "nov_lumin02.bmp", 2;
+				next;
+				mes "[" + strcharinfo(0) + "]";
+				mes "Esse cara ...";
+				next;
+			}
+			cutin "", 255;
+			mes "[Equipe de Informações]";
+			mes "Ahhh, vocês dois se acalmem.";
+			mes "Lumin levou todos eles.";
+			mes "" + strcharinfo (0) + "Eu te darei um conjunto separadamente.";
+			next;
+			mes "[Equipe de Informações]";
+			mes "Pense na razão, foi minha culpa deixar uma pessoa, mas enviou vocês dois.";
+			next;
+			cutin "nov_lumin03.bmp", 2;
+			mes "[Lumin]";
+			mes "Decisão simples e justa.";
+			mes "OK. Agora eu vou.";
+			mes "Vejo você de novo, meu amigo.";
+			next;
+			cutin "", 255;
+			mes "[Equipe de Informações]";
+			mes "Vocês não são dois amigos?";
+			mes "Vocês dois pareciam amigáveis, certo?";
+			next;
+			mes "[Equipe de Informações]";
+			mes "Bem, este é o meu presente para você.";
+			mes "Espero que seja útil.";
+			completequest 7474;
+			erasequest 7475;
+			erasequest 7476;
+			erasequest 7477;
+			getexp 300,20;
+			getitem 12323,20;// N_Fly_Wing
+			getitem 12324,10;// N_Butterfly_Wing
+			getitem 569,20;// Novice_Potion
+			next;
+			mes "[Equipe de Informações]";
+			mes "Tenha uma jornada maravilhosa.";
+			close;
+		} else {
+			mes "[Equipe de Informações]";
+			mes "Você não encontrou o tesouro que eu escondi.";
+			mes "Aqui estão os locais novamente.";
+			mes "Apresse-se!";
+			viewpoint 1,179,75,1,0xccffff;
+			viewpoint 1,45,94,2,0x00ff00;
+			viewpoint 1,207,167,3,0xFFEB46;
+			close;
+		}
+	} else {
+		mes "[Equipe de Informações]";
+		mes "Aqui é Izlude - a cidade-satélite de Prontera.";
+		mes "Você precisa de instruções?";
+		next;
+		mes "[Equipe de Informações]";
+		mes "Se você clicar no ^B9062F[nome da área]^000000, eu posso ^B9062Fnavegar^000000 um caminho para você seguir.";
+		next;
+		while(1) {
+			switch(select("[Instalações principais]", "[Guia & Auxiliar]", "Remoção de marcação de mini-mapa", "Conversa final")) {
+			case 1:
+				while (1) {
+					switch (select("[Academia de Criatura]: [Cais]: [Dirigível (Internacional)]: [Arena]: [Loja]: [Guilda de Espadachim]: [Associação de Encantamento]: [Oficina de Ferreiro]: Volte para o menu anterior ")) {
+					case 1:
+						mes "[Equipe de Informações]";
+						mes "Se você é o primeiro aventureiro,";
+						mes "<NAVI>[Academia Criatura]<INFO>iz_ac01,100,39,</INFO></NAVI>";
+						mes "pode ??oferecer muita informação e ajuda.";
+						mes "Você precisa de direções adicionais?";
+						viewpoint 1,128,260,0,0xFFD269;
+						next;
+						continue;
+					case 2:
+						mes "[Equipe de Informações]";
+						mes "Através do <NAVI>[Wharf]<INFO> izlude,197,205,</INFO></NAVI> no nordeste,";
+						mes "^ 8B4513Alberta ^ 000000 ou ^8B4513a Ilha Byalan^000000 pode ser visitada.";
+						mes "você pode ir.";
+						next;
+						mes "[Equipe de Informações]";
+						mes "Byalan Island é o lugar assustador com a masmorra ^8B4513Izlude^000000 nela.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,197,205,1,0xFFFF00;
+						next;
+						continue;
+					case 3:
+						mes "[Equipe de Informações]";
+						mes "Para o sudeste, o <NAVI>[Dirigível]<INFO>izlude,206,75,</INFO></NAVI>";
+						mes "será conectado com a Capital da república de Schwarzwald - ^ 8B4513 Yuno ^ 000000, e";
+						mes "A capital do Arunapeltsdom - ^ 8B4513 Raquel ^ 000000.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,210,73,2,0xFF0A82;
+						next;
+						continue;
+					case 4:
+						mes "[Equipe de Informações]";
+						mes "O <NAVI> [Arena] <INFO> izlude, 213,161, </ INFO> </ NAVI> localizado no leste";
+						mes "é para testar sua habilidade de batalha.";
+						mes "É um lugar excelente.";
+						mes "Vou marcar a localização no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,213,161,3,0xFFFF54;
+						next;
+						continue;
+					case 5:
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI> [Loja] <INFO> izlude, 110,182, </ INFO> </ NAVI>";
+						mes "no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,108,179,4, 0xFFAAFF;
+						next;
+						continue;
+					case 6:
+						mes "[Equipe de Informações]";
+						mes "<NAVI> [guilda dos Espadachins] <INFO> izlude, 51,172, </ INFO> </ NAVI> é o lugar para gerenciar a transferência de emprego para um espadachim.";
+						mes "Eu vou marcar a localização da guilda de espadachim no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,52,172,5,0xFFDA70;
+						next;
+						continue;
+					case 7:
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI> [Associação Enchant] <INFO> izlude, 97,125, </ INFO> </ NAVI>";
+						mes "no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,97,125,6,0xFFDA70;
+						next;
+						continue;
+					case 8:
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI> [Oficina de Ferreiro] <INFO> izlude, 153,126, </ INFO> </ NAVI>";
+						mes "no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,153,126,7,0xFFAAFF;
+						next;
+						continue;
+					case 9:
+						break;
+					}
+					break;
+				}
+				break;
+			case 2:
+				while (1) {
+					switch (select ("[Teleporter Grupo Eden]: [Funcionário Kafra]: [Mesmerizer]: [Secretário de casamento]: [Funcionário Mercenary Guild]: [Taming Merchant]: Volte para o menu anterior")) {
+					case 1:
+						mes "[Equipe de Informações]";
+						mes "Por enquanto, vou marcar a localização do";
+						mes "<NAVI> [Teleporter do Grupo Eden] <INFO> izlude, 131,148, </ INFO> </ NAVI>";
+						mes "no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,131,148,8,0xFF0A82;
+						next;
+						continue;
+					case 2:
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI> [Funcionário Kafra] <INFO> izlude, 128,148, </ INFO> </ NAVI>";
+						mes "no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,128,148,9,0xFFFF54;
+						next;
+						continue;
+					case 3:
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI> [Mesmerizer] <INFO> izlude, 124,127, </ INFO> </ NAVI>";
+						mes "no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,125,127,10,0xFF0064;
+						next;
+						continue;
+					case 4:
+						mes "[Equipe de Informações]";
+						mes "Se você quiser visitar ^ 8B4513Jawaii ^ 000000 - o lugar do resort para um casal,";
+						mes "fale com o <NAVI> [Secretário de Casamentos] <INFO> izlude, 180,224, </ INFO> </ NAVI>.";
+						mes "Apenas faça a pergunta sobre isso.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,180,224,11,0xFFFF00;
+						next;
+						continue;
+					case 5:
+						mes "[Equipe de Informações]";
+						mes "Se você precisa saber sobre o Mercenary Guild, vá para o oeste e fale com o";
+						mes "<NAVI> [Oficial Mercenary Guild] <INFO> izlude, 47,170, </ INFO> </ NAVI>.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,47,170,12,0xFFDA70;
+						next;
+						continue;
+					case 6:
+						mes "[Equipe de Informações]";
+						mes "Vou marcar a localização do";
+						mes "<NAVI>[Domar Mercador]<INFO>izlude,118,163,</INFO> </NAVI>";
+						mes "no mini mapa.";
+						mes "Você precisa de instruções adicionais?";
+						viewpoint 1,118,163,13,0xFF0064;
+						next;
+						continue;
+					case 7:
+						break;
+					}
+					break;
+				}
+				break;
+			case 3:
+				mes "[Equipe de Informações]";
+				mes "vou apagar as marcas.";
+				mes "Você precisa de instruções adicionais?";
+				viewpoint 2,197,205,1,0xFF0000;
+				viewpoint 2,210,73,2,0xFF0000;
+				viewpoint 2,213,161,3,0xFF0000;
+				viewpoint 2,108,179,4,0xFF0000;
+				viewpoint 2,52,172,5,0xFF0000;
+				viewpoint 2,97,125,6,0xFF0000;
+				viewpoint 2,153,126,7,0xFF0000;
+				viewpoint 2,131,148,8,0xFF0000;
+				viewpoint 2,128,148,9,0xFF0000;
+				viewpoint 2,125,127,10,0xFF0000;
+				viewpoint 2,180,224,11,0xFF0000;
+				viewpoint 2,47,170,12,0xFF0000;
+				viewpoint 2,118,163,13,0xFF0000;
+				next;
+				break;
+			case 4:
+				mes "[Equipe de Informações]";
 				mes "Tenha uma aventura maravilhosa.";
 				mes "Adeus ~~!";
 close;
@@ -1647,25 +1647,25 @@ OnInit:
 	end;
 }
 
-izlude_a,120,207,4	duplicate(Equipe de InformaÃ§Ãµes#0)	Equipe de InformaÃ§Ãµes#a	8W_SOLDIER
-izlude_b,120,207,4	duplicate(Equipe de InformaÃ§Ãµes#0)	Equipe de InformaÃ§Ãµes#b	8W_SOLDIER
-izlude_c,120,207,4	duplicate(Equipe de InformaÃ§Ãµes#0)	Equipe de InformaÃ§Ãµes#c	8W_SOLDIER
-izlude_d,120,207,4	duplicate(Equipe de InformaÃ§Ãµes#0)	Equipe de InformaÃ§Ãµes#d	8W_SOLDIER
+izlude_a,120,207,4	duplicate(Equipe de Informações#0)	Equipe de Informações#a	8W_SOLDIER
+izlude_b,120,207,4	duplicate(Equipe de Informações#0)	Equipe de Informações#b	8W_SOLDIER
+izlude_c,120,207,4	duplicate(Equipe de Informações#0)	Equipe de Informações#c	8W_SOLDIER
+izlude_d,120,207,4	duplicate(Equipe de Informações#0)	Equipe de Informações#d	8W_SOLDIER
 
-// - Sinal de dirigÃ­vel
+// - Sinal de dirigível
 // -----------------------------------------------------------------------------
-izlude,179,75,3	script	DirigÃ­vel#iz	4_BULLETIN_BOARD2,3,3,{
+izlude,179,75,3	script	Dirigível#iz	4_BULLETIN_BOARD2,3,3,{
 	.@total = isbegin_quest(7475) + isbegin_quest(7476) + isbegin_quest(7477);
 	if (isbegin_quest(7474)) {
 		if (!isbegin_quest(7475)) {
-			mes "==== InformaÃ§Ãµes de Destino ====";
+			mes "==== Informações de Destino ====";
 			mes "Izlude - Juno - Rachel";
 			mes "Viajantes com destino a ^ 4d4dffSchwarzwalt Republic ^ 000000 ou ^ 4d4dffArunafeltz ^ 000000 podem embarcar na aeronave aqui.";
 			next;
 			if (.@total == 1) {
-				mes "Exceto a tabuleta do dirigÃ­vel livre, nada pode ser encontrado.";
+				mes "Exceto a tabuleta do dirigível livre, nada pode ser encontrado.";
 				next;
-				select("Onde estÃ¡ o tesouro escondido?");
+				select("Onde está o tesouro escondido?");
 				mes "[Lumin]";
 				mes "Yo.";
 				mes "Desculpe amigo, eu cheguei aqui primeiro.";
@@ -1674,14 +1674,14 @@ izlude,179,75,3	script	DirigÃ­vel#iz	4_BULLETIN_BOARD2,3,3,{
 				next;
 				mes "[Lumin]";
 				mes "Por que essas asas se teleportam?";
-				mes "Eu acho que porque eles sÃ£o de monstros cremosos...";
+				mes "Eu acho que porque eles são de monstros cremosos...";
 				next;
 				mes "[Lumin]";
-				mes "Como o capitÃ£o disse, ver para crer. O mundo estÃ¡ cheio de mistÃ©rios.";
+				mes "Como o capitão disse, ver para crer. O mundo está cheio de mistérios.";
 				next;
 				cutin "", 255;
 				mes "Parece que Lumin te bateu novamente.";
-				mes "Melhor chegar ao prÃ³ximo local antes que o Lumin o faÃ§a.";
+				mes "Melhor chegar ao próximo local antes que o Lumin o faça.";
 				setquest 7475;
 				viewpoint 2,179,75,1,0xFF0000;
 				close;
@@ -1694,65 +1694,65 @@ izlude,179,75,3	script	DirigÃ­vel#iz	4_BULLETIN_BOARD2,3,3,{
 				mes "Muahahahaha.";
 				cutin "nov_lumin03.bmp", 2;
 				next;
-				if (select("VocÃª estÃ¡ brincando comigo ?!", "Onde estÃ¡ o tesouro?") == 1) {
+				if (select("Você está brincando comigo ?!", "Onde está o tesouro?") == 1) {
 					mes "[Lumin]";
-					mes "NÃ£o ...";
-					mes "Conhecer trÃªs vezes em um dia deve ser o destino.";
-					mes "VocÃª e eu podemos ser amigos.";
+					mes "Não ...";
+					mes "Conhecer três vezes em um dia deve ser o destino.";
+					mes "Você e eu podemos ser amigos.";
 					cutin "nov_lumin05.bmp", 2;
 					next;
 					select ("Or Frenemies!");
 					mes "[Lumin]";
-					mes "Frene-o quÃª? Oh, bem, eu acabei com a missÃ£o.";
+					mes "Frene-o quê? Oh, bem, eu acabei com a missão.";
 					mes "Tome cuidado.";
 					cutin "nov_lumin02.bmp", 2;
 					next;
 					cutin "", 255;
 					mes "[" + strcharinfo(0) + "]";
-					mes "VocÃª estÃ¡ me ouvindo?";
+					mes "Você está me ouvindo?";
 					setquest 7475;
 					viewpoint 2,179,75,1,0xFF0000;
 					next;
-					mes "^ 4d4dff ... Eu tenho que reportar o resultado para a Equipe de InformaÃ§Ãµes ... ^ 000000.";
+					mes "^ 4d4dff ... Eu tenho que reportar o resultado para a Equipe de Informações ... ^ 000000.";
 					close;
 				}
 				mes "[Lumin]";
 				mes "Ooo Asas de Borboleta.";
-				mes "Se eu entregÃ¡-lo para vocÃª, vocÃª sÃ³ vai perdÃª-los, entÃ£o eu vou mantÃª-los.";
+				mes "Se eu entregá-lo para você, você só vai perdê-los, então eu vou mantê-los.";
 				cutin "nov_lumin01.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Vamos lÃ¡, Ã© apenas uma competiÃ§Ã£o amigÃ¡vel.";
+				mes "Vamos lá, é apenas uma competição amigável.";
 				cutin "nov_lumin05.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Eu estou fazendo isso para vocÃª tornÃ¡-lo mais forte.";
+				mes "Eu estou fazendo isso para você torná-lo mais forte.";
 				mes "Agora, tanto tempo.";
 				cutin "nov_lumin03.bmp", 2;
 				next;
 				cutin "", 255;
-				mes "^ 4d4dff ... eu tenho que reportar o resultado para a equipe de InformaÃ§Ã£o ... ^000000.";
+				mes "^ 4d4dff ... eu tenho que reportar o resultado para a equipe de Informação ... ^000000.";
 				setquest 7475;
 				viewpoint 2,179,75,1,0xFF0000;
 				close;
 			} else {
-				mes "Com exceÃ§Ã£o da placa do dirigÃ­vel livre, nada foi encontrado.";
+				mes "Com exceção da placa do dirigível livre, nada foi encontrado.";
 				next;
-				select ("Por que nÃ£o hÃ¡ nada aqui?");
+				select ("Por que não há nada aqui?");
 				mes "[Lumin]";
 				mes "Claro.";
-				mes "Eu jÃ¡ coloquei na minha bolsa.";
+				mes "Eu já coloquei na minha bolsa.";
 				mes "Havia Asas de Borboleta aqui.";
 				cutin "nov_lumin01.bmp", 2;
 				next;
-				select ("EntÃ£o, posso ter alguns?");
+				select ("Então, posso ter alguns?");
 				mes "[Lumin]";
-				mes "Isso nÃ£o Ã© justo, eu estava aqui primeiro, entÃ£o eles sÃ£o meus.";
-				mes "Ã‰ melhor vocÃª chegar na prÃ³xima parada mais rÃ¡pido se vocÃª quiser o prÃªmio.";
+				mes "Isso não é justo, eu estava aqui primeiro, então eles são meus.";
+				mes "É melhor você chegar na próxima parada mais rápido se você quiser o prêmio.";
 				cutin "nov_lumin02.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Bem, entÃ£o .....";
+				mes "Bem, então .....";
 				cutin "nov_lumin03.bmp", 2;
 				next;
 				cutin "", 255;
@@ -1763,13 +1763,13 @@ izlude,179,75,3	script	DirigÃ­vel#iz	4_BULLETIN_BOARD2,3,3,{
 				close;
 			}
 		} else {
-			mes "==== InformaÃ§Ãµes sobre dirigÃ­veis ====";
+			mes "==== Informações sobre dirigíveis ====";
 			mes "Izlude - Juno - Rachel";
 			mes "Viajantes com destino a ^ 4d4dffSchwarzwalt Republic ^ 000000 ou ^ 4d4dffArunafeltz ^ 000000 podem embarcar na aeronave aqui.";
 			close;
 		}
 	} else {
-		mes "==== InformaÃ§Ãµes sobre dirigÃ­veis ====";
+		mes "==== Informações sobre dirigíveis ====";
 		mes "Izlude - Juno - Rachel";
 		mes "Viajantes com destino a ^ 4d4dffSchwarzwalt Republic ^ 000000 ou ^ 4d4dffArunafeltz ^ 000000 podem embarcar na aeronave aqui.";
 		close;
@@ -1786,10 +1786,10 @@ OnTouch:
 	end;
 }
 
-izlude_a,179,75,3	duplicate(DirigÃ­vel#iz)	DirigÃ­vel#iz_a	4_BULLETIN_BOARD2,3,3
-izlude_b,179,75,3	duplicate(DirigÃ­vel#iz)	DirigÃ­vel#iz_b	4_BULLETIN_BOARD2,3,3
-izlude_c,179,75,3	duplicate(DirigÃ­vel#iz)	DirigÃ­vel#iz_c	4_BULLETIN_BOARD2,3,3
-izlude_d,179,75,3	duplicate(DirigÃ­vel#iz)	DirigÃ­vel#iz_d	4_BULLETIN_BOARD2,3,3
+izlude_a,179,75,3	duplicate(Dirigível#iz)	Dirigível#iz_a	4_BULLETIN_BOARD2,3,3
+izlude_b,179,75,3	duplicate(Dirigível#iz)	Dirigível#iz_b	4_BULLETIN_BOARD2,3,3
+izlude_c,179,75,3	duplicate(Dirigível#iz)	Dirigível#iz_c	4_BULLETIN_BOARD2,3,3
+izlude_d,179,75,3	duplicate(Dirigível#iz)	Dirigível#iz_d	4_BULLETIN_BOARD2,3,3
 
 // - Arena Sign
 // -----------------------------------------------------------------------------
@@ -1798,8 +1798,8 @@ izlude,207,167,3	script	Arena#iz	4_BULLETIN_BOARD2,3,3,{
 	if (isbegin_quest(7474) == 1) {
 		if (!isbegin_quest(7476)) {
 			mes "== Desafio! Arena! ==";
-			mes "RespiraÃ§Ã£o levando batalha com monstros!";
-			mes "Onde estÃ¡ seu limite?";
+			mes "Respiração levando batalha com monstros!";
+			mes "Onde está seu limite?";
 			mes "PvE festa com seu comrad!";
 			mes "Tudo isso na Arena !!";
 			next;
@@ -1808,19 +1808,19 @@ izlude,207,167,3	script	Arena#iz	4_BULLETIN_BOARD2,3,3,{
 				next;
 				select ("Nada de novo?");
 				mes "[Lumin]";
-				mes "Hmmm. NÃ£o Ã© nada ....";
-				mes "Havia poÃ§Ãµes aqui ...";
-				mes "Eu estava cansado de esperar por vocÃª, entÃ£o eu peguei tambÃ©m.";
+				mes "Hmmm. Não é nada ....";
+				mes "Havia poções aqui ...";
+				mes "Eu estava cansado de esperar por você, então eu peguei também.";
 				cutin "nov_lumin01.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Mas por que essa poÃ§Ã£o nunca me deixa satisfeito?";
+				mes "Mas por que essa poção nunca me deixa satisfeito?";
 				mes "gole *";
 				mes "Bem, parece que tudo acabou.";
 				next;
 				cutin "", 255;
-				mes "Lumin venceu vocÃª de novo.";
-				mes "Melhor vencÃª-lo atÃ© o Ãºltimo ponto.";
+				mes "Lumin venceu você de novo.";
+				mes "Melhor vencê-lo até o último ponto.";
 				setquest 7476;
 				viewpoint 2,207,167,3,0xFF0000;
 				close;
@@ -1833,65 +1833,65 @@ izlude,207,167,3	script	Arena#iz	4_BULLETIN_BOARD2,3,3,{
 				mes "Muahahaha.";
 				cutin "nov_lumin03.bmp", 2;
 				next;
-				switch(select("VocÃª estÃ¡ brincando comigo ?!", "Onde estÃ¡ o tesouro?") == 1) {
+				switch(select("Você está brincando comigo ?!", "Onde está o tesouro?") == 1) {
 					mes "[Lumin]";
-					mes "NÃ£o ...";
-					mes "Conhecer trÃªs vezes em um dia deve ser o destino.";
-					mes "VocÃª e eu podemos ser amigos.";
+					mes "Não ...";
+					mes "Conhecer três vezes em um dia deve ser o destino.";
+					mes "Você e eu podemos ser amigos.";
 					cutin "nov_lumin05.bmp", 2;
 					next;
 					select ("Or Frenemies!");
 					mes "[Lumin]";
-					mes "Frene-o quÃª? Oh, bem, eu acabei com a missÃ£o.";
+					mes "Frene-o quê? Oh, bem, eu acabei com a missão.";
 					mes "Tome cuidado.";
 					cutin "nov_lumin02.bmp", 2;
 					next;
 					cutin "", 255;
 					mes "[" + strcharinfo (0) + "]";
-					mes "VocÃª estÃ¡ me ouvindo?";
+					mes "Você está me ouvindo?";
 					setquest 7476;
 					viewpoint 2,207,167,3,0xFF0000;
 					next;
-					mes "^ 4d4dff ... Eu tenho que reportar o resultado para a Equipe de InformaÃ§Ãµes ... ^ 000000.";
+					mes "^ 4d4dff ... Eu tenho que reportar o resultado para a Equipe de Informações ... ^ 000000.";
 					close;
 				}
 				mes "[Lumin]";
-				mes "PoÃ§Ãµes Vermelhas.";
-				mes "Se eu entregÃ¡-lo para vocÃª, vocÃª sÃ³ vai perdÃª-los, entÃ£o eu vou mantÃª-los.";
+				mes "Poções Vermelhas.";
+				mes "Se eu entregá-lo para você, você só vai perdê-los, então eu vou mantê-los.";
 				cutin "nov_lumin01.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Vamos lÃ¡, Ã© apenas uma competiÃ§Ã£o amigÃ¡vel.";
+				mes "Vamos lá, é apenas uma competição amigável.";
 				cutin "nov_lumin05.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Eu estou fazendo isso para vocÃª tornÃ¡-lo mais forte.";
+				mes "Eu estou fazendo isso para você torná-lo mais forte.";
 				mes "Agora, tanto tempo.";
 				cutin "nov_lumin03.bmp", 2;
 				next;
 				cutin "", 255;
-				mes "^4d4dff...Eu tenho que reportar o resultado para a equipe de InformaÃ§Ã£o...^000000.";
+				mes "^4d4dff...Eu tenho que reportar o resultado para a equipe de Informação...^000000.";
 				setquest 7476;
 				viewpoint 2,207,167,3,0xFF0000;
 				close;
 			} else {
-				mes "Exceto pela placa de promoÃ§Ã£o da Arena, nada pode ser encontrado.";
+				mes "Exceto pela placa de promoção da Arena, nada pode ser encontrado.";
 				next;
-				select ("Por que nÃ£o hÃ¡ nada?");
+				select ("Por que não há nada?");
 				mes "[Lumin]";
 				mes "Claro.";
-				mes "Eu jÃ¡ fiz isso.";
-				mes "Havia PoÃ§Ã£o Vermelha escondida aqui.";
+				mes "Eu já fiz isso.";
+				mes "Havia Poção Vermelha escondida aqui.";
 				cutin "nov_lumin01.bmp", 2;
 				next;
-				select ("EntÃ£o, posso ter alguns?");
+				select ("Então, posso ter alguns?");
 				mes "[Lumin]";
-				mes "Isso nÃ£o Ã© justo, eu estava aqui primeiro, entÃ£o eles sÃ£o meus.";
-				mes "Ã‰ melhor vocÃª chegar na prÃ³xima parada mais rÃ¡pido se vocÃª quiser o prÃªmio.";
+				mes "Isso não é justo, eu estava aqui primeiro, então eles são meus.";
+				mes "É melhor você chegar na próxima parada mais rápido se você quiser o prêmio.";
 				cutin "nov_lumin02.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Bem, entÃ£o .....";
+				mes "Bem, então .....";
 				cutin "nov_lumin03.bmp", 2;
 				next;
 				cutin "", 255;
@@ -1903,16 +1903,16 @@ izlude,207,167,3	script	Arena#iz	4_BULLETIN_BOARD2,3,3,{
 			}
 		} else {
 			mes "== Desafio! Arena! ==";
-			mes "RespiraÃ§Ã£o levando batalha com monstros!";
-			mes "Onde estÃ¡ seu limite?";
+			mes "Respiração levando batalha com monstros!";
+			mes "Onde está seu limite?";
 			mes "PvE festa com seu comrad!";
 			mes "Tudo isso na Arena !!";
 			close;
 }
 	} else {
 		mes "== Desafio! Arena! ==";
-		mes "RespiraÃ§Ã£o levando batalha com monstros!";
-		mes "Onde estÃ¡ seu limite?";
+		mes "Respiração levando batalha com monstros!";
+		mes "Onde está seu limite?";
 		mes "PvE festa com seu comrad!";
 		mes "Tudo isso na Arena !!";
 		close;
@@ -1940,36 +1940,36 @@ izlude,45,94,3	script	Quadro de Avisos#iz	4_BULLETIN_BOARD2,3,3,{
 	.@total = isbegin_quest(7475) + isbegin_quest(7476) + isbegin_quest(7477);
 	if (isbegin_quest(7474) == 1) {
 		if (!isbegin_quest(7477)) {
-		mes "==== InformaÃ§Ã£o ====";
+		mes "==== Informação ====";
 		mes "Campo de Prontera.";
-		mes "A cidade de Prontera estÃ¡ localizada ao norte.";
+		mes "A cidade de Prontera está localizada ao norte.";
 next;
 			if (.@total == 1) {
 				mes "Exceto pela simples tabuleta, nada pode ser encontrado aqui.";
 				next;
-				select ("Onde estÃ¡ o tesouro?");
+				select ("Onde está o tesouro?");
 				mes "[Lumin]";
 				mes "Yo.";
-				mes "Desculpe, mas eu sou mais rÃ¡pido que vocÃª.";
+				mes "Desculpe, mas eu sou mais rápido que você.";
 				mes "Havia Asas de Mosca aqui ..";
 				cutin "nov_lumin01.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Na verdade, eu nÃ£o gosto de asas de Mosca.";
-				mes "As moscas sÃ£o tÃ£o sujas.";
+				mes "Na verdade, eu não gosto de asas de Mosca.";
+				mes "As moscas são tão sujas.";
 				cutin "nov_lumin02.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "A propÃ³sito, por que um dos transportes convenientes voa em forma de asa?";
-				mes "Talvez vocÃª saiba?";
+				mes "A propósito, por que um dos transportes convenientes voa em forma de asa?";
+				mes "Talvez você saiba?";
 				next;
 				mes "[Lumin]";
-				mes "... vocÃª nÃ£o sabe.";
+				mes "... você não sabe.";
 				cutin "nov_lumin01.bmp", 2;
 				next;
 				cutin "", 255;
 				mes "Derrotado por Lumin novamente.";
-				mes "Mantenha a calma e encontre o prÃ³ximo local.";
+				mes "Mantenha a calma e encontre o próximo local.";
 				setquest 7477;
 				viewpoint 2,45,94,2,0xFF0000;
 				close;
@@ -1979,67 +1979,67 @@ next;
 				cutin "nov_lumin01.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "... OlÃ¡";
+				mes "... Olá";
 				cutin "nov_lumin03.bmp", 2;
 				next;
-			if (select("VocÃª estÃ¡ brincando comigo ?!", "Onde estÃ¡ o tesouro?") == 1) {
+			if (select("Você está brincando comigo ?!", "Onde está o tesouro?") == 1) {
 				mes "[Lumin]";
-				mes "NÃ£o ...";
-				mes "Conhecer trÃªs vezes em um dia deve ser o destino.";
-				mes "VocÃª e eu podemos ser amigos.";
+				mes "Não ...";
+				mes "Conhecer três vezes em um dia deve ser o destino.";
+				mes "Você e eu podemos ser amigos.";
 				cutin "nov_lumin05.bmp", 2;
 				next;
 				select ("Or Frenemies!");
 				mes "[Lumin]";
-				mes "Frene-o quÃª? Oh, bem, eu acabei com a missÃ£o.";
+				mes "Frene-o quê? Oh, bem, eu acabei com a missão.";
 				mes "Tome cuidado.";
 				cutin "nov_lumin02.bmp", 2;
 				next;
 				cutin "", 255;
 				mes "[" + strcharinfo (0) + "]";
-				mes "VocÃª estÃ¡ me ouvindo?";
+				mes "Você está me ouvindo?";
 				setquest 7477;
 				viewpoint 2,45,94,2,0xFF0000;
 				next;
-				mes "^4d4dff...Eu tenho que reportar o resultado para a Equipe de InformaÃ§Ãµes...^000000.";
+				mes "^4d4dff...Eu tenho que reportar o resultado para a Equipe de Informações...^000000.";
 				close;
 				}
 				mes "[Lumin]";
 				mes "Voe Asas.";
-				mes "Se eu entregÃ¡-los para vocÃª, vocÃª sÃ³ vai perdÃª-los, entÃ£o eu acho que vou mantÃª-los.";
+				mes "Se eu entregá-los para você, você só vai perdê-los, então eu acho que vou mantê-los.";
 				cutin "nov_lumin01.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Vamos lÃ¡, Ã© apenas uma competiÃ§Ã£o amigÃ¡vel.";
+				mes "Vamos lá, é apenas uma competição amigável.";
 				cutin "nov_lumin05.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Eu estou fazendo isso para vocÃª tornÃ¡-lo mais forte.";
+				mes "Eu estou fazendo isso para você torná-lo mais forte.";
 				mes "Agora, tanto tempo.";
 				cutin "nov_lumin03.bmp", 2;
 				next;
 				cutin "", 255;
-				mes "^ 4d4dff ... Eu tenho que reportar o resultado para a equipe de InformaÃ§Ã£o ... ^ 000000.";
+				mes "^ 4d4dff ... Eu tenho que reportar o resultado para a equipe de Informação ... ^ 000000.";
 				setquest 7477;
 				viewpoint 2,45,94,2,0xFF0000;
 				close;
 				} else {
 				mes "Exceto pela simples tabuleta, nada pode ser encontrado.";
 				next;
-				select ("Por que nÃ£o hÃ¡ nada?");
+				select ("Por que não há nada?");
 				mes "[Lumin]";
 				mes "Claro.";
-				mes "As asas de Fly estavam aqui, entÃ£o eu jÃ¡ as coloquei na minha bolsa.";
+				mes "As asas de Fly estavam aqui, então eu já as coloquei na minha bolsa.";
 				cutin "nov_lumin01.bmp", 2;
 				next;
-				select ("EntÃ£o, posso ter alguns?");
+				select ("Então, posso ter alguns?");
 				mes "[Lumin]";
-				mes "Isso nÃ£o Ã© justo, eu estava aqui primeiro, entÃ£o eles sÃ£o meus.";
-				mes "Ã‰ melhor vocÃª chegar na prÃ³xima parada mais rÃ¡pido se vocÃª quiser o prÃªmio.";
+				mes "Isso não é justo, eu estava aqui primeiro, então eles são meus.";
+				mes "É melhor você chegar na próxima parada mais rápido se você quiser o prêmio.";
 				cutin "nov_lumin03.bmp", 2;
 				next;
 				mes "[Lumin]";
-				mes "Bem, entÃ£o .....";
+				mes "Bem, então .....";
 				next;
 				cutin "", 255;
 				mes "Lumin desapareceu com seus longos cabelos no ar.";
@@ -2049,15 +2049,15 @@ next;
 				close;
 			}
 		} else {
-			mes "==== InformaÃ§Ã£o ====";
+			mes "==== Informação ====";
 			mes "Campo de Prontera.";
-			mes "A cidade de Prontera estÃ¡ localizada ao norte.";
+			mes "A cidade de Prontera está localizada ao norte.";
 			close;
 		}
 	} else {
-		mes "==== InformaÃ§Ã£o ====";
+		mes "==== Informação ====";
 		mes "Campo de Prontera.";
-		mes "A cidade de Prontera estÃ¡ localizada ao norte.";
+		mes "A cidade de Prontera está localizada ao norte.";
 		close;
 	}
 
@@ -2078,22 +2078,22 @@ izlude_c,45,94,3	duplicate(Quadro de Avisos#iz)	Quadro de Avisos#iz_c	4_BULLETIN
 izlude_d,45,94,3	duplicate(Quadro de Avisos#iz)	Quadro de Avisos#iz_d	4_BULLETIN_BOARD2,3,3
 
 // - Terapeuta (Quest Erva Vermelha + Primeiros Socorros)
-// - DÃ¡ ao jogador uma missÃ£o bÃ¡sica e ensina Primeiros Socorros.
+// - Dá ao jogador uma missão básica e ensina Primeiros Socorros.
 // -----------------------------------------------------------------------------
 iz_ac01,59,43,3	script	Terapeuta#ac	4_M_6THPRIN1,{
 	if (!checkweight(1304,3)) {
-		mes "A missÃ£o nÃ£o pode ser continuada devido ao inventÃ¡rio sobrecarregado.";
+		mes "A missão não pode ser continuada devido ao inventário sobrecarregado.";
 		mes "Por favor, tente novamente depois de organizar os itens.";
 		close;
 	}
 	mes "[Terapeuta]";
 	if (isbegin_quest(4269) == 2) {
-		mes "VocÃª Ã© estudante?";
-		mes "VocÃª tem algum problema em seu corpo?";
+		mes "Você é estudante?";
+		mes "Você tem algum problema em seu corpo?";
 		next;
 		.@menu$ = "Ajude-me!:Ensina-me a Habilidade de Primeiros Socorros:^ff0000Quest Erva Vermelha^000000:Salvar Local.";
 	} else {
-		mes "Este Ã© o dispensÃ¡rio da Academia Real Criatura.";
+		mes "Este é o dispensário da Academia Real Criatura.";
 		mes "Como posso te ajudar?";
 		next;
 		.@menu$ = "Ajude-me!: Habilidade de Primeiros Socorros :: Eu quero descansar. ";
@@ -2102,42 +2102,42 @@ iz_ac01,59,43,3	script	Terapeuta#ac	4_M_6THPRIN1,{
 	case 1:
 		if (BaseLevel <= 20) {
 			mes "[Terapeuta]";
-			mes "VocÃª estÃ¡ ferido?";
-			mes "Mesmo o tratamento de emergÃªncia nÃ£o funcionou para vocÃª?";
+			mes "Você está ferido?";
+			mes "Mesmo o tratamento de emergência não funcionou para você?";
 			next;
 			npcskill "AL_HEAL", 3, 50, 60;
 			percentheal 0,50;
 			mes "[Terapeuta]";
-			mes "Isso Ã© bom o suficiente?";
-			mes "VocÃª se recuperou?";
-			mes "Se vocÃª Ã© sÃ£o, vÃ¡ para a cama e descanse antes de ir.";
+			mes "Isso é bom o suficiente?";
+			mes "Você se recuperou?";
+			mes "Se você é são, vá para a cama e descanse antes de ir.";
 			close;
 		} else {
 			mes "[Terapeuta]";
-			mes "Eu sinto muito por vocÃª, mas ...";
-			mes "Eu sÃ³ posso dar o meu serviÃ§o gratuito de cura para aqueles abaixo do nÃ­vel de base 20.";
-			mes "VocÃª nÃ£o parece que vai morrer de qualquer maneira.";
+			mes "Eu sinto muito por você, mas ...";
+			mes "Eu só posso dar o meu serviço gratuito de cura para aqueles abaixo do nível de base 20.";
+			mes "Você não parece que vai morrer de qualquer maneira.";
 			next;
 			mes "[Terapeuta]";
-			mes "Apenas descanse aqui atÃ© vocÃª se recuperar.";
-			mes "HÃ¡ muitas camas vazias!";
+			mes "Apenas descanse aqui até você se recuperar.";
+			mes "Há muitas camas vazias!";
 			close;
 		}
 		break;
 	case 2:
 		if (getskilllv("NV_FIRSTAID")) {
 			mes "[Terapeuta]";
-			mes "VocÃª jÃ¡ sabe sobre Primeiros Socorros.";
-			mes "NÃ³s dois estamos ocupados. NÃ£o me incomode.";
+			mes "Você já sabe sobre Primeiros Socorros.";
+			mes "Nós dois estamos ocupados. Não me incomode.";
 			close;
 		} else {
 			mes "[Terapeuta]";
-			mes "VocÃª Ã© louvÃ¡vel!";
-			mes "Primeiros Socorros Ã© uma habilidade que transfere SP para HP em situaÃ§Ãµes de emergÃªncia.";
+			mes "Você é louvável!";
+			mes "Primeiros Socorros é uma habilidade que transfere SP para HP em situações de emergência.";
 			next;
 			mes "[Terapeuta]";
-			mes "Taxa de recuperaÃ§Ã£o Ã© mÃ­nima ...";
-			mes "Isso pode te ajudar a evitar a morte, mas nÃ£o vai te dar muito HP.";
+			mes "Taxa de recuperação é mínima ...";
+			mes "Isso pode te ajudar a evitar a morte, mas não vai te dar muito HP.";
 			specialeffect2 EF_BEGINSPELL6;
 			specialeffect2 EF_SPELLBREAKER;
 			next;
@@ -2148,129 +2148,129 @@ iz_ac01,59,43,3	script	Terapeuta#ac	4_M_6THPRIN1,{
 			getexp 1000,40;
 			next;
 			mes "[Terapeuta]";
-			mes "Se vocÃª pressionar ^ 4d4dffF12 ^ 000000 ...";
+			mes "Se você pressionar ^ 4d4dffF12 ^ 000000 ...";
 			mes "A janela de atalho vai abrir com nove pequenos compartimentos para registrar suas habilidades.";
 			next;
 			mes "[Terapeuta]";
-			mes "Arrastando o canto direito na janela de atalho, vocÃª pode abrir mais pÃ¡ginas de atalho.";
+			mes "Arrastando o canto direito na janela de atalho, você pode abrir mais páginas de atalho.";
 			next;
 			mes "[Terapeuta]";
-			mes "Ã‰ um uso simples. ^ 4d4dffEla slot responde a teclas individuais de F1 a F9 ^ 000000.";
-			mes "Habilidades ou itens necessÃ¡rios podem ser usados â€‹â€‹imediatamente apÃ³s o registro nos slots correspondentes.";
+			mes "É um uso simples. ^ 4d4dffEla slot responde a teclas individuais de F1 a F9 ^ 000000.";
+			mes "Habilidades ou itens necessários podem ser usados ??imediatamente após o registro nos slots correspondentes.";
 			next;
 			cutin "tutorial05.bmp", 4;
-			mes "! - InformaÃ§Ã£o -!";
-			mes "VocÃª pode registrar itens ou habilidades necessÃ¡rias em ^ 4d4dffshortcut slots arrastando os Ã­cones.";
+			mes "! - Informação -!";
+			mes "Você pode registrar itens ou habilidades necessárias em ^ 4d4dffshortcut slots arrastando os ícones.";
 			next;
-			mes "! - InformaÃ§Ã£o -!";
-			mes "^ 4d4dff Os itens registrados e equipamentos em ^ 4d4dff os slots podem ser imediatamente usados â€‹â€‹ou armados pressionando as teclas F1 - F9 de reposiÃ§Ã£o.";
+			mes "! - Informação -!";
+			mes "^ 4d4dff Os itens registrados e equipamentos em ^ 4d4dff os slots podem ser imediatamente usados ??ou armados pressionando as teclas F1 - F9 de reposição.";
 			next;
-			mes "! - InformaÃ§Ã£o -!";
-			mes "Definindo as teclas ^ 4d4dffshortcut como vocÃª quer, vocÃª pode usar a tecla de atalho respondendo.";
+			mes "! - Informação -!";
+			mes "Definindo as teclas ^ 4d4dffshortcut como você quer, você pode usar a tecla de atalho respondendo.";
 			next;
-			mes "! - InformaÃ§Ã£o -!";
-			mes "^ 4d4dffyou pode registrar os itens e habilidades freqÃ¼entemente usados, e usÃ¡-los conforme sua conveniÃªncia.";
+			mes "! - Informação -!";
+			mes "^ 4d4dffyou pode registrar os itens e habilidades freqüentemente usados, e usá-los conforme sua conveniência.";
 			cutin "", 255;
 			next;
 			mes "[Terapeuta]";
-			mes "Agora abra a janela de habilidades e registre [Primeiros Socorros] como tecla de atalho, entÃ£o use-a.";
-			mes "VocÃª acharÃ¡ mais cÃ´modo usar isto.";
+			mes "Agora abra a janela de habilidades e registre [Primeiros Socorros] como tecla de atalho, então use-a.";
+			mes "Você achará mais cômodo usar isto.";
 			close;
 		}
 	case 3:
 		if (!isbegin_quest(7478)) {
 			mes "[Terapeuta]";
-			mes "VocÃª investigou as plantas em crescimento no campo?";
+			mes "Você investigou as plantas em crescimento no campo?";
 			mes "^ 4d4dff Planta Vermelha, Planta Azul, Planta Verde, Planta Branca ^ 000000etc ..";
 			next;
 			mes "[Terapeuta]";
-			mes "VocÃª pode obter diferentes ervas coloridas das vÃ¡rias plantas.";
-			mes "Processar ervas se transforma em vÃ¡rias poÃ§Ãµes Ãºteis.";
+			mes "Você pode obter diferentes ervas coloridas das várias plantas.";
+			mes "Processar ervas se transforma em várias poções úteis.";
 			next;
 			mes "[Terapeuta]";
-			mes "Agora, devemos coletar a Erva Vermelha com as mÃ£os?";
+			mes "Agora, devemos coletar a Erva Vermelha com as mãos?";
 			next;
 			mes "[Terapeuta]";
-			mes "Uma planta ^ 4d4dffRed estÃ¡ crescendo perto do prÃ©dio da academia. ^ 000000.";
+			mes "Uma planta ^ 4d4dffRed está crescendo perto do prédio da academia. ^ 000000.";
 			mes "Eu secretamente a plantou hoje.";
-			mes "VÃ¡ e pegue ^ 4d4dff1 Red Herb ^ 000000.";
+			mes "Vá e pegue ^ 4d4dff1 Red Herb ^ 000000.";
 			setquest 7478;
 			close;
 		} else if (isbegin_quest(7478) == 1) {
 			if (countitem(507) > 0) {
 				mes "[Terapeuta]";
-				mes "VocÃª entendeu.";
-				mes "^ 4d4dffVocÃª poderia comer esta erva e obter o benefÃ­cio imediatamente, mas serÃ¡ mais eficiente se vocÃª fizer uma poÃ§Ã£o. ^ 000000.";
+				mes "Você entendeu.";
+				mes "^ 4d4dffVocê poderia comer esta erva e obter o benefício imediatamente, mas será mais eficiente se você fizer uma poção. ^ 000000.";
 				next;
 				mes "[Terapeuta]";
 				mes "As ervas variam suas virtudes de acordo com sua cor.";
-				mes "^ 4d4dffErvas Verdes ^ 000000 desintoxique vocÃª.";
+				mes "^ 4d4dffErvas Verdes ^ 000000 desintoxique você.";
 				mes "^ 4d4dffBlue Ervas ^ 000000 recupere seu SP.";
 				next;
 				mes "[Terapeuta]";
 				mes "Alguma outra?";
-				mes "Bem, HP estÃ¡ se recuperando como esta erva vermelha.";
-				mes "Ã‰ assim ... FaÃ§a um nÃ©ctar e coloque em uma garrafa ...";
+				mes "Bem, HP está se recuperando como esta erva vermelha.";
+				mes "É assim ... Faça um néctar e coloque em uma garrafa ...";
 				next;
 				mes "[Terapeuta]";
-				mes "Isso se torna a poÃ§Ã£o recuperÃ¡vel que pode ser levada para qualquer lugar, a qualquer momento.";
-				mes "Eu vou dar a vocÃª como lembranÃ§a.";
-				mes "E tambÃ©m te dar a receita para fazer poÃ§Ãµes facilmente.";
+				mes "Isso se torna a poção recuperável que pode ser levada para qualquer lugar, a qualquer momento.";
+				mes "Eu vou dar a você como lembrança.";
+				mes "E também te dar a receita para fazer poções facilmente.";
 				next;
 				mes "[Terapeuta]";
-				mes "Este Ã© o livro para a simples combinaÃ§Ã£o de uso de poÃ§Ãµes.";
-				mes "VocÃª pode fazer isso facilmente usando o kit de combinaÃ§Ã£o ou a ferramenta de culinÃ¡ria ^ 000000.";
+				mes "Este é o livro para a simples combinação de uso de poções.";
+				mes "Você pode fazer isso facilmente usando o kit de combinação ou a ferramenta de culinária ^ 000000.";
 				completequest 7478;
 				getexp 2000,50;
-				getitem 569,30; // PoÃ§Ã£o de Aprendiz
+				getitem 569,30; // Poção de Aprendiz
 				getitem 11058,1; // Livro de Aprendizes
-				getitem 12849,10; // Kit CombinaÃ§Ã£o
+				getitem 12849,10; // Kit Combinação
 				getitem 507,1; // Erva Vermelha
-				getitem 512,1; // MaÃ§Ã£
+				getitem 512,1; // Maçã
 				next;
 				mes "[Terapeuta]";
-				mes "NÃ£o apenas poÃ§Ãµes, mas tambÃ©m outras coisas facilmente alcanÃ§Ã¡veis â€‹â€‹podem ser usadas em vÃ¡rias ferramentas. Por favor, faÃ§a uso delas.";
+				mes "Não apenas poções, mas também outras coisas facilmente alcançáveis ??podem ser usadas em várias ferramentas. Por favor, faça uso delas.";
 				next;
 				mes "[Terapeuta]";
-				mes "Para o seu teste, eu te dei uma Erva Vermelha e uma MaÃ§Ã£,";
-				mes "Que tal fazer com o kit de combinaÃ§Ã£o?";
+				mes "Para o seu teste, eu te dei uma Erva Vermelha e uma Maçã,";
+				mes "Que tal fazer com o kit de combinação?";
 				next;
 				mes "[Terapeuta]";
-				mes "Leia o kit de combinaÃ§Ã£o clicando em ^ 4d4dff clicando com o botÃ£o ^ 000000, e ^ 4d4dffclique no Ã­cone em forma de livro ^ 000000 que abrirÃ¡ a janela de explicaÃ§Ã£o.";
+				mes "Leia o kit de combinação clicando em ^ 4d4dff clicando com o botão ^ 000000, e ^ 4d4dffclique no ícone em forma de livro ^ 000000 que abrirá a janela de explicação.";
 				close;
 			} else {
 				mes "[Terapeuta]";
-				mes "Por que vocÃª nÃ£o aprende sobre as virtudes das ervas?";
-				mes "Traga uma erva vermelha batendo no crescente Red Herb perto do prÃ©dio da academia.";
+				mes "Por que você não aprende sobre as virtudes das ervas?";
+				mes "Traga uma erva vermelha batendo no crescente Red Herb perto do prédio da academia.";
 				next;
 				mes "[Terapeuta]";
-				mes "VocÃª pode encontrÃ¡-lo perto da entrada da academia.";
+				mes "Você pode encontrá-lo perto da entrada da academia.";
 				close;
 			}
 		} else {
 			mes "[Terapeuta]";
-			mes "Eu jÃ¡ deixei vocÃª saber sobre a botÃ¢nica mÃ©dica bÃ¡sica.";
-			mes "A propÃ³sito, existe uma coisa chamada ^ 4d4dffPlanta Congelante ^ 000000 aqui em Rune Midgard.";
+			mes "Eu já deixei você saber sobre a botânica médica básica.";
+			mes "A propósito, existe uma coisa chamada ^ 4d4dffPlanta Congelante ^ 000000 aqui em Rune Midgard.";
 			next;
 			mes "[Terapeuta]";
-			mes "NinguÃ©m sabe qual erva sai desta planta.";
+			mes "Ninguém sabe qual erva sai desta planta.";
 			mes "Uma vez eu recebi o fruto de Yggdrasil.";
 			next;
 			mes "[Terapeuta]";
-			mes "E, na guilda de mercadores de Alberta, hÃ¡ um velho fazendo poÃ§Ãµes.";
-			mes "VocÃª pode pedir ajuda a ele.";
+			mes "E, na guilda de mercadores de Alberta, há um velho fazendo poções.";
+			mes "Você pode pedir ajuda a ele.";
 			next;
 			mes "[Terapeuta]";
-			mes "^ 4d4dffAlquimista ^ 000000 ou ^ 4d4dffBiochemist ^ 000000 ou o trabalho de classe superior ^ 4d4dffGeneticist ^ 000000 sÃ£o bons em criar poÃ§Ãµes.";
+			mes "^ 4d4dffAlquimista ^ 000000 ou ^ 4d4dffBiochemist ^ 000000 ou o trabalho de classe superior ^ 4d4dffGeneticist ^ 000000 são bons em criar poções.";
 			next;
 			mes "[Terapeuta]";
-			mes "Se vocÃª quer uma poÃ§Ã£o bem feita, pode ser uma boa idÃ©ia pedir um especialista.";
+			mes "Se você quer uma poção bem feita, pode ser uma boa idéia pedir um especialista.";
 			close;
 		}
 	case 4:
 		mes "[Terapeuta]";
 		mes "Eu vejo ...";
-		mes "Para situaÃ§Ãµes de emergÃªncia, caso vocÃª tenha desmaiado e queira ser trazido de volta para cÃ¡, salvarei sua localizaÃ§Ã£o atual.";
+		mes "Para situações de emergência, caso você tenha desmaiado e queira ser trazido de volta para cá, salvarei sua localização atual.";
 		savepoint "iz_ac01",45,46,1,1;
 		close;
 	}
@@ -2320,7 +2320,7 @@ izlude_d,141,251,0	duplicate(Planta Vermelha Cultivada#0)	Planta Vermelha Cultiv
 // -----------------------------------------------------------------------------
 izlude,140,249,7	script	Estudante da Academia#0	4_M_NOV_RUMIN,{
 	if (!checkweight(1304,3)) {
-		mes "Seu inventÃ¡rio estÃ¡ muito cheio, entÃ£o vocÃª nÃ£o pode continuar esta missÃ£o.";
+		mes "Seu inventário está muito cheio, então você não pode continuar esta missão.";
 		mes "Por favor, tente novamente depois de organizar os itens.";
 		close;
 	}
@@ -2331,14 +2331,14 @@ izlude,140,249,7	script	Estudante da Academia#0	4_M_NOV_RUMIN,{
 		emotion ET_SMILE;
 		mes "[Lumin]";
 		mes "Ei, Tartaruga";
-		mes "VocÃª Ã© muito lento.";
-		mes "Esta Planta Vermelha nÃ£o Ã© mais Ãºtil para vocÃª.";
+		mes "Você é muito lento.";
+		mes "Esta Planta Vermelha não é mais útil para você.";
 		cutin "nov_lumin01.bmp", 2;
 		next;
-		if (select("Do que vocÃª estÃ¡ falando?", "Quem Ã© vocÃª?") == 1) {
+		if (select("Do que você está falando?", "Quem é você?") == 1) {
 			mes "[Lumin]";
-			mes "VocÃª me ouviu.";
-			mes "VocÃª nÃ£o estÃ¡ aqui para coletar a Planta Vermelha para o Terapeuta da Academia.";
+			mes "Você me ouviu.";
+			mes "Você não está aqui para coletar a Planta Vermelha para o Terapeuta da Academia.";
 			next;
 			mes "[Lumin]";
 			mes "Mas, mas algo estranho acabou de acontecer.";
@@ -2347,9 +2347,9 @@ izlude,140,249,7	script	Estudante da Academia#0	4_M_NOV_RUMIN,{
 		} else {
 			if (isbegin_quest(7472) > 0 || isbegin_quest(7474) > 1) {
 				mes "[Lumin]";
-				mes "VocÃª perdeu sua memÃ³ria?";
-				mes "Se o capitÃ£o souber disso, ele vai chorar.";
-				mes "Ainda estÃ¡ tudo bem, desde que eu me lembre de vocÃª.";
+				mes "Você perdeu sua memória?";
+				mes "Se o capitão souber disso, ele vai chorar.";
+				mes "Ainda está tudo bem, desde que eu me lembre de você.";
 				cutin "nov_lumin02.bmp", 2;
 				next;
 			} else {
@@ -2362,20 +2362,20 @@ izlude,140,249,7	script	Estudante da Academia#0	4_M_NOV_RUMIN,{
 			}
 		}
 		mes "[Lumin]";
-		mes "De qualquer forma, deixe-me explicar para vocÃª, eu acabei de cortar todas as folhas desta Planta Vermelha.";
-		mes "VocÃª nÃ£o pode mais coletar a Planta Vermelha.";
+		mes "De qualquer forma, deixe-me explicar para você, eu acabei de cortar todas as folhas desta Planta Vermelha.";
+		mes "Você não pode mais coletar a Planta Vermelha.";
 		cutin "nov_lumin02.bmp", 2;
 		next;
-		select ("Ok, entÃ£o me dÃª um ^ ff0000Red Herb ^ 000000");
+		select ("Ok, então me dê um ^ ff0000Red Herb ^ 000000");
 		mes "[Lumin]";
-		mes "OK ... entÃ£o ...";
-		mes "Eu nem preciso disso de qualquer maneira. Eu jÃ¡ sei tudo sobre botÃ¢nica mÃ©dica bÃ¡sica.";
+		mes "OK ... então ...";
+		mes "Eu nem preciso disso de qualquer maneira. Eu já sei tudo sobre botânica médica básica.";
 		cutin "nov_lumin03.bmp", 2;
 		next;
-		select ("EntÃ£o, por que vocÃª fez isso?");
+		select ("Então, por que você fez isso?");
 		mes "[Lumin]";
-		mes "Eu nÃ£o fiz isso!";
-		mes "Eu estava em pÃ© aqui.";
+		mes "Eu não fiz isso!";
+		mes "Eu estava em pé aqui.";
 		cutin "nov_lumin05.bmp", 2;
 		next;
 		mes "[Lumin]";
@@ -2386,15 +2386,15 @@ izlude,140,249,7	script	Estudante da Academia#0	4_M_NOV_RUMIN,{
 		getitem 507,1; // Erva Vermelha
 		next;
 		mes "[Lumin]";
-		mes "Ah ... veja que estÃ¡ voltando.";
+		mes "Ah ... veja que está voltando.";
 		enablenpc "Planta Vermelha Cultivada#"+strnpcinfo(2);
 		close2;
 	} else {
 		if (Class == Job_Novice) {
 			if (isbegin_quest(7478) == 1) {
 				mes "[Lumin]";
-				mes "Eu acho que vocÃª deveria voltar para o terapeuta.";
-				mes "Ele provavelmente estÃ¡ esperando por vocÃª ..";
+				mes "Eu acho que você deveria voltar para o terapeuta.";
+				mes "Ele provavelmente está esperando por você ..";
 				cutin "nov_lumin01.bmp", 2;
 				close2;
 			} else {
@@ -2430,7 +2430,7 @@ izlude_b,140,249,7	duplicate(Estudante da Academia#0)	Estudante da Academia#b	4_
 izlude_c,140,249,7	duplicate(Estudante da Academia#0)	Estudante da Academia#c	4_M_NOV_RUMIN
 izlude_d,140,249,7	duplicate(Estudante da Academia#0)	Estudante da Academia#d	4_M_NOV_RUMIN
 
-// - Instrutor Argos (MissÃ£o Trick Dead)
+// - Instrutor Argos (Missão Trick Dead)
 // -----------------------------------------------------------------------------
 izlude,140,260,3	script	Instrutor Argos#iz	4_M_LIEMAN,{
 	if (Class != Job_Novice && getskilllv("NV_TRICKDEAD") != 0) {
@@ -2446,22 +2446,22 @@ izlude,140,260,3	script	Instrutor Argos#iz	4_M_LIEMAN,{
 	if (checkquest(15001,PLAYTIME) == -1) {
 		mes "- ......";
 		next;
-		mes "- Um homem estÃ¡ deitado aqui";
-		mes "- ele mal estÃ¡ respirando.";
+		mes "- Um homem está deitado aqui";
+		mes "- ele mal está respirando.";
 		next;
-		mes "- Isso Ã© talvez ...?";
+		mes "- Isso é talvez ...?";
 		next;
 		mes "- um acidente ...";
-		mes "- sim, isso Ã© um assassinato!";
+		mes "- sim, isso é um assassinato!";
 		mes "- Tem um assassino aqui!";
 		next;
-		mes "- Eu juro pelo tÃºmulo de uma pessoa idosa";
+		mes "- Eu juro pelo túmulo de uma pessoa idosa";
 		mes "- Eu vou resolver este caso!";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Bocejo. Quem vocÃª estÃ¡ fazendo muito barulho ao meu lado ...";
+		mes "Bocejo. Quem você está fazendo muito barulho ao meu lado ...";
 		next;
-		select ("VocÃª nÃ£o estÃ¡ morto?");
+		select ("Você não está morto?");
 		emotion ET_HUK, playerattached ();
 		mes "[Instrutor Argos]";
 		mes "Morto ?! Quem ...?";
@@ -2470,86 +2470,86 @@ izlude,140,260,3	script	Instrutor Argos#iz	4_M_LIEMAN,{
 		emotion ET_SMILE;
 		mes "[Instrutor Argos]";
 		mes "Desculpe por rir. Ha ha ha!";
-		mes "Eu estava apenas tirando uma soneca porque o tempo estÃ¡ bom.";
+		mes "Eu estava apenas tirando uma soneca porque o tempo está bom.";
 		next;
-		select ("Mas vocÃª nÃ£o estava respirando ...");
+		select ("Mas você não estava respirando ...");
 		mes "[Instrutor Argos]";
 		mes "Ahh ...... isso?";
-		mes "Certo, faz sentido que vocÃª entendeu mal.";
+		mes "Certo, faz sentido que você entendeu mal.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Eu usei a habilidade <^ ff0000Reproduzir Morto ^ 000000> porque eu nÃ£o queria ser perturbado por monstros ou outra pessoa.";
+		mes "Eu usei a habilidade <^ ff0000Reproduzir Morto ^ 000000> porque eu não queria ser perturbado por monstros ou outra pessoa.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Eu nunca pensei que alguÃ©m pensaria em mim como um verdadeiro corpo morto.";
+		mes "Eu nunca pensei que alguém pensaria em mim como um verdadeiro corpo morto.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Ah, entendo ... vocÃª Ã© um novato que acabou de chegar aqui?";
+		mes "Ah, entendo ... você é um novato que acabou de chegar aqui?";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Eu acho que Ã© inesperado e surpreendente, mas vocÃª quer aprender <^ ff0000Play Dead ^ 000000>?";
+		mes "Eu acho que é inesperado e surpreendente, mas você quer aprender <^ ff0000Play Dead ^ 000000>?";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Eu tenho certeza que isso vai te ajudar. Como vocÃª pensa sobre isso?";
+		mes "Eu tenho certeza que isso vai te ajudar. Como você pensa sobre isso?";
 		next;
 		if (select ("Sinto muito mas estou ocupado", "Eu quero aprender!") == 1) {
 			mes "[Instrutor Argos]";
-			mes "SÃ©rio? Se vocÃª estÃ¡ ocupado, tudo bem por mim.";
+			mes "Sério? Se você está ocupado, tudo bem por mim.";
 			mes "Eu deveria continuar dormindo.";
 			mes "bocejando ...";
 			close;
 		}
 		mes "[Instrutor Argos]";
-		mes "VocÃª tomou a decisÃ£o certa!";
+		mes "Você tomou a decisão certa!";
 		mes "Eu quero te ensinar para sempre.";
 		emotion ET_BEST;
 		next;
 		mes "[Instrutor Argos]";
-		mes "Um novato nÃ£o conhece o poder potencial de si mesmo, nem quÃ£o forte o inimigo Ã©.";
+		mes "Um novato não conhece o poder potencial de si mesmo, nem quão forte o inimigo é.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "HÃ¡ um tipo de novato estudioso que estuda bem ... mas eu acho que nÃ£o somos.";
+		mes "Há um tipo de novato estudioso que estuda bem ... mas eu acho que não somos.";
 		next;
 		mes "[Instrutor Argos]";
 		mes "Apenas tome medidas imediatas.";
-		mes "E Ã s vezes vocÃª serÃ¡ derrotado por inimigos fortes ...";
+		mes "E às vezes você será derrotado por inimigos fortes ...";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Huh? VocÃª estÃ¡ certo, esta Ã© a minha histÃ³ria.";
+		mes "Huh? Você está certo, esta é a minha história.";
 		mes "Eu estava ficando doente de ser derrotado.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Um dia, uma boa idÃ©ia veio Ã  minha mente. Se eu fingir estar morto quando eu encontrar um inimigo forte ...";
+		mes "Um dia, uma boa idéia veio à minha mente. Se eu fingir estar morto quando eu encontrar um inimigo forte ...";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Eu fui confrontado com o risco de morte, porque eu nÃ£o era bom em fingir estar morto.";
-		mes "Mesmo quando eu olho para trÃ¡s naquela Ã©poca, ainda Ã© emocionante ...";
+		mes "Eu fui confrontado com o risco de morte, porque eu não era bom em fingir estar morto.";
+		mes "Mesmo quando eu olho para trás naquela época, ainda é emocionante ...";
 		emotion ET_KEK;
 		next;
 		mes "[Instrutor Argos]";
 		mes "vamos continuar falando";
-		mes "EntÃ£o, desde entÃ£o, o Playing Dead comeÃ§ou a funcionar para mim!";
+		mes "Então, desde então, o Playing Dead começou a funcionar para mim!";
 		next;
 		mes "[Instrutor Argos]";
-		mes "E entÃ£o ...";
-		mes "Eu nÃ£o consegui segurar a respiraÃ§Ã£o por um longo tempo.";
+		mes "E então ...";
+		mes "Eu não consegui segurar a respiração por um longo tempo.";
 		mes "Isso foi um problema!";
-		mes "Monstros inteligentes estavam checando minha respiraÃ§Ã£o!";
+		mes "Monstros inteligentes estavam checando minha respiração!";
 		next;
 		mes "[Instrutor Argos]";
-		mes "EntÃ£o eu tive que treinar para prender a respiraÃ§Ã£o por um longo tempo.";
+		mes "Então eu tive que treinar para prender a respiração por um longo tempo.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Parece complicado ... mas Ã© bem simples.";
+		mes "Parece complicado ... mas é bem simples.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Se vocÃª sentir que nÃ£o pode derrotar o inimigo, quando um forte aparecer, apenas caia no chÃ£o e finja estar morto.";
+		mes "Se você sentir que não pode derrotar o inimigo, quando um forte aparecer, apenas caia no chão e finja estar morto.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Eu vou colocar vocÃª em um breve teste se vocÃª espera que vocÃª respire ou nÃ£o.";
+		mes "Eu vou colocar você em um breve teste se você espera que você respire ou não.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Prenda a respiraÃ§Ã£o por 20 segundos, entÃ£o fale comigo depois. Eu nÃ£o vou admitir vocÃª se vocÃª falar comigo antes que o tempo acabe!";
+		mes "Prenda a respiração por 20 segundos, então fale comigo depois. Eu não vou admitir você se você falar comigo antes que o tempo acabe!";
 		next;
 		mes "[Instrutor Argos]";
 		mes "Comece!";
@@ -2558,12 +2558,12 @@ izlude,140,260,3	script	Instrutor Argos#iz	4_M_LIEMAN,{
 		end;
 	} else if (checkquest(15001,PLAYTIME) == 0) {
 		mes "[Instrutor Argos]";
-		mes "O quÃª? VocÃª nÃ£o consegue prender a respiraÃ§Ã£o por 20 segundos?";
-		mes "VocÃª nÃ£o pode aprender esta habilidade atÃ© que vocÃª consiga segurÃ¡-la!";
+		mes "O quê? Você não consegue prender a respiração por 20 segundos?";
+		mes "Você não pode aprender esta habilidade até que você consiga segurá-la!";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Segure a respiraÃ§Ã£o por 20 segundos novamente!";
-		mes "EntÃ£o fale comigo.";
+		mes "Segure a respiração por 20 segundos novamente!";
+		mes "Então fale comigo.";
 		close2;
 		erasequest 15001;
 		setquest 15001;
@@ -2576,16 +2576,16 @@ izlude,140,260,3	script	Instrutor Argos#iz	4_M_LIEMAN,{
 		next;
 		mes "[Instrutor Argos]";
 		mes "Ok, bom trabalho.";
-		mes "Se vocÃª tem muita paciÃªncia como essa, vocÃª vai economizar. NÃ£o haverÃ¡ monstros que possam te machucar.";
+		mes "Se você tem muita paciência como essa, você vai economizar. Não haverá monstros que possam te machucar.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "A skill <^ ff0000Play Dead ^ 000000> estÃ¡ na sua lista de habilidades que vocÃª pode abrir pressionando <Alt + S>, por favor nÃ£o se esqueÃ§a de usÃ¡-la, ela serÃ¡ salva quando vocÃª estiver em perigo.";
+		mes "A skill <^ ff0000Play Dead ^ 000000> está na sua lista de habilidades que você pode abrir pressionando <Alt + S>, por favor não se esqueça de usá-la, ela será salva quando você estiver em perigo.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Se vocÃª crescer e conseguir outro emprego, entÃ£o vocÃª nÃ£o precisa dessa habilidade, entÃ£o nÃ£o a poupe! Use quando precisar e nÃ£o hesite.";
+		mes "Se você crescer e conseguir outro emprego, então você não precisa dessa habilidade, então não a poupe! Use quando precisar e não hesite.";
 		next;
 		mes "[Instrutor Argos]";
-		mes "Eu preciso dormir um pouco, nÃ£o me acorde.";
+		mes "Eu preciso dormir um pouco, não me acorde.";
 		close;
 	}
 
@@ -2600,7 +2600,7 @@ izlude_c,140,260,3	duplicate(Instrutor Argos#iz)	Instrutor Argos#iz_c	4_M_LIEMAN
 izlude_d,140,260,3	duplicate(Instrutor Argos#iz)	Instrutor Argos#iz_d	4_M_LIEMAN
 
 // - Recepcionista da Academia
-// - DÃ¡ ao jogador algum equipamento bÃ¡sico e inicia as missÃµes da Academia.
+// - Dá ao jogador algum equipamento básico e inicia as missões da Academia.
 // -----------------------------------------------------------------------------
 iz_ac01,100,39,5	script	Recepcionista da Academia#1	4_F_01,{
 	if (isbegin_quest(7117) == 1) { erasequest 7117; }
@@ -2616,96 +2616,96 @@ iz_ac01,100,39,5	script	Recepcionista da Academia#1	4_F_01,{
 
 	if (isbegin_quest(4269) == 2) {
 		mes "[Recepcionista]";
-		mes "OlÃ¡," + strcharinfo(0) +".";
-		mes "Como vocÃª estÃ¡ hoje?";
-		mes "Eu estou no comando para guiar vocÃª aqui na Academia.";
+		mes "Olá," + strcharinfo(0) +".";
+		mes "Como você está hoje?";
+		mes "Eu estou no comando para guiar você aqui na Academia.";
 	} else {
 		mes "[Recepcionista]";
-		mes "Bem-vindo Ã  nossa Academia. Eu estou no comando com o guia e inscriÃ§Ã£o para os cursos de educaÃ§Ã£o iniciante.";
+		mes "Bem-vindo à nossa Academia. Eu estou no comando com o guia e inscrição para os cursos de educação iniciante.";
 	}
 	next;
 	while(1) {
 		mes "[Recepcionista]";
-		mes "O que eu posso fazer por vocÃª?";
+		mes "O que eu posso fazer por você?";
 		next;
 		if (isbegin_quest(4269) == 2)
-			.@menu$ = ":O que estÃ¡ fazendo dentro e fora da Academia.:Guia de localizaÃ§Ã£o do Treinador.:Encerrar Conversa. ";
+			.@menu$ = ":O que está fazendo dentro e fora da Academia.:Guia de localização do Treinador.:Encerrar Conversa. ";
 		else
-			.@menu$ = "Registre-se para a Academia:ExplicaÃ§Ã£o sobre a Academia:Local para Treinadores:Encerrar Conversa.";
+			.@menu$ = "Registre-se para a Academia:Explicação sobre a Academia:Local para Treinadores:Encerrar Conversa.";
 		switch(select(.@menu$)) {
 		case 1:
 			if (Class == Job_Novice) {
 				if (!checkweight(1301,10)) {
-					mes "- Como vocÃª estÃ¡ sobrecarregado com muitos itens, a busca nÃ£o pode continuar.-";
+					mes "- Como você está sobrecarregado com muitos itens, a busca não pode continuar.-";
 					close;
 				}
 				mes "[Recepcionista]";
-				mes "Deixe-me ver ... Seu nome Ã© ..." + strcharinfo (0) + ".";
-				mes "Eu farei um novo registro para vocÃª.";
-				mes "VocÃª pode escolher o curso livremente e cada curso tem caracterÃ­sticas individuais.";
+				mes "Deixe-me ver ... Seu nome é ..." + strcharinfo (0) + ".";
+				mes "Eu farei um novo registro para você.";
+				mes "Você pode escolher o curso livremente e cada curso tem características individuais.";
 				next;
 				mes "[Recepcionista]";
-				mes "E este Ã© o equipamento bÃ¡sico para o curso educacional.";
-				mes "Por favor, faÃ§a um bom uso disso.";
-				mes "Tenha cuidado com isso, pois nÃ£o serÃ¡ fornecido novamente.";
+				mes "E este é o equipamento básico para o curso educacional.";
+				mes "Por favor, faça um bom uso disso.";
+				mes "Tenha cuidado com isso, pois não será fornecido novamente.";
 				setquest 4269;
 				completequest 4269;
 				getitem 2352,1; // Armadura de Aprendiz
 				getitem 2510,1; // Capuz de Aprendiz
 				getitem 2414,1; // Botas de Aprendiz
 				getitem 5055,1; // Novice Egg Cap
-				getitem 1243,1 // Novice Knife
+				getitem 1243,1; // Novice Knife
 				getitem 2112,1; // Novice Guard
 				getitem 18730,1; // Criatura Academy Hat
 				getitem 6593,1; // Criatura Hair Coupon
-				getitem 569,300; // PoÃ§Ã£o de iniciante
+				getitem 569,300; // Poção de iniciante
 				next;
 				mes "[Recepcionista]";
-				mes "Ã‰ o seu primeiro passo para ser um aventureiro que vocÃª fez uma visita a nÃ³s.";
+				mes "É o seu primeiro passo para ser um aventureiro que você fez uma visita a nós.";
 				getexp 100,100;
 				next;
 				mes "[Recepcionista]";
-				mes "Na nossa prÃ³xima reuniÃ£o, eu espero que vocÃª cresÃ§a um pouco mais.";
+				mes "Na nossa próxima reunião, eu espero que você cresça um pouco mais.";
 				// ConsumeSpecialItem Inspector_Certificate_
 				close;
 			} else {
 				mes "[Recepcionista]";
-				mes "AlguÃ©m que nÃ£o Ã© novato nÃ£o pode participar do curso educacional.";
+				mes "Alguém que não é novato não pode participar do curso educacional.";
 				next;
 				mes "[Recepcionista]";
-				mes "No entanto, uma parte do curso educacional, exceto o cultivo de carÃ¡ter, pode ser assistido gratuitamente. EntÃ£o, vocÃª pode dar uma olhada na Academia e nos lugares vizinhos.";
+				mes "No entanto, uma parte do curso educacional, exceto o cultivo de caráter, pode ser assistido gratuitamente. Então, você pode dar uma olhada na Academia e nos lugares vizinhos.";
 				close;
 			}
 		case 2:
-			switch (select ("O que estÃ¡ no primeiro andar", "O que estÃ¡ no segundo andar", "ExplicaÃ§Ã£o sobre cidades", "Terminar conversa")) {
+			switch (select ("O que está no primeiro andar", "O que está no segundo andar", "Explicação sobre cidades", "Terminar conversa")) {
 			case 1:
 				mes "[Recepcionista]";
-				mes "O primeiro andar estÃ¡ equipado com instrutores que te dÃ£o liÃ§Ãµes de como o mundo funciona aqui em Rune Midgard.";
+				mes "O primeiro andar está equipado com instrutores que te dão lições de como o mundo funciona aqui em Rune Midgard.";
 				next;
 				mes "[Recepcionista]";
-				mes "Primeiro de tudo, no dispensÃ¡rio, vocÃª pode aprender como recuperar sua forÃ§a fÃ­sica e aprender uma habilidade para curar seu HP";
+				mes "Primeiro de tudo, no dispensário, você pode aprender como recuperar sua força física e aprender uma habilidade para curar seu HP";
 				next;
 				mes "[Recepcionista]";
-				mes "No arsenal, vocÃª pode obter treinamento simples sobre como lutar contra monstros em Rune Midgard.";
+				mes "No arsenal, você pode obter treinamento simples sobre como lutar contra monstros em Rune Midgard.";
 				next;
 				mes "[Recepcionista]";
-				mes "Na cafeteria, vocÃª pode praticar culinÃ¡ria e aprenderÃ¡ seus muitos benefÃ­cios.";
+				mes "Na cafeteria, você pode praticar culinária e aprenderá seus muitos benefícios.";
 				next;
 				break;
 			case 2:
 				mes "[Recepcionista]";
-				mes "No segundo andar, hÃ¡ treinadores que vÃ£o te ensinar sobre as diferentes classes de trabalho no mundo.";
+				mes "No segundo andar, há treinadores que vão te ensinar sobre as diferentes classes de trabalho no mundo.";
 				next;
 				mes "[Recepcionista]";
-				mes "OuÃ§a os treinadores e decida por si mesmo qual trabalho se adequa ao seu estilo pessoal.";
+				mes "Ouça os treinadores e decida por si mesmo qual trabalho se adequa ao seu estilo pessoal.";
 				next;
 				break;
 			case 3:
 				mes "[Recepcionista]";
-				mes "Esta cidade Ã© chamada 'Izlude', a cidade-satÃ©lite e a cidade portuÃ¡ria da Capital do Reino de Rune-Midgarts Prontera.";
+				mes "Esta cidade é chamada 'Izlude', a cidade-satélite e a cidade portuária da Capital do Reino de Rune-Midgarts Prontera.";
 				next;
 				mes "[Recepcionista]";
-				mes "Esta cidade foi reorganizada para atender a educaÃ§Ã£o dos noviÃ§os.";
+				mes "Esta cidade foi reorganizada para atender a educação dos noviços.";
 				next;
 				break;
 			case 4:
@@ -2718,28 +2718,28 @@ iz_ac01,100,39,5	script	Recepcionista da Academia#1	4_F_01,{
 			break;
 		case 3:
 			while(1) {
-				switch (select ("Instrutores Tutoriais do Game Mechanic", "1st trainers", "Voltar ao menu anterior", "End Conversation"))) {
+				switch(select ("Instrutores Tutoriais do Game Mechanic", "1st trainers", "Voltar ao menu anterior", "End Conversation")) {
 				case 1:
 					mes "[Recepcionista]";
-					mes "Clique com o botÃ£o esquerdo do mouse sobre o nome do treinador que vocÃª estÃ¡ procurando e eu darei um guia para vocÃª.";
+					mes "Clique com o botão esquerdo do mouse sobre o nome do treinador que você está procurando e eu darei um guia para você.";
 					next;
-					mes "<NAVI>[Terapeuta]<INFO>iz_ac01,59,43</INFO></NAVI>, instrutor de recuperaÃ§Ã£o de status";
+					mes "<NAVI>[Terapeuta]<INFO>iz_ac01,59,43</INFO></NAVI>, instrutor de recuperação de status";
 					mes "<NAVI>[Subino]<INFO>iz_ac01,59,83</INFO></NAVI>, treinador de batalha";
-					mes "<NAVI>[Mainz]<INFO>iz_ac01,134,47</INFO></NAVI>, treinador de estatÃ­sticas anormal";
-					mes "<NAVI>[Dakuwazu]<INFO>iz_ac01,147,47</INFO></NAVI>, Treinador de CulinÃ¡ria.";
+					mes "<NAVI>[Mainz]<INFO>iz_ac01,134,47</INFO></NAVI>, treinador de estatísticas anormal";
+					mes "<NAVI>[Dakuwazu]<INFO>iz_ac01,147,47</INFO></NAVI>, Treinador de Culinária.";
 					mes "<NAVI>[Han]<INFO>izlude,153,126</INFO></NAVI>, Treinador de refinamento.";
 					mes "<NAVI>[Montes]<INFO>izlude,96,125</INFO></NAVI> Instrutor Encantador.";
-					mes "<NAVI>[Cream Puff]<INFO>iz_ac02,143,55</INFO></NAVI>, Teste de AptidÃ£o da Classe.";
+					mes "<NAVI>[Cream Puff]<INFO>iz_ac02,143,55</INFO></NAVI>, Teste de Aptidão da Classe.";
 					next;
 					mes "[Recepcionista]";
-					mes "Isso Ã© Ãºtil?";
+					mes "Isso é útil?";
 					next;
 					if (select ("Apenas um momento", "Eu tenho que sair") == 1) {
 						continue;
 					} else {
 						if (Class == Job_Novice) {
 							mes "[Recepcionista]";
-							mes "Eu acredito que vocÃª se tornarÃ¡ melhor na nossa prÃ³xima reuniÃ£o. Tente o seu melhor ~~~";
+							mes "Eu acredito que você se tornará melhor na nossa próxima reunião. Tente o seu melhor ~~~";
 							//ConsumeSpecialItem Inspector_Certificate_
 							close;
 						} else {
@@ -2750,7 +2750,7 @@ iz_ac01,100,39,5	script	Recepcionista da Academia#1	4_F_01,{
 					}
 				case 2:
 					mes "[Recepcionista]";
-					mes "Clique com o botÃ£o esquerdo do mouse sobre o nome do treinador que vocÃª estÃ¡ procurando e eu darei um guia para vocÃª.";
+					mes "Clique com o botão esquerdo do mouse sobre o nome do treinador que você está procurando e eu darei um guia para você.";
 					next;
 					mes "Instrutor Espadachim<NAVI>[Adric]<INFO>iz_ac02,62,51</INFO></NAVI>";
 					mes "Instrutor Sacerdote<NAVI>[Alice]<INFO>iz_ac02,156,169</INFO></NAVI>";
@@ -2763,14 +2763,14 @@ iz_ac01,100,39,5	script	Recepcionista da Academia#1	4_F_01,{
 					mes "Instrutor Taekwon<NAVI>[Arang]<INFO>iz_ac02,70,85</INFO></NAVI>";
 					next;
 					mes "[Recepcionista]";
-					mes "Isso Ã© Ãºtil?";
+					mes "Isso é útil?";
 					next;
 					if (select ("Apenas um momento", "Eu tenho que sair") == 1) {
 						continue;
 					} else {
 						if (Class == Job_Novice) {
 							mes "[Recepcionista]";
-							mes "Eu acredito que vocÃª se tornarÃ¡ melhor na nossa prÃ³xima reuniÃ£o. Tente o seu melhor ~~~";
+							mes "Eu acredito que você se tornará melhor na nossa próxima reunião. Tente o seu melhor ~~~";
 							//ConsumeSpecialItem Inspector_Certificate_
 							close;
 						} else {
@@ -2823,58 +2823,58 @@ iz_ac01,134,47,5	script	Treinador Mainz#ac	4_M_KY_KNT,4,4,{
 	if (isbegin_quest(15000) == 1) {
 		if (!checkweight(1201,1) || (MaxWeight - Weight) < 40) {
 			mes "- Aqui, apenas momento !! -";
-			mes "- Como vocÃª estÃ¡ sobrecarregado com muitos itens no seu inventÃ¡rio -";
-			mes "- VocÃª nÃ£o pode mais receber os itens -";
+			mes "- Como você está sobrecarregado com muitos itens no seu inventário -";
+			mes "- Você não pode mais receber os itens -";
 			mes "- Deixe-se iluminado -";
 			mes "- e por favor tente novamente -";
 			close;
 		}
 		mes "[Mainz]";
-		mes "VocÃª estÃ¡ pronto para aprender sobre os status anormais? Eu prometo que nÃ£o vou mais te enganar. Eu sou um '' treinador '', afinal de contas, certo?";
+		mes "Você está pronto para aprender sobre os status anormais? Eu prometo que não vou mais te enganar. Eu sou um '' treinador '', afinal de contas, certo?";
 		next;
 		mes "[Mainz]";
 		mes "Primeiro de tudo, eu vou falar sobre <^ FF0000Poison ^ 000000>.";
 		next;
 		mes "[Mainz]";
-		mes "Como vocÃª jÃ¡ experimentou, quando vocÃª estÃ¡ envenenado, seu corpo fica roxo e vocÃª perde um pouco de HP a cada segundo.";
+		mes "Como você já experimentou, quando você está envenenado, seu corpo fica roxo e você perde um pouco de HP a cada segundo.";
 		next;
 		mes "[Mainz]";
-		mes "VocÃª nÃ£o pode perder HP para sempre, entÃ£o vocÃª nÃ£o vai morrer de veneno.";
+		mes "Você não pode perder HP para sempre, então você não vai morrer de veneno.";
 		next;
 		mes "[Mainz]";
-		mes "Experimentar Ã© acreditar! Eu vou colocar vocÃª em um estado de envenenamento.";
+		mes "Experimentar é acreditar! Eu vou colocar você em um estado de envenenamento.";
 		next;
 		mes "[Mainz]";
-		mes "Veja o que acontece com vocÃª no status envenenado.";
+		mes "Veja o que acontece com você no status envenenado.";
 		next;
 		sc_start SC_POISON, 30000, 0;
-		mes "VocÃª estÃ¡- <^FF0000Envenenado^000000>.";
+		mes "Você está- <^FF0000Envenenado^000000>.";
 		next;
 		mes "[Mainz]";
 		mes "......";
 		next;
 		sc_end SC_POISON;
 		mes "[Mainz]";
-		mes "VocÃª viu qual Ã© o status de envenenamento? Depois de um certo perÃ­odo de tempo, vocÃª pode ser desintoxicado, mas se vocÃª estÃ¡ sendo apegado, Ã© perigoso esperar ser desintoxicado naturalmente.";
+		mes "Você viu qual é o status de envenenamento? Depois de um certo período de tempo, você pode ser desintoxicado, mas se você está sendo apegado, é perigoso esperar ser desintoxicado naturalmente.";
 		next;
 		mes "[Mainz]";
-		mes "Consulte os desintoxicantes como <^0022FFErva Verde^000000>, <^0022FFPoÃ§Ã£o Verde^000000>, <^0022FFPanacea^000000> e <^0022FFGelÃ©ia Real^000000>.";
+		mes "Consulte os desintoxicantes como <^0022FFErva Verde^000000>, <^0022FFPoção Verde^000000>, <^0022FFPanacea^000000> e <^0022FFGeléia Real^000000>.";
 		next;
 		mes "[Mainz]";
 		mes "Em seguida, vou falar sobre <^FF0000Stun^000000.";
 		next;
 		mes "[Mainz]";
-		mes "Enquanto estiver no status Atordoar, estrelas irÃ£o circular em torno de sua cabeÃ§a e vocÃª nÃ£o pode se mover basicamente, vocÃª estarÃ¡" indefeso ".";
+		mes "Enquanto estiver no status Atordoar, estrelas irão circular em torno de sua cabeça e você não pode se mover basicamente, você estará ''indefeso''.";
 		next;
 		mes "[Mainz]";
-		mes "Como vocÃª estÃ¡ indefeso, vocÃª nÃ£o pode se mover, usar habilidades e usar itens.";
-		mes "EntÃ£o, Ã© impossÃ­vel se recuperar sozinho.";
+		mes "Como você está indefeso, você não pode se mover, usar habilidades e usar itens.";
+		mes "Então, é impossível se recuperar sozinho.";
 		next;
 		mes "[Mainz]";
-		mes "O caso excepcional Ã© que vocÃª pode se recuperar com a habilidade chamada <^ 0022FFGentle Touch-Cure ^ 000000> se vocÃª for um Sura.";
+		mes "O caso excepcional é que você pode se recuperar com a habilidade chamada <^0022FFGentle Touch-Cure^000000> se você for um Sura.";
 		next;
 		mes "[Mainz]";
-		mes "VocÃª pode se recuperar com habilidades como a <^ 0022FFRecuperaÃ§Ã£o ^ 000000> do Sacerdote ou <^ 0022FFLauda Ramus ^ 000000> do Bispo do Arco.";
+		mes "Você pode se recuperar com habilidades como a <^0022FFRecuperação^000000> do Sacerdote ou <^0022FFLauda Ramus^000000> do Bispo do Arco.";
 		next;
 		mes "[Mainz]";
 		mes "Deixe-me mostrar o que vai acontecer no status Atordoar!";
@@ -2888,10 +2888,10 @@ iz_ac01,134,47,5	script	Treinador Mainz#ac	4_M_KY_KNT,4,4,{
 		sc_end SC_STUN;
 		mes "[Mainz]";
 		mes "Como foi isso?";
-		mes "VocÃª nÃ£o se sentiu oprimido desde que vocÃª nÃ£o podia se mover?";
+		mes "Você não se sentiu oprimido desde que você não podia se mover?";
 		next;
 		mes "[Mainz]";
-		mes "Imagine que vocÃª estÃ¡ nesse estado e os monstros estÃ£o correndo para vocÃª ...";
+		mes "Imagine que você está nesse estado e os monstros estão correndo para você ...";
 		mes "Acredite em mim, isso vai acontecer.";
 		emotion ET_KEK;
 		next;
@@ -2899,19 +2899,19 @@ iz_ac01,134,47,5	script	Treinador Mainz#ac	4_M_KY_KNT,4,4,{
 		mes "Desta vez, eu vou te ensinar sobre <^ FF0000Dormir ^ 000000>.";
 		next;
 		mes "[Mainz]";
-		mes "Em estado de sono, vocÃª adormece com um <Zzz> acima da sua cabeÃ§a.";
+		mes "Em estado de sono, você adormece com um <Zzz> acima da sua cabeça.";
 		next;
 		mes "[Mainz]";
-		mes "Mesmo que o status Atordoar, vocÃª estÃ¡ indefeso, mas a diferenÃ§a Ã© que vocÃª pode se recuperar do ataque do inimigo.";
+		mes "Mesmo que o status Atordoar, você está indefeso, mas a diferença é que você pode se recuperar do ataque do inimigo.";
 		next;
 		mes "[Mainz]";
-		mes "Mas no estado de Sono, a possibilidade de ser atingido por ataques '' CrÃ­ticos '' do ataque do inimigo Ã© aumentada, vocÃª estÃ¡ em perigo e expÃ´s um dano severo.";
+		mes "Mas no estado de Sono, a possibilidade de ser atingido por ataques '' Críticos '' do ataque do inimigo é aumentada, você está em perigo e expôs um dano severo.";
 		next;
 		mes "[Mainz]";
-		mes "Para sua referÃªncia, a recuperaÃ§Ã£o por si mesmo Ã© impossÃ­vel e sÃ³ Ã© possÃ­vel com a habilidade <^ 0022FF RecuperaÃ§Ã£o ^ 000000> de um Sacerdote.";
+		mes "Para sua referência, a recuperação por si mesmo é impossível e só é possível com a habilidade <^ 0022FF Recuperação ^ 000000> de um Sacerdote.";
 		next;
 		mes "[Mainz]";
-		mes "Deixe-me mostrar a vocÃª o que acontecerÃ¡ no estado de suspensÃ£o.";
+		mes "Deixe-me mostrar a você o que acontecerá no estado de suspensão.";
 		next;
 		sc_start SC_SLEEP, 30000, 0;
 		mes "<^ FF0000 Sono ^ 000000>.";
@@ -2921,83 +2921,83 @@ iz_ac01,134,47,5	script	Treinador Mainz#ac	4_M_KY_KNT,4,4,{
 		next;
 		sc_end SC_SLEEP;
 		mes "[Mainz]";
-		mes "Como foi? NÃ£o Ã© divertido imaginar estar dormindo na frente de um inimigo perigoso, Ã©?";
+		mes "Como foi? Não é divertido imaginar estar dormindo na frente de um inimigo perigoso, é?";
 		next;
 		mes "[Mainz]";
-		mes "O sono Ã© bom para a recuperaÃ§Ã£o, mas nÃ£o necessariamente bom enquanto vocÃª estÃ¡ no meio de uma batalha.";
+		mes "O sono é bom para a recuperação, mas não necessariamente bom enquanto você está no meio de uma batalha.";
 		emotion ET_SPARK;
 		next;
 		mes "[Mainz]";
-		mes "Por fim, eu vou te ensinar sobre <^ FF0000 SilÃªncio ^ 000000>.";
+		mes "Por fim, eu vou te ensinar sobre <^ FF0000 Silêncio ^ 000000>.";
 		next;
 		mes "[Mainz]";
-		mes "Em status Silencioso, vocÃª nÃ£o pode usar nenhuma habilidade mÃ¡gica e um <...> aparecerÃ¡ acima da sua cabeÃ§a.";
+		mes "Em status Silencioso, você não pode usar nenhuma habilidade mágica e um <...> aparecerá acima da sua cabeça.";
 		next;
 		mes "[Mainz]";
-		mes "Mas todos os ataques nÃ£o sÃ£o impossÃ­veis. Ataques normais ainda podem ser feitos enquanto silenciados.";
+		mes "Mas todos os ataques não são impossíveis. Ataques normais ainda podem ser feitos enquanto silenciados.";
 		next;
 		mes "[Mainz]";
-		mes "No estado de silÃªncio, vocÃª pode simplesmente atacar fisicamente ou recuperar usando poÃ§Ãµes.";
+		mes "No estado de silêncio, você pode simplesmente atacar fisicamente ou recuperar usando poções.";
 		next;
 		mes "[Mainz]";
-		mes "Ã‰ possÃ­vel recuperar com itens como <^ 0022FF Green Herb ^ 000000>, <^ 0022FF PoÃ§Ã£o Verde ^ 000000>, <^ 0022FFPanacea ^ 000000> e <^ 0022FFGelÃ©ia Real ^ 000000>.";
+		mes "É possível recuperar com itens como <^ 0022FF Green Herb ^ 000000>, <^ 0022FF Poção Verde ^ 000000>, <^ 0022FFPanacea ^ 000000> e <^ 0022FFGeléia Real ^ 000000>.";
 		next;
 		mes "[Mainz]";
-		mes "Deixe-me mostrar o que vai acontecer no estado de suspensÃ£o.";
+		mes "Deixe-me mostrar o que vai acontecer no estado de suspensão.";
 		next;
 		sc_start SC_SILENCE, 30000, 0;
-		mes "<^ FF0000SilÃªncia ^ 000000>";
+		mes "<^ FF0000Silência ^ 000000>";
 		next;
 		mes "[Mainz]";
 		mes "......";
 		next;
 		sc_end SC_SILENCE;
 		mes "[Mainz]";
-		mes "Ã‰ frustrante nÃ£o poder usar suas habilidades, certo?";
+		mes "É frustrante não poder usar suas habilidades, certo?";
 		next;
 		mes "[Mainz]";
-		mes "Especialmente, quando vocÃª Ã© uma classe alta dependendo das habilidades em vez de ataques fÃ­sicos ou em estado de Sono durante a batalha, vocÃª serÃ¡ severamente danificado.";
+		mes "Especialmente, quando você é uma classe alta dependendo das habilidades em vez de ataques físicos ou em estado de Sono durante a batalha, você será severamente danificado.";
 		next;
 		mes "[Mainz]";
-		mes "AlÃ©m disso, existem outros status como EscuridÃ£o, Congelado, MaldiÃ§Ã£o, Pedra, ConfusÃ£o, etc., mas eu posso deixar vocÃª experimentar todos eles.";
+		mes "Além disso, existem outros status como Escuridão, Congelado, Maldição, Pedra, Confusão, etc., mas eu posso deixar você experimentar todos eles.";
 		next;
 		mes "[Mainz]";
-		mes "Espero que isso tenha sido Ãºtil para vocÃª experimentar algumas das coisas que vocÃª verÃ¡ no mundo.";
+		mes "Espero que isso tenha sido útil para você experimentar algumas das coisas que você verá no mundo.";
 		next;
 		mes "[Mainz]";
-		mes "Sempre que vocÃª quiser experimentar um status anormal, por favor, venha atÃ© mim.";
+		mes "Sempre que você quiser experimentar um status anormal, por favor, venha até mim.";
 		next;
 		mes "[Mainz]";
 		mes "Como um pedido de desculpas pelo assunto da lancheira, eu lhe darei um pequeno presente.";
 		next;
 		mes "[Mainz]";
-		mes "Desejo que vocÃª tenha boa sorte em suas aventuras!";
+		mes "Desejo que você tenha boa sorte em suas aventuras!";
 		completequest 15000;
 		getitem 512,10;// Apple
 		getexp 180,100;
 		close;
 	} else if (isbegin_quest(4269) && !isbegin_quest(15000)) {
 		mes "[Mainz]";
-		mes "Ei, vocÃª estÃ¡ aÃ­!";
-		mes "Por acaso, vocÃª Ã© um iniciante em treinamento?";
+		mes "Ei, você está aí!";
+		mes "Por acaso, você é um iniciante em treinamento?";
 		emotion ET_SPARK;
 		next;
 		mes "[Mainz]";
-		mes "Eu sou o Treinador Mainz; e eu sou responsÃ¡vel pela educaÃ§Ã£o nesta Academia.";
+		mes "Eu sou o Treinador Mainz; e eu sou responsável pela educação nesta Academia.";
 		next;
 		mes "[Mainz]";
 		mes "Qual curso?";
-		mes "NÃ£o Ã© importante, entÃ£o eu deixarei vocÃª saber mais tarde.";
+		mes "Não é importante, então eu deixarei você saber mais tarde.";
 		next;
 		mes "[Mainz]";
-		mes "VocÃª deve estar muito exausto depois de ter que ler e aprender tanto, certo?";
+		mes "Você deve estar muito exausto depois de ter que ler e aprender tanto, certo?";
 		next;
 		mes "[Mainz]";
-		mes "Claro, vocÃª Ã© ... Oh, coitadinho.";
+		mes "Claro, você é ... Oh, coitadinho.";
 		next;
 		mes "[Mainz]";
-		mes "HÃ¡ uma pessoa que pode ajudÃ¡-lo quando vocÃª precisar.";
-		mes "VocÃª sabe quem Ã©?";
+		mes "Há uma pessoa que pode ajudá-lo quando você precisar.";
+		mes "Você sabe quem é?";
 		next;
 		mes "[Mainz]";
 		mes "Essa sou eu!";
@@ -3007,152 +3007,152 @@ iz_ac01,134,47,5	script	Treinador Mainz#ac	4_M_KY_KNT,4,4,{
 		mes "Isso significa que eu preparei um presente especial apenas para o seu eu exausto!";
 		next;
 		mes "[Mainz]";
-		mes "Uma lancheira para vocÃª !!! Hahahaha!";
+		mes "Uma lancheira para você !!! Hahahaha!";
 		next;
 		mes "[Mainz]";
-		mes "Desde que eu nÃ£o sou o Ãºnico que fez isso, nÃ£o se preocupe.";
-		mes "Minha amada esposa preparou. EntÃ£o, seja meu convidado e aproveite!";
+		mes "Desde que eu não sou o único que fez isso, não se preocupe.";
+		mes "Minha amada esposa preparou. Então, seja meu convidado e aproveite!";
 		next;
-		if (select ("NÃ£o tome isso.", "Pegue") == 1) {
+		if (select ("Não tome isso.", "Pegue") == 1) {
 		mes "[Mainz]";
-		mes "VocÃª nÃ£o quer ter essa lancheira? Eu acho que Ã© a sua perda entÃ£o.";
+		mes "Você não quer ter essa lancheira? Eu acho que é a sua perda então.";
 		next;
 		mes "[Mainz]";
-		mes "Eu deveria tomar para mim mesmo entÃ£o?";
+		mes "Eu deveria tomar para mim mesmo então?";
 		close2;
 		emotion ET_OHNO;
 		end;
 		}
 		mes "[Mainz]";
-		mes "Sim ... VocÃª tomou a decisÃ£o certa.";
-		mes "Por favor, tenha em mente que eu realmente queria tÃª-lo, mas desde que vocÃª parece exausto, eu ofereci a vocÃª primeiro!";
+		mes "Sim ... Você tomou a decisão certa.";
+		mes "Por favor, tenha em mente que eu realmente queria tê-lo, mas desde que você parece exausto, eu ofereci a você primeiro!";
 		emotion ET_BEST;
 		next;
-		mes "- VocÃª abre a lancheira e hÃ¡ algum tipo de comida dentro -";
+		mes "- Você abre a lancheira e há algum tipo de comida dentro -";
 		next;
 		mes "[Mainz]";
-		mes "Wahahahat! NÃ£o hesite e apenas pegue!";
+		mes "Wahahahat! Não hesite e apenas pegue!";
 		mes "Vai te refrescar da sua fadiga!";
 		mes "Coma-o ~~ Coma-o ~~";
 		next;
-		mes "- JÃ¡ que vocÃª estÃ¡ cansado e faminto, vocÃª Ã© obrigado a levar a caixa -";
+		mes "- Já que você está cansado e faminto, você é obrigado a levar a caixa -";
 		next;
 		mes ".........";
 		next;
 		sc_start SC_POISON, 60000, 0;
-		mes "- VocÃª come a comida e de repente sente uma dor aguda no seu estÃ´mago. Sua visÃ£o parece estar embaÃ§ada tambÃ©m -";
+		mes "- Você come a comida e de repente sente uma dor aguda no seu estômago. Sua visão parece estar embaçada também -";
 		next;
 		mes "[Mainz]";
-		mes "Oh ... o que aconteceu com vocÃª?";
-		mes "VocÃª nÃ£o parece muito bom!";
+		mes "Oh ... o que aconteceu com você?";
+		mes "Você não parece muito bom!";
 		emotion ET_QUESTION;
 		next;
 		mes "[Mainz]";
 		mes "Oh, cara ...";
-		mes "Eu acho que vocÃª foi envenenado.";
+		mes "Eu acho que você foi envenenado.";
 		next;
 		mes "[Mainz]";
-		mes "Eu vou te dar um antÃ­doto. VocÃª pode ficar melhor se vocÃª pegar.";
+		mes "Eu vou te dar um antídoto. Você pode ficar melhor se você pegar.";
 		next;
-		mes "- VocÃª relutantemente toma o antÃ­doto -";
+		mes "- Você relutantemente toma o antídoto -";
 		sc_end SC_POISON;
-		percenteal 100,0;
+		percentheal 100,0;
 		next;
 		mes "[Mainz]";
-		mes "Bem, como diabos vocÃª foi envenenado?";
+		mes "Bem, como diabos você foi envenenado?";
 		next;
 		mes "[Mainz]";
-		mes "A propÃ³sito, ouvi dizer que hÃ¡ um fantasma vagando pela Academia da Real Criatura.";
+		mes "A propósito, ouvi dizer que há um fantasma vagando pela Academia da Real Criatura.";
 		next;
 		mes "[Mainz]";
-		mes "Eu acho que o fantasma deve ter envenenado vocÃª.";
+		mes "Eu acho que o fantasma deve ter envenenado você.";
 		next;
-		mes "- VocÃª revira os olhos para Mainz -";
-		mes "- Mainz vira a cabeÃ§a como se ele nÃ£o percebesse -";
+		mes "- Você revira os olhos para Mainz -";
+		mes "- Mainz vira a cabeça como se ele não percebesse -";
 		emotion ET_STARE;
 		next;
 		mes "[Mainz]";
 		mes "Ehem! De qualquer forma, eu sinto muito.";
-		mes "Por favor, entenda que nÃ£o hÃ¡ malÃ­cia.";
+		mes "Por favor, entenda que não há malícia.";
 		next;
 		mes "[Mainz]";
-		mes "Todos estes sÃ£o para vocÃª ...";
+		mes "Todos estes são para você ...";
 		mes "Quer saber o que eu quero dizer?";
 		next;
 		mes "[Mainz]";
-		mes "Existem vÃ¡rios tipos de monstros no continente de Rune Midgard. E alguns deles podem envenenÃ¡-lo ou colocÃ¡-lo em condiÃ§Ãµes anormais.";
+		mes "Existem vários tipos de monstros no continente de Rune Midgard. E alguns deles podem envenená-lo ou colocá-lo em condições anormais.";
 		next;
 		mes "[Mainz]";
-		mes "Normalmente, qualquer um fica com vergonha de admitir que estÃ¡ sendo envenenado sem saber. Eu apenas fiz isso de propÃ³sito para deixar vocÃª ter a experiÃªncia, caso isso aconteÃ§a no mundo real.";
+		mes "Normalmente, qualquer um fica com vergonha de admitir que está sendo envenenado sem saber. Eu apenas fiz isso de propósito para deixar você ter a experiência, caso isso aconteça no mundo real.";
 		next;
 		mes "[Mainz]";
-		mes "Entenda que eu nÃ£o pretendia passar a lancheira da minha esposa como se fosse um presente. Foi apenas mais uma liÃ§Ã£o da Academia Criatura.";
+		mes "Entenda que eu não pretendia passar a lancheira da minha esposa como se fosse um presente. Foi apenas mais uma lição da Academia Criatura.";
 		emotion ET_OTL;
 		next;
 		mes "[Mainz]";
-		mes "Como um pedido de desculpas, gostaria de informar sobre vÃ¡rios status anormais que vocÃª pode experimentar no Continente Rune Midgard.";
+		mes "Como um pedido de desculpas, gostaria de informar sobre vários status anormais que você pode experimentar no Continente Rune Midgard.";
 		next;
 		mes "[Mainz]";
-		mes "NÃ£o recuse! Estando pronto para aprender, fale comigo novamente.";
+		mes "Não recuse! Estando pronto para aprender, fale comigo novamente.";
 		setquest 15000;
 		close2;
 		emotion ET_SORRY;
 		end;
 	} else {
 		mes "[Mainz]";
-		mes "VocÃª estÃ¡ aqui para uma explicaÃ§Ã£o sobre os status anormais? O que te deixa ansioso?";
+		mes "Você está aqui para uma explicação sobre os status anormais? O que te deixa ansioso?";
 		next;
 		while(1) {
-			switch(select("<^FF0000Veneno^000000>", "<^FF0000Atordoado^000000>", "<^FF0000Dormindo^000000>", "<^FF0000Silencio^000000>", "Eu nÃ£o tenho mas perguntas.")) {
+			switch(select("<^FF0000Veneno^000000>", "<^FF0000Atordoado^000000>", "<^FF0000Dormindo^000000>", "<^FF0000Silencio^000000>", "Eu não tenho mas perguntas.")) {
 			case 1:
 				mes "[Mainz]";
-				mes "Eu vou te contar sobre <^ FF0000Poison ^ 000000>.";
+				mes "Eu vou te contar sobre <^FF0000Poison^000000>.";
 				next;
 				mes "[Mainz]";
-				mes "Como vocÃª jÃ¡ experimentou, quando vocÃª estÃ¡ envenenado, seu corpo fica roxo e vocÃª perde um pouco de HP a cada segundo.";
+				mes "Como você já experimentou, quando você está envenenado, seu corpo fica roxo e você perde um pouco de HP a cada segundo.";
 				next;
 				mes "[Mainz]";
-				mes "VocÃª nÃ£o pode perder HP para sempre, entÃ£o vocÃª nÃ£o vai morrer de veneno.";
+				mes "Você não pode perder HP para sempre, então você não vai morrer de veneno.";
 				next;
 				mes "[Mainz]";
-				mes "Experimentar Ã© acreditar! Eu vou colocar vocÃª em um estado de envenenamento.";
+				mes "Experimentar é acreditar! Eu vou colocar você em um estado de envenenamento.";
 				next;
 				mes "[Mainz]";
-				mes "Veja o que acontece com vocÃª no status envenenado.";
+				mes "Veja o que acontece com você no status envenenado.";
 				next;
 				sc_start SC_POISON, 30000, 0;
-				mes "VocÃª estÃ¡- <^ FF0000Envenenado^000000>.";
+				mes "Você está- <^ FF0000Envenenado^000000>.";
 				next;
 				mes "[Mainz]";
 				mes "......";
 				next;
 				sc_end SC_POISON;
 				mes "[Mainz]";
-				mes "VocÃª viu qual Ã© o status de envenenamento? Depois de um certo perÃ­odo de tempo, vocÃª pode ser desintoxicado, mas se vocÃª estÃ¡ sendo atacado, Ã© perigoso esperar ser desintoxicado naturalmente.";
+				mes "Você viu qual é o status de envenenamento? Depois de um certo período de tempo, você pode ser desintoxicado, mas se você está sendo atacado, é perigoso esperar ser desintoxicado naturalmente.";
 				next;
 				mes "[Mainz]";
-				mes "Consulte os desintoxicantes como <^ 0022FFErva Verde ^ 000000>, <^ 0022FF PoÃ§Ã£o Verde ^ 000000>, <^ 0022FFPanacea ^ 000000> e <^ 0022FFGelÃ©ia Real ^ 000000>.";
+				mes "Consulte os desintoxicantes como <^0022FFErva Verde^000000>, <^0022FFPoção Verde^000000>, <^0022FFPanacea^000000> e <^0022FFGeléia Real^000000>.";
 				next;
 				mes "[Mainz]";
-				mes "O que mais vocÃª estÃ¡ ansioso?";
+				mes "O que mais você está ansioso?";
 				next;
 				break;
 			case 2:
 				mes "[Mainz]";
-				mes "Eu vou te contar sobre <^ FF0000Stun ^ 000000>.";
+				mes "Eu vou te contar sobre <^FF0000Stun^000000>.";
 				next;
 				mes "[Mainz]";
-				mes "Enquanto estiver no status Atordoar, estrelas irÃ£o circular em torno de sua cabeÃ§a e vocÃª nÃ£o pode se mover basicamente, vocÃª estarÃ¡" indefeso ".";
+				mes "Enquanto estiver no status Atordoar, estrelas irão circular em torno de sua cabeça e você não pode se mover basicamente, você estará 'indefeso'.";
 				next;
 				mes "[Mainz]";
-				mes "Como vocÃª estÃ¡ indefeso, vocÃª nÃ£o pode se mover, usar habilidades e usar itens.";
-				mes "EntÃ£o, Ã© impossÃ­vel se recuperar sozinho.";
+				mes "Como você está indefeso, você não pode se mover, usar habilidades e usar itens.";
+				mes "Então, é impossível se recuperar sozinho.";
 				next;
 				mes "[Mainz]";
-				mes "O caso excepcional Ã© que vocÃª pode se recuperar com a habilidade chamada <^ 0022FFGentle Touch-Cure ^ 000000> se vocÃª for um Sura.";
+				mes "O caso excepcional é que você pode se recuperar com a habilidade chamada <^0022FFGentle Touch-Cure^000000> se você for um Sura.";
 				next;
 				mes "[Mainz]";
-				mes "VocÃª pode se recuperar com habilidades como a <^ 0022FFRecuperaÃ§Ã£o ^ 000000> do Sacerdote ou <^ 0022FFLauda Ramus ^ 000000> do Bispo do Arco.";
+				mes "Você pode se recuperar com habilidades como a <^0022FFRecuperação^000000> do Sacerdote ou <^0022FFLauda Ramus^000000> do Bispo do Arco.";
 				next;
 				mes "[Mainz]";
 				mes "Deixe-me mostrar o que vai acontecer no status Atordoar!";
@@ -3166,35 +3166,35 @@ iz_ac01,134,47,5	script	Treinador Mainz#ac	4_M_KY_KNT,4,4,{
 				sc_end SC_STUN;
 				mes "[Mainz]";
 				mes "Como foi isso?";
-				mes "VocÃª nÃ£o se sentiu oprimido desde que vocÃª nÃ£o podia se mover?";
+				mes "Você não se sentiu oprimido desde que você não podia se mover?";
 				next;
 				mes "[Mainz]";
-				mes "Imagine que vocÃª estÃ¡ nesse estado e os monstros estÃ£o correndo para vocÃª ...";
+				mes "Imagine que você está nesse estado e os monstros estão correndo para você ...";
 				mes "Acredite em mim, isso vai acontecer.";
 				emotion ET_KEK;
 				next;
 				mes "[Mainz]";
-				mes "O que mais vocÃª estÃ¡ ansioso?";
+				mes "O que mais você está ansioso?";
 				next;
 				break;
 				case 3:
 				mes "[Mainz]";
-				mes "Eu vou te ensinar sobre <^ FF0000Dormir ^ 000000>.";
+				mes "Eu vou te ensinar sobre <^FF0000Dormir^000000>.";
 				next;
 				mes "[Mainz]";
-				mes "Em estado de sono, vocÃª adormece com um <Zzz> acima da sua cabeÃ§a.";
+				mes "Em estado de sono, você adormece com um <Zzz> acima da sua cabeça.";
 				next;
 				mes "[Mainz]";
-				mes "Mesmo que o status Atordoar, vocÃª estÃ¡ indefeso, mas a diferenÃ§a Ã© que vocÃª pode se recuperar do ataque do inimigo.";
+				mes "Mesmo que o status Atordoar, você está indefeso, mas a diferença é que você pode se recuperar do ataque do inimigo.";
 				next;
 				mes "[Mainz]";
-				mes "Mas no estado de Sono, a possibilidade de ser atingido por ataques '' CrÃ­ticos '' do ataque do inimigo Ã© aumentada, vocÃª estÃ¡ em perigo e expÃ´s um dano severo.";
+				mes "Mas no estado de Sono, a possibilidade de ser atingido por ataques '' Críticos '' do ataque do inimigo é aumentada, você está em perigo e expôs um dano severo.";
 				next;
 				mes "[Mainz]";
-				mes "Para sua referÃªncia, a recuperaÃ§Ã£o por si mesmo Ã© impossÃ­vel e sÃ³ Ã© possÃ­vel com a habilidade <^ 0022FF RecuperaÃ§Ã£o ^ 000000> de um Sacerdote.";
+				mes "Para sua referência, a recuperação por si mesmo é impossível e só é possível com a habilidade <^0022FFRecuperação^000000> de um Sacerdote.";
 				next;
 				mes "[Mainz]";
-				mes "Deixe-me mostrar a vocÃª o que acontecerÃ¡ no estado de suspensÃ£o.";
+				mes "Deixe-me mostrar a você o que acontecerá no estado de suspensão.";
 				next;
 				sc_start SC_SLEEP, 30000, 0;
 				mes "<^ FF0000 Sono ^ 000000>.";
@@ -3204,56 +3204,56 @@ iz_ac01,134,47,5	script	Treinador Mainz#ac	4_M_KY_KNT,4,4,{
 				next;
 				sc_end SC_SLEEP;
 				mes "[Mainz]";
-				mes "Como foi? NÃ£o Ã© divertido imaginar estar dormindo na frente de um inimigo perigoso, Ã©?";
+				mes "Como foi? Não é divertido imaginar estar dormindo na frente de um inimigo perigoso, é?";
 				next;
 				mes "[Mainz]";
-				mes "O sono Ã© bom para a recuperaÃ§Ã£o, mas nÃ£o necessariamente bom enquanto vocÃª estÃ¡ no meio de uma batalha.";
+				mes "O sono é bom para a recuperação, mas não necessariamente bom enquanto você está no meio de uma batalha.";
 				emotion ET_SPARK;
 				next;
 				mes "[Mainz]";
-				mes "O que mais vocÃª estÃ¡ ansioso?";
+				mes "O que mais você está ansioso?";
 				next;
 				break;
 				case 4:
 				mes "[Mainz]";
-				mes "Eu vou te ensinar sobre <^ FF0000 SilÃªncio ^ 000000>.";
+				mes "Eu vou te ensinar sobre <^ FF0000 Silêncio ^ 000000>.";
 				next;
 				mes "[Mainz]";
-				mes "Em status Silencioso, vocÃª nÃ£o pode usar nenhuma habilidade mÃ¡gica e um <...> aparecerÃ¡ acima da sua cabeÃ§a.";
+				mes "Em status Silencioso, você não pode usar nenhuma habilidade mágica e um <...> aparecerá acima da sua cabeça.";
 				next;
 				mes "[Mainz]";
-				mes "Mas todos os ataques nÃ£o sÃ£o impossÃ­veis. Ataques normais ainda podem ser feitos enquanto silenciados.";
+				mes "Mas todos os ataques não são impossíveis. Ataques normais ainda podem ser feitos enquanto silenciados.";
 				next;
 				mes "[Mainz]";
-				mes "No estado de silÃªncio, vocÃª pode simplesmente atacar fisicamente ou recuperar usando poÃ§Ãµes.";
+				mes "No estado de silêncio, você pode simplesmente atacar fisicamente ou recuperar usando poções.";
 				next;
 				mes "[Mainz]";
-				mes "Ã‰ possÃ­vel recuperar com itens como <^ 0022FF Green Herb ^ 000000>, <^ 0022FF PoÃ§Ã£o Verde ^ 000000>, <^ 0022FFPanacea ^ 000000> e <^ 0022FFGelÃ©ia Real ^ 000000>.";
+				mes "É possível recuperar com itens como <^ 0022FF Green Herb ^ 000000>, <^ 0022FF Poção Verde ^ 000000>, <^ 0022FFPanacea ^ 000000> e <^ 0022FFGeléia Real ^ 000000>.";
 				next;
 				mes "[Mainz]";
-				mes "Deixe-me mostrar o que vai acontecer no estado de suspensÃ£o.";
+				mes "Deixe-me mostrar o que vai acontecer no estado de suspensão.";
 				next;
 				sc_start SC_SILENCE, 30000, 0;
-				mes "<^ FF0000SilÃªncia ^ 000000>";
+				mes "<^ FF0000Silência ^ 000000>";
 				next;
 				mes "[Mainz]";
 				mes "......";
 				next;
 				sc_end SC_SILENCE;
 				mes "[Mainz]";
-				mes "Ã‰ frustrante nÃ£o poder usar suas habilidades, certo?";
+				mes "É frustrante não poder usar suas habilidades, certo?";
 				next;
 				mes "[Mainz]";
-				mes "Especialmente, quando vocÃª Ã© uma classe alta dependendo das habilidades em vez de ataques fÃ­sicos ou em estado de Sono durante a batalha, vocÃª serÃ¡ severamente danificado.";
+				mes "Especialmente, quando você é uma classe alta dependendo das habilidades em vez de ataques físicos ou em estado de Sono durante a batalha, você será severamente danificado.";
 				next;
 				mes "[Mainz]";
-				mes "VocÃª tem mais alguma pergunta?";
+				mes "Você tem mais alguma pergunta?";
 				next;
 				break;
 			case 5:
 				mes "[Mainz]";
-				mes "Se vocÃª nÃ£o tiver mais perguntas, vocÃª poderia ter minha lancheira em nome de mim?";
-				mes "NÃ£o?";
+				mes "Se você não tiver mais perguntas, você poderia ter minha lancheira em nome de mim?";
+				mes "Não?";
 				next;
 				mes "[Mainz]";
 				mes "Haaaaa ...";
@@ -3278,18 +3278,18 @@ iz_ac01_d,134,47,5	duplicate(Treinador Mainz#ac)	Treinador Mainz#ac_d	4_M_KY_KNT
 // - Estranho Aprendiz
 // - Introduz o jogador ao conceito de Super Aprendizes.
 // -----------------------------------------------------------------------------
-iz_ac01,36,52,3	script	Estranho Aprendiz#ac	4_M_SIT_NOVICE,{
-	mes "[Estranho Aprendiz]";
-	mes "Ahaaa ~~ grudando no dispensÃ¡rio.";
-	mes "Jogar com a puta Ã© legal e incrÃ­vel.";
+iz_ac01,36,52,3	script	Novato#ac	4_M_SIT_NOVICE,{
+	mes "[Novato]";
+	mes "Ahaaa ~~ grudando no dispensário.";
+	mes "Jogar com a puta é legal e incrível.";
 	if (Class == Job_Novice) {
-		mes "enquanto XXXXXX, mas o que vocÃª Ã©?";
-		mes "VocÃª Ã© do mesmo tipo de XXXXX?";
+		mes "enquanto XXXXXX, mas o que você é?";
+		mes "Você é do mesmo tipo de XXXXX?";
 		next;
 		.@choice = rand(1,10);
 		if (.@choice < 3) {
-			mes "[Novato Estranho]";
-			mes "Hmmm ... vocÃª parece que tem algum talento.";
+			mes "[Novato]";
+			mes "Hmmm ... você parece que tem algum talento.";
 			mes "Estando de bom humor, eu vou te mostrar algo novo?";
 			next;
 			.@message = select("Newfangled?", "Who are you..?", "Why are you here?", "End Conversation");
@@ -3299,43 +3299,43 @@ iz_ac01,36,52,3	script	Estranho Aprendiz#ac	4_M_SIT_NOVICE,{
 		switch(.@message)
 		{
 		case 1:
-			mes "[Odd Novice]";
+			mes "[Novato]";
 			mes "I may look ordinary to you but I have a newfangled talent.";
 			mes "Not my fault, if you are shocked at seeing it.";
 			next;
-			mes "[Odd Novice]";
+			mes "[Novato]";
 			mes "OK. Where should I start?";
 			mes "First, Bash!";
 			specialeffect2 EF_BASH;
 			next;
-			mes "[Odd Novice]";
+			mes "[Novato]";
 			mes "Hehehe.. Surprised?";
 			mes "I'm just pretending...";
 			mes "It's not a real punch.";
 			next;
-			mes "[Odd Novice]";
+			mes "[Novato]";
 			mes "Looks like you were surprised!";
 			specialeffect2 EF_BLESSING;
 			next;
-			mes "[Odd Novice]";
+			mes "[Novato]";
 			mes "Just keep calm";
 			mes "and have a potion";
 			mes "But that's not the last of it.";
 			specialeffect2 EF_STEAL;
 			next;
-			mes "[Odd Novice]";
+			mes "[Novato]";
 			mes "I have stolen one thread of your hair.";
 			mes "I don't believe in Voodooism.";
 			mes "Regard it as your luck.";
 			next;
-			mes "[Odd Novice]";
+			mes "[Novato]";
 			mes "The last one is a flame, to say the least!";
 			mes "How about it? Newfangled.";
 			mes "Idling away too long,";
 			mes "All the skills learnt over your shoulder could be used.";
 			specialeffect EF_SIGHT, AREA, "Odd Novice#nk1";
 			next;
-			mes "[Odd Novice]";
+			mes "[Novato]";
 			mes "Ugh, all my SP is gone...";
 			mes "and wasted... I am tired.";
 			mes "I am going back to rest.";
@@ -3343,14 +3343,14 @@ iz_ac01,36,52,3	script	Estranho Aprendiz#ac	4_M_SIT_NOVICE,{
 			close;
 		case 2:
 			if (.@choice == 10) {
-				mes "[Odd Novice]";
+				mes "[Novato]";
 				mes "What? You, disturbing me.";
 				mes "Get away from me kid you're botherin' me.";
 				close;
 			} else {
 				switch(rand(1,3)) {
 					case 1:
-						mes "[Odd Novice]";
+						mes "[Novato]";
 						mes "Me? I'm Novice.";
 						mes "What? Strange? You seein' me for the first time?";
 						next;
@@ -3446,10 +3446,10 @@ iz_ac01,36,52,3	script	Estranho Aprendiz#ac	4_M_SIT_NOVICE,{
 	close;
 }
 
-iz_ac01_a,36,52,3	duplicate(Odd Novice#ac)	Odd Novice#ac_a	4_M_SIT_NOVICE
-iz_ac01_b,36,52,3	duplicate(Odd Novice#ac)	Odd Novice#ac_b	4_M_SIT_NOVICE
-iz_ac01_c,36,52,3	duplicate(Odd Novice#ac)	Odd Novice#ac_c	4_M_SIT_NOVICE
-iz_ac01_d,36,52,3	duplicate(Odd Novice#ac)	Odd Novice#ac_d	4_M_SIT_NOVICE
+iz_ac01_a,36,52,3	duplicate(Novato#ac)	Novato#ac_a	4_M_SIT_NOVICE
+iz_ac01_b,36,52,3	duplicate(Novato#ac)	Novato#ac_b	4_M_SIT_NOVICE
+iz_ac01_c,36,52,3	duplicate(Novato#ac)	Novato#ac_c	4_M_SIT_NOVICE
+iz_ac01_d,36,52,3	duplicate(Novato#ac)	Novato#ac_d	4_M_SIT_NOVICE
 
 // - Shop Helper
 // - Teaches the player about Shops and Currency.
@@ -4269,11 +4269,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients- ^0000cd1 Clover, 1 Green Herb, 1 Red Herb^000000.";
 				next;
-				cutin "Ø§ÓªÆ½Ä«Ö¥.bmp", 3;
+				cutin "???i?.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Clover and the Red Herb are dropped by Lunatic or Fabre monsters wandering everywhere on the field outside Izlude.";
 				next;
-				cutin "Ç„ÛªØ£Ä«Ö¥.bmp", 3;
+				cutin "???i?.bmp", 3;
 				mes "[Eclaire]";
 				mes "Green Herbs are dropped by Fabres.";
 				next;
@@ -4295,11 +4295,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Apple & 2 Carrots^000000.";
 				next;
-				cutin "Ç·ØµÄ«Ö¥.bmp", 3;
+				cutin "??i?.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apples are dropped by Porings bouncing around the field outside of Izlude.";
 				next;
-				cutin "Ø§ÓªÆ½Ä«Ö¥.bmp", 3;
+				cutin "???i?.bmp", 3;
 				mes "[Eclaire]";
 				mes "Carrots are given by Lunatics.";
 				next;
@@ -4321,15 +4321,15 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are ^0000cd1 Jellopy, 1 Fluff, 1 Feather^000000.";
 				next;
-				cutin "Ç·ØµÄ«Ö¥.bmp", 3;
+				cutin "??i?.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Jellopy are dropped by Porings bouncing around the field of Izlude.";
 				next;
-				cutin "Ç„ÛªØ£Ä«Ö¥.bmp", 3;
+				cutin "???i?.bmp", 3;
 				mes "[Eclaire]";
 				mes "Fluff can be received from Fabre or Lunatic.";
 				next;
-				cutin "Ø§ÓªÆ½Ä«Ö¥.bmp", 3;
+				cutin "???i?.bmp", 3;
 				mes "[Mille Feuille]";
 				mes "Feathers are dropped by Lunatics or Fabres.";
 				next;
@@ -4351,11 +4351,11 @@ iz_ac01,147,50,3	script	Dacquoise#ac	4_COOK,{
 				mes "[Mille Feuille]";
 				mes "Ingredients are-^0000cd 1 Apple & 1 Clover^000000.";
 				next;
-				cutin "Ç·ØµÄ«Ö¥.bmp", 3;
+				cutin "??i?.bmp", 3;
 				mes "[Dacquoise]";
 				mes "Apple can be found in Porings in the field outside of Izlude.";
 				next;
-				cutin "Ø§ÓªÆ½Ä«Ö¥.bmp", 3;
+				cutin "???i?.bmp", 3;
 				mes "[Eclaire]";
 				mes "Clovers are dropped by Lunatics or Fabre in the field outside Izlude.";
 				next;

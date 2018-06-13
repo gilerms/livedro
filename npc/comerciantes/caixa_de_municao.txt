@@ -25,7 +25,7 @@ alberta,118,157,3	script	Magazine Dealer Kenny::mdk	4_M_01,{
 	if (BaseClass == Job_Gunslinger) {
 		mes "Bem vindo à minha Revista Magazine.";
 		mes "Como você deve saber, grandes números";
-		show "de balas pode ser carregado mais";
+		mes "de balas pode ser carregado mais";
 		mes "facilmente quando eles estão em Revistas. Agora, posso te interessar";
 		mes "alguma coisa em particular?";
 		next;
@@ -44,7 +44,7 @@ alberta,118,157,3	script	Magazine Dealer Kenny::mdk	4_M_01,{
 			mes "que você tem muitos";
 			mes "balas, venha me ver.";
 			mes "É uma idéia inteligente para armazenar";
-			mes "balas com minhas revistas."
+			mes "balas com minhas revistas.";
 			close;
 		}
 	}

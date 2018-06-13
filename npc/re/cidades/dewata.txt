@@ -86,7 +86,7 @@ dewata,221,237,5	script	Homem jovem#dew-1	4_M_DEWMAN,{
 	mes "Deixe-me passar algum conhecimento pra você.";
 	next;
 	mes "[Apreciador de Frutos]";
-	mes "Eu posso ser jovem, mas ninguém sabe mais do que eu sobre ^777700Palm fruit^000000. Tudo bem! O que você quer saber?";
+	mes "Eu posso ser jovem, mas ninguém sabe mais do que eu sobre ^777700Fruto da palmeira^000000. Tudo bem! O que você quer saber?";
 	next;
 	switch(select("Sobre o casco...:Sobre a polpa...:Sobre o interior da palmeira...:Não, obrigado.")) {
 	case 1:
@@ -174,7 +174,7 @@ dewata,221,237,5	script	Homem jovem#dew-1	4_M_DEWMAN,{
 	}
 }
 
-dewata,114,243,6	script	Jovem Preguiçoso#dew	4_M_DEWMAN,1,1,{
+dewata,114,243,6	script	Jovem Preguiçoso#dew	536,1,1,{
 	if (checkweight(1201,1) == 0 || MaxWeight - Weight < 500) {
 		mes "[Jovem Preguiçoso]";
 		mes "Por que você está carregando tanto? Não é pesado?";
@@ -220,7 +220,7 @@ OnTouch:
 	end;
 }
 
-dewata,159,81,4	script	Turista#dew-1	4_M_SITDOWN,{
+dewata,159,81,4	script	Turista#dew-1	881,{
 	mes "[Nasolo]";
 	mes "Wow~ Oceano puro, uma praia quente...";
 	mes "Perfeito para um encontro com uma namorada...";
@@ -235,7 +235,7 @@ dewata,159,81,4	script	Turista#dew-1	4_M_SITDOWN,{
 	close;
 }
 
-dewata,146,109,5	script	Chefe do Restaurante#dew	4_COOK,{
+dewata,146,109,5	script	Chefe do Restaurante#dew	886,{
 	if (checkweight(11532,1) == 0 || checkweight(11533,1) == 0 || MaxWeight - Weight < 500) {
 		mes "[Chefe do Restaurante]";
 		mes "Você chegou a provar meu prato? É sempre bom comer com o estômago vazio.";
@@ -274,7 +274,7 @@ dewata,146,109,5	script	Chefe do Restaurante#dew	4_COOK,{
 		mes "Na ilha Dewata, chamamos o arroz como Nasi, macarrão como Mie, pão como Roti, frango como Ayam, peixe como Ikan e milho como Jagung.";
 		next;
 		mes "[Chefe do Restaurante]";
-		mes "Então, se o arroz é frito, chamamos isso de "Nasi Goreng", e o macarrão frito é 'Mie Goreng'.";
+		mes "Então, se o arroz é frito, chamamos isso de 'Nasi Goreng', e o macarrão frito é 'Mie Goreng'.";
 		next;
 		mes "[Chefe do Restaurante]";
 		mes "Bem ... Isso é suficiente para desfrutar nossos alimentos em Dewata !! Se você está com fome, nós temos nosso menu exclusivo por apenas ^0000FF5000^000000 Zeny.";
@@ -324,7 +324,7 @@ dewata,147,107,6	script	Gourmet#dew	85,{
 	mes "[Gourmet]";
 	mes "Oh... É como uma festa na minha";
 	mes "boca ... E todos estão convidados!";
-	emotion e_sob;
+	emotion ET_CRY;
 	next;
 	mes "[Gourmet]";
 	mes "Mestre~ mais um por favore~";
@@ -343,7 +343,7 @@ dewata,154,107,4	script	Turista#dew	4_M_04,{
 	emotion ET_SCRATCH;
 	next;
 	mes "[Turista]";
-	mes "Ele deve ser um grande comedor, não um "gourmet"...";
+	mes "Ele deve ser um grande comedor, não um 'gourmet'...";
 	next;
 	mes "[Turista]";
 	mes "Você já esteve em Prontera? Eu acho que o vi em algum lugar..";
@@ -415,7 +415,7 @@ dewata,99,203,4	script	Turista#dew4	4_M_SAGE_C,{
 	mes "[Turista]";
 	mes "Oh ~ Isso é muito interessante. Um";
 	mes "templo que adora o Buda...";
-	emotion e_ok;
+	emotion ET_OK;
 	next;
 	mes "[Turista]";
 	mes "Mas eu realmente não consigo todas as";
@@ -568,9 +568,9 @@ L_Wish:
 	next;
 	return;
 }
-dewata,89,212,6	duplicate(Pequeno Santuário#dew1)	Pequeno Santuário#dew2	CLEAR_NPC
-dewata,68,212,6	duplicate(Pequeno Santuário#dew1)	Pequeno Santuário#dew3	CLEAR_NPC
-dewata,68,191,6	duplicate(Pequeno Santuário#dew1)	Pequeno Santuário#dew4	CLEAR_NPC
+dewata,89,212,6	duplicate(Pequeno Santuário#dew1)	Pequeno Santuário#dew2	844
+dewata,68,212,6	duplicate(Pequeno Santuário#dew1)	Pequeno Santuário#dew3	844
+dewata,68,191,6	duplicate(Pequeno Santuário#dew1)	Pequeno Santuário#dew4	844
 
 dewata,75,122,6	script	Monge#dewt1	4_M_BUDDHIST,{
 	mes "[Monge]";
@@ -666,7 +666,7 @@ OnTouch:
 	close;
 }
 
-dewata,233,263,0	script	Doce Casal#1	4_M_ROGUE,2,3,{
+dewata,233,263,8	script	Doce Casal#1	4_M_ROGUE,2,3,{
 OnTouch:
 	mes "[Doce Marido]";
 	mes "Você é a coisa mais bonita do mundo, querida~";
@@ -674,7 +674,7 @@ OnTouch:
 	next;
 	mes "[Doce Esposa]";
 	mes "Mesmo? Eu sou tão bonita? Te amo querido~";
-	emotion e_kis2,0,"Doce Casal#dew2";
+	emotion ET_CHUPCHUP, getnpcid(0, "Doce Casal#dew2");
 	next;
 	mes "[Doce Casal]";
 	mes "Hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha";
@@ -735,7 +735,7 @@ OnTouch:
 	close;
 }
 
-dewata,269,208,4	script	Criança na Cidade#dew	4_M_DEWBOY,2,3,{
+dewata,269,208,4	script	Criança da Cidade#dew	4_M_DEWBOY,2,3,{
 OnTouch:
 	mes "[Kid]";
 	mes "Olá "+((Sex == SEX_MALE)?"bro":"sis")+", olhe para aquele homem!";
@@ -853,7 +853,7 @@ dewata,249,87,4	script	Mum#dew	101,2,3,{
 OnTouch:
 	mes "[Mum]";
 	mes "Ukki~ Ukki~ Onde ela foi?";
-	emotion e_wah;
+	emotion ET_KEK;
 	next;
 	mes "[Mum]";
 	mes "Não posso tirar meus olhos dela por um segundo...";
@@ -885,43 +885,43 @@ OnTouch:
 	close;
 }
 
-dewata,278,281,4	script	Vovô Feliz Casado	4_M_DEWOLDMAN,{
-	mes "[Vovô Feliz Casado]";
+dewata,278,281,4	script	Vovô Feliz	4_M_DEWOLDMAN,{
+	mes "[Vovô Feliz]";
 	mes "Hoje, eu deveria pedir a minha esposa para";
 	mes "cozinhar ^006400arroz frito^000000.";
 	next;
-	mes "[Vovô Feliz Casado]";
+	mes "[Vovô Feliz]";
 	mes "O ^006400arroz frito^000000 da minha esposa é";
 	mes "sempre muito especial!";
 	next;
-	mes "[Vovô Feliz Casado]";
+	mes "[Vovô Feliz]";
 	mes "Isso me faz amá-la ainda mais.";
 	mes "Você não pode imaginar o sabor maravilhoso!";
 	emotion ET_THROB;
 	close;
 }
 
-dewata,280,277,4	script	Vovó Feliz Casada	4_M_DEWOLDWOMAN,{
-	mes "[Vovó Feliz Casada]";
+dewata,280,277,4	script	Vovó Feliz	4_M_DEWOLDWOMAN,{
+	mes "[Vovó Feliz]";
 	mes "Quando eu era mais jovem,";
 	mes "havia muitas propostas de cavalheiros";
 	mes "querendo me cortejar.";
 	emotion ET_PROFUSELY_SWEAT;
 	next;
-	mes "[Vovó Feliz Casada]";
+	mes "[Vovó Feliz]";
 	mes "No entanto, conheci o tipo certo,";
 	mes "e me casei.";
 	mes "Perguntei o que ele mais gosta";
 	mes "em mim, ele disse que era";
 	mes "meu ^006400arroz frito^000000 caseiro";
 	next;
-	mes "[Vovó Feliz Casada]";
+	mes "[Vovó Feliz]";
 	mes "E desde então, ele só me pede";
 	mes "tra fazer ^006400arroz frito^000000 para o jantar.";
 	mes "Mais de 40 anos de casamento";
 	mes "e ele ainda não se cansa disso";
 	next;
-	mes "[Vovó Feliz Casada]";
+	mes "[Vovó Feliz]";
 	mes "Eu sempre acho que foi uma sorte";
 	mes "envelhecer com um cara";
 	mes "quem ama o que eu cozinho.";

@@ -402,58 +402,58 @@
 }
 
 -	script	::Soldier_izlude	-1,{
-	mes "[Soldado]";
+	mes "[Guarda de Izlude]";
 	mes "HeHeHeHe..HaHaHaHa ";
 	mes "Huh? Porque estou tão feliz?";
 	mes "Você quer saber?";
 	next;
 	if (select("Claro, porque?:Na verdade, eu não ligo.") == 1) {
-		mes "[Soldado]";
+		mes "[Guarda de Izlude]";
 		mes "Ah~~ Não há muito a fazermos nos últimos dias. Você pode ver, Mercadores comprando itens que são dropados por monstros. Mas você sabia disso, né?";
 		next;
 		if (select("Claro:É? Sério?") == 1) {
-			mes "[Soldado]";
+			mes "[Guarda de Izlude]";
 			mes "HaHa~ Na verdade, é atualmente parte de nosso trabalho. Porém cada vez mais caçadores vem até nós para para serem pagos e isso passou dos limites.";
 			next;
-			mes "[Soldado]";
+			mes "[Guarda de Izlude]";
 			mes "Tivemos que fazer hora extra todos os dias. Ah, era um pesadelo...! Enfim, o governo fez uma sábia decisão ao criar o Sistema de Registro.";
 			next;
-			mes "[Soldado]";
+			mes "[Guarda de Izlude]";
 			mes "O Instituto de Premiação só paga quem tem o registro. Claro, você tem que ser mercador e permanecer no mesmo lugar o dia inteiro.";
 			next;
-			mes "[Soldado]";
+			mes "[Guarda de Izlude]";
 			mes "O instituto dá a matrícula para qualquer comerciante que preencha os requisitos. Mas hoje em dia, os caçadores vendem suas mercadorias a mercadores registrados.";
 			next;
-			mes "[Soldado]";
+			mes "[Guarda de Izlude]";
 			mes "Hoje em dia, os caçadores vendem suas mercadorias para mercadores registrados.  Não são muitas as pessoas que vêm até nós por outro motivo.";
 			next;
-			mes "[Soldado]";
+			mes "[Guarda de Izlude]";
 			mes "Quer dizer, ainda somos muito ocupados, mas nada se compara a como era antes. Pessoas que sofreram sabem apreciar o mínimo conforto.";
 			close;
 		}
-		mes "[Soldado]";
+		mes "[Guarda de Izlude]";
 		mes "O que?! Vai me dizer que não sabia?! Bom, Você sabe que pode conseguir itens matando monstros. Se você pegá-los e levar a um mercador, você pode conseguir algum dinheiro. ";
 		next;
-		mes "[Soldado]";
+		mes "[Guarda de Izlude]";
 		mes "HaHa, na verdade, é usado como parte do nosso trabalho. Porém chegam cada vez mais caçadores querendo receber, e fica fora de controle.";
 		next;
-		mes "[Soldado]";
+		mes "[Guarda de Izlude]";
 		mes "Tivemos que fazer hora extra todos os dias. Ah, era um pesadelo...! Enfim, o governo fez uma sábia decisão ao criar o Sistema de Registro.";
 		next;
-		mes "[Soldado]";
+		mes "[Guarda de Izlude]";
 		mes "O Instituto de Premiação só paga quem tem o registro. Claro, você tem que ser mercador e permanecer no mesmo lugar o dia inteiro.";
 		next;
-		mes "[Soldado]";
+		mes "[Guarda de Izlude]";
 		mes "O instituto dá a matrícula para qualquer comerciante que preencha os requisitos. Mas hoje em dia, os caçadores vendem suas mercadorias a mercadores registrados.";
 		next;
-		mes "[Soldado]";
+		mes "[Guarda de Izlude]";
 		mes "Hoje em dia, os caçadores vendem suas mercadorias para mercadores registrados.  Não são muitas as pessoas que vêm até nós por outro motivo.";
 		next;
-		mes "[Soldado]";
+		mes "[Guarda de Izlude]";
 		mes "Quer dizer, ainda somos muito ocupados, mas nada se compara a como era antes. Pessoas que sofreram sabem apreciar o mínimo conforto.";
 		close;
 	}
-	mes "[Soldado]";
+	mes "[Guarda de Izlude]";
 	mes "Ótimo Até mais~~";
 	close;
 }

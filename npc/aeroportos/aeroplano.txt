@@ -41,9 +41,9 @@ OnTouch_:
 	}
 }
 
-airplane,243,29,0	duplicate(#AeroplanoPortal-1)	#AeroplanoPortal-2	45,1,1
+airplane,243,29,0	duplicate(#AirshipWarp-1)	#AirshipWarp-2	45,1,1
 
-airplane,1,1,0	script	Aeroplano Domestico	-1,{
+airplane,1,1,0	script	Domestic_Airship	-1,{
 	end;
 OnInit:
 	initnpctimer;
@@ -56,16 +56,16 @@ OnTimer50000:
 	end;
 OnTimer60000:
 	set $@airplanelocation,1;
-	donpcevent "#AeroplanoPortal-1::OnUnhide";
-	donpcevent "#AeroplanoPortal-2::OnUnhide";
-	mapannounce "airplane","Bem-vind"+(Sex?"o":"a")+" a Einbroch. Tenha uma boa viagem.",bc_map,"0x00ff00";
+	donpcevent "#AirshipWarp-1::OnUnhide";
+	donpcevent "#AirshipWarp-2::OnUnhide";
+	mapannounce "airplane","Bem-vindo a Einbroch. Tenha uma boa viagem.",bc_map,"0x00ff00";
 	end;
 OnTimer70000:
 	mapannounce "airplane","Atualmente nós estamos em Einbroch. O Aeroplano irá decolar em instantes.",bc_map,"0x00ff00";
 	end;
 OnTimer80000:
-	donpcevent "#AeroplanoPortal-1::OnHide";
-	donpcevent "#AeroplanoPortal-2::OnHide";
+	donpcevent "#AirshipWarp-1::OnHide";
+	donpcevent "#AirshipWarp-2::OnHide";
 	mapannounce "airplane","O Aeroplano está decolando agora. Seu próximo destino é Lighthalzen.",bc_map,"0x70dbdb";
 	end;
 OnTimer100000:
@@ -76,16 +76,16 @@ OnTimer130000:
 	end;
 OnTimer140000:
 	set $@airplanelocation,2;
-	donpcevent "#AeroplanoPortal-1::OnUnhide";
-	donpcevent "#AeroplanoPortal-2::OnUnhide";
+	donpcevent "#AirshipWarp-1::OnUnhide";
+	donpcevent "#AirshipWarp-2::OnUnhide";
 	mapannounce "airplane","Bem-vindo a Lighthalzen. Tenha uma boa viagem.",bc_map,"0x70dbdb";
 	end;
 OnTimer150000:
 	mapannounce "airplane","Atualmente nós estamos em Lighthalzen. O Aeroplano irá decolar em instantes.",bc_map,"0x70dbdb";
 	end;
 OnTimer160000:
-	donpcevent "#AeroplanoPortal-1::OnHide";
-	donpcevent "#AeroplanoPortal-2::OnHide";
+	donpcevent "#AirshipWarp-1::OnHide";
+	donpcevent "#AirshipWarp-2::OnHide";
 	mapannounce "airplane","O Aeroplano está decolando agora. Seu próximo destino é Einbroch.",bc_map,"0x00ff00";
 	end;
 OnTimer180000:
@@ -96,16 +96,16 @@ OnTimer210000:
 	end;
 OnTimer220000:
 	set $@airplanelocation,1;
-	donpcevent "#AeroplanoPortal-1::OnUnhide";
-	donpcevent "#AeroplanoPortal-2::OnUnhide";
+	donpcevent "#AirshipWarp-1::OnUnhide";
+	donpcevent "#AirshipWarp-2::OnUnhide";
 	mapannounce "airplane","Bem-vindo a Einbroch. Tenha uma boa viagem.",bc_map,"0x00ff00";
 	end;
 OnTimer230000:
 	mapannounce "airplane","Atualmente nós estamos em Einbroch. O Aeroplano irá decolar em instantes.",bc_map,"0x00ff00";
 	end;
 OnTimer240000:
-	donpcevent "#AeroplanoPortal-1::OnHide";
-	donpcevent "#AeroplanoPortal-2::OnHide";
+	donpcevent "#AirshipWarp-1::OnHide";
+	donpcevent "#AirshipWarp-2::OnHide";
 	mapannounce "airplane","O Aeroplano está decolando. Nosso próximo destino é Juno.",bc_map,"0xff8200";
 	end;
 OnTimer260000:
@@ -116,16 +116,16 @@ OnTimer290000:
 	end;
 OnTimer300000:
 	set $@airplanelocation,0;
-	donpcevent "#AeroplanoPortal-1::OnUnhide";
-	donpcevent "#AeroplanoPortal-2::OnUnhide";
-	mapannounce "airplane","Bem-vind"+(Sex?"o":"a")+" a Juno. Tenha uma boa viagem.",bc_map,"0xff8200";
+	donpcevent "#AirshipWarp-1::OnUnhide";
+	donpcevent "#AirshipWarp-2::OnUnhide";
+	mapannounce "airplane","Bem-vindo a Juno. Tenha uma boa viagem.",bc_map,"0xff8200";
 	end;
 OnTimer310000:
 	mapannounce "airplane","Atualmente nós estamos em Juno. O Aeroplano irá decolar em instantes.",bc_map,"0xff8200";
 	end;
 OnTimer320000:
-	donpcevent "#AeroplanoPortal-1::OnUnhide";
-	donpcevent "#AeroplanoPortal-2::OnUnhide";
+	donpcevent "#AirshipWarp-1::OnHide";
+	donpcevent "#AirshipWarp-2::OnHide";
 	mapannounce "airplane","O Aeroplano está deixando o solo. Nosso próximo destino é Hugel.",bc_map,"0xca4bf3";
 	end;
 OnTimer340000:
@@ -136,16 +136,16 @@ OnTimer370000:
 	end;
 OnTimer380000:
 	set $@airplanelocation,3;
-	donpcevent "#AeroplanoPortal-1::OnUnhide";
-	donpcevent "#AeroplanoPortal-2::OnUnhide";
-	mapannounce "airplane","Bem-vind"+(Sex?"o":"a")+" a Hugel. Tenha uma boa viagem.",bc_map,"0xca4bf3";
+	donpcevent "#AirshipWarp-1::OnUnhide";
+	donpcevent "#AirshipWarp-2::OnUnhide";
+	mapannounce "airplane","Bem-vindo a Hugel. Tenha uma boa viagem.",bc_map,"0xca4bf3";
 	end;
 OnTimer390000:
 	mapannounce "airplane","Atualmente estamos em Hugel. O Aeroplano sairá em breve.",bc_map,"0xca4bf3";
 	end;
 OnTimer400000:
-	donpcevent "#AeroplanoPortal-1::OnUnhide";
-	donpcevent "#AeroplanoPortal-2::OnUnhide";
+	donpcevent "#AirshipWarp-1::OnHide";
+	donpcevent "#AirshipWarp-2::OnHide";
 	mapannounce "airplane","O Aeroplano está deixando o solo. Nosso próximo destino é Juno.",bc_map,"0xff8200";
 	end;
 OnTimer420000:
@@ -156,16 +156,16 @@ OnTimer450000:
 	end;
 OnTimer460000:
 	set $@airplanelocation,0;
-	donpcevent "#AeroplanoPortal-1::OnUnhide";
-	donpcevent "#AeroplanoPortal-2::OnUnhide";
-	mapannounce "airplane","Bem-vind"+(Sex?"o":"a")+" a Juno. Tenha uma boa viagem.",bc_map,"0xff8200";
+	donpcevent "#AirshipWarp-1::OnUnhide";
+	donpcevent "#AirshipWarp-2::OnUnhide";
+	mapannounce "airplane","Bem-vindo a Juno. Tenha uma boa viagem.",bc_map,"0xff8200";
 	end;
 OnTimer470000:
 	mapannounce "airplane","Atualmente estamos em Juno. O Aeroplano sairá em breve.",bc_map,"0xff8200";
 	end;
 OnTimer480000:
-	donpcevent "#AeroplanoPortal-1::OnHide";
-	donpcevent "#AeroplanoPortal-2::OnHide";
+	donpcevent "#AirshipWarp-1::OnHide";
+	donpcevent "#AirshipWarp-2::OnHide";
 	mapannounce "airplane","O Aeroplano está decolando agora. Seu próximo destino é Einbroch.",bc_map,"0x00ff00";
 	stopnpctimer;
 	initnpctimer;
@@ -269,7 +269,7 @@ airplane,71,91,7	script	Homem de Umbala#ein_p	789,{
 	close;
 }
 
-airplane,250,58,2	script	Equipe do Aeroplano#airplane	67,{
+airplane,250,58,2	script	Airship Staff#airplane	67,{
 	// Hugel quest addition
 	if (hg_ma1 == 3) {
 		mes "[Equipe do Aeroplano]";
@@ -650,7 +650,7 @@ airplane,50,66,5	script	Mercador de Maçãs#airplane	86,{
 //= ... -> Izlude -> Juno -> Rachel -> ...
 //============================================================ 
 
-airplane_01,243,73,0	script	#AeroplanoPortal-3	45,1,1,{
+airplane_01,243,73,0	script	#AirshipWarp-3	45,1,1,{
 	end;
 	
 OnTouch_:
@@ -662,8 +662,8 @@ OnTouch_:
 		else
 			warp "izlude",200,56;
 		end;
-	case 2: warp "yuno",12,261;
-		 end;
+	case 2: warp "yuno",12,261;	end;
+
 	}
 
 OnInit:
@@ -678,9 +678,9 @@ OnUnhide:
 	end;
 }
 
-airplane_01,243,29,0	duplicate(#AeroplanoPortal-3)	#AeroplanoPortal-4	45,1,1
+airplane_01,243,29,0	duplicate(#AirshipWarp-3)	#AirshipWarp-4	45,1,1
 
-airplane_01,1,1,0	script	Aeroplano_Internacional	-1,{
+airplane_01,1,1,0	script	International_Airship	-1,{
 	end;
 OnInit:
 OnEnable:
@@ -694,16 +694,16 @@ OnTimer50000:
 	end;
 OnTimer60000:
 	set $@airplanelocation2,1;
-	donpcevent "#AeroplanoPortal-3::OnUnhide";
-	donpcevent "#AeroplanoPortal-4::OnUnhide";
-	mapannounce "airplane_01","Bem-vind"+(Sex?"o":"a")+" a Izlude. Tenha uma boa viagem.",bc_map,"0x00ff00";
+	donpcevent "#AirshipWarp-3::OnUnhide";
+	donpcevent "#AirshipWarp-4::OnUnhide";
+	mapannounce "airplane_01","Bem-vindo a Izlude. Tenha uma boa viagem.",bc_map,"0x00ff00";
 	end;
 OnTimer70000:
 	mapannounce "airplane_01","Atualmente nós estamos em Izlude. O Aeroplano irá decolar em instantes.",bc_map,"0x00ff00";
 	end;
 OnTimer80000:
-	donpcevent "#AeroplanoPortal-3::OnHide";
-	donpcevent "#AeroplanoPortal-4::OnHide";
+	donpcevent "#AirshipWarp-3::OnHide";
+	donpcevent "#AirshipWarp-4::OnHide";
 	mapannounce "airplane_01","O Aeroplano está decolando. Nosso próximo destino é Juno.",bc_map,"0x70dbdb";
 	end;
 OnTimer105000:
@@ -714,16 +714,16 @@ OnTimer130000:
 	end;
 OnTimer140000:
 	set $@airplanelocation2,2;
-	donpcevent "#AeroplanoPortal-3::OnUnhide";
-	donpcevent "#AeroplanoPortal-4::OnUnhide";
-	mapannounce "airplane_01","Bem-vind"+(Sex?"o":"a")+" a Juno. Tenha uma boa viagem.",bc_map,"0x70dbdb";
+	donpcevent "#AirshipWarp-3::OnUnhide";
+	donpcevent "#AirshipWarp-4::OnUnhide";
+	mapannounce "airplane_01","Bem-vindo a Juno. Tenha uma boa viagem.",bc_map,"0x70dbdb";
 	end;
 OnTimer150000:
 	mapannounce "airplane_01","Atualmente nós estamos em Juno. O Aeroplano irá decolar em instantes.",bc_map,"0x70dbdb";
 	end;
 OnTimer160000:
-	donpcevent "#AeroplanoPortal-3::OnHide";
-	donpcevent "#AeroplanoPortal-4::OnHide";
+	donpcevent "#AirshipWarp-3::OnHide";
+	donpcevent "#AirshipWarp-4::OnHide";
 	mapannounce "airplane_01","O Aeroplano está deixando o solo. Nosso próximo destino é Rachel.",bc_map,"0xFF8200";
 	end;
 OnTimer185000:
@@ -734,22 +734,22 @@ OnTimer210000:
 	end;
 OnTimer220000:
 	set $@airplanelocation2,0;
-	donpcevent "#AeroplanoPortal-3::OnUnhide";
-	donpcevent "#AeroplanoPortal-4::OnUnhide";
-	mapannounce "airplane_01","Bem-vind"+(Sex?"o":"a")+" a Rachel. Tenha uma boa viagem.",bc_map,"0xFF8200";
+	donpcevent "#AirshipWarp-3::OnUnhide";
+	donpcevent "#AirshipWarp-4::OnUnhide";
+	mapannounce "airplane_01","Bem-vindo a Rachel. Tenha uma boa viagem.",bc_map,"0xFF8200";
 	end;
 OnTimer230000:
 	mapannounce "airplane_01","Atualmente nós estamos em Rachel. The Airship will take off shortly.",bc_map,"0xFF8200";
 	end;
 OnTimer240000:
-	donpcevent "#AeroplanoPortal-3::OnHide";
-	donpcevent "#AirshiAeroplanoPortalpWarp-4::OnHide";
+	donpcevent "#AirshipWarp-3::OnHide";
+	donpcevent "#AirshipWarp-4::OnHide";
 	mapannounce "airplane_01","O Aeroplano está decolando. Nosso próximo destino é Izlude.",bc_map,"0x00ff00";
 	stopnpctimer;
 	set .moninv, .moninv + 1;
 	if (.moninv == 7) {
 		if (rand(1,3) == 3) {
-			donpcevent "Aeroplano#airplane02::OnEnable";
+			donpcevent "Airship#airplane02::OnEnable";
 			end;
 		}
 		set .moninv, 0;
@@ -765,7 +765,7 @@ airplane_01,247,64,5	duplicate(ExitAirplane01)	Saída#airplane_011b	857
 airplane_01,240,40,1	duplicate(ExitAirplane01)	Saída#airplane_012a	857
 airplane_01,247,40,1	duplicate(ExitAirplane01)	Saída#airplane_012b	857
 
-airplane_01,250,58,2	script	Equipe do Aeroplano#airplane01	1_F_02,{
+airplane_01,250,58,2	script	Airship Staff#airplane01	1_F_02,{
 	mes "[Equipe do Aeroplano]";
 	mes "Bem-vind"+(Sex?"o":"a")+"";
 	mes "ao Aeroplano.";

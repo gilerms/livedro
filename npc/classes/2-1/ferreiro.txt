@@ -69,7 +69,7 @@ ein_in01,18,28,4	script	Mestre Ferreiro #BLS	731,{
 	mes "a Guilda dos Ferreiros.";
 	next;
 	mes "[Altiregen]";
-	es "Nós colocamos o fervor";
+	mes "Nós colocamos o fervor";
 	mes "e a paixão de nossas almas";
 	mes "em nossas forjas. Nossa habilidade de derreter metal em novas armas";
 	mes "e ferramentas é realmente uma forma de arte!";
@@ -259,7 +259,7 @@ ein_in01,18,28,4	script	Mestre Ferreiro #BLS	731,{
 		}
 		else if (BSMITH_Q == 17 && countitem(1005) > 0 && JobLevel > 39) {
 			mes "[Altiregen]";
-			if (checkmount()) {
+			if (ismounting()) {
 				mes "Você está em uma montaria de aluguel, então você não pode mudar seu trabalho.";
 				mes "Por favor desequipe a montaria de aluguel e tente novamente!";
 				close;
@@ -715,7 +715,7 @@ ein_in01,201,27,3	script	Líder da Guilda#alberta	1_M_SMITH,{
 					next;
 					mes "[Geschupenschte]";
 					mes "Em todo caso, leve isso";
-					mes "para ^8E6B23Whichebain^000000 em Morroc do Reino de Rune-Midgard,";
+					mes "para ^8E6B23Whichebain^000000 em Morroc no Reino de Rune-Midgard,";
 					break;
 				case 11:
 					mes "Certo, agora leve isso para ^8E6B23Grongast^000000 em Lighthalzen. Basta entregá-lo e trazer para mim o recibo.";
@@ -770,7 +770,7 @@ ein_in01,201,27,3	script	Líder da Guilda#alberta	1_M_SMITH,{
 				case 13:
 					mes "Certo, agora leve isso para ^8E6B23Bismark^000000 em Hugel. Basta entregá-lo e trazer para mim o recibo.";
 					getitem 1122,1; // Sabre de Impacto
-					if (questprogress(2007)) {
+					if (checkquest(2007) != -1) {
 						changequest 2007,2012;
 					}
 					next;

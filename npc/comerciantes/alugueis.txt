@@ -26,9 +26,9 @@
 //= 2.2 Added warg checks. [Euphy]
 //============================================================ 
 
-// Criador de Peco-Pecos (para Cavaleiros)
+// PecoPeco Breeder (for Knights) :: breeder
 //============================================================
-prontera,55,350,5	script	Criador de Pecopecos#knt	105,{
+prontera,55,350,5	script	Criador de Peco Peco#knt	105,{
 	if(Upper==0) set .@price,2500; //Peco Normal - Preço Padrão
 	if(Upper==1) set .@price,2500; //Peco Blindado
 	if(Upper==2) set .@price,2500; //Peco Bebê
@@ -92,12 +92,12 @@ prontera,55,350,5	script	Criador de Pecopecos#knt	105,{
 
 // Grande Criador de Peco-Pecos (para Templários)
 //============================================================
-prontera,232,318,3	script		Criador de Peco-Pecos#cru	105,{
+prontera,232,318,3	script	Criador de Peco Peco#cru	105,{
 	if(Upper==0) set .@price,3500; //Normal Peco - default price
 	if(Upper==1) set .@price,3500; //Armored Peco
 	if(Upper==2) set .@price,3500; //Baby Peco
 
-	mes "[Criador de Peco-Pecos]";;
+	mes "[Criador de Peco-Pecos]";
 	if (BaseJob == Job_Crusader && Class < Job_Rune_Knight) {
 		if(Upper != 1 ) mes "Bem vindo, Templário.";
 		else mes "Bem vindo, Paladino.";

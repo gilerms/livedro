@@ -20,7 +20,7 @@
 // Brasilis Transportation :: brasilis_trans
 //============================================================
 /* Pre-Renewal coordinates: alberta,247,115,3 */
-alberta,246,82,3	script	Crewman#bra2	100,{
+alberta,246,82,3	script	Tripulante#bra2	100,{
 	mes "[Tripulante]";
 	mes "Ei, você já ouviu falar de um lugar chamado Brasilis?";
 	mes "É uma cidade tropical quente como o deserto, mas também chuvosa. É um lugar muito misterioso.";
@@ -57,7 +57,7 @@ alberta,246,82,3	script	Crewman#bra2	100,{
 	}
 }
 
-brasilis,316,57,3	script	Tripulante#bra1	4W_SAILOR,{
+brasilis,316,57,3	script	Tripulante#bra1	100,{
 	mes "[Tripulante]";
 	mes "Meu navio vai voltar para Alberta, você quer se juntar a nós?";
 	next;
@@ -80,17 +80,17 @@ brasilis,316,57,3	script	Tripulante#bra1	4W_SAILOR,{
 
 // Generic Brasilis NPCs :: brazil_tre
 //============================================================
-brasilis,155,165,3	script	Signpost#bra1	4_BULLETIN_BOARD2,{
+brasilis,155,165,3	script	Signpost#bra1	858,{
 	mes ":: Museu de Arte ::";
 	close;
 }
 
-brasilis,195,231,3	script	Signpost#bra2	4_BULLETIN_BOARD2,{
+brasilis,195,231,3	script	Signpost#bra2	858,{
 	mes ":: Monumento às Bandeiras ::";
 	close;
 }
 
-brasilis,240,247,3	script	Signpost#bra3	4_BULLETIN_BOARD2,{
+brasilis,240,247,3	script	Signpost#bra3	858,{
 	mes ":: Mercado ::";
 	mes " ";
 	mes "- Para as suas poções e armamento -";
@@ -98,7 +98,7 @@ brasilis,240,247,3	script	Signpost#bra3	4_BULLETIN_BOARD2,{
 }
 
 brasilis,303,309,3	script	Signpost#bra4	858,{
-	mes ":: Jungle Cable ::";
+	mes ":: Cabo da selva ::";
 	mes "- Não é para os corações fracos -";
 	close;
 }
@@ -108,7 +108,7 @@ brasilis,278,137,3	script	Signpost#bra5	858,{
 	close;
 }
 
-brasilis,137,77,5	script	Ice-Cream Maker	4_M_03,{
+brasilis,137,77,5	script	Sorveteiro	85,{
 	mes "[Sorveteiro]";
 	mes "Venha~Venha~";
 	mes "Sorvete é o lanche perfeito para um dia quente~";

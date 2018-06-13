@@ -17,11 +17,11 @@
 
 // Izlude
 //============================================================
-izlude,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude	4W_SAILOR
-izlude_a,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude_a	4W_SAILOR
-izlude_b,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude_b	4W_SAILOR
-izlude_c,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude_c	4W_SAILOR
-izlude_d,197,205,1	duplicate(Marinheiro)	Marinheiro#izlude_d	4W_SAILOR
+izlude,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude	4W_SAILOR
+izlude_a,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude_a	4W_SAILOR
+izlude_b,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude_b	4W_SAILOR
+izlude_c,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude_c	4W_SAILOR
+izlude_d,197,205,1	duplicate(Sailor_izlude)	Sailor#izlude_d	4W_SAILOR
 
 izlude,71,92,2	duplicate(Bonne_izlude)	Bonne#izlude	4_F_01
 izlude_a,71,92,2	duplicate(Bonne_izlude)	Bonne#izlude_a	4_F_01
@@ -65,27 +65,27 @@ izlude_b,55,159,2	duplicate(Cebalis_izlude)	Cebalis#izlude_b	4W_M_02
 izlude_c,55,159,2	duplicate(Cebalis_izlude)	Cebalis#izlude_c	4W_M_02
 izlude_d,55,159,2	duplicate(Cebalis_izlude)	Cebalis#izlude_d	4W_M_02
 
-izlude,165,156,2	duplicate(Soldado)	Soldado#izlude	8W_SOLDIER
-izlude_a,165,156,2	duplicate(Soldado)	Soldado#izlude_a	8W_SOLDIER
-izlude_b,165,156,2	duplicate(Soldado)	Soldado#izlude_b	8W_SOLDIER
-izlude_c,165,156,2	duplicate(Soldado)	Soldado#izlude_c	8W_SOLDIER
-izlude_d,165,156,2	duplicate(Soldado)	Soldado#izlude_d	8W_SOLDIER
+izlude,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude	8W_SOLDIER
+izlude_a,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude_a	8W_SOLDIER
+izlude_b,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude_b	8W_SOLDIER
+izlude_c,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude_c	8W_SOLDIER
+izlude_d,165,156,2	duplicate(Soldier_izlude)	Soldier#izlude_d	8W_SOLDIER
 
--	script	::Guarda	-1,{
-	mes "[Guarda de Izlude]";
-	mes "Bem vindo a Izlude.";
+-	script	::Guard_izlude	-1,{
+	mes "[Izlude Guard]";
+	mes "Welcome to Izlude.";
 	close;
 }
-prt_fild08,350,219,4	duplicate(Guarda)	Guarda#izlude	8W_SOLDIER
-prt_fild08a,350,219,4	duplicate(Guarda)	Guarda#izlude_a	8W_SOLDIER
-prt_fild08b,350,219,4	duplicate(Guarda)	Guarda#izlude_b	8W_SOLDIER
-prt_fild08c,350,219,4	duplicate(Guarda)	Guarda#izlude_c	8W_SOLDIER
-prt_fild08d,350,219,4	duplicate(Guarda)	Guarda#izlude_d	8W_SOLDIER
+prt_fild08,350,219,4	duplicate(Guard_izlude)	Guard#izlude	8W_SOLDIER
+prt_fild08a,350,219,4	duplicate(Guard_izlude)	Guard#izlude_a	8W_SOLDIER
+prt_fild08b,350,219,4	duplicate(Guard_izlude)	Guard#izlude_b	8W_SOLDIER
+prt_fild08c,350,219,4	duplicate(Guard_izlude)	Guard#izlude_c	8W_SOLDIER
+prt_fild08d,350,219,4	duplicate(Guard_izlude)	Guard#izlude_d	8W_SOLDIER
 
 // Channel Warper :: channel
 //============================================================
 function	script	F_IzludeChannel	{
-	mes "[Oficial da Warp do Canal]";
+	mes "[Oficial do Canal]";
 	mes "Izlude é um lugar muito animado, não é?";
 	mes "Estou aqui para ajudar para te ajudar no que precisar!";
 	mes "Ou posso mandar você para a outra Izlude.";
@@ -256,7 +256,7 @@ izlude_b,146,205,7	duplicate(Aventureiro Falador#iz)	Aventureiro Falador#izb	4_M
 izlude_c,146,205,7	duplicate(Aventureiro Falador#iz)	Aventureiro Falador#izc	4_M_KID1
 izlude_d,146,205,7	duplicate(Aventureiro Falador#iz)	Aventureiro Falador#izd	4_M_KID1
 
-prt_fild08,338,217,7	script	Aventureiro Descançado#iz	4_F_SITDOWN,{
+prt_fild08,338,217,7	script	Aventureiro Descansado#iz	4_F_SITDOWN,{
 	end;
 
 OnTimer60000:
