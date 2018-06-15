@@ -88,7 +88,7 @@ Achievements:
     Score: 10
   - ID: 120001
     Group: "AG_ADVENTURE"
-    Name: "Esplorar o campo de Prontera Norte(1)"
+    Name: "North Prontera Field Exploration(1)"
     Reward:
       ItemID: 22876
     Score: 10

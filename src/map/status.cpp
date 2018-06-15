@@ -9,15 +9,15 @@
 #include <functional>
 #include <yaml-cpp/yaml.h>
 
-#include "../common/cbasetypes.h"
-#include "../common/timer.h"
-#include "../common/nullpo.h"
-#include "../common/random.h"
-#include "../common/showmsg.h"
-#include "../common/malloc.h"
-#include "../common/utils.h"
-#include "../common/ers.h"
-#include "../common/strlib.h"
+#include "../common/cbasetypes.hpp"
+#include "../common/timer.hpp"
+#include "../common/nullpo.hpp"
+#include "../common/random.hpp"
+#include "../common/showmsg.hpp"
+#include "../common/malloc.hpp"
+#include "../common/utils.hpp"
+#include "../common/ers.hpp"
+#include "../common/strlib.hpp"
 
 #include "battle.hpp"
 #include "itemdb.hpp"
@@ -551,6 +551,7 @@ void initChangeTables(void)
 	set_sc( NPC_INVINCIBLEOFF	, SC_INVINCIBLEOFF	, EFST_BLANK		, SCB_SPEED );
 	set_sc( NPC_COMET			, SC_BURNING		, EFST_BURNT		, SCB_MDEF );
 	set_sc_with_vfx( NPC_MAXPAIN	,	 SC_MAXPAIN	, EFST_MAXPAIN	, SCB_NONE );
+	add_sc( NPC_JACKFROST        , SC_FREEZE		  );
 
 	set_sc( CASH_BLESSING		, SC_BLESSING		, EFST_BLESSING		, SCB_STR|SCB_INT|SCB_DEX );
 	set_sc( CASH_INCAGI		, SC_INCREASEAGI	, EFST_INC_AGI, SCB_AGI|SCB_SPEED );
@@ -1156,6 +1157,15 @@ void initChangeTables(void)
 
 	StatusIconChangeTable[SC_DRESSUP] = EFST_DRESS_UP;
 
+	// Old Glast Heim
+	StatusIconChangeTable[SC_GLASTHEIM_ATK] = EFST_GLASTHEIM_ATK;
+	StatusIconChangeTable[SC_GLASTHEIM_DEF] = EFST_GLASTHEIM_DEF;
+	StatusIconChangeTable[SC_GLASTHEIM_HEAL] = EFST_GLASTHEIM_HEAL;
+	StatusIconChangeTable[SC_GLASTHEIM_HIDDEN] = EFST_GLASTHEIM_HIDDEN;
+	StatusIconChangeTable[SC_GLASTHEIM_STATE] = EFST_GLASTHEIM_STATE;
+	StatusIconChangeTable[SC_GLASTHEIM_ITEMDEF] = EFST_GLASTHEIM_ITEMDEF;
+	StatusIconChangeTable[SC_GLASTHEIM_HPSP] = EFST_GLASTHEIM_HPSP;
+
 	/* Other SC which are not necessarily associated to skills */
 	StatusChangeFlagTable[SC_ASPDPOTION0] |= SCB_ASPD;
 	StatusChangeFlagTable[SC_ASPDPOTION1] |= SCB_ASPD;
@@ -1302,6 +1312,12 @@ void initChangeTables(void)
 
 	// RODEX
 	StatusChangeFlagTable[SC_DAILYSENDMAILCNT] |= SCB_NONE;
+
+	// Old Glast Heim
+	StatusChangeFlagTable[SC_GLASTHEIM_ATK] |= SCB_ALL;
+	StatusChangeFlagTable[SC_GLASTHEIM_STATE] |= SCB_STR|SCB_AGI|SCB_VIT|SCB_DEX|SCB_INT|SCB_LUK;
+	StatusChangeFlagTable[SC_GLASTHEIM_ITEMDEF] |= SCB_DEF|SCB_MDEF;
+	StatusChangeFlagTable[SC_GLASTHEIM_HPSP] |= SCB_MAXHP|SCB_MAXSP;
 
 	// Summoner
 	StatusChangeFlagTable[SC_SHRIMPBLESSING] |= SCB_REGEN;
@@ -3002,6 +3018,8 @@ static int status_get_hpbonus(struct block_list *bl, enum e_status_bonus type) {
 				bonus += 30;
 			if(sc->data[SC_CROSSBOWCLAN])
 				bonus += 30;
+			if(sc->data[SC_GLASTHEIM_HPSP])
+				bonus += sc->data[SC_GLASTHEIM_HPSP]->val1;
 		}
 	} else if (type == STATUS_BONUS_RATE) {
 		struct status_change *sc = status_get_sc(bl);
@@ -3123,6 +3141,8 @@ static int status_get_spbonus(struct block_list *bl, enum e_status_bonus type) {
 				bonus += 10;
 			if(sc->data[SC_CROSSBOWCLAN])
 				bonus += 10;
+			if(sc->data[SC_GLASTHEIM_HPSP])
+				bonus += sc->data[SC_GLASTHEIM_HPSP]->val2;
 		}
 	} else if (type == STATUS_BONUS_RATE) {
 		struct status_change *sc = status_get_sc(bl);
@@ -3243,6 +3263,8 @@ bool status_calc_weight(struct map_session_data *sd, enum e_status_calc_weight_o
 			sd->max_weight += sd->max_weight * sc->data[SC_KNOWLEDGE]->val1 / 10;
 		if ((skill = pc_checkskill(sd, ALL_INCCARRY)) > 0)
 			sd->max_weight += 2000 * skill;
+		if (pc_ismadogear(sd))
+			sd->max_weight += 15000;
 	}
 
 	// Update the client if the new weight calculations don't match
@@ -4040,7 +4062,7 @@ int status_calc_pc_(struct map_session_data* sd, enum e_status_calc_opt opt)
 	status_calc_weight(sd, CALCWT_MAXBONUS);
 	status_calc_cart_weight(sd, CALCWT_MAXBONUS);
 
-	if (pc_checkskill(sd,SM_MOVINGRECOVERY)>0)
+	if (pc_checkskill(sd, SM_MOVINGRECOVERY) > 0 || pc_ismadogear(sd))
 		sd->regen.state.walk = 1;
 	else
 		sd->regen.state.walk = 0;
@@ -4185,6 +4207,10 @@ int status_calc_pc_(struct map_session_data* sd, enum e_status_calc_opt opt)
 			sd->subele[ELE_NEUTRAL] += sc->data[SC_MTF_MLEATKED]->val3;
 		if (sc->data[SC_MTF_CRIDAMAGE])
 			sd->bonus.crit_atk_rate += sc->data[SC_MTF_CRIDAMAGE]->val1;
+		if (sc->data[SC_GLASTHEIM_ATK]) {
+			sd->ignore_mdef_by_race[RC_UNDEAD] += sc->data[SC_GLASTHEIM_ATK]->val1;
+			sd->ignore_mdef_by_race[RC_DEMON] += sc->data[SC_GLASTHEIM_ATK]->val1;
+		}
 	}
 	status_cpy(&sd->battle_status, base_status);
 
@@ -5466,6 +5492,8 @@ static unsigned short status_calc_str(struct block_list *bl, struct status_chang
 		str += str * sc->data[SC_FULL_THROTTLE]->val3 / 100;
 	if(sc->data[SC_CHEERUP])
 		str += 3;
+	if(sc->data[SC_GLASTHEIM_STATE])
+		str += sc->data[SC_GLASTHEIM_STATE]->val1;
 
 	return (unsigned short)cap_value(str,0,USHRT_MAX);
 }
@@ -5540,6 +5568,8 @@ static unsigned short status_calc_agi(struct block_list *bl, struct status_chang
 		agi += sc->data[SC_ARCLOUSEDASH]->val2;
 	if(sc->data[SC_CHEERUP])
 		agi += 3;
+	if(sc->data[SC_GLASTHEIM_STATE])
+		agi += sc->data[SC_GLASTHEIM_STATE]->val1;
 
 	return (unsigned short)cap_value(agi,0,USHRT_MAX);
 }
@@ -5606,6 +5636,8 @@ static unsigned short status_calc_vit(struct block_list *bl, struct status_chang
 #endif
 	if(sc->data[SC_CHEERUP])
 		vit += 3;
+	if(sc->data[SC_GLASTHEIM_STATE])
+		vit += sc->data[SC_GLASTHEIM_STATE]->val1;
 
 	return (unsigned short)cap_value(vit,0,USHRT_MAX);
 }
@@ -5678,6 +5710,8 @@ static unsigned short status_calc_int(struct block_list *bl, struct status_chang
 		int_ += int_ * sc->data[SC_FULL_THROTTLE]->val3 / 100;
 	if(sc->data[SC_CHEERUP])
 		int_ += 3;
+	if(sc->data[SC_GLASTHEIM_STATE])
+		int_ += sc->data[SC_GLASTHEIM_STATE]->val1;
 
 	if(bl->type != BL_PC) {
 		if(sc->data[SC_STRIPHELM])
@@ -5761,6 +5795,8 @@ static unsigned short status_calc_dex(struct block_list *bl, struct status_chang
 		dex += dex * sc->data[SC_FULL_THROTTLE]->val3 / 100;
 	if(sc->data[SC_CHEERUP])
 		dex += 3;
+	if(sc->data[SC_GLASTHEIM_STATE])
+		dex += sc->data[SC_GLASTHEIM_STATE]->val1;
 
 	return (unsigned short)cap_value(dex,0,USHRT_MAX);
 }
@@ -5825,6 +5861,8 @@ static unsigned short status_calc_luk(struct block_list *bl, struct status_chang
 		luk += luk * sc->data[SC_FULL_THROTTLE]->val3 / 100;
 	if(sc->data[SC_CHEERUP])
 		luk += 3;
+	if(sc->data[SC_GLASTHEIM_STATE])
+		luk += sc->data[SC_GLASTHEIM_STATE]->val1;
 
 	return (unsigned short)cap_value(luk,0,USHRT_MAX);
 }
@@ -6435,8 +6473,10 @@ static defType status_calc_def(struct block_list *bl, struct status_change *sc, 
 		def -= def * sc->data[SC_ASH]->val3/100;
 	if( sc->data[SC_OVERED_BOOST] && bl->type == BL_HOM )
 		def -= def * sc->data[SC_OVERED_BOOST]->val4 / 100;
+	if(sc->data[SC_GLASTHEIM_ITEMDEF])
+		def += sc->data[SC_GLASTHEIM_ITEMDEF]->val1;
 
-	return (defType)cap_value(def,DEFTYPE_MIN,DEFTYPE_MAX);;
+	return (defType)cap_value(def,DEFTYPE_MIN,DEFTYPE_MAX);
 }
 
 /**
@@ -6566,6 +6606,8 @@ static defType status_calc_mdef(struct block_list *bl, struct status_change *sc,
 	}
 	if (sc->data[SC_ODINS_POWER])
 		mdef -= 20 * sc->data[SC_ODINS_POWER]->val1;
+	if(sc->data[SC_GLASTHEIM_ITEMDEF])
+		mdef += sc->data[SC_GLASTHEIM_ITEMDEF]->val2;
 
 	return (defType)cap_value(mdef,DEFTYPE_MIN,DEFTYPE_MAX);
 }
@@ -6622,6 +6664,20 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 	if (sc == NULL || (sd && sd->state.permanent_speed))
 		return (unsigned short)cap_value(speed, MIN_WALK_SPEED, MAX_WALK_SPEED);
 
+	if (sd && pc_ismadogear(sd)) { // Mado speed is not affected by other statuses
+		int val = 0;
+
+		if (pc_checkskill(sd, NC_MADOLICENCE) < 5)
+			val = 50 - 10 * pc_checkskill(sd, NC_MADOLICENCE);
+		else
+			val -= 25;
+		if (sc->data[SC_ACCELERATION])
+			val -= 25;
+		speed += speed * val / 100;
+
+		return (unsigned short)cap_value(speed, MIN_WALK_SPEED, MAX_WALK_SPEED);
+	}
+
 	if( sd && sd->ud.skilltimer != INVALID_TIMER && (pc_checkskill(sd,SA_FREECAST) > 0 || sd->ud.skill_id == LG_EXEEDBREAK) ) {
 		if( sd->ud.skill_id == LG_EXEEDBREAK )
 			speed_rate = 160 - 10 * sd->ud.skill_lv;
@@ -6638,11 +6694,6 @@ static unsigned short status_calc_speed(struct block_list *bl, struct status_cha
 				val = 25; // Same bonus
 			else if( pc_isridingwug(sd) )
 				val = 15 + 5 * pc_checkskill(sd, RA_WUGRIDER);
-			else if( pc_ismadogear(sd) ) {
-				val = -(50 - 10 * pc_checkskill(sd,NC_MADOLICENCE));
-				if( sc->data[SC_ACCELERATION] )
-					val += 25;
-			}
 			else if( sc->data[SC_ALL_RIDING] )
 				val = battle_config.rental_mount_speed_boost;
 		}
@@ -10917,6 +10968,8 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = 50; // -Hit
 			break;
 
+		case SC_OVERHEAT:
+		case SC_OVERHEAT_LIMITPOINT:
 		case SC_STEALTHFIELD:
 			tick_time = tick;
 			tick = -1;
@@ -11084,6 +11137,28 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 				val4 = 1;
 			break;
 
+		case SC_GLASTHEIM_ATK:
+			val1 = 100; // Undead/Demon MDEF ignore rate
+			break;
+		case SC_GLASTHEIM_HEAL:
+			val1 = 100; // Heal Power rate bonus
+			val2 = 50; // Received heal rate bonus
+			break;
+		case SC_GLASTHEIM_HIDDEN:
+			val1 = 90; // Damage rate reduction bonus
+			break;
+		case SC_GLASTHEIM_STATE:
+			val1 = 20; // All-stat bonus
+			break;
+		case SC_GLASTHEIM_ITEMDEF:
+			val1 = 200; // DEF bonus
+			val2 = 50; // MDEF bonus
+			break;
+		case SC_GLASTHEIM_HPSP:
+			val1 = 10000; // HP bonus
+			val2 = 1000; // SP bonus
+			break;
+
 		default:
 			if( calc_flag == SCB_NONE && StatusSkillChangeTable[type] == -1 && StatusIconChangeTable[type] == EFST_BLANK ) {
 				// Status change with no calc, no icon, and no skill associated...?
@@ -11144,6 +11219,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_SPHERE_3:
 		case SC_SPHERE_4:
 		case SC_SPHERE_5:
+		case SC_OVERHEAT:
 		case SC_LIGHTNINGWALK:
 		case SC_MONSTER_TRANSFORM:
 		case SC_ACTIVE_MONSTER_TRANSFORM:
@@ -13299,21 +13375,31 @@ int status_change_timer(int tid, unsigned int tick, int id, intptr_t data)
 		break;
 
 	case SC_OVERHEAT_LIMITPOINT:
-		if( --(sce->val1) > 0 ) { // Cooling
-			sc_timer_next(30000 + tick);
+		if (--(sce->val1) >= 0) { // Cooling
+			int16 limit[] = { 150, 200, 280, 360, 450 };
+			uint16 skill_lv = (sd ? pc_checkskill(sd, NC_MAINFRAME) : 0);
+
+			if (sc && sc->data[SC_OVERHEAT])
+				status_change_end(bl,SC_OVERHEAT,INVALID_TIMER);
+			if (sce->val1 > limit[skill_lv])
+				sc_start(bl, bl, SC_OVERHEAT, 100, sce->val1, 1000);
+			sc_timer_next(1000 + tick);
+			return 0;
 		}
 		break;
 
-	case SC_OVERHEAT:
-		{
+	case SC_OVERHEAT: {
 			int damage = status->max_hp / 100; // Suggestion 1% each second
-			if( damage >= status->hp ) damage = status->hp - 1; // Do not kill, just keep you with 1 hp minimum
+
+			if (damage >= status->hp)
+				damage = status->hp - 1; // Do not kill, just keep you with 1 hp minimum
 			map_freeblock_lock();
-			status_fix_damage(NULL,bl,damage,clif_damage(bl,bl,tick,0,0,damage,0,DMG_NORMAL,0,false));
-			if( sc->data[type] ) {
+			status_fix_damage(NULL, bl, damage, clif_damage(bl, bl, tick, 0, 0, damage, 0, DMG_NORMAL, 0, false));
+			if (sc->data[type]) {
 				sc_timer_next(1000 + tick);
 			}
 			map_freeblock_unlock();
+			return 0;
 		}
 		break;
 
