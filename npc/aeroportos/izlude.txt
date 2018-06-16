@@ -15,18 +15,18 @@
 -	script	::Airship_Staff_izlude	-1,{
 	mes "[Equipe do Aeroporto]";
 	mes "Bem-vind"+(Sex?"o":"a")+"! Gostaria de";
-	mes "embarcar no vôo que te leva a";
+	mes "embarcar no vï¿½o que te leva a";
 	mes "Juno ou Rachel?";
 	next;
-	if (select("Embarcar no vôo para Juno/Rachel.:Cancelar.") == 1) {
+	if (select("Embarcar no vï¿½o para Juno/Rachel.:Cancelar.") == 1) {
 		mes "[Equipe do Aeroporto]";
-		mes "O vôo tem um custo de";
-		mes "1,200 zeny. Ou caso você tenha";
+		mes "O vï¿½o tem um custo de";
+		mes "1,200 zeny. Ou caso vocï¿½ tenha";
 		mes "um Bilhete para Aeroplano,";
-		mes "sua taxa não será cobrada. Então";
+		mes "sua taxa nï¿½o serï¿½ cobrada. Entï¿½o";
 		mes "gostaria de embarcar?";
 		next;
-		if (select("Sim:Não") == 1) {
+		if (select("Sim:Nï¿½o") == 1) {
 			if (countitem(7311) > 0) {
 				delitem 7311,1; //Bilhete para Aeroplano
 				warp "airplane_01",244,58;
@@ -38,7 +38,7 @@
 				end;
 			}
 			mes "[Equipe do Aeroporto]";
-			mes "Desculpe, mas você";
+			mes "Desculpe, mas vocï¿½";
 			mes "possui 1,200 zenys para";
 			mes "pagar o embarque.";
 			close;

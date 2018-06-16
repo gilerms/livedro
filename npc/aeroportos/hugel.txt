@@ -15,10 +15,10 @@
 hugel,178,142,0	script	toairplane#hugel	45,1,1,{
 	end;
 OnTouch:
-	mes "Para usar o aeroplano, você precisa pagar uma taxa de 1,200 Zenys ou possuir um Bilhete para Aeroplano.";
-	mes "Gostaria de utilizar nossos serviços?";
+	mes "Para usar o aeroplano, vocï¿½ precisa pagar uma taxa de 1,200 Zenys ou possuir um Bilhete para Aeroplano.";
+	mes "Gostaria de utilizar nossos serviï¿½os?";
 	next;
-	if (select("Sim:Não") == 1) {
+	if (select("Sim:Nï¿½o") == 1) {
 		if (countitem(7311) > 0) {
 			delitem 7311,1; //Bilhete para Aeroplano
 			warp "airplane",244,58;
@@ -29,8 +29,8 @@ OnTouch:
 			warp "airplane",244,58;
 			end;
 		}
-		mes "Desculpe, mas você não possui zeny suficiente.";
-		mes "Lembre-se, você precisa possuir o Bilhete para Aeroplano, ou ter a taxa de embarque equivalente a 1,200 zenys.";
+		mes "Desculpe, mas vocï¿½ nï¿½o possui zeny suficiente.";
+		mes "Lembre-se, vocï¿½ precisa possuir o Bilhete para Aeroplano, ou ter a taxa de embarque equivalente a 1,200 zenys.";
 		close;
 	}
 	mes "Obrigado, e volte novamente.";
